@@ -9,10 +9,9 @@ const Greeting = ({ currentUser, logout }) => {
             <button onClick={logout}> Log Out</button>
         </div>
     ) : (
-            <div>
-                <Link to='/signup'> Sign Up</Link>
-                <br />
-                <Link to='/login'> Log In</Link>
+            <div> 
+                <Link className='link' to='/login'> Sign In</Link>
+                <Link className='link' to='/signup'> Sign Up</Link>
             </div>
         )
 

@@ -21,11 +21,11 @@ class SessionForm extends React.Component {
         this.props.processForm(this.state)
     }
     render() {
-        const header = this.props.formType === 'signup' ? 'Sign Up' : 'Log In';
+        const header = this.props.formType === 'signup' ? 'Sign Up' : 'Sign In';
 
         let link;
         if (header === 'Sign Up') {
-            link = <Link to="/login"> Log In</Link>
+            link = <Link to="/login"> Sign In</Link>
         } else {
             link = <Link to="/signup">Sign Up</Link>
         }
