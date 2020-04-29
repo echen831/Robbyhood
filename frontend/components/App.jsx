@@ -8,17 +8,23 @@ import { AuthRoute } from '../util/route_util'
 const App = () => {
 
     return (
-        <div className='page'>
-            <header className='top'>
-                <h2 className='title'> Robbyhood ➶ </h2>
-                <h3 className='title'><GreetingContainer /></h3>
-                
+
+        <body>
+
+            <header className='header'>
+                <nav className='header-nav'>
+                    <h2 className='header-logo'> 
+                        <a href="#">Robbyhood ➶</a>
+                    </h2>
+                    <GreetingContainer />
+                </nav>
             </header>
+            <span> It's Time to do Money</span>
+
                 <AuthRoute path="/login" component={LoginFormContainer} />
                 <AuthRoute path="/signup" component={SignupFormContainer} />
+        </body>
 
-
-        </div>
     )
 }
 

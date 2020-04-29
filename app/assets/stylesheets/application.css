@@ -14,25 +14,118 @@
  *= require_self
  */
 
- .page {
-     background-color: aquamarine;
- }
+ /* html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
 
- 
- .top {
-     display: flex;
-    }
-    
- .title {
-    flex: 2;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: white;
- }
+ul {
+  list-style: none;
+}
 
- .link {
-     display: inline-block;
-     padding-left: 50px;
-     padding-right: 10px;
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
- }
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  /*
+  Get rid of native styling. Read more here:
+  http://css-tricks.com/almanac/properties/a/appearance/
+  */
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+} */ 
+
+
+ body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  font-weight: 400;
+  background: aquamarine;
+}
+
+.header {
+  background: white;
+  /* border-bottom: 1px solid #ccc; */
+}
+
+.header a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  /* border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc; */
+}
+
+/* .header-logo {
+  border-right: 1px solid #ccc; 
+  font-weight: 700;
+} */
+
+/* .header-logo:hover {
+  background: grey;
+} */
+
+.header-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login-btn {
+  /* background-color: yellow;
+  display: block;
+  border-radius: 30px; */
+}
+
+.signup-btn:hover {
+  background: yellowgreen;
+  display: block;
+  border-radius: 15px;
+}
+
+/* .header-list > li {
+  border-left: 1px solid #ccc;
+  list-style: none;
+}
+
+.header-list > li:hover {
+  background: #000;
+} */
+
 

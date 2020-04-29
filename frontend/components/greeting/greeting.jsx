@@ -5,13 +5,17 @@ const Greeting = ({ currentUser, logout }) => {
 
     const display = currentUser ? (
         <div>
-            <p>Hello, {currentUser.email}</p>
-            <button onClick={logout}> Log Out</button>
+            <ul>
+                <p>Hello, {currentUser.email}</p>
+                <button onClick={logout}> Log Out</button>
+            </ul>
         </div>
     ) : (
-            <div> 
-                <Link className='link' to='/login'> Sign In</Link>
-                <Link className='link' to='/signup'> Sign Up</Link>
+            <div>
+                <ul className='header-list'>
+                    <Link className= 'login-btn' to='/login'> Sign In</Link>
+                    <Link className= 'signup-btn' to='/signup'> Sign Up</Link>
+                </ul>
             </div>
         )
 
