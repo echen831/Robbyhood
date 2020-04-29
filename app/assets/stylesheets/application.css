@@ -115,6 +115,17 @@ input[type="submit"] {
   border-radius: 15px;
 }
 
+.submit-form {
+  display: flex;
+  justify-content: center;
+  margin: 100px 10px 10px 500px;
+  background-color: cornsilk;
+  border-style: black solid;
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+}
+
 .demo-hide {
   display: none;
 }

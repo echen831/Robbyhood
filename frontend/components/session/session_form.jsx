@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.demoLogin = this.demoLogin.bind(this)
+        // this.renderErrors = this.renderErrors.bind(this)
     }
 
     demoLogin() {
@@ -29,6 +30,18 @@ class SessionForm extends React.Component {
         this.props.processForm(this.state)
     };
 
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, idx) => (
+                    <li key={`error-${idx}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    };
+
     render() {
         const header = this.props.formType === 'signup' ? 'Sign Up' : 'Sign In';
 
@@ -40,30 +53,37 @@ class SessionForm extends React.Component {
         }
 
         return (
-            <div>
-                <h1>{header}</h1>
-                <p>{link}</p>
+            <div className='submit-form'>
                 <form onSubmit={this.handleSubmit}>
+                    Welcome to Robbyhood!
+                    <br/>
+                    Please {header} or {link}
+                    <h1>{this.renderErrors()}</h1>
+                    <br/>
                     <label> Email: 
                         <input type="text" 
                                value={this.state.email}
                                onChange={this.update('email')}
                                 />
                     </label>
-
+                    <br/>
                     <label> Password:
                         <input type="password"
                                value={this.state.password}
                                onChange={this.update('password')}
                                 />
                     </label>
-
+                    <br/>
+                    <button className={header === 'Sign In' ? 'demo-hide' : ''}>
+                        <Link to="/login"> Test with demo login</Link>
+                    </button>
                     <button 
                         type='submit' 
                         onClick={this.demoLogin}
-                        className = {header === 'Sign Up' ? 'demo-hide' : ''}
-                        >Demo Login</button>
-
+                        className = {header === 'Sign Up' ? 'demo-hide' : ''}>
+                        Demo Login
+                    </button>
+                    <br/>
                     <button type='submit'>{header}</button>
                 </form>
             </div>

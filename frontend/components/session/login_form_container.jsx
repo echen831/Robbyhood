@@ -4,8 +4,8 @@ import { login } from '../../actions/session_actions';
 import SessionForm from './session_form'
 
 
-const mSTP = (state, ownProps) => ({
-    errors: state.errors.session,
+const mSTP = ({ errors }) => ({
+    errors: errors.session,
     formType: 'login'
 });
 
