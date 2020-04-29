@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom' 
+import { Link } from 'react-router-dom';
+import GreetingContainer from '../greeting/greeting_container';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -53,11 +54,20 @@ class SessionForm extends React.Component {
         }
 
         return (
-            <div className='submit-form'>
-                <form onSubmit={this.handleSubmit}>
-                    Welcome to Robbyhood!
+            <div>
+                <header className='header'>
+                    <nav className='header-nav'>
+                        <Link to='/' className='header-logo'>
+                            <h2>Robbyhood ➶</h2>
+                        </Link>
+                        <GreetingContainer />
+                    </nav>
+                </header>
+
+                <form onSubmit={this.handleSubmit} className='submit-form'>
+                    <h1 className='form-header'>Welcome to Robbyhood!</h1>
                     <br/>
-                    Please {header} or {link}
+                    <h2>Please {header} or {link}</h2> 
                     <h1>{this.renderErrors()}</h1>
                     <br/>
                     <label> Email: 

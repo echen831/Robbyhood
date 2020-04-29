@@ -116,14 +116,20 @@ input[type="submit"] {
 }
 
 .submit-form {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  display: block;
   margin: 100px 10px 10px 500px;
   background-color: cornsilk;
   border-style: black solid;
   width: 250px;
   height: 250px;
   border-radius: 15px;
+}
+
+.form-header {
+  display: flex;
+  justify-content: center;
 }
 
 .demo-hide {
