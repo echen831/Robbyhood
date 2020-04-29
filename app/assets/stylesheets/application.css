@@ -14,10 +14,10 @@
  *= require_self
  */
 
- /* html, body, header, nav, h1, a,
-ul, li, strong, main, button, i,
+html, body, header, nav, h1, a,
+ul, li, strong, main, i,
 section, img, div, h2, p, form,
-fieldset, label, input, textarea,
+fieldset, label,
 span, article, footer, time, small {
   margin: 0;
   padding: 0;
@@ -36,7 +36,7 @@ ul {
   list-style: none;
 }
 
-img {
+/* img {
   display: block;
   width: 100%;
   height: auto;
@@ -64,10 +64,6 @@ input[type="submit"] {
 
  body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
   font-size: 16px;
   font-weight: 400;
   background: aquamarine;
