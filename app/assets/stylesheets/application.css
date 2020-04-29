@@ -115,6 +115,9 @@ input[type="submit"] {
   border-radius: 15px;
 }
 
+.demo-hide {
+  display: none;
+}
 /* .header-list > li {
   border-left: 1px solid #ccc;
   list-style: none;

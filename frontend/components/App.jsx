@@ -20,6 +20,7 @@ const App = () => {
                 </nav>
             </header>
             <span> It's Time to do Money</span>
+            {/* <img src="" alt="RobinHood"/> */}
 
                 <AuthRoute path="/login" component={LoginFormContainer} />
                 <AuthRoute path="/signup" component={SignupFormContainer} />
