@@ -11,12 +11,27 @@ const App = () => {
     return (
 
         <div>
-            <Route exact path ='/' component={Home}/>
-            {/* <Route exact path ='/' component={GreetingContainer}/> */}
-            <AuthRoute path="/login" component={LoginFormContainer} />
-            <AuthRoute path="/signup" component={SignupFormContainer} />
+            <Switch>
+                <Route exact path ='/' component={Home}/>
+                <AuthRoute path="/login" component={LoginFormContainer} />
+                <AuthRoute path="/signup" component={SignupFormContainer} />
+                <Route path='*' component={NoMatch}/>
+            </Switch>
         </div>
 
+    )
+}
+
+
+
+const NoMatch = () => {
+    return (
+        <div>
+            404 Page not found
+            <Link to='/'>
+                <h2>Return to homepage</h2>
+            </Link>
+        </div>
     )
 }
 

@@ -15,6 +15,10 @@ class SessionForm extends React.Component {
         // this.renderErrors = this.renderErrors.bind(this)
     }
 
+    componentWillUnmount() {
+        this.props.clearErrors()
+    }
+
     demoLogin() {
         this.setState ({
             email: 'demo@hotmail.com',
@@ -55,23 +59,23 @@ class SessionForm extends React.Component {
 
         return (
             <div className='body'>
-                <header className='header'>
+                {/* <header className='header'>
                     <nav className='header-nav'>
                         <Link to='/' className='header-logo'>
                             <h2>Robbyhood ➶</h2>
                         </Link>
                         <GreetingContainer />
                     </nav>
-                </header>
+                </header> */}
                 <div className='form-body'>
                     <div className='submit-image-body'> 
-                        <h1>Image goes here</h1>
+                        <h1></h1>
                     </div>
                     <div className='submit-form-body'>
                         <form onSubmit={this.handleSubmit} className='form'>
                             <h1 className='form-header'>Welcome to Robbyhood</h1>
                             <br/>
-                            <h2>Please {header} or {link}</h2> 
+                            {/* <h2>Please {header} or {link}</h2>  */}
                             <h1>{this.renderErrors()}</h1>
                             <br/>
                             <label className='submit-input-label'>Email</label>
@@ -92,9 +96,9 @@ class SessionForm extends React.Component {
                                     onChange={this.update('password')}
                                 />
                             <br/>
-                            <button className={header === 'Sign In' ? 'demo-hide' : 'btn-show'}>
+                            {/* <button className={header === 'Sign In' ? 'demo-hide' : 'btn-show'}>
                                 <Link to="/login"> Test with demo login</Link>
-                            </button>
+                            </button> */}
                             <button 
                                 type='submit'
                                 onClick={this.demoLogin}

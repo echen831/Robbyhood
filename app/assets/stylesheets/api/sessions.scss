@@ -5,6 +5,7 @@
 .form-body {
   display: flex;
   justify-content: flex-end;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .submit-form-body {
@@ -20,7 +21,12 @@
 
 .submit-image-body {
   width: 50%;
-  background-color: aquamarine;
+  background-image: url(https://thumbs.dreamstime.com/b/blue-sky-clouds-abstract-art-background-watercolor-digital-artwork-136551201.jpg);
+}
+
+.form-header {
+  font-size: x-large;
+  font-style: bold;
 }
 
 .submit-input-label {
@@ -29,12 +35,13 @@
 }
 
 .submit-input-box {
-    height: 45px;
+    height: 40px;
     width: 400px;
     font-size: small;
     border-radius: 5px;
     margin: 5px;
     background-color: lightblue;
+    font-style: italic;
 }
 
 .submit-input-box:hover {
@@ -43,7 +50,7 @@
 
 .btn-show {
     margin: 5px;
-    height: 45px;
+    height: 40px;
     width: 150px;
     border-radius: 5px;
     background-color: rgb(66, 207, 160);
