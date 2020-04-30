@@ -86,6 +86,7 @@ input[type="submit"] {
   justify-content: space-between;
   background-color: white;
   width: 100%;
+  border-bottom: 1px solid black;
   /* border-left: 1px solid #ccc;
   border-right: 1px solid #ccc; */
 }
@@ -116,33 +117,7 @@ input[type="submit"] {
   border-radius: 15px;
 }
 
-.submit-form {
-  /* display: flex;
-  justify-content: center; */
-  display: block;
-  margin: 100px 10px 10px 500px;
-  background-color: cornsilk;
-  border-style: black solid;
-  width: 250px;
-  height: 250px;
-  border-radius: 15px;
-}
 
-.form-header {
-  display: flex;
-  justify-content: center;
-}
 
-.demo-hide {
-  display: none;
-}
-/* .header-list > li {
-  border-left: 1px solid #ccc;
-  list-style: none;
-}
-
-.header-list > li:hover {
-  background: #000;
-} */
 
 

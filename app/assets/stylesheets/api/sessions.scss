@@ -1,3 +1,60 @@
 // Place all the styles related to the Api/Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-body {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-form-body {
+  width: 50%;
+  background-color: white;
+  height: 900px;
+}
+
+.form {
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.submit-image-body {
+  width: 50%;
+  background-color: aquamarine;
+}
+
+.submit-input-label {
+    font-size: small;
+    margin: 5px;
+}
+
+.submit-input-box {
+    height: 45px;
+    width: 400px;
+    font-size: small;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: lightblue;
+}
+
+.submit-input-box:hover {
+    border: 1px solid black;
+}
+
+.btn-show {
+    margin: 5px;
+    height: 45px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: rgb(66, 207, 160);
+    color: white;
+}
+
+.btn-show:hover {
+    background-color: rgb(52, 184, 140);
+    color: white;
+}
+
+.demo-hide {
+  display: none;
+}

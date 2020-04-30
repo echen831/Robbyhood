@@ -63,39 +63,49 @@ class SessionForm extends React.Component {
                         <GreetingContainer />
                     </nav>
                 </header>
-
-                <form onSubmit={this.handleSubmit} className='submit-form'>
-                    <h1 className='form-header'>Welcome to Robbyhood!</h1>
-                    <br/>
-                    <h2>Please {header} or {link}</h2> 
-                    <h1>{this.renderErrors()}</h1>
-                    <br/>
-                    <label> Email: 
-                        <input type="text" 
-                               value={this.state.email}
-                               onChange={this.update('email')}
+                <div className='form-body'>
+                    <div className='submit-image-body'> 
+                        <h1>Image goes here</h1>
+                    </div>
+                    <div className='submit-form-body'>
+                        <form onSubmit={this.handleSubmit} className='form'>
+                            <h1 className='form-header'>Welcome to Robbyhood</h1>
+                            <br/>
+                            <h2>Please {header} or {link}</h2> 
+                            <h1>{this.renderErrors()}</h1>
+                            <br/>
+                            <label className='submit-input-label'>Email</label>
+                            <br/>
+                                <input className='submit-input-box'
+                                    type="text" 
+                                    value={this.state.email}
+                                    placeholder='Email'
+                                    onChange={this.update('email')}
                                 />
-                    </label>
-                    <br/>
-                    <label> Password:
-                        <input type="password"
-                               value={this.state.password}
-                               onChange={this.update('password')}
+                            <br/>
+                            <label className='submit-input-label'>Password</label>
+                            <br/>
+                                <input className='submit-input-box'
+                                    type="password"
+                                    value={this.state.password}
+                                    placeholder='Password'
+                                    onChange={this.update('password')}
                                 />
-                    </label>
-                    <br/>
-                    <button className={header === 'Sign In' ? 'demo-hide' : ''}>
-                        <Link to="/login"> Test with demo login</Link>
-                    </button>
-                    <button 
-                        type='submit' 
-                        onClick={this.demoLogin}
-                        className = {header === 'Sign Up' ? 'demo-hide' : ''}>
-                        Demo Login
-                    </button>
-                    <br/>
-                    <button type='submit'>{header}</button>
-                </form>
+                            <br/>
+                            <button className={header === 'Sign In' ? 'demo-hide' : 'btn-show'}>
+                                <Link to="/login"> Test with demo login</Link>
+                            </button>
+                            <button 
+                                type='submit'
+                                onClick={this.demoLogin}
+                                className = {header === 'Sign Up' ? 'demo-hide' : 'btn-show'}>
+                                Demo Login
+                            </button>
+                            <br/>
+                            <button className='btn-show' type='submit'>{header}</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         )
     }
