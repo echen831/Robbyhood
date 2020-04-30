@@ -54,7 +54,7 @@ class SessionForm extends React.Component {
         }
 
         return (
-            <div>
+            <div className='body'>
                 <header className='header'>
                     <nav className='header-nav'>
                         <Link to='/' className='header-logo'>

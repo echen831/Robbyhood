@@ -62,11 +62,12 @@ input[type="submit"] {
 } */ 
 
 
- body {
+ .body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   background: aquamarine;
+  height: 900px;
 }
 
 .header {

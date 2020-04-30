@@ -6,7 +6,7 @@ import GreetingContainer from '../greeting/greeting_container'
 const Home = () => {
 
     return (
-        <body>
+        <div className='body'>
             <header className='header'>
                 <nav className='header-nav'>
                     <Link to='/' className='header-logo'>
@@ -16,7 +16,7 @@ const Home = () => {
                 </nav>
             </header>
             <marquee> It's Time to do Money</marquee>
-        </body>
+        </div>
     )
 }
 
