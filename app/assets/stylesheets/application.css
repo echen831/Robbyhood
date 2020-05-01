@@ -40,6 +40,15 @@ ul {
   list-style: none;
 }
 
+button,
+input[type="submit"] {
+  cursor: pointer;
+  outline-style:none;
+  box-shadow:none;
+  border-color:transparent;
+}
+
+
 /* img {
   display: block;
   width: 100%;
@@ -111,12 +120,13 @@ button {
   height: 300px;
 }
 
-button,
-input[type="submit"] {
-  cursor: pointer;
-  outline-style:none;
-  box-shadow:none;
-  /* border-color:transparent; */
+.logout-btn {
+  border: 1px solid rgb(245, 245, 245);
+  border-radius: 15px;
+}
+
+.logout-btn:hover {
+  background-color: rgb(80, 192, 155);
 }
 
 

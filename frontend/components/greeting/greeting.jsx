@@ -7,7 +7,7 @@ const Greeting = ({ currentUser, logout }) => {
         <div>
             <ul>
                 <p>Hello, {currentUser.email}</p>
-                <button onClick={logout}> Log Out</button>
+                <button onClick={logout} className='logout-btn'> Log Out</button>
             </ul>
             <span>My Account</span>
         </div>

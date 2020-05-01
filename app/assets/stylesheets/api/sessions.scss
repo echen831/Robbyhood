@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-button {
-  border-color: transparent;
-}
-
 .form-body {
   display: flex;
 }
@@ -69,13 +65,19 @@ button {
 }
 
 .submit-input-box:valid {
+  box-sizing: border-box;
+  outline-style:none;
+  box-shadow:none;
+  border-color: transparent;
   background-color: rgb(210, 238, 255);
 }
 
 form ul {
-  margin-top: 15px;
+  margin-top: 5px;
+  position: absolute;
+  width: max-content;
   margin-left: 15px;
-  list-style-type: '➶   ';
+  list-style-type: '!   ';
 }
 
 
@@ -88,7 +90,7 @@ form ul {
     border-radius: 5px;
     background-color: rgb(66, 207, 160);
     color: white;
-    margin-top: 60px;
+    margin-top: 100px;
     cursor: pointer;
 }
 
