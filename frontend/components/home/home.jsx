@@ -16,7 +16,7 @@ const Home = () => {
                 </nav>
             </header>
             <marquee> It's Time to do Money</marquee>
-            <img src="https://cdn.clipart.email/03a4d01c0972c1acbe2db44212f83244_stock-investing-insights-and-information-stocks-png-clipart-_875-624.png" 
+            <img src="https://cdn.robinhood.com/assets/robinhood/brand/0ac83d822d7f714396eebe65b54b2fa5-1x.png" 
                  alt=""
                  className='home-img'
                  />

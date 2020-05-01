@@ -67,8 +67,8 @@ button {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  background: aquamarine;
-  height: 650px;
+  background:  rgb(55, 204, 154);
+  height: 100%;
 }
 
 .header {
@@ -116,7 +116,7 @@ input[type="submit"] {
   cursor: pointer;
   outline-style:none;
   box-shadow:none;
-  border-color:transparent;
+  /* border-color:transparent; */
 }
 
 

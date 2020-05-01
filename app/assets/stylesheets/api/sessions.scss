@@ -2,28 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+button {
+  border-color: transparent;
+}
 
 .form-body {
   display: flex;
-  justify-content: flex-end;
-
 }
 
 .submit-form-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 50%;
-  background-color: white;
   max-height: 100%;
+  background-color: white;
 }
 
 .form {
-  margin-top: 20%;
   margin-left: 50px;
 }
 
 .submit-image-body {
+  margin-top: 149px;
   width: 50%;
-  height: 650px;
-  background-image: url(https://thumbs.dreamstime.com/b/blue-sky-clouds-abstract-art-background-watercolor-digital-artwork-136551201.jpg);
+  height: 500px;
+  background-repeat: no-repeat;
+  background-image: url(https://s.yimg.com/ny/api/res/1.2/wL8oj3c3bEWARP8lBHRvAA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/motleyfool.com/dd29e27eb515379b591ab47e4857072a);
 }
 
 .form-header {
@@ -69,8 +74,8 @@
 
 form ul {
   margin-top: 15px;
-  list-style-type: circle;
-  // font-weight: bolder;;
+  margin-left: 15px;
+  list-style-type: '➶   ';
 }
 
 
