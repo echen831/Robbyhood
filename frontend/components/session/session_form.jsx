@@ -76,38 +76,38 @@ class SessionForm extends React.Component {
                             <h1 className='form-header'>Welcome to Robbyhood</h1>
                             <br/>
                             {/* <h2>Please {header} or {link}</h2>  */}
-                            <h1>{this.renderErrors()}</h1>
                             <br/>
                             <label className='submit-input-label'>Email</label>
                             <br/>
                                 <input className='submit-input-box'
-                                    type="text" 
+                                    type="email" 
                                     value={this.state.email}
-                                    placeholder='Email'
                                     onChange={this.update('email')}
-                                />
+                                    required
+                                    />
                             <br/>
                             <label className='submit-input-label'>Password</label>
                             <br/>
                                 <input className='submit-input-box'
                                     type="password"
                                     value={this.state.password}
-                                    placeholder='Password'
                                     onChange={this.update('password')}
-                                />
+                                    required
+                                    />
                             <br/>
                             {/* <button className={header === 'Sign In' ? 'demo-hide' : 'btn-show'}>
                                 <Link to="/login"> Test with demo login</Link>
                             </button> */}
-                            <button 
-                                type='submit'
-                                onClick={this.demoLogin}
-                                className = {header === 'Sign Up' ? 'demo-hide' : 'btn-show'}>
-                                Demo Login
-                            </button>
-                            <br/>
+                            <ul>{this.renderErrors()}</ul>
                             <button className='btn-show' type='submit'>{header}</button>
+                            <br/>
                         </form>
+                         <button 
+                            type='submit'
+                            onClick={this.demoLogin}
+                            className = {header === 'Sign Up' ? 'demo-hide' : 'demo-show'}>
+                            Demo login
+                        </button>
                     </div>
                 </div>
             </div>

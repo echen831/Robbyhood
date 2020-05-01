@@ -17,19 +17,23 @@
 html, body, header, nav, h1, a,
 ul, li, strong, main, i,
 section, img, div, h2, p, form,
-fieldset, label,
+fieldset, label, button, input
 span, article, footer, time, small {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
-  font: inherit;
+  font:inherit;
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
   color: inherit;
   text-align: inherit;
   text-decoration: inherit;
   vertical-align: inherit;
-  box-sizing: inherit;
+  box-sizing: border-box;
   background: transparent;
+  outline-style:none;
+  box-shadow:none;
+  border-color:transparent;
 }
 
 ul {
@@ -67,12 +71,11 @@ input[type="submit"] {
   font-size: 16px;
   font-weight: 400;
   background: aquamarine;
-  height: 900px;
+  height: 650px;
 }
 
 .header {
   background: white;
-  /* border-bottom: 1px solid #ccc; */
 }
 
 .header a {
@@ -87,36 +90,29 @@ input[type="submit"] {
   background-color: white;
   width: 100%;
   border-bottom: 1px solid black;
-  /* border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc; */
 }
 
-/* .header-logo {
-  border-right: 1px solid #ccc; 
-  font-weight: 700;
-} */
 
-/* .header-logo:hover {
-  background: grey;
-} */
 
 .header-list {
   display: flex;
   justify-content: flex-end;
 }
 
-.login-btn {
-  /* background-color: yellow;
-  display: block;
-  border-radius: 30px; */
-}
 
 .signup-btn:hover {
-  background: yellowgreen;
+  background: rgb(80, 192, 155);
   display: block;
   border-radius: 15px;
 }
 
+
+.home-img {
+  margin-left: 65%;
+  margin-top: 10%;
+  width: 300px;
+  height: 300px;
+}
 
 
 

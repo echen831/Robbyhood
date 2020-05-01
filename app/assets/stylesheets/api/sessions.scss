@@ -2,25 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .form-body {
   display: flex;
   justify-content: flex-end;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 
 .submit-form-body {
   width: 50%;
   background-color: white;
-  height: 900px;
+  max-height: 100%;
 }
 
 .form {
-    margin-top: 100px;
-    margin-left: 50px;
+  margin-top: 20%;
+  margin-left: 50px;
 }
 
 .submit-image-body {
   width: 50%;
+  height: 650px;
   background-image: url(https://thumbs.dreamstime.com/b/blue-sky-clouds-abstract-art-background-watercolor-digital-artwork-136551201.jpg);
 }
 
@@ -31,37 +33,81 @@
 
 .submit-input-label {
     font-size: small;
-    margin: 5px;
 }
 
 .submit-input-box {
-    height: 40px;
+    height: 45px;
     width: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: small;
+    box-sizing: border-box;
+    border: none;
     border-radius: 5px;
-    margin: 5px;
-    background-color: lightblue;
+    background-color: rgb(248, 248, 248);
     font-style: italic;
 }
 
 .submit-input-box:hover {
-    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid rgb(245, 245, 245);
 }
 
+.submit-input-box:focus {
+    box-sizing: border-box;
+    outline-style:none;
+    box-shadow:none;
+    border-color:transparent;
+    box-shadow: none;
+    border: 1px solid rgb(66, 207, 160);
+}
+
+.submit-input-box:valid {
+  background-color: rgb(210, 238, 255);
+}
+
+form ul {
+  margin-top: 15px;
+  list-style-type: circle;
+  // font-weight: bolder;;
+}
+
+
 .btn-show {
-    margin: 5px;
-    height: 40px;
-    width: 150px;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    height: 45px;
+    width: 125px;
     border-radius: 5px;
     background-color: rgb(66, 207, 160);
     color: white;
+    margin-top: 60px;
+    cursor: pointer;
 }
 
 .btn-show:hover {
     background-color: rgb(52, 184, 140);
-    color: white;
 }
 
 .demo-hide {
   display: none;
+}
+
+.demo-show {
+  display: flex;
+  justify-content: center;
+  font-size: small;
+  height: 45px;
+  width: 125px;
+  border-radius: 5px;
+  background-color: rgb(145, 214, 241);
+  color: white;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.demo-show:hover {
+  background-color: rgb(125, 185, 209);
 }
