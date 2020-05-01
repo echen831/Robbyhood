@@ -30,7 +30,6 @@ export const login = (user) => dispatch => (
     APIUtil.login(user)
         .then((currentUser) => dispatch(receiveCurrentUser(currentUser)),
         (err) => dispatch(receiveErrors(err.responseJSON)),
-        // () => dispatch(clearErrors())
         
 ));
 
@@ -42,6 +41,5 @@ export const logout = () => dispatch => (
 export const signup = (user) => dispatch => (
     APIUtil.signup(user)
         .then((currentUser) => dispatch(receiveCurrentUser(currentUser)),
-        (err) => dispatch(receiveErrors(err.responseJSON)),
-        // () => dispatch(clearErrors())     
+        (err) => dispatch(receiveErrors(err.responseJSON)), 
 ));
