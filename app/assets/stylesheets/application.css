@@ -114,6 +114,9 @@ button {
 button,
 input[type="submit"] {
   cursor: pointer;
+  outline-style:none;
+  box-shadow:none;
+  border-color:transparent;
 }
 
 
