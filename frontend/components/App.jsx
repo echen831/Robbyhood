@@ -5,6 +5,7 @@ import { Route, Switch, Link } from 'react-router-dom'
 import SignupFormContainer from './session/signup_form_container'
 import LoginFormContainer from './session/login_form_container';
 import { AuthRoute } from '../util/route_util'
+import StockContainer from './stock/stock_container'
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
                 <Route exact path ='/' component={Home}/>
                 <AuthRoute path="/login" component={LoginFormContainer} />
                 <AuthRoute path="/signup" component={SignupFormContainer} />
+                <Route path='/stocks/:symbol' component={StockContainer}/>
                 <Route path='*' component={NoMatch}/>
             </Switch>
         </div>
