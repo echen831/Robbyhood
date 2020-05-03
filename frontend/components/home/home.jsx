@@ -20,6 +20,11 @@ const Home = () => {
                  className='home-img'
                  />
 
+            <ul>
+                <Link to={`/stocks/${'AAPL'}`}> Apple </Link>
+                <Link to={`/stocks/${'CCL'}`}> Carnival </Link>
+                <Link to={`/stocks/${'AMZN'}`}> Amazon </Link>
+            </ul>
         </div>
     )
 }

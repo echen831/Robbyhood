@@ -6,7 +6,7 @@ import { fetchIntraDayStock } from '../../actions/stock_actions';
 const mSTP = (state, ownProps) => {
     
     return {
-        stock: state.entities.stocks[ownProps.match.params.symbol] || []
+        stock: state.entities.stocks[ownProps.match.params.symbol] // || [] *lazy assign empty array
     }
 };
 
