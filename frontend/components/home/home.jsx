@@ -19,12 +19,15 @@ const Home = () => {
                  alt=""
                  className='home-img'
                  />
-
+            <marquee>
             <ul>
                 <Link to={`/stocks/${'AAPL'}`}> Apple </Link>
                 <Link to={`/stocks/${'CCL'}`}> Carnival </Link>
                 <Link to={`/stocks/${'AMZN'}`}> Amazon </Link>
+                <Link to={`/stocks/${'MSFT'}`}> Microsoft </Link>
+                <Link to={`/stocks/${'TSLA'}`}> Tesla </Link>
             </ul>
+            </marquee>
         </div>
     )
 }
