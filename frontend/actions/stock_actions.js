@@ -23,3 +23,8 @@ export const fetchIntraDayStock = (symbol) => dispatch => {
     return StockAPIUtil.fetchIntraDayStock(symbol)
         .then((stock) => dispatch(receiveOneStock(stock,symbol)))
 };
+
+export const fetchHistStock = (symbol, range) => dispatch => {
+    return StockAPIUtil.fetchHistStock(symbol, range)
+        .then((stock) => dispatch(receiveOneStock(stock, symbol)))
+};

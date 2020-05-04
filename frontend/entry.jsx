@@ -36,8 +36,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
     window.receiveOneStock = Stock.receiveOneStock
     window.getState = store.getState
     window.dispatch = store.dispatch
-    window.fetchIntraDayStock = Stock.fetchIntraDayStock
-    window.ajax = StockUtil.fetchIntraDayStock
+    window.fetchIntraDayStock = Stock.fetchIntraDayStock    
+    window.fetchHistStock = Stock.fetchHistStock
+    window.ajax = StockUtil.fetchHistStock
     //test 
 
 

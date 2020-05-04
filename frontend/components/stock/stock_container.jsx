@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Stock from './stock';
-import { fetchIntraDayStock } from '../../actions/stock_actions';
+import { fetchIntraDayStock, fetchHistStock } from '../../actions/stock_actions';
 
 
 const mSTP = (state, ownProps) => {
@@ -11,7 +11,8 @@ const mSTP = (state, ownProps) => {
 };
 
 const mDTP = (dispatch) => ({
-    fetchIntraDayStock: (symbol) => dispatch(fetchIntraDayStock(symbol))
+    fetchIntraDayStock: (symbol) => dispatch(fetchIntraDayStock(symbol)),
+    fetchHistStock: (symbol, range) => dispatch(fetchHistStock(symbol, range))
 });
 
 export default connect(mSTP, mDTP)(Stock)

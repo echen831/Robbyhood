@@ -12,3 +12,10 @@ export const fetchIntraDayStock = (symbol) => (
         method: 'GET'
     })
 );
+
+export const fetchHistStock = (symbol,range) => (
+    $.ajax({
+        url: `https://sandbox.iexapis.com/stable/stock/${symbol}/chart/${range}?token=${window.iexAPIKey}`,
+        method: 'GET'
+    })
+);
