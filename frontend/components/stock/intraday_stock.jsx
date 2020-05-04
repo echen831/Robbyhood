@@ -3,7 +3,7 @@ import React from 'react';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 
 
-class Stock extends React.Component {
+class IntraDayStock extends React.Component {
 
 
     
@@ -46,4 +46,4 @@ class Stock extends React.Component {
     
 };
 
-export default Stock
+export default IntraDayStock

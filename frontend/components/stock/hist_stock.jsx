@@ -12,7 +12,7 @@ class HistStock extends React.Component {
 
     render () {
         // if (!this.props.histData) return null;
-        let data = Object.values(this.props.histData)
+        let data = this.props.histData
 
         return (
             <div>
