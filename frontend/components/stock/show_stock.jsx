@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 import GreetingContainer from '../greeting/greeting_container'
+import { Link } from 'react-router-dom'
 
-const Home = () => {
-
+const Show = () => {
     return (
         <div className='body'>
             <header className='header'>
@@ -14,14 +13,15 @@ const Home = () => {
                     <GreetingContainer />
                 </nav>
             </header>
-            <marquee> It's Time to do Money</marquee>
-            <img src="https://cdn.robinhood.com/assets/robinhood/brand/0ac83d822d7f714396eebe65b54b2fa5-1x.png" 
-                 alt=""
-                 className='home-img'
-                 />
-
+                <ul>
+                    <Link to={`/stocks/${'AAPL'}`}> Apple </Link>
+                    <Link to={`/stocks/${'CCL'}`}> Carnival </Link>
+                    <Link to={`/stocks/${'AMZN'}`}> Amazon </Link>
+                    <Link to={`/stocks/${'MSFT'}`}> Microsoft </Link>
+                    <Link to={`/stocks/${'TSLA'}`}> Tesla </Link>
+                </ul>
         </div>
     )
 }
 
-export default Home;
+export default Show

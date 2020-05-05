@@ -9,7 +9,6 @@ const Greeting = ({ currentUser, logout }) => {
                 <p>Hello, {currentUser.email}</p>
                 <button onClick={logout} className='logout-btn'> Log Out</button>
             </ul>
-            <span>My Account</span>
         </div>
     ) : (
             <div>

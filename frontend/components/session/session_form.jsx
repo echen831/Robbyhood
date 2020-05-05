@@ -12,7 +12,6 @@ class SessionForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.demoLogin = this.demoLogin.bind(this)
-        // this.renderErrors = this.renderErrors.bind(this)
     }
 
     componentWillUnmount() {
@@ -35,6 +34,7 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state)
         this.props.processForm(user)
+            .then(() => this.props.history.push('/stocks'))
     };
 
     renderErrors() {

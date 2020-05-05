@@ -22,7 +22,7 @@ class IntraDayStock extends React.Component {
         let data = []
 
         {for(let i = 0; i < this.props.stock.length; i ++) {
-            if (i % 15 === 0) {
+            if (i % 5 === 0) {
                 data.push(this.props.stock[i])
             }
         }}
@@ -31,7 +31,7 @@ class IntraDayStock extends React.Component {
             <div>
                 <h1>{this.props.match.params.symbol}</h1>
                 <h2 id='stockPrice'>{data[data.length-1].average}</h2>
-                <h2 id='stockChange'></h2>
+                <h2 id='stockChange'>0.00</h2>
 
                 <LineChart width={800} 
                             height={400} 
@@ -61,21 +61,23 @@ class IntraDayStock extends React.Component {
 };
 
 const CustomTooltip = (props) => {
+    const price = document.getElementById('stockPrice')
+    const change = document.getElementById('stockChange')
     if (props.active) {
-        const price = document.getElementById('stockPrice')
-        const change = document.getElementById('stockChange')
+        let oldPrice = price.innerText
+        change.innerText = oldPrice 
 
         
         if (props.payload[0] && props.payload[0].payload) {
-            console.log(oldPrice)
-            console.log('.......')
             let newPrice = props.payload[0].payload.average
             price.innerText = newPrice
+            console.log('********')
+            console.log(oldPrice)
+            console.log('.......')
             console.log(newPrice)
+            console.log('--------')
             
         }
-        let oldPrice = price.innerText
-        change.innerText = oldPrice 
         
         return (
             <div >
