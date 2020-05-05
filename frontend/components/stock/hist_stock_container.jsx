@@ -3,7 +3,7 @@ import HistStock from './hist_stock';
 import { fetchHistStock } from '../../actions/stock_actions' 
 
 const mSTP = (state, ownProps) => ({
-    histData: state.entities.stocks[ownProps.match.params.symbol] || []
+    histData: state.entities.stocks[ownProps.match.params.symbol] //|| []
 });
 
 const mDTP = (dispatch) => ({
