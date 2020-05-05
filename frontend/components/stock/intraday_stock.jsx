@@ -65,16 +65,17 @@ const CustomTooltip = (props) => {
         const price = document.getElementById('stockPrice')
         const change = document.getElementById('stockChange')
 
+        
         if (props.payload[0] && props.payload[0].payload) {
-            let oldPrice = price.innerText
-            let newPrice = props.payload[0].payload.average
             console.log(oldPrice)
-            console.log(newPrice)
+            console.log('.......')
+            let newPrice = props.payload[0].payload.average
             price.innerText = newPrice
-            if (oldPrice !== newPrice) {
-                change.innerText = oldPrice - newPrice
-            }
+            console.log(newPrice)
+            
         }
+        let oldPrice = price.innerText
+        change.innerText = oldPrice 
         
         return (
             <div >

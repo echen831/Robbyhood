@@ -24,6 +24,7 @@ class SessionForm extends React.Component {
             email: 'demo@hotmail.com',
             password: '123456'
         })
+
     };
 
     update(field) {
@@ -32,7 +33,8 @@ class SessionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.processForm(this.state)
+        const user = Object.assign({}, this.state)
+        this.props.processForm(user)
     };
 
     renderErrors() {
@@ -102,12 +104,14 @@ class SessionForm extends React.Component {
                             <button className='btn-show' type='submit'>{header}</button>
                             <br/>
                         </form>
-                         <button 
-                            type='submit'
-                            onClick={this.demoLogin}
-                            className = {header === 'Sign Up' ? 'demo-hide' : 'demo-show'}>
-                            Demo login
-                        </button>
+                        <form onSubmit={this.handleSubmit}>
+                            <button 
+                                type='submit'
+                                onClick={this.demoLogin}
+                                className = {header === 'Sign Up' ? 'demo-hide' : 'demo-show'}>
+                                Demo login
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
