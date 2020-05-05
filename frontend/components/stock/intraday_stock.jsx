@@ -5,14 +5,20 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts'
 
 class IntraDayStock extends React.Component {
     constructor(props) {
-        super(props) 
+        super(props)
 
     }
 
 
     
     componentDidMount() {
-        this.props.fetchIntraDayStock(this.props.match.params.symbol)
+        this.props.fetchIntraDayStock(this.props.symbol)
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.symbol !== prevProps.symbol) {
+            this.props.fetchIntraDayStock(this.props.symbol)
+        }
     }
 
     
@@ -27,9 +33,11 @@ class IntraDayStock extends React.Component {
             }
         }}
 
+        let close = 
+
         return (
             <div>
-                <h1>{this.props.match.params.symbol}</h1>
+                <h1>{this.props.name}</h1>
                 <h2 id='stockPrice'>{data[data.length-1].average}</h2>
                 <h2 id='stockChange'>0.00</h2>
 

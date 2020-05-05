@@ -4,9 +4,11 @@ import { fetchIntraDayStock, fetchHistStock } from '../../actions/stock_actions'
 
 
 const mSTP = (state, ownProps) => {
-    
+    let symbol = ownProps.symbol || ownProps.match.params.symbol
     return {
-        stock: state.entities.stocks[ownProps.match.params.symbol] // || [] *lazy assign empty array
+        stock: state.entities.stocks[symbol],
+        symbol
+         // || [] *lazy assign empty array
     }
 };
 

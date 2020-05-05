@@ -4,6 +4,7 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts'
 class HistStock extends React.Component {
 
 
+
     componentDidMount() {
         const symbol = this.props.match.params.symbol;
         const range = this.props.match.params.range;
@@ -13,11 +14,13 @@ class HistStock extends React.Component {
     render () {
         if (!this.props.histData) return null;
         let data = this.props.histData
-
+        let close = data[data.length-1].high
+        let open = data[0].high
         return (
             <div>
                 <h1>{this.props.match.params.symbol}</h1>
-                <h2 id='stockPrice'>{data[data.length-1].high}</h2>
+                <h2 id='stockPrice'>{close}</h2>
+                <h2 id='changePrice'>{close-open}</h2>
 
                 <LineChart width={800} 
                             height={400} 
@@ -37,7 +40,7 @@ class HistStock extends React.Component {
                             tick={false}/>
                     <Tooltip cursor={false}
                             position={{y: 10}} 
-                            content={<CustomTooltip/>}/>
+                            content={<CustomTooltip oldPrice = {open}/>}/>
                 </LineChart>
             </div>
         )
@@ -45,10 +48,14 @@ class HistStock extends React.Component {
 };
 
 const CustomTooltip = (props) => {
+    let oldPrice = props.oldPrice
     if (props.active) {
         const price = document.getElementById('stockPrice')
+        const change = document.getElementById('changePrice')
         if (props.payload[0] && props.payload[0].payload) {
-            price.innerText = (props.payload[0].payload.high)
+            let currPrice = (props.payload[0].payload.high)
+            price.innerText = currPrice
+            change.innerText = currPrice - oldPrice
         }
         return (
             <div >
