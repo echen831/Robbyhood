@@ -7,21 +7,12 @@ class IntraDayStock extends React.Component {
     constructor(props) {
         super(props) 
 
-        this.state = {
-            dotData: null
-        }
-
-        this.activeDotHandler = this.activeDotHandler.bind(this)
     }
 
 
     
     componentDidMount() {
         this.props.fetchIntraDayStock(this.props.match.params.symbol)
-    }
-
-    activeDotHandler(data) {
-        this.setState({dotData: data})
     }
 
     
@@ -31,7 +22,7 @@ class IntraDayStock extends React.Component {
         let data = []
 
         {for(let i = 0; i < this.props.stock.length; i ++) {
-            if (i % 5 === 0) {
+            if (i % 15 === 0) {
                 data.push(this.props.stock[i])
             }
         }}
@@ -40,6 +31,7 @@ class IntraDayStock extends React.Component {
             <div>
                 <h1>{this.props.match.params.symbol}</h1>
                 <h2 id='stockPrice'>{data[data.length-1].average}</h2>
+                <h2 id='stockChange'></h2>
 
                 <LineChart width={800} 
                             height={400} 
@@ -58,7 +50,7 @@ class IntraDayStock extends React.Component {
                             domain={['dataMin, dataMax']} 
                             tick={false} 
                             axisLine={false}/>
-                    <Tooltip cursor={false} 
+                    <Tooltip 
                             content={<CustomTooltip/>}
                             position={{y: 0}}/>
                 </LineChart>
@@ -71,9 +63,19 @@ class IntraDayStock extends React.Component {
 const CustomTooltip = (props) => {
     if (props.active) {
         const price = document.getElementById('stockPrice')
+        const change = document.getElementById('stockChange')
+
         if (props.payload[0] && props.payload[0].payload) {
-            price.innerText = (props.payload[0].payload.average)
+            let oldPrice = price.innerText
+            let newPrice = props.payload[0].payload.average
+            console.log(oldPrice)
+            console.log(newPrice)
+            price.innerText = newPrice
+            if (oldPrice !== newPrice) {
+                change.innerText = oldPrice - newPrice
+            }
         }
+        
         return (
             <div >
                 <p>{props.label}</p>
