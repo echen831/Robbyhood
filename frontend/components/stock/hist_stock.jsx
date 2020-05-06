@@ -43,19 +43,20 @@ class HistStock extends React.Component {
         return (
             <div>
                 <h1>{this.props.name}</h1>
-                <h2 id='stockPrice'>{close}</h2>
-                <h2 id='changePrice'>{close-open}</h2>
+                <p id='stockPrice'>${close}</p>
+                <p id='changePrice'>{close-open}</p>
 
-                <LineChart width={800} 
-                            height={400} 
-                            data={data} 
-                            margin={{ top: 50, right: 20, bottom: 5, left: 100 }}>
+                <LineChart data={data} 
+                            width={500} 
+                            height={300} 
+                            margin={{ top: 10, right: 0, bottom: 0, left: 0 }}
+                            >
                     <Line type="monotone"
                             connectNulls 
                             dataKey="high" 
                             stroke="#8884d8" 
                             dot={false} />
-                    <XAxis dataKey={this.props.range !== "1d" ? 'date' : 'label'}
+                    <XAxis dataKey={this.props.range === "1d" ? 'label' : 'date'}
                             tick={false} 
                             axisLine={false} 
                             domain={['dataMin, dataMax'] } />
@@ -63,13 +64,25 @@ class HistStock extends React.Component {
                             axisLine={false} 
                             tick={false}/>
                     <Tooltip cursor={false}
-                            position={{y: 10}} 
+                            position={{y: 0}} 
                             content={<CustomTooltip oldPrice = {open} date = {this.props.range === '1d' ? data[0].date : null}/>}/>
                 </LineChart>
             </div>
         )
     };
 };
+
+const setFlux = (num) => {
+    let res = ''
+    let arr = num.split('.')
+    let int = arr[0];
+    let dec = arr[1];
+
+    if (int[0] === '-') {
+        
+    }
+    return res
+}
 
 const CustomTooltip = (props) => {
     let oldPrice = props.oldPrice
@@ -78,12 +91,13 @@ const CustomTooltip = (props) => {
         const change = document.getElementById('changePrice')
         if (props.payload[0] && props.payload[0].payload) {
             let currPrice = (props.payload[0].payload.high)
-            price.innerText = currPrice
-            change.innerText = currPrice - oldPrice
+            price.innerText = `$${currPrice}`
+            let flux = currPrice - oldPrice
+            change.innerText = flux
         }
         return (
             <div >
-                <p>{props.date}</p>
+                {/* <p>{props.date}</p> */}
                 <p>{props.label}</p>
             </div>
         );

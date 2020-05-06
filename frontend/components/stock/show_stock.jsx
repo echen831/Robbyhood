@@ -17,6 +17,7 @@ class Show extends React.Component {
 
     
     render() {
+        const {name, symbol, range} = this.state
         return (
             <div className='body'>
                 <header className='header'>
@@ -27,24 +28,52 @@ class Show extends React.Component {
                         <GreetingContainer />
                     </nav>
                 </header>
-                <div>
+                <marquee>
                     <ul>
-                        <button onClick={()=> this.setState({symbol: 'AAPL', name:'APPLE'})}>Apple</button>
-                        <button onClick={() => this.setState({ symbol: 'AMZN', name:'AMAZON' })}>Amazon</button>
-                        <button onClick={() => this.setState({ symbol: 'CCL' , name: 'CARNIVAL'})}>Carnival</button>
+                        <button onClick={()=> this.setState({
+                                                    symbol: 'AAPL', 
+                                                    name:'APPLE'
+                                                    })}
+                                className={name === 'APPLE' ? 'selected' : ''}
+                            >Apple</button>
+                        <button onClick={() => this.setState({ 
+                                                    symbol: 'AMZN', 
+                                                    name:'AMAZON'
+                                                    })}
+                                className={name === 'AMAZON' ? 'selected' : ''}
+                            >Amazon</button>
+                        <button onClick={() => this.setState({ 
+                                                    symbol: 'CCL', 
+                                                    name: 'CARNIVAL',
+                                                    currStock: 'CARNIVAL'
+                                                    })}
+                                className={name === 'CARNIVAL'? 'selected' : ''}
+                            >Carnival</button>
                     </ul>
+                </marquee>
+                <div className='stock-show'>
 
                     <div>
-                        <HistStock symbol={this.state.symbol} 
-                                    name={this.state.name} 
-                                    range={this.state.range}/>
+                        <HistStock symbol={symbol} 
+                                    name={name} 
+                                    range={range}/>
                     </div>
                     <ul>
-                        <button onClick={() => this.setState({ range: '1d' })}>1 Day</button>
-                        <button onClick={()=> this.setState({range: '5d'})}>1 Week</button>
-                        <button onClick={() => this.setState({ range: '1m' })}>1 Month</button>
-                        <button onClick={() => this.setState({ range: '3m' })}>3 Month</button>
-                        <button onClick={() => this.setState({ range: '1y' })}>1 Year</button>
+                        <button onClick={() => this.setState({ range: '1d' })}
+                            className={ range === '1d' ? 'selected' : ''}
+                        >1D</button>
+                        <button onClick={()=> this.setState({range: '5d'})}
+                            className={range === '5d' ? 'selected' : ''}
+                        >1W</button>
+                        <button onClick={() => this.setState({ range: '1m' })}
+                            className={range === '1m' ? 'selected' : ''}
+                        >1M</button>
+                        <button onClick={() => this.setState({ range: '3m' })}
+                            className={range === '3m' ? 'selected' : ''}
+                        >3M</button>
+                        <button onClick={() => this.setState({ range: '1y' })}
+                            className={range === '1y' ? 'selected' : ''}
+                        >1Y</button>
                     </ul>
                 </div>
             </div>

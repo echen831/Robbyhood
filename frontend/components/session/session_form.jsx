@@ -50,7 +50,9 @@ class SessionForm extends React.Component {
     };
 
     render() {
-        const header = this.props.formType === 'signup' ? 'Sign Up' : 'Sign In';
+        const { formType } = this.props;
+        const { email, password} = this.state;
+        const header = formType === 'signup' ? 'Sign Up' : 'Sign In';
 
         let link;
         if (header === 'Sign Up') {
@@ -83,7 +85,7 @@ class SessionForm extends React.Component {
                             <br/>
                                 <input className='submit-input-box'
                                     type="email" 
-                                    value={this.state.email}
+                                    value={email}
                                     onChange={this.update('email')}
                                     required
                                     />
@@ -92,7 +94,7 @@ class SessionForm extends React.Component {
                             <br/>
                                 <input className='submit-input-box'
                                     type="password"
-                                    value={this.state.password}
+                                    value={password}
                                     onChange={this.update('password')}
                                     required
                                     />
