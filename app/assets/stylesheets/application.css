@@ -131,3 +131,33 @@ button {
 
 
 
+/* Navbar */
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  overflow: hidden;
+}
+
+.nav-dropdown {
+  float: right;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-right: 25px;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
+}
+
+/* Navbar end */

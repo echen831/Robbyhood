@@ -19,7 +19,9 @@ const Home = () => {
                  alt=""
                  className='home-img'
                  />
-
+            <button className='demo-show'>
+                <Link to="/signup">Sign Up</Link>
+            </button>
         </div>
     )
 }

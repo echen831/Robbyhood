@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleDemoLogin = this.handleDemoLogin.bind(this)
         this.demoLogin = this.demoLogin.bind(this)
     }
 
@@ -25,6 +26,14 @@ class SessionForm extends React.Component {
         })
 
     };
+
+    handleDemoLogin(e) {
+        e.preventDefault();
+        const user = Object.assign({}, this.state)
+        this.props.demoLogin(user)
+            .then(() => this.props.history.push('/stocks'))
+
+    }
 
     update(field) {
         return (e) => this.setState({[field]: e.currentTarget.value})
@@ -106,11 +115,11 @@ class SessionForm extends React.Component {
                             <button className='btn-show' type='submit'>{header}</button>
                             <br/>
                         </form>
-                        <form onSubmit={this.handleSubmit}>
+                        <form onSubmit={this.handleDemoLogin}>
                             <button 
                                 type='submit'
                                 onClick={this.demoLogin}
-                                className = {header === 'Sign Up' ? 'demo-hide' : 'demo-show'}>
+                                className = 'demo-show'>
                                 Demo login
                             </button>
                         </form>

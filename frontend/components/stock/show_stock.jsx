@@ -3,6 +3,7 @@ import GreetingContainer from '../greeting/greeting_container'
 import { Link } from 'react-router-dom'
 import IntradayStock from './intraday_stock_container'
 import HistStock from './hist_stock_container'
+import NavBarContainer from '../nav_bar/nav_bar_container'
 
 class Show extends React.Component {
     constructor(props) {
@@ -21,12 +22,13 @@ class Show extends React.Component {
         return (
             <div className='body'>
                 <header className='header'>
-                    <nav className='header-nav'>
+                    <NavBarContainer/>
+                    {/* <nav className='header-nav'>
                         <Link to='/' className='header-logo'>
                             <h2>Robbyhood ➶</h2>
                         </Link>
                         <GreetingContainer />
-                    </nav>
+                    </nav> */}
                 </header>
                 <marquee>
                     <ul>
