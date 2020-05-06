@@ -114,7 +114,7 @@ button {
 
 
 .home-img {
-  margin-left: 65%;
+  margin-left: 55%;
   margin-top: 10%;
   width: 300px;
   height: 300px;
@@ -123,6 +123,7 @@ button {
 .logout-btn {
   border: 1px solid rgb(245, 245, 245);
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .logout-btn:hover {
@@ -134,30 +135,31 @@ button {
 /* Navbar */
 
 .top-nav {
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
   background-color: white;
-  overflow: hidden;
 }
 
 .nav-dropdown {
-  float: right;
-  overflow: hidden;
   margin-top: 10px;
-  margin-right: 25px;
+  margin-left: 950px;
+  cursor: pointer;
+
 }
 
 .nav-dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color:white;
   z-index: 1;
 }
 
+
+
 .nav-dropdown:hover .nav-dropdown-content {
   display: block;
+  margin-top: 10px;
+  margin-right: 200px;
 }
 
 /* Navbar end */
