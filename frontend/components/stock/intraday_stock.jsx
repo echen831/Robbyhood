@@ -33,13 +33,14 @@ class IntraDayStock extends React.Component {
             }
         }}
 
-        let close = 
+        let close = data[data.length-1].average
+        let open = data[0].average
 
         return (
             <div>
                 <h1>{this.props.name}</h1>
-                <h2 id='stockPrice'>{data[data.length-1].average}</h2>
-                <h2 id='stockChange'>0.00</h2>
+                <h2 id='stockPrice'>{close}</h2>
+                <h2 id='changePrice'>{close-open}</h2>
 
                 <LineChart width={800} 
                             height={400} 
@@ -59,7 +60,7 @@ class IntraDayStock extends React.Component {
                             tick={false} 
                             axisLine={false}/>
                     <Tooltip 
-                            content={<CustomTooltip/>}
+                            content={<CustomTooltip oldPrice={open}/>}
                             position={{y: 0}}/>
                 </LineChart>
 
@@ -69,21 +70,17 @@ class IntraDayStock extends React.Component {
 };
 
 const CustomTooltip = (props) => {
-    const price = document.getElementById('stockPrice')
-    const change = document.getElementById('stockChange')
+    let oldPrice = props.oldPrice
     if (props.active) {
-        let oldPrice = price.innerText
-        change.innerText = oldPrice 
 
+        const price = document.getElementById('stockPrice')
+        const change = document.getElementById('changePrice')
+        
         
         if (props.payload[0] && props.payload[0].payload) {
-            let newPrice = props.payload[0].payload.average
-            price.innerText = newPrice
-            console.log('********')
-            console.log(oldPrice)
-            console.log('.......')
-            console.log(newPrice)
-            console.log('--------')
+            let currPrice = (props.payload[0].payload.average)
+            price.innerText = currPrice
+            change.innerText = currPrice - oldPrice
             
         }
         

@@ -8,7 +8,7 @@ const mSTP = (state, ownProps) => {
     return {
         stock: state.entities.stocks[symbol],
         symbol
-         // || [] *lazy assign empty array
+        // || [] *lazy assign empty array
     }
 };
 
