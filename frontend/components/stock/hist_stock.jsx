@@ -16,7 +16,7 @@ class HistStock extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if ((this.props.range !== prevProps.range) || (this.props.symbol !== prevProps.symbol)) {
+        if ((this.props.symbol !== prevProps.symbol) || (this.props.range !== prevProps.range)) {
             this.props.fetchHistStock(this.props.symbol, this.props.range)
         }
     }
@@ -54,7 +54,7 @@ class HistStock extends React.Component {
                             dataKey="high" 
                             stroke="#8884d8" 
                             dot={false} />
-                    <XAxis dataKey="date" 
+                    <XAxis dataKey={this.props.range !== "1d" ? 'date' : 'label'}
                             tick={false} 
                             axisLine={false} 
                             domain={['dataMin, dataMax'] } />
@@ -63,7 +63,7 @@ class HistStock extends React.Component {
                             tick={false}/>
                     <Tooltip cursor={false}
                             position={{y: 10}} 
-                            content={<CustomTooltip oldPrice = {open}/>}/>
+                            content={<CustomTooltip oldPrice = {open} date = {this.props.range === '1d' ? data[0].date : null}/>}/>
                 </LineChart>
             </div>
         )
@@ -82,6 +82,7 @@ const CustomTooltip = (props) => {
         }
         return (
             <div >
+                <p>{props.date}</p>
                 <p>{props.label}</p>
             </div>
         );

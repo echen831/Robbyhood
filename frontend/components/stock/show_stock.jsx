@@ -27,14 +27,12 @@ class Show extends React.Component {
                         <GreetingContainer />
                     </nav>
                 </header>
+                <div>
                     <ul>
                         <button onClick={()=> this.setState({symbol: 'AAPL', name:'APPLE'})}>Apple</button>
                         <button onClick={() => this.setState({ symbol: 'AMZN', name:'AMAZON' })}>Amazon</button>
                         <button onClick={() => this.setState({ symbol: 'CCL' , name: 'CARNIVAL'})}>Carnival</button>
                     </ul>
-                    {/* <div>
-                        <IntradayStock symbol={this.state.symbol} name={this.state.name}/>
-                    </div> */}
 
                     <div>
                         <HistStock symbol={this.state.symbol} 
@@ -42,12 +40,13 @@ class Show extends React.Component {
                                     range={this.state.range}/>
                     </div>
                     <ul>
-                        <button onClick={() => this.setState({ range: '1d' })}>Day</button>
-                        <button onClick={()=> this.setState({range: '5d'})}>Week</button>
-                        <button onClick={() => this.setState({ range: '1m' })}>Month</button>
+                        <button onClick={() => this.setState({ range: '1d' })}>1 Day</button>
+                        <button onClick={()=> this.setState({range: '5d'})}>1 Week</button>
+                        <button onClick={() => this.setState({ range: '1m' })}>1 Month</button>
                         <button onClick={() => this.setState({ range: '3m' })}>3 Month</button>
-                        <button onClick={() => this.setState({ range: '1y' })}>Year</button>
+                        <button onClick={() => this.setState({ range: '1y' })}>1 Year</button>
                     </ul>
+                </div>
             </div>
         )
     }
