@@ -9,6 +9,7 @@ class HistStock extends React.Component {
         this.setFlux = this.setFlux.bind(this)
         this.setFluxPercent = this.setFluxPercent.bind(this)
         this.addSymbol = this.addSymbol.bind(this)
+        this.setPrice = this.setPrice.bind(this)
     }
 
 
@@ -34,6 +35,26 @@ class HistStock extends React.Component {
         }
         return res
     }
+
+    setPrice(data) {
+        if (data) {
+
+            let arr = data.toString().split('.')
+            let res = arr[1]
+    
+            if (!res) {
+                res = '00'
+            } else if (res.length == 1) {
+                res += 0
+            } else if (res.length > 2) {
+                res = res.slice(0,2)
+            }
+    
+            return arr[0] + '.' + res
+        }
+    }
+
+
 
     setFlux(num){
         let res = ''
@@ -70,7 +91,7 @@ class HistStock extends React.Component {
 
 
     render () {
-        const { range, name, histData } = this.props
+        const { range, name, symbol, histData } = this.props
         if (!this.props.histData) return null;
         // let data = this.props.histData
         let data;
@@ -80,8 +101,8 @@ class HistStock extends React.Component {
         let flux = this.setFlux(close - open)
         return (
             <div>
-                <h1>{name}</h1>
-                <p id='stockPrice'>${close}</p>
+                <h1>{name ? name : symbol}</h1>
+                <p id='stockPrice'>${this.setPrice(close)}</p>
                 <div className='flux'>
                     <p id='changePrice'>{this.addSymbol(flux)}</p>
                     <p id='fluxPercent'>{this.setFluxPercent(close,open)}</p>
@@ -113,6 +134,7 @@ class HistStock extends React.Component {
 
                             content={<CustomTooltip 
                                         oldPrice = {open}
+                                        setPrice = {this.setPrice}
                                         setFlux = {this.setFlux}
                                         addSymbol = {this.addSymbol}
                                         setFluxPercent = {this.setFluxPercent}
@@ -135,7 +157,7 @@ const CustomTooltip = (props) => {
         if (props.payload[0] && props.payload[0].payload) {
             let currPrice = (props.payload[0].payload.high)
             let flux = props.setFlux(currPrice - oldPrice)
-            price.innerText = `$${currPrice}`
+            price.innerText = `$${props.setPrice(currPrice)}`
             change.innerText = props.addSymbol(flux)
             update.innerText = props.setFluxPercent(currPrice, oldPrice)
         }

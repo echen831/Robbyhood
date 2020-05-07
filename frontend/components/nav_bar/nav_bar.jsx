@@ -26,20 +26,32 @@ class NavBar extends React.Component {
                 <Link to='/' className='header-logo'>
                     <h2>Robbyhood ➶</h2>
                 </Link>
-                <div className='search-bar'>
-                        <input type="text" 
-                                value={this.state.symbol}
-                                onChange={this.update('symbol')}
-                                className='search-input'
+   
+                <input type="text" 
+                        value={this.state.symbol}
+                        onChange={this.update('symbol')}
+                        className='search-input'
                                 />
-                        <Link to={`/stocks/${this.state.symbol}/1d`}>Go</Link>
-                </div>
-                
-                <div className='nav-dropdown'>
-                    <h2 className='nav-dropdown-btn'>Account</h2>
-                    <div className='nav-dropdown-content'>
-                        <p>{currentUser.email}</p>
-                        <p onClick={logout} className='logout-btn'> Log Out</p>
+                <Link to={`/stocks/${this.state.symbol}/1d`}>
+                            <button className= 'logout-btn'>Go</button>
+                </Link>
+
+
+                <div className='right-nav'>
+                    <div>Free Stocks</div>
+                    <div>Portfolio</div>
+                    <div>Cash</div>
+                    <div>Messages</div>
+                    
+                    <div className='nav-dropdown'>
+                        <h2 className='nav-dropdown-btn'>Account</h2>
+                        <div className='nav-dropdown-content'>
+                            <p>{currentUser.email}</p>
+                            <p>Account</p>
+                            <p>Banking</p>
+                            <p>History</p>
+                            <p onClick={logout}> Log Out</p>
+                        </div>
                     </div>
                 </div>
 

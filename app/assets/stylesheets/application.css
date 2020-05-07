@@ -140,9 +140,18 @@ button {
   background-color: white;
 }
 
-.nav-dropdown {
+.right-nav {
+  display: flex;
+  justify-content: space-between;
   margin-top: 10px;
-  margin-left: 750px;
+  margin-left: 450px;
+}
+
+.right-nav div {
+  margin-right: 20px;
+}
+
+.nav-dropdown {
   cursor: pointer;
 
 }
@@ -152,6 +161,10 @@ button {
   position: absolute;
   background-color:white;
   z-index: 1;
+}
+
+.nav-dropdown-content p:hover {
+  background-color: lightcyan
 }
 
 .nav-dropdown:hover .nav-dropdown-content {
@@ -168,16 +181,11 @@ button {
   box-sizing: border-box;
   outline-style: none;
   box-shadow:none;
-  margin-top: 8px;
+  margin-top: 9px;
   height: 20px;
   width: 150px;
 }
 
-/* .search-input:hover {
-    box-sizing: content-box;
-    background-color: white;
-    border: 1px solid rgb(245, 245, 245);
-} */
 
 .search-input:focus {
     box-sizing: border-box;
