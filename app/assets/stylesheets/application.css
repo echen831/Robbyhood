@@ -142,7 +142,7 @@ button {
 
 .nav-dropdown {
   margin-top: 10px;
-  margin-left: 950px;
+  margin-left: 750px;
   cursor: pointer;
 
 }
@@ -154,12 +154,38 @@ button {
   z-index: 1;
 }
 
-
-
 .nav-dropdown:hover .nav-dropdown-content {
   display: block;
   margin-top: 10px;
   margin-right: 200px;
 }
+
+.search-bar {
+  display: flex;
+}
+
+.search-input {
+  box-sizing: border-box;
+  outline-style: none;
+  box-shadow:none;
+  margin-top: 8px;
+  height: 20px;
+  width: 150px;
+}
+
+/* .search-input:hover {
+    box-sizing: content-box;
+    background-color: white;
+    border: 1px solid rgb(245, 245, 245);
+} */
+
+.search-input:focus {
+    box-sizing: border-box;
+    outline-style:none;
+    box-shadow:none;
+    border-color:transparent;
+    border: 1px solid rgb(66, 207, 160);
+}
+
 
 /* Navbar end */

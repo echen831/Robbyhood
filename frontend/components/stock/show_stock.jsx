@@ -23,12 +23,6 @@ class Show extends React.Component {
             <div className='body'>
                 <header className='header'>
                     <NavBarContainer/>
-                    {/* <nav className='header-nav'>
-                        <Link to='/' className='header-logo'>
-                            <h2>Robbyhood ➶</h2>
-                        </Link>
-                        <GreetingContainer />
-                    </nav> */}
                 </header>
                 <marquee>
                     <ul>

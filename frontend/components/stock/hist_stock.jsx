@@ -90,7 +90,8 @@ class HistStock extends React.Component {
                 <LineChart data={data} 
                             width={500} 
                             height={300} 
-                            margin={{ top: 10, right: 0, bottom: 0, left: 0 }}
+                            className='chart'
+                            // margin={{ top: 10, right: 0, bottom: 0, left: 0 }}
                             >
                     <Line type="monotone"
                             connectNulls 
@@ -108,7 +109,8 @@ class HistStock extends React.Component {
                             tick={false}
                             />
                     <Tooltip cursor={false}
-                            position={{y: 0}} 
+                            position={{y: -20}}
+
                             content={<CustomTooltip 
                                         oldPrice = {open}
                                         setFlux = {this.setFlux}
