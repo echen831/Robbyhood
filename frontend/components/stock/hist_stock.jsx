@@ -101,7 +101,7 @@ class HistStock extends React.Component {
         let flux = this.setFlux(close - open)
         return (
             <div>
-                <h1>{name ? name : symbol}</h1>
+                <h1 className='stock-name'>{name ? name : symbol}</h1>
                 <p id='stockPrice'>${this.setPrice(close)}</p>
                 <div className='flux'>
                     <p id='changePrice'>{this.addSymbol(flux)}</p>
@@ -116,8 +116,9 @@ class HistStock extends React.Component {
                             >
                     <Line type="monotone"
                             connectNulls 
-                            dataKey="high" 
-                            stroke="#8884d8" 
+                            dataKey="high"
+                            strokeWidth={2} 
+                            stroke="#5ae6b0" 
                             dot={false} 
                             />
                     <XAxis dataKey={range === "1d" ? 'label' : 'date'}
@@ -129,9 +130,8 @@ class HistStock extends React.Component {
                             axisLine={false} 
                             tick={false}
                             />
-                    <Tooltip cursor={false}
+                    <Tooltip cursor={true}
                             position={{y: -20}}
-
                             content={<CustomTooltip 
                                         oldPrice = {open}
                                         setPrice = {this.setPrice}
@@ -141,6 +141,8 @@ class HistStock extends React.Component {
                                         date = {range === '1d' ? data[0].date : null}/>}
                             />
                 </LineChart>
+
+
             </div>
         )
     };

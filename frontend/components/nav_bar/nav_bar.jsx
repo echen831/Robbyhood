@@ -45,13 +45,13 @@ class NavBar extends React.Component {
                     
                     <div className='nav-dropdown'>
                         <h2 className='nav-dropdown-btn'>Account</h2>
-                        <div className='nav-dropdown-content'>
+                        <span className='nav-dropdown-content'>
                             <p>{currentUser.email}</p>
                             <p>Account</p>
                             <p>Banking</p>
                             <p>History</p>
                             <p onClick={logout}> Log Out</p>
-                        </div>
+                        </span>
                     </div>
                 </div>
 

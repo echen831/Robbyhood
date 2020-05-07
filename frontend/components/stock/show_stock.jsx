@@ -20,7 +20,7 @@ class Show extends React.Component {
     render() {
         const {name, symbol, range} = this.state
         return (
-            <div className='body'>
+            <div className='show-body'>
                 <header className='header'>
                     <NavBarContainer/>
                 </header>
@@ -54,7 +54,7 @@ class Show extends React.Component {
                                     name={name} 
                                     range={range}/>
                     </div>
-                    <ul>
+                    <ul className='timeline-btn'>
                         <button onClick={() => this.setState({ range: '1d' })}
                             className={ range === '1d' ? 'selected' : ''}
                         >1D</button>
