@@ -7,7 +7,7 @@ class NavBar extends React.Component {
         const {currentUser, logout} = this.props
         return (
             <div className='top-nav'>
-                <Link to='/stocks' className='header-logo'>
+                <Link to='/' className='header-logo'>
                     <h2>Robbyhood ➶</h2>
                 </Link>
                 <div className='nav-dropdown'>

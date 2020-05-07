@@ -8,6 +8,7 @@ class HistStock extends React.Component {
         this.filterData = this.filterData.bind(this)
         this.setFlux = this.setFlux.bind(this)
         this.setFluxPercent = this.setFluxPercent.bind(this)
+        this.addSymbol = this.addSymbol.bind(this)
     }
 
 
@@ -40,30 +41,31 @@ class HistStock extends React.Component {
         let int = arr[0];
         let dec = arr[1];
 
-        if (int[0] !== '-') {
-            res += "+" + int + "."
-        } else {
-            res += int + '.'
-        }
+        int[0] !== '-' ? res += "+" + int + "." : res += int + '.'
+        
 
         if (!dec) {
             res += '00'
         } else if (dec.length === 1) {
             res += '0' + dec
-        } else if (dec.length > 2) {
-            res += dec.slice(0, 2)
         } else if (dec.length === 2) {
             res += dec
+        } else if (dec.length > 2) {
+            res += dec.slice(0, 2)
         }
 
         return res
+    }
+
+    addSymbol(flux) {
+        return flux[0] + '$' + flux.slice(1)
     }
 
     setFluxPercent(oldPrice, newPrice) {
         let diff = oldPrice - newPrice
         let per = diff/oldPrice
         let res = per * 100
-        return this.setFlux(res) + '%'
+        return '(' + this.setFlux(res) + '%)'
     }  
 
 
@@ -75,12 +77,15 @@ class HistStock extends React.Component {
         range !== '1d' ? data = histData : data = this.filterData(histData)
         let close = data[data.length-1].high
         let open = data[0].high
+        let flux = this.setFlux(close - open)
         return (
             <div>
                 <h1>{name}</h1>
                 <p id='stockPrice'>${close}</p>
-                <p id='changePrice'>{this.setFlux(close-open)}</p>
-                <p id='fluxPercent'>{this.setFluxPercent(close,open)}</p>
+                <div className='flux'>
+                    <p id='changePrice'>{this.addSymbol(flux)}</p>
+                    <p id='fluxPercent'>{this.setFluxPercent(close,open)}</p>
+                </div>
 
                 <LineChart data={data} 
                             width={500} 
@@ -107,6 +112,7 @@ class HistStock extends React.Component {
                             content={<CustomTooltip 
                                         oldPrice = {open}
                                         setFlux = {this.setFlux}
+                                        addSymbol = {this.addSymbol}
                                         setFluxPercent = {this.setFluxPercent}
                                         date = {range === '1d' ? data[0].date : null}/>}
                             />
@@ -126,9 +132,9 @@ const CustomTooltip = (props) => {
         const update = document.getElementById('fluxPercent')
         if (props.payload[0] && props.payload[0].payload) {
             let currPrice = (props.payload[0].payload.high)
+            let flux = props.setFlux(currPrice - oldPrice)
             price.innerText = `$${currPrice}`
-            let flux = currPrice - oldPrice
-            change.innerText = props.setFlux(flux)
+            change.innerText = props.addSymbol(flux)
             update.innerText = props.setFluxPercent(currPrice, oldPrice)
         }
         return (
