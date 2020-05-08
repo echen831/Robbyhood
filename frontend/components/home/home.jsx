@@ -21,7 +21,7 @@ const Home = () => {
                     alt=""
                     className='home-img'
                     />
-                <button className='demo-show'>
+                <button id='home-btn'>
                     <Link to="/signup">Sign Up</Link>
                 </button>
             </div>
