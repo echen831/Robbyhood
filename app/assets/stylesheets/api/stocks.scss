@@ -28,6 +28,21 @@
     font-weight: bold;
 }
 
+.show-body-dark .nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  right: 10px;
+  border: 1px solid lightgrey ;
+  color: white;
+  z-index: 1;
+}
+
+.show-body-dark .nav-dropdown-content p:hover {
+  background-color: lightcyan;
+  color: black
+}
+
 /* Dark Mode */
 
 .stock-show {
@@ -40,7 +55,6 @@
 .show-body button {
     font-size: small;
 }
-
 
 marquee ul button {
     border: 1px solid lightgrey;
