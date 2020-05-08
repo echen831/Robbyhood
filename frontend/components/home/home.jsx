@@ -16,7 +16,7 @@ const Home = () => {
             </header>
             <div className='home-body'>
                 <div className='home-header'> It's Time to do Money</div>
-                <p className='home-slogan'> Robbyhood, a pioneer of commission free investing,gives you more ways to make your money work harder</p>
+                <p className='home-slogan'> Robbyhood, a clone of Robinhood, is a website that allows people to invest in stocks without fees.</p>
                 <img src="https://cdn.robinhood.com/assets/robinhood/brand/0ac83d822d7f714396eebe65b54b2fa5-1x.png" 
                     alt=""
                     className='home-img'
