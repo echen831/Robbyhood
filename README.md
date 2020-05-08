@@ -12,6 +12,7 @@ Please check it out [here](https://robbyhood.herokuapp.com/).
 * Javascript
 * HTML/CSS
 * Recharts
+* IEX API
 
 ## Features:
 
