@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Robbyhood is a single page app clone of [Robinhood](https://robinhood.com/).
 
 Things you may want to cover:
 
