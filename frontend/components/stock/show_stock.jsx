@@ -34,12 +34,6 @@ class Show extends React.Component {
                                 className={name === 'APPLE' ? 'selected' : ''}
                             >Apple</button>
                         <button onClick={() => this.setState({ 
-                                                    symbol: 'AMZN', 
-                                                    name:'AMAZON'
-                                                    })}
-                                className={name === 'AMAZON' ? 'selected' : ''}
-                            >Amazon</button>
-                        <button onClick={() => this.setState({ 
                                                     symbol: 'CCL', 
                                                     name: 'CARNIVAL',
                                                     })}
