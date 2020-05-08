@@ -25,6 +25,12 @@ class SessionForm extends React.Component {
             password: '123456'
         })
 
+        // let speed = 85
+        // for(let i = 0; i < this.state.email.length; i ++) {
+        //     document.getElementById('email').innerHTML += this.state.email.charAt(i);
+        //     setTimeout(demoLogin, speed)
+        // }
+
     };
 
     handleDemoLogin(e) {
@@ -72,14 +78,6 @@ class SessionForm extends React.Component {
 
         return (
             <div className='body'>
-                {/* <header className='header'>
-                    <nav className='header-nav'>
-                        <Link to='/' className='header-logo'>
-                            <h2>Robbyhood ➶</h2>
-                        </Link>
-                        <GreetingContainer />
-                    </nav>
-                </header> */}
                 <div className='form-body'>
                     <div className='submit-image-body'> 
                         <h1></h1>
@@ -87,12 +85,11 @@ class SessionForm extends React.Component {
                     <div className='submit-form-body'>
                         <form onSubmit={this.handleSubmit} className='form'>
                             <h1 className='form-header'>Welcome to Robbyhood</h1>
-                            <br/>
-                            {/* <h2>Please {header} or {link}</h2>  */}
-                            <br/>
+
                             <label className='submit-input-label'>Email</label>
                             <br/>
                                 <input className='submit-input-box'
+                                    id='email'
                                     type="email" 
                                     value={email}
                                     onChange={this.update('email')}
@@ -102,15 +99,13 @@ class SessionForm extends React.Component {
                             <label className='submit-input-label'>Password</label>
                             <br/>
                                 <input className='submit-input-box'
+                                    id='password'
                                     type="password"
                                     value={password}
                                     onChange={this.update('password')}
                                     required
                                     />
                             <br/>
-                            {/* <button className={header === 'Sign In' ? 'demo-hide' : 'btn-show'}>
-                                <Link to="/login"> Test with demo login</Link>
-                            </button> */}
                             <ul>{this.renderErrors()}</ul>
                             <button className='btn-show' type='submit'>{header}</button>
                             <br/>

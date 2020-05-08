@@ -106,6 +106,7 @@ class HistStock extends React.Component {
                 <div className='flux'>
                     <p id='changePrice'>{this.addSymbol(flux)}</p>
                     <p id='fluxPercent'>{this.setFluxPercent(close,open)}</p>
+                    {/* <p id='fluxInfo'>{range === '1d' ? 'Today' : ''}</p> */}
                 </div>
 
                 <LineChart data={data} 
