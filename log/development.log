@@ -25846,3 +25846,451 @@ Processing by Api::SessionsController#destroy as JSON
 Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.1ms)
 
 
+Started GET "/" for ::1 at 2020-05-08 07:50:35 -0700
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ericchen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 2655ms (Views: 2652.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-05-08 07:50:47 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@hotmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (38.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (8.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@hotmail.com"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (3.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "I6nGJTA7_4pRQWLVNiHMNg"], ["updated_at", "2020-05-08 14:50:47.554036"], ["id", 6]]
+  ↳ app/models/user.rb:30
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 467ms (Views: 8.4ms | ActiveRecord: 148.1ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 07:52:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "I6nGJTA7_4pRQWLVNiHMNg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 07:58:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "I6nGJTA7_4pRQWLVNiHMNg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 844ms (Views: 841.3ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-05-08 07:58:12 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "I6nGJTA7_4pRQWLVNiHMNg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@hotmail.com"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "0ljC-VuHONgnsFJtv2cdIw"], ["updated_at", "2020-05-08 14:58:12.290856"], ["id", 6]]
+  ↳ app/models/user.rb:30
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 07:58:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 07:58:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 868ms (Views: 866.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 07:58:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:03:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 798ms (Views: 783.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:04:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 771ms (Views: 769.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:05:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 783ms (Views: 781.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-05-08 08:05:42 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@hotmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@hotmail.com"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "diI80cI5XICc524wFa0wxA"], ["updated_at", "2020-05-08 15:05:42.339442"], ["id", 6]]
+  ↳ app/models/user.rb:30
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 305ms (Views: 7.0ms | ActiveRecord: 9.9ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-05-08 08:07:15 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "diI80cI5XICc524wFa0wxA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@hotmail.com"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Xib01n-NT0-48vS13y6p9w"], ["updated_at", "2020-05-08 15:07:15.516251"], ["id", 6]]
+  ↳ app/models/user.rb:30
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 10.2ms)
+
+
+Started POST "/api/session" for ::1 at 2020-05-08 08:07:20 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@hotmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@hotmail.com"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["updated_at", "2020-05-08 15:07:20.570999"], ["id", 6]]
+  ↳ app/models/user.rb:30
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 341ms (Views: 9.0ms | ActiveRecord: 42.1ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:10:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 95ms (Views: 93.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:10:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 124ms (Views: 122.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:13:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:13:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:15:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 94ms (Views: 90.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:16:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 830ms (Views: 827.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:17:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 65ms (Views: 63.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:18:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 89ms (Views: 86.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:18:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 99ms (Views: 97.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:21:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 107ms (Views: 104.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:22:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 106ms (Views: 104.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:22:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 109ms (Views: 107.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:22:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 113ms (Views: 111.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:24:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (1.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 109ms (Views: 106.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:25:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 117ms (Views: 113.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:25:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:25:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 97ms (Views: 94.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:25:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 105ms (Views: 103.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:26:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 115ms (Views: 112.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:34:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 848ms (Views: 843.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:40:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 1033ms (Views: 1027.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:43:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 1116ms (Views: 1113.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:46:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 155ms (Views: 150.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:51:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 109ms (Views: 105.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:51:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 880ms (Views: 877.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:55:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 137ms (Views: 133.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:56:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 121ms (Views: 119.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:56:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 133ms (Views: 131.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-08 08:57:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5QUICUac0pfUpfKoq5zXAw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 121ms (Views: 118.5ms | ActiveRecord: 0.4ms)
+
+

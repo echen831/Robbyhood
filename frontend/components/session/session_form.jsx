@@ -25,12 +25,6 @@ class SessionForm extends React.Component {
             password: '123456'
         })
 
-        // let speed = 85
-        // for(let i = 0; i < this.state.email.length; i ++) {
-        //     document.getElementById('email').innerHTML += this.state.email.charAt(i);
-        //     setTimeout(demoLogin, speed)
-        // }
-
     };
 
     handleDemoLogin(e) {

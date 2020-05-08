@@ -11,7 +11,8 @@ class Show extends React.Component {
         this.state = {
             name: 'APPLE',
             symbol: 'AAPL',
-            range: '1d'
+            range: '1d',
+            dark: false
         }
     }
 
@@ -20,7 +21,7 @@ class Show extends React.Component {
     render() {
         const {name, symbol, range} = this.state
         return (
-            <div className='show-body'>
+            <div className= {!this.state.dark ? 'show-body' : 'show-body-dark'}>
                 <header className='header'>
                     <NavBarContainer/>
                 </header>
@@ -45,6 +46,10 @@ class Show extends React.Component {
                                                     })}
                                 className={name === 'CARNIVAL'? 'selected' : ''}
                             >Carnival</button>
+                        <button onClick={() => this.setState({
+                                                    dark: !this.state.dark
+                                                    })}
+                        >{this.state.dark ? 'Light' : 'Dark'}</button>
                     </ul>
                 </marquee>
                 <div className='stock-show'>
@@ -54,7 +59,7 @@ class Show extends React.Component {
                                     name={name} 
                                     range={range}/>
                     </div>
-                    <ul className='timeline-btn'>
+                    <ul >
                         <button onClick={() => this.setState({ range: '1d' })}
                             className={ range === '1d' ? 'selected' : ''}
                         >1D</button>

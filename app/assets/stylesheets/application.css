@@ -53,19 +53,19 @@ input[type="submit"] {
   display: block;
   width: 100%;
   height: auto;
-}
+} */
 
-input[type="password"],
+/* input[type="password"],
 input[type="email"],
 input[type="text"],
 input[type="submit"],
 textarea,
 button {
-  /*
+  
   Get rid of native styling. Read more here:
   http://css-tricks.com/almanac/properties/a/appearance/
-  */
-  /* -webkit-appearance: none;
+ 
+  -webkit-appearance: none;
   -moz-appearance: none;
 } */
 
@@ -80,9 +80,6 @@ button {
   height: 649px;
 }
 
-.header {
-  background: white;
-}
 
 .header a {
   display: block;
@@ -165,85 +162,3 @@ button {
 .logout-btn:hover {
   background-color: rgb(80, 192, 155);
 }
-
-
-
-/* Navbar */
-
-.top-nav {
-  display: inline-flex;
-  justify-content: space-between;
-  background-color: white;
-}
-
-.right-nav {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  margin-left: 475px;
-}
-
-.right-nav div {
-  margin-right: 20px;
-}
-
-.right-nav div:hover {
-  color:  rgb(66, 207, 160);
-  cursor: pointer;
-}
-
-.nav-dropdown {
-  cursor: pointer;
-  position: relative;
-}
-
-.nav-dropdown-content {
-  display: none;
-  position: absolute;
-  right: 10px;
-  border: 1px solid lightgrey ;
-  color: black;
-  z-index: 1;
-}
-
-.nav-dropdown-content p {
-  padding: 5px;
-  margin-bottom: 5px;
-}
-
-.nav-dropdown-content p:hover {
-  background-color: lightcyan;
-}
-
-.nav-dropdown:hover .nav-dropdown-content {
-  display: block;
-  padding: 2px;
-  margin-top: 10px;
-}
-
-
-.search-bar {
-  display: flex;
-}
-
-.search-input {
-  text-transform: uppercase;
-  box-sizing: border-box;
-  outline-style: none;
-  box-shadow:none;
-  margin-top: 9px;
-  height: 20px;
-  width: 150px;
-}
-
-
-.search-input:focus {
-    box-sizing: border-box;
-    outline-style:none;
-    box-shadow:none;
-    border-color:transparent;
-    border: 1px solid rgb(66, 207, 160);
-}
-
-
-/* Navbar end */
