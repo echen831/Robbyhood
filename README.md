@@ -13,22 +13,45 @@ Please check it out [here](https://robbyhood.herokuapp.com/).
 * HTML/CSS
 * Recharts
 
-Things you may want to cover:
+## Features:
 
-* Ruby version
+### Secure User Sign-up/Login:
 
-* System dependencies
+* Secure sign up and sign in using BCrypt.
+* Non logged in users are not able to go to stocks or profile pages with Protected Routes.
 
-* Configuration
+### User Portfolio Page:
 
-* Database creation
+### Stock Show Page:
 
-* Database initialization
+Users are able to search and see stocks from different timeframes.
 
-* How to run the test suite
+#### Sample Code:
 
-* Services (job queues, cache servers, search engines, etc.)
+The following code snippet shows use of Recharts Custom Tool Tip function:
+```
+const CustomTooltip = (props) => {
+    let oldPrice = props.oldPrice
+    if (props.active) {
+        const price = document.getElementById('stockPrice')
+        const change = document.getElementById('changePrice')
+        const update = document.getElementById('fluxPercent')
+        if (props.payload[0] && props.payload[0].payload) {
+            let currPrice = (props.payload[0].payload.high)
+            let flux = props.setFlux(currPrice - oldPrice)
+            price.innerText = `$${props.setPrice(currPrice)}`
+            change.innerText = props.addSymbol(flux)
+            update.innerText = props.setFluxPercent(currPrice, oldPrice)
+        }
+        return (
+            <div >
+                {/* <p>{props.date}</p> */}
+                <p>{props.label}</p>
+            </div>
+        );
+    }
 
-* Deployment instructions
+    return null;
+};
 
-* ...
+```
