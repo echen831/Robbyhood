@@ -29,6 +29,10 @@ Users are able to search and see stocks from different timeframes.
 
 <img src='app/assets/images/show_page_1.png' width='600' height='375' >
 
+Dark mode if white background is too bright.
+
+<img src='app/assets/images/show_page_2.png' width='600' height='375' >
+
 #### Sample Code:
 
 The following code snippet shows use of Recharts Custom Tool Tip function:
