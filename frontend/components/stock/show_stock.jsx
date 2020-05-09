@@ -26,38 +26,40 @@ class Show extends React.Component {
                     <NavBarContainer/>
                 </header>
                 <marquee>
+                    <button onClick={() => this.setState({
+                        dark: !this.state.dark
+                    })}
+                    >{this.state.dark ? 'Light' : 'Dark'}</button>
+                </marquee>
+                <div className='stock-bar'>
                     <ul>
-                        <button onClick={()=> this.setState({
+                        <span onClick={()=> this.setState({
                                                     symbol: 'AAPL', 
                                                     name:'APPLE'
                                                     })}
                                 className={name === 'APPLE' ? 'selected' : ''}
-                            >Apple</button>
-                        <button onClick={() => this.setState({ 
+                            >Apple</span>
+                        <span onClick={() => this.setState({ 
                                                     symbol: 'CCL', 
                                                     name: 'CARNIVAL',
                                                     })}
                                 className={name === 'CARNIVAL'? 'selected' : ''}
-                            >Carnival</button>
-                        <button onClick={() => this.setState({
+                            >Carnival</span>
+                        <span onClick={() => this.setState({
                             symbol: 'MSFT',
                             name: 'MICROSOFT',
                         })}
                             className={name === 'MICROSOFT' ? 'selected' : ''}
-                        >Microsoft</button>
-                        <button onClick={() => this.setState({
+                        >Microsoft</span>
+                        <span onClick={() => this.setState({
                             symbol: 'TSLA',
                             name: 'TESLA',
                             currStock: 'TESLA'
                         })}
                             className={name === 'TESLA' ? 'selected' : ''}
-                        >Tesla</button>
-                        <button onClick={() => this.setState({
-                                                    dark: !this.state.dark
-                                                    })}
-                        >{this.state.dark ? 'Light' : 'Dark'}</button>
+                        >Tesla</span>
                     </ul>
-                </marquee>
+                </div>
                 <div className='stock-show'>
 
                     <div>
