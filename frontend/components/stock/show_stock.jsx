@@ -1,9 +1,15 @@
 import React from 'react';
-import GreetingContainer from '../greeting/greeting_container'
 import { Link } from 'react-router-dom'
-import IntradayStock from './intraday_stock_container'
 import HistStock from './hist_stock_container'
-import NavBarContainer from '../nav_bar/nav_bar_container'
+
+const stocks = [
+    {name: 'APPLE', symbol: 'AAPL'},
+    {name: 'CARNIVAL', symbol: 'CCL'},
+    {name: 'MICROSOFT', symbol: 'MSFT'},
+    {name: 'TESLA', symbol: 'TSLA'}
+]
+
+
 
 class Show extends React.Component {
     constructor(props) {
@@ -12,52 +18,80 @@ class Show extends React.Component {
             name: 'APPLE',
             symbol: 'AAPL',
             range: '1d',
+            search: '',
             dark: false
         }
+        
+        this.update = this.update.bind(this)
     }
 
 
+
+    update(field) {
+        debugger
+        return (e) => this.setState({ [field]: e.currentTarget.value })
+    };
+
     
     render() {
-        const {name, symbol, range} = this.state
+        const {name, symbol, range} = this.state;
+        const { currentUser, logout } = this.props
         return (
             <div className= {!this.state.dark ? 'show-body' : 'show-body-dark'}>
                 <header className='header'>
-                    <NavBarContainer/>
+                    <div className='top-nav'>
+                        <Link to='/' className='header-logo'>
+                            <h2>Robbyhood ➶</h2>
+                        </Link>
+
+                        <input type="text"
+                            value={this.state.search}
+                            onChange={this.update('search')}
+                            className='search-input'
+                        />
+                        <Link to={`/stocks/${this.state.search}/1d`}>
+                            <button className='logout-btn'>Go</button>
+                        </Link>
+
+
+                        <div className='right-nav'>
+                            <div>Free Stocks</div>
+                            <div>Portfolio</div>
+                            <div>Cash</div>
+                            <div>Messages</div>
+
+                            <div className='nav-dropdown'>
+                                <h2 className='nav-dropdown-btn'>Account</h2>
+                                <span className='nav-dropdown-content'>
+                                    <p>{currentUser.email}</p>
+                                    <p>Account</p>
+                                    <p>Banking</p>
+                                    <p>History</p>
+                                    <p onClick={() => this.setState({
+                                        dark: !this.state.dark
+                                        })}
+                                    >{this.state.dark ? 'Light' : 'Dark'}</p>
+                                    <p onClick={logout}> Log Out</p>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
                 </header>
-                <marquee>
-                    <button onClick={() => this.setState({
-                        dark: !this.state.dark
-                    })}
-                    >{this.state.dark ? 'Light' : 'Dark'}</button>
-                </marquee>
                 <div className='stock-bar'>
+                    <h1 className='stock-bar-header'>Stocks</h1>
                     <ul>
-                        <span onClick={()=> this.setState({
-                                                    symbol: 'AAPL', 
-                                                    name:'APPLE'
-                                                    })}
-                                className={name === 'APPLE' ? 'selected' : ''}
-                            >Apple</span>
-                        <span onClick={() => this.setState({ 
-                                                    symbol: 'CCL', 
-                                                    name: 'CARNIVAL',
-                                                    })}
-                                className={name === 'CARNIVAL'? 'selected' : ''}
-                            >Carnival</span>
-                        <span onClick={() => this.setState({
-                            symbol: 'MSFT',
-                            name: 'MICROSOFT',
-                        })}
-                            className={name === 'MICROSOFT' ? 'selected' : ''}
-                        >Microsoft</span>
-                        <span onClick={() => this.setState({
-                            symbol: 'TSLA',
-                            name: 'TESLA',
-                            currStock: 'TESLA'
-                        })}
-                            className={name === 'TESLA' ? 'selected' : ''}
-                        >Tesla</span>
+
+                        {stocks.map((stock, idx) => (
+                            <span onClick={() => this.setState({
+                                symbol: stock.symbol,
+                                name: stock.name
+                            })}
+                                className={name === stock.name ? 'selected' : ''}
+                                key={idx}
+                           >{stock.name}</span>
+                        ))}
+        
                     </ul>
                 </div>
                 <div className='stock-show'>

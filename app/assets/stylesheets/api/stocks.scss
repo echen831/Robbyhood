@@ -22,6 +22,11 @@
     color: white;
 }
 
+.show-body-dark ul button{
+    background-color: black;
+    color: white;
+}
+
 .show-body-dark .selected {
     color: rgb(66, 207, 160);
     text-decoration: underline;
@@ -50,28 +55,43 @@
 .stock-bar {
   display: block;
   position: absolute;
-  border: 1px solid black; 
+  box-shadow: 2px 2px 4px 5px #ccc;
   margin-left: 800px;
-  margin-top: 40px;
+  margin-top: 80px;
   width: 250px;
-  height: 500px;
+  height: Auto;
+}
+
+.stock-bar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  color:  rgb(66, 207, 160);
+  width: 100%;
+  height: 60px;
 }
 
 .stock-bar ul {
   display: flex;
   flex-direction: column;
+  margin-left: 5px;
 }
 
 .stock-bar ul span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   height: 60px;
-  font-size: larger;
+  font-size: large;
   cursor: pointer;
-  box-shadow: lightslategray;
 }
 
 .stock-bar ul span:hover {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: lightblue;
 }
 
@@ -88,13 +108,6 @@
 
 .show-body button {
     font-size: small;
-}
-
-marquee button {
-    border: 1px solid lightgrey;
-    border-radius: 15px;
-    margin-top: 30px;
-    margin-left: 5px;
 }
 
 .show-body button:hover {
@@ -140,6 +153,7 @@ marquee button {
 .top-nav {
   display: inline-flex;
   justify-content: space-between;
+  margin-bottom: 25px;
 }
 
 .right-nav {
