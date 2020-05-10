@@ -6,7 +6,9 @@ const stocks = [
     {name: 'APPLE', symbol: 'AAPL'},
     {name: 'CARNIVAL', symbol: 'CCL'},
     {name: 'MICROSOFT', symbol: 'MSFT'},
-    {name: 'TESLA', symbol: 'TSLA'}
+    {name: 'TESLA', symbol: 'TSLA'},
+    {name: 'FORD', symbol: 'F'},
+    {name: 'FACEBOOK', symbol: 'FB'}
 ]
 
 
@@ -80,7 +82,7 @@ class Show extends React.Component {
                 </header>
                 <div className='stock-bar'>
                     <h1 className='stock-bar-header'>Stocks</h1>
-                    <ul>
+                    <div>
 
                         {stocks.map((stock, idx) => (
                             <span onClick={() => this.setState({
@@ -92,7 +94,7 @@ class Show extends React.Component {
                            >{stock.name}</span>
                         ))}
         
-                    </ul>
+                    </div>
                 </div>
                 <div className='stock-show'>
 

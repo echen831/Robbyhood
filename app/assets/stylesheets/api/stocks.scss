@@ -17,7 +17,7 @@
      color: rgb(66, 207, 160);
 }
 
-.show-body-dark ul span{
+.show-body-dark span{
     background-color: black;
     color: white;
 }
@@ -44,7 +44,7 @@
 }
 
 .show-body-dark .nav-dropdown-content p:hover {
-  background-color: lightcyan;
+  background-color: rgb(236, 241, 243);
   color: black
 }
 
@@ -59,7 +59,8 @@
   margin-left: 800px;
   margin-top: 80px;
   width: 250px;
-  height: Auto;
+  height: 300px;
+  overflow-y: auto;
 }
 
 .stock-bar-header {
@@ -72,13 +73,13 @@
   height: 60px;
 }
 
-.stock-bar ul {
+.stock-bar div {
   display: flex;
   flex-direction: column;
   margin-left: 5px;
 }
 
-.stock-bar ul span {
+.stock-bar div span {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,11 +89,11 @@
   cursor: pointer;
 }
 
-.stock-bar ul span:hover {
+.stock-bar div span:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: lightblue;
+  background-color: rgb(236, 241, 243);
 }
 
 
@@ -151,7 +152,7 @@
 /* Navbar */
 
 .top-nav {
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
 }
@@ -193,7 +194,7 @@
 }
 
 .nav-dropdown-content p:hover {
-  background-color: lightcyan;
+  background-color: rgb(236, 241, 243);
 }
 
 .nav-dropdown:hover .nav-dropdown-content {
