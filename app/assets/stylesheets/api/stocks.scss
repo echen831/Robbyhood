@@ -27,6 +27,10 @@
     color: white;
 }
 
+.show-body-dark .stock-bar span:hover {
+  color: black
+}
+
 .show-body-dark .selected {
     color: rgb(66, 207, 160);
     text-decoration: underline;
@@ -48,6 +52,8 @@
   color: black
 }
 
+
+
 /* Dark Mode */
 
 /* Stock Bar*/
@@ -55,6 +61,7 @@
 .stock-bar {
   display: block;
   position: absolute;
+  border-radius: 3px;
   box-shadow: 2px 2px 4px 5px #ccc;
   margin-left: 800px;
   margin-top: 80px;
@@ -181,6 +188,7 @@
 .nav-dropdown-content {
   display: none;
   position: absolute;
+  border-radius: 3px;
   background-color: white;
   right: 10px;
   border: 1px solid lightgrey ;
