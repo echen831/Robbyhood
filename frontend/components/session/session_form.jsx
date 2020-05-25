@@ -24,6 +24,26 @@ class SessionForm extends React.Component {
             email: 'demo@hotmail.com',
             password: '123456'
         })
+        // const email = 'demo@hotmail.com';
+        // const password = '123456';
+        // const Speed = 100;
+
+        // document.getElementById("demo-button").disabled = true;
+        // this.setState({ email: "", password: "" });
+
+        // for (let i = 0; i < email.length; i++) {
+        //     setTimeout(() => {
+        //         this.setState({ email: this.state.email + email[i] });
+        //     }, i * Speed);
+        // }
+        // for (let j = 0; j < password.length; j++) {
+        //     setTimeout(() => {
+        //         this.setState({ password: this.state.password + password[j] });
+        //     }, (email.length * Speed) + j * Speed);
+        // }
+        // setTimeout(() => {
+        //     this.props.login(this.state).then(() => this.props.history.push("/stocks"));
+        // }, (email.length * Speed) + (password.length * Speed) + Speed);
 
     };
 
@@ -105,10 +125,12 @@ class SessionForm extends React.Component {
                             <br/>
                         </form>
                         <form onSubmit={this.handleDemoLogin}>
-                            <button 
+                            <button
                                 type='submit'
                                 onClick={this.demoLogin}
-                                className = 'demo-show'>
+                                className = 'demo-show'
+                                id='demo-button'
+                                >
                                 Demo login
                             </button>
                         </form>

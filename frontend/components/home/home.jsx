@@ -21,9 +21,9 @@ const Home = () => {
                     alt=""
                     className='home-img'
                     />
-                <button id='home-btn'>
-                    <Link to="/signup">Sign Up</Link>
-                </button>
+                
+                    <Link to="/signup"><button id='home-btn'>Sign Up</button></Link>
+                
             </div>
         </div>
     )
