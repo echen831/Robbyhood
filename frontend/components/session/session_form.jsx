@@ -11,7 +11,7 @@ class SessionForm extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleDemoLogin = this.handleDemoLogin.bind(this)
+        // this.handleDemoLogin = this.handleDemoLogin.bind(this)
         this.demoLogin = this.demoLogin.bind(this)
     }
 
@@ -20,40 +20,41 @@ class SessionForm extends React.Component {
     }
 
     demoLogin() {
-        this.setState ({
-            email: 'demo@hotmail.com',
-            password: '123456'
-        })
-        // const email = 'demo@hotmail.com';
-        // const password = '123456';
-        // const Speed = 100;
+        // this.setState ({
+        //     email: 'demo@hotmail.com',
+        //     password: '123456'
+        // })
+        const email = 'demo@hotmail.com';
+        const password = '123456';
+        const Speed = 100;
 
-        // document.getElementById("demo-button").disabled = true;
-        // this.setState({ email: "", password: "" });
+        document.getElementById("demo-button").disabled = true;
+        this.setState({ email: "", password: "" });
 
-        // for (let i = 0; i < email.length; i++) {
-        //     setTimeout(() => {
-        //         this.setState({ email: this.state.email + email[i] });
-        //     }, i * Speed);
-        // }
-        // for (let j = 0; j < password.length; j++) {
-        //     setTimeout(() => {
-        //         this.setState({ password: this.state.password + password[j] });
-        //     }, (email.length * Speed) + j * Speed);
-        // }
-        // setTimeout(() => {
-        //     this.props.login(this.state).then(() => this.props.history.push("/stocks"));
-        // }, (email.length * Speed) + (password.length * Speed) + Speed);
+        for (let i = 0; i < email.length; i++) {
+            setTimeout(() => {
+                this.setState({ email: this.state.email + email[i] });
+            }, i * Speed);
+        }
+        for (let j = 0; j < password.length; j++) {
+            setTimeout(() => {
+                this.setState({ password: this.state.password + password[j] });
+            }, (email.length * Speed) + j * Speed);
+        }
+        setTimeout(() => {
+            const user = Object.assign({}, this.state)
+            this.props.demoLogin(user).then(() => this.props.history.push("/stocks"));
+        }, (email.length * Speed) + (password.length * Speed) + Speed);
 
     };
 
-    handleDemoLogin(e) {
-        e.preventDefault();
-        const user = Object.assign({}, this.state)
-        this.props.demoLogin(user)
-            .then(() => this.props.history.push('/stocks'))
+    // handleDemoLogin(e) {
+    //     e.preventDefault();
+    //     const user = Object.assign({}, this.state)
+    //     this.props.demoLogin(user)
+    //         .then(() => this.props.history.push('/stocks'))
 
-    }
+    // }
 
     update(field) {
         return (e) => this.setState({[field]: e.currentTarget.value})
@@ -124,7 +125,7 @@ class SessionForm extends React.Component {
                             <button className='btn-show' type='submit'>{header}</button>
                             <br/>
                         </form>
-                        <form onSubmit={this.handleDemoLogin}>
+                        <form >
                             <button
                                 type='submit'
                                 onClick={this.demoLogin}
