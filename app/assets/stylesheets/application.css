@@ -42,10 +42,13 @@ ul {
 
 button,
 input[type="submit"] {
+  display: flex;
   cursor: pointer;
   outline-style:none;
   box-shadow:none;
   border-color:transparent;
+  align-items: center;
+  justify-content: center
 }
 
 
