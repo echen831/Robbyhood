@@ -102,7 +102,7 @@ class Show extends React.Component {
                                     name={name} 
                                     range={range}/>
                     </div>
-                    <ul >
+                    <ul className='stock-show-bar'>
                         <button onClick={() => this.setState({ range: '1d' })}
                             className={ range === '1d' ? 'selected' : ''}
                         >1D</button>
