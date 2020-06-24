@@ -61,13 +61,17 @@
 .stock-bar {
   display: block;
   position: absolute;
-  border-radius: 3px;
-  box-shadow: 2px 2px 4px 5px #ccc;
-  margin-left: 800px;
-  margin-top: 80px;
-  width: 250px;
-  height: 300px;
+  border-radius: 0.25em;
+  margin-left: 50em;
+  margin-top: 5em;
+  width: 15em;
+  height: 20em;
+  border: 1px solid black;
   overflow-y: auto;
+}
+
+.stock-bar::-webkit-scrollbar {
+  display: none;
 }
 
 .stock-bar-header {

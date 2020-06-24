@@ -2,34 +2,48 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
 .form-body {
   display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 .submit-form-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 50%;
   max-height: 100%;
   background-color: white;
+  border: 1px solid black;
 }
 
 .form {
-  margin-left: 50px;
+  // margin-left: 3.25em;
+  width: 80%;
+  border: 1px solid black;
 }
 
 .submit-image-body {
-  margin-top: 149px;
+  border: 1px solid black;
   width: 50%;
-  height: 500px;
+  height: 100%;
   background-repeat: no-repeat;
+  background-position: center;
   background-image: url(https://s.yimg.com/ny/api/res/1.2/wL8oj3c3bEWARP8lBHRvAA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/motleyfool.com/dd29e27eb515379b591ab47e4857072a);
 }
 
 .form-header {
   font-size: x-large;
   font-style: bold;
+  margin-bottom: 1em;
 }
 
 .submit-input-label {
@@ -37,6 +51,7 @@
 }
 
 .submit-input-box {
+    border: 1px solid black;
     height: 45px;
     width: 400px;
     margin-top: 10px;
