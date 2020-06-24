@@ -125,7 +125,7 @@ class SessionForm extends React.Component {
                             <button className='btn-show' type='submit'>{header}</button>
                             <br/>
                         </form>
-                        <form >
+                        <form className='demo-container'>
                             <button
                                 type='submit'
                                 onClick={this.demoLogin}
