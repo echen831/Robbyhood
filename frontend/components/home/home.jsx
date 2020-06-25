@@ -28,6 +28,15 @@ const Home = () => {
                         />
                 </div>    
             </div>
+            <div className='fees-body'>
+                <div className='fees-content'>
+                    <ul>
+                        <h2 id='fees-header' >Break Free from Commission Fees</h2>
+                        <p id='fees-slogan' >Make unlimited commission-free trades in stocks, ETFs, and options with Robinhood Financial, as well as buy and sell cryptocurrencies with Robinhood Crypto. See our fee schedule to learn more about cost.</p>
+                        <p id='com-dis'> Commissions Disclosure</p>
+                    </ul>
+                </div>
+            </div>
         </div>
     )
 }
