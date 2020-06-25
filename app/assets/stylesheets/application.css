@@ -73,88 +73,137 @@ button {
 } */
 
 
+/******** Greeting ************/
+
+
+
+
+
+/******************************/
+
+
 
 
  .body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  background:  rgb(55, 204, 154);
-  height: 649px;
+  height: max-content;
+  width: 100%;
 }
 
-
-.header a {
-  display: block;
-  padding: 10px 20px;
-  text-decoration: none;
+.header {
+  width: 100%;
+  height: 4em;
 }
+
 
 .header-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: white;
   width: 100%;
-  border-bottom: 1px solid black;
+  height: 100%;
+}
+
+.header-logo {
+  display: block;
+  font-size: x-large;
+  margin-left: 2em;
 }
 
 
 .header-list {
   display: flex;
-  justify-content: flex-end;
+  height: 100%;
+  width: 15em;
+  margin-right: 1.25em;
+}
+
+.signup-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  width: 9em;
+  height: 2.5em;
+  border-radius: 2em;
+  background: rgb(80, 192, 155)
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  width: 6em;
+  height: 2.5em;
 }
 
 .signup-btn:hover {
-  background: rgb(80, 192, 155);
-  display: block;
-  border-radius: 15px;
+  display: flex;
+  background: rgb(59, 139, 113);
 }
 
 .home-body {
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 35em;
+  background-color: rgb(55, 204, 154);
 }
 
-.home-header {
-  margin-top: 100px;
-  margin-left: 150px;
-  width: 450px;
-  font-size: 65px;
+.home-body-left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+  width: 50%;
+}
 
+
+.home-header {
+  width: 80%;
+  font-size: 60px;
+  margin-top: 1.5em;
 }
 
 .home-slogan {
-  width: 450px;
-  margin-top: 50px;
-  margin-left: 150px;
+  width: 80%;
   font-size: 30px;
-
+  margin-top: 1.5em;
 }
 
-
-.home-img {
-  position: absolute;
-  margin-top: 100px;
-  margin-left: 600px;
-  width: 425px;
-  height: 425px;
-
+.home-btn-container {
+  width: 80%;
+  margin-top: 2.5em;
 }
 
 #home-btn {
   display: flex;
-  justify-content: center;
   position: absolute;
-  margin-left: 150px;
-  margin-top: 75px;
+  justify-content: center;
   background-color: black;
-  border-radius: 5px;
+  border-radius: 3em;
   color: white;
-  font-size: medium;
-  width: 150px;
-  height: 60px;
+  font-size: large;
+  width: 8em;
+  height: 2.75em;
   cursor: pointer;
 }
+
+.home-body-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.home-img {
+  width: 55%;
+  height: 55%;
+}
+
 
 .logout-btn {
   border: 1px solid rgb(245, 245, 245);

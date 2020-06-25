@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 const Greeting = ({ currentUser, logout }) => {
 
     const display = currentUser ? (
-        <div>
+        <div className='logged-in-greeting'>
             <ul>
                 <p>Hello, {currentUser.email}</p>
                 <button onClick={logout} className='logout-btn'> Log Out</button>
             </ul>
         </div>
     ) : (
-            <div>
+            <div className='logged-out-container'>
                 <ul className='header-list'>
                     <Link className= 'login-btn' to='/login'> Sign In</Link>
                     <Link className= 'signup-btn' to='/signup'> Sign Up</Link>
@@ -21,7 +21,7 @@ const Greeting = ({ currentUser, logout }) => {
 
 
     return (
-        <div>
+        <div className='greeting-container'>
             {display}
         </div>
     )
