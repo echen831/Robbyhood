@@ -278,7 +278,6 @@ button {
   height: 100%;
   display: flex;
   background-color: black;
-  color: white;
 }
 
 .lmc-actions {
@@ -297,13 +296,40 @@ button {
   justify-content: center;
   align-items: flex-end;
   font-size: x-large;
+  color: gray;
 }
 
 .lmc-actions ul div {
   padding: 0.5em;
+  cursor: pointer;
+  background-color: none;
 }
 
 
+.lmc-actions ul div:hover {
+  color: greenyellow;
+}
+
+.lmc-focus {
+  color: white;
+  background-color: none;
+}
+
+.lmc-details {
+  width: 75%;
+  height: 100%;
+  color: white;
+}
+
+
+
+.lmc-show {
+  display: flex;
+}
+
+.lmc-hide {
+  display: none;
+}
 
 
 /**************************************/
