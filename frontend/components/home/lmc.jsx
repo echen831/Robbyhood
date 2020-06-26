@@ -46,17 +46,30 @@ class LMC extends React.Component {
                         </ul>
                     </div>
                     <div className='lmc-details'>
-                        <div className={this.state.index === 0 ? 'lmc-show' : 'lmc-hide'}>
-                            <div>Image1</div>
-                            <div>Content1</div>
+                        <div id={this.state.index === 0 ? 'lmc-show' : 'lmc-hide'}
+                             className='lmc-slide'>
+                            <div className='lmc-image'>Image1</div>
+                            <div className='lmc-msg'>
+                                <h2>Learn As You Grow</h2>
+                                <p>Our goal is to make investing in financial markets more affordable, more intuitive, and more fun, no matter how much experience you have (or don’t have).</p>
+                            </div>
                         </div>
-                        <div className={this.state.index === 1 ? 'lmc-show' : 'lmc-hide'}>
-                            <div>Image2</div>
-                            <div>Content2</div>
+                        <div id={this.state.index === 1 ? 'lmc-show' : 'lmc-hide'}
+                             className='lmc-slide'>
+                            <div className='lmc-image'>Image2</div>
+                            <div className='lmc-msg'>
+                                <h2>Manage Your Portfolio</h2>
+                                <p>Keep your portfolio in your pocket. Everything you need to manage your assets is available in a single app.</p>
+                                
+                            </div>
                         </div>
-                        <div className={this.state.index === 2 ? 'lmc-show' : 'lmc-hide'}>   
-                            <div>Image3</div>
-                            <div>Content3</div>
+                        <div id={this.state.index === 2 ? 'lmc-show' : 'lmc-hide'}
+                             className='lmc-slide'>   
+                            <div className='lmc-image'>Image3</div>
+                            <div className='lmc-msg'>
+                                <h2>Keep Tabs on Your Money</h2>
+                                <p>Set up customized news and notifications to stay on top of your assets as casually or as relentlessly as you like. Controlling the flow of info is up to you.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

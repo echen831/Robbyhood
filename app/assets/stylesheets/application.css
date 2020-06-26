@@ -316,18 +316,49 @@ button {
 }
 
 .lmc-details {
+  position: relative;
   width: 75%;
   height: 100%;
   color: white;
 }
 
 
-
-.lmc-show {
+#lmc-show {
   display: flex;
 }
 
-.lmc-hide {
+.lmc-slide {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.lmc-image {
+  height: 100%;
+  width: 30%;
+}
+
+.lmc-msg {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lmc-msg h2 {
+  width: 80%;
+  font-size: 70px;
+}
+
+.lmc-msg p {
+  width: 80%;
+  font-size: medium;
+}
+
+#lmc-hide {
   display: none;
 }
 
