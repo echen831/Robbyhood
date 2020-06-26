@@ -37,6 +37,13 @@ const Home = () => {
                     </ul>
                 </div>
             </div>
+            <div className='manage-port-body'>
+                <div>
+                    <div>Learn</div>
+                    <div>Manage</div>
+                    <div>Customize</div>
+                </div>
+            </div>
             <div className='footer-body'>
                 <div>
                     <p>Contact Me</p>
