@@ -7,6 +7,23 @@ class LMC extends React.Component {
         this.state = {
             index: 0
         }
+        this.autoShift = this.autoShift.bind(this)
+    }
+
+    componentDidMount() {
+        this.handle = setInterval(this.autoShift, 8000)
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.handle)
+    }
+
+    autoShift() {
+        if (this.state.index === 2) {
+            this.setState({ index: 0 })
+        } else {
+            this.setState({ index: this.state.index + 1 })
+        }  
     }
 
     upButton() {
@@ -15,6 +32,7 @@ class LMC extends React.Component {
         } else {
             this.setState({index: this.state.index - 1})
         }
+        clearInterval(this.handle)
     }
 
     downButton() {
@@ -22,7 +40,8 @@ class LMC extends React.Component {
             this.setState({ index: 0 })
         } else {
             this.setState({ index: this.state.index + 1 })
-        }  
+        } 
+        clearInterval(this.handle) 
     }
     
     render() {
