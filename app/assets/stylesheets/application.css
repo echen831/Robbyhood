@@ -152,8 +152,9 @@ button {
 .home-body {
   display: flex;
   width: 100%;
-  height: 35em;
+  height: 40em;
   background-color: rgb(55, 204, 154);
+  border-bottom: 1px solid black;
 }
 
 .home-body-left {
@@ -203,8 +204,8 @@ button {
 }
 
 .home-img {
-  width: 55%;
-  height: 55%;
+  width: 20em;
+  height: 20em;
 }
 
 
@@ -224,7 +225,7 @@ button {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 22em;
+  height: 25em;
 }
 
 .fees-content {
@@ -269,7 +270,7 @@ button {
 
 .lmc-body {
   width: 100%;
-  height: 40em;
+  height: 38em;
 }
 
 .lmc-content {
@@ -344,8 +345,8 @@ button {
 }
 
 .lmc-image img {
-  width: 90%;
-  height: 80%;
+  width: 16em;
+  height: 31em;
 }
 
 .lmc-msg {
@@ -375,4 +376,49 @@ button {
 }
 
 
+/**************************************/
+
+/****************Footer****************/
+
+.footer-body {
+  width: 100%;
+  height: 4em;
+  display: flex;
+  align-items: center;
+}
+
+#about-me {
+  font-size: x-large;
+  margin-left: 2em;
+  margin-right: 2em;
+  cursor: pointer;
+}
+
+.footer-contacts {
+  height: 100%;
+  width: max-content;
+  display: flex;
+  align-items: center;
+}
+
+#footer-github {
+  background-image: url("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png");
+  background-size: cover;
+  background-position: center;
+  width: 2.5em;
+  height: 2.5em;
+  padding: 1em;
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+#footer-linkedin {
+  background-image: url("https://www.nicepng.com/png/detail/19-198727_png-file-linkedin-icon-png-black.png");
+  background-size: cover;
+  background-position: center;
+  width: 2em;
+  height: 2em;
+  padding: 1em;
+  cursor: pointer;
+}
 /**************************************/

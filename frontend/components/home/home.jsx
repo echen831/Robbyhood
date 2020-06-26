@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import GreetingContainer from '../greeting/greeting_container'
 import LMC from './lmc'
+import Footer from './footer'
 
 const Home = () => {
 
@@ -39,13 +40,7 @@ const Home = () => {
                 </div>
             </div>
             <LMC/>
-            <div className='footer-body'>
-                <div>
-                    <p>Contact Me</p>
-                    <p>Linked In</p>
-                    <p>Github</p>
-                </div>
-            </div>
+            <Footer/>
         </div>
     )
 }
