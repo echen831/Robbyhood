@@ -96,6 +96,7 @@ button {
   position: fixed;
   width: 100%;
   height: 4em;
+  z-index: 100;
 }
 
 
@@ -106,8 +107,7 @@ button {
   background-color: white;
   width: 100%;
   height: 100%;
-  border-bottom: 1px solid rgb(165, 165, 165);
-  box-shadow: 0 0 10px 5px;
+  box-shadow: 0 0 10px;
 }
 
 .header-logo {
@@ -265,3 +265,45 @@ button {
   justify-content: center;
   font-size: larger;
 }
+
+/************** LMC *******************/
+
+.lmc-body {
+  width: 100%;
+  height: 40em;
+}
+
+.lmc-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+.lmc-actions {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.lmc-actions ul {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: x-large;
+}
+
+.lmc-actions ul div {
+  padding: 0.5em;
+}
+
+
+
+
+/**************************************/

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import GreetingContainer from '../greeting/greeting_container'
+import LMC from './lmc'
 
 const Home = () => {
 
@@ -37,13 +38,7 @@ const Home = () => {
                     </ul>
                 </div>
             </div>
-            <div className='manage-port-body'>
-                <div>
-                    <div>Learn</div>
-                    <div>Manage</div>
-                    <div>Customize</div>
-                </div>
-            </div>
+            <LMC/>
             <div className='footer-body'>
                 <div>
                     <p>Contact Me</p>
