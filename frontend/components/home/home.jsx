@@ -37,6 +37,13 @@ const Home = () => {
                     </ul>
                 </div>
             </div>
+            <div className='footer-body'>
+                <div>
+                    <p>Contact Me</p>
+                    <p>Linked In</p>
+                    <p>Github</p>
+                </div>
+            </div>
         </div>
     )
 }
