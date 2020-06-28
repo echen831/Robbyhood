@@ -440,7 +440,7 @@ button {
 
 .products-body {
   width: 100%;
-  height: 60em;
+  height: max-content;
   display: flex;
   flex-direction: column;
   background-color: rgb(240, 235, 230);
@@ -517,6 +517,55 @@ button {
   color: black;
 }
 
+.products-descriptions {
+  width: 100%;
+  height: 20em;
+  display: flex;
+}
+
+.products-descriptions div {
+  position: absolute;
+  width: 100%;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 2em;
+  border: 1px solid black;
+}
+
+.prod-des-des {
+  width: 25em;
+  height: 5em;
+  line-height: 1.5em;
+}
+
+.products-descriptions div a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 3em;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  width: 10em;
+  height: 2.75em;
+  cursor: pointer;
+}
+
+.prod-des-show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+
+}
+
+.prod-des-hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1.5s, opacity 1.5s ease-in;
+}
 
 
 
