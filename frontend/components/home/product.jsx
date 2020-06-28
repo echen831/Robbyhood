@@ -5,6 +5,9 @@ class Product extends React.Component {
     constructor() {
         super()
 
+        this.state = {
+            index: 0
+        }
     }
 
     render () {
@@ -14,15 +17,35 @@ class Product extends React.Component {
                     <h1>Our Products</h1>
                 </div>
                 <div className='products-image'>
-                    <img src="" alt=""/>
+                    <img className={this.state.index === 0 ? 'image-show' : 'image-hide'} 
+                         src="/assets/cash_management.png" alt=""/>
+                    <img className={this.state.index === 1 ? 'image-show' : 'image-hide'}
+                        src="/assets/stock_funds.png" alt="" />
+                    <img className={this.state.index === 2 ? 'image-show' : 'image-hide'}
+                        src="/assets/options.png" alt="" />
+                    <img className={this.state.index === 3 ? 'image-show' : 'image-hide'}
+                        src="/assets/gold.png" alt="" />
+                    <img className={this.state.index === 4 ? 'image-show' : 'image-hide'}
+                        src="/assets/crypto.png" alt="" />                        
                 </div>
                 <div className='products-actions'>
                     <ul>
-                        <h2>Cash Management</h2>
-                        <h2>Stocks & Funds</h2>
-                        <h2>Options</h2>
-                        <h2>Gold</h2>
-                        <h2>Crypto</h2>
+                        <h2 onClick={() => this.setState({ index: 0 })}
+                            className={this.state.index === 0 ? 'prod-focus' : ''}
+                            >Cash Management</h2>
+                        <h2 onClick={() => this.setState({ index: 1 })}
+                            className={this.state.index === 1 ? 'prod-focus' : ''}
+                            >Stocks & Funds</h2>
+                        <h2 onClick={() => this.setState({ index: 2 })}
+                            className={this.state.index === 2 ? 'prod-focus' : ''}
+                            >Options</h2>
+                        <h2 onClick={() => this.setState({ index: 3 })}
+                            className={this.state.index === 3 ? 'prod-focus' : ''}
+                            >Gold</h2>
+                        <h2 onClick={() => this.setState({ index: 4 })}
+                            className={this.state.index === 4 ? 'prod-focus' : ''}
+                            id='crypto'
+                            >Crypto</h2>
                     </ul>
                 </div>
                 <div className='products-descriptions'>
