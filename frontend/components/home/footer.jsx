@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
         <div className='footer-body'>
-            <div id='about-me'>About Me</div>
+            <div id='about-me'>About Me: </div>
             <div className='footer-contacts'>
                 <a id='footer-github'
                    target='_blank'
@@ -16,6 +16,10 @@ const Footer = () => {
                    target='_blank'
                    href="https://www.linkedin.com/in/eric-chen-782b951a9/" > 
                     </a>
+                <a id='footer-facebook'
+                    target='_blank'
+                    href="https://www.facebook.com/profile.php?id=11708937" >
+                </a>
             </div>
         </div>
     ) 
