@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import GreetingContainer from '../greeting/greeting_container'
 import LMC from './lmc'
 import Footer from './footer'
+import Product from './product'
 
 const Home = () => {
 
@@ -40,6 +41,7 @@ const Home = () => {
                 </div>
             </div>
             <LMC/>
+            <Product/>
             <Footer/>
         </div>
     )

@@ -422,3 +422,19 @@ button {
   cursor: pointer;
 }
 /**************************************/
+
+
+/*************** Products ***************/
+
+.products-body {
+  width: 100%;
+  height: 55em;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+
+
+
+/****************************************/
