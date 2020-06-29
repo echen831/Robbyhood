@@ -61,7 +61,9 @@ class Product extends React.Component {
                             >Earn 0.30% APY* on your uninvested cash and get more flexibility with your brokerage account.</p>
                         <Link>Learn More</Link>
                         <span className='risk-container'>
-                            <p className='prod-des-legend'>Variable APY and Debit Card Disclosures</p> 
+                            <p className='prod-des-legend'
+                                onClick={()=>{this.props.showModal(this.state.index)}}
+                                >Variable APY and Debit Card Disclosures</p> 
                             <p className='prod-des-risk'
                             >Cash Management offered through Robinhood Financial
                             </p>
@@ -73,7 +75,9 @@ class Product extends React.Component {
                             >Get mobile access to the markets. Invest commission-free in individual companies or bundles of investments (ETFs).</p>
                         <Link>Learn More</Link>
                         <span className='risk-container'>
-                            <p className='prod-des-legend'>Risk Disclosure</p>
+                            <p className='prod-des-legend'
+                                onClick={() => { this.props.showModal(this.state.index) }}
+                                >Risk Disclosure</p>
                             <p className='prod-des-risk'
                             >Stocks & funds offered through Robinhood Financial
                             </p>
@@ -85,7 +89,9 @@ class Product extends React.Component {
                             >Be bullish on stocks you believe in and bearish on the ones you don’t. It’s your call.</p>
                         <Link>Learn More</Link>
                         <span className='risk-container'>
-                            <p className='prod-des-legend'>Options Risk Disclosure</p>
+                            <p className='prod-des-legend'
+                                onClick={() => { this.props.showModal(this.state.index) }}
+                                >Options Risk Disclosure</p>
                             <p className='prod-des-risk'
                             >Options offered through Robinhood Financial
                             </p>
@@ -97,7 +103,9 @@ class Product extends React.Component {
                             >Access research reports, trade on margin, and make bigger deposits with quicker access to funds—all starting at $5 per month.</p>
                         <Link>Learn More</Link>
                         <span className='risk-container'>
-                            <p className='prod-des-legend'>Margin Disclosure</p>
+                            <p className='prod-des-legend'
+                                onClick={() => { this.props.showModal(this.state.index) }}
+                                >Margin Disclosure</p>
                             <p className='prod-des-risk'
                             >Gold offered through Robinhood Financial
                             </p>
@@ -109,7 +117,9 @@ class Product extends React.Component {
                             >Tap into the cryptocurrency market to buy, HODL, and sell Bitcoin, Ethereum, Dogecoin, and more, 24/7 with Robinhood Crypto.</p>
                         <Link>Learn More</Link>
                         <span className='risk-container'>
-                            <p className='prod-des-legend'>Crypto Risk Disclosure</p>
+                            <p className='prod-des-legend'
+                                onClick={() => { this.props.showModal(this.state.index) }}
+                                >Crypto Risk Disclosure</p>
                             <span className='prod-des-risk'>
                                 <p id='crypto-risk-1'
                                     >Crypto offered through Robinhood Crypto, not a member of FINRA.</p>

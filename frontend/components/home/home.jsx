@@ -15,13 +15,35 @@ class Home extends React.Component {
             show: false,
             index: 0
         }
+
+        this.showModal = this.showModal.bind(this)
+        this.closeModal = this.closeModal.bind(this)
+        this.outsideClose = this.outsideClose.bind(this)
+    }
+
+    showModal(index) {
+        this.setState({show: true, index: index})
+    }
+
+    closeModal() {
+        this.setState({show: false})
+    }
+
+    outsideClose(e) {
+        let modal = document.getElementById('prod-modal-container')
+        if(e.target === modal) {
+            this.setState({show: false})
+        }
     }
 
     render() {
 
         return (
             <div className='body'>
-                <ProductModal show={this.state.show} index={this.state.index}/>
+                <ProductModal show={this.state.show} 
+                              index={this.state.index}
+                              outsideClose={this.outsideClose}
+                              closeModal={this.closeModal}/>
                 <header className='header'>
                     <nav className='header-nav'>
                         <Link to='/'className='header-logo'>
@@ -54,7 +76,7 @@ class Home extends React.Component {
                     </div>
                 </div>
                 <LMC/>
-                <Product/>
+                <Product showModal={this.showModal} closeModal={this.closeModal}/>
                 <Footer/>
             </div>
         )
