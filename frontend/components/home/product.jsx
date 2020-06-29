@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import ProductModal from './product_modal'
 
 class Product extends React.Component {
     constructor() {
