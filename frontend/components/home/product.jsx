@@ -59,41 +59,63 @@ class Product extends React.Component {
                         <p className='prod-des-des'
                             >Earn 0.30% APY* on your uninvested cash and get more flexibility with your brokerage account.</p>
                         <Link>Learn More</Link>
-                        <p>Cash Management offered through Robinhood Financial</p>
-                        <button>Disclosure</button>
+                        <span className='risk-container'>
+                            <p className='prod-des-legend'>Variable APY and Debit Card Disclosures</p> 
+                            <p className='prod-des-risk'
+                            >Cash Management offered through Robinhood Financial
+                            </p>
+                        </span>     
                     </div>
                     <div className= {this.state.index === 1 ? 'prod-des-show' : 'prod-des-hide'}
                         id='stocks-description'>
                         <p className='prod-des-des'
                             >Get mobile access to the markets. Invest commission-free in individual companies or bundles of investments (ETFs).</p>
                         <Link>Learn More</Link>
-                        <p>Stocks & funds offered through Robinhood Financial</p>
-                        <button>Disclosure</button>
+                        <span className='risk-container'>
+                            <p className='prod-des-legend'>Risk Disclosure</p>
+                            <p className='prod-des-risk'
+                            >Stocks & funds offered through Robinhood Financial
+                            </p>
+                        </span>  
                     </div>
                     <div className={this.state.index === 2 ? 'prod-des-show' : 'prod-des-hide'}
                         id='options-description'>
                         <p className='prod-des-des'
                             >Be bullish on stocks you believe in and bearish on the ones you don’t. It’s your call.</p>
                         <Link>Learn More</Link>
-                        <p>Options offered through Robinhood Financial</p>
-                        <button>Disclosure</button>
+                        <span className='risk-container'>
+                            <p className='prod-des-legend'>Options Risk Disclosure</p>
+                            <p className='prod-des-risk'
+                            >Options offered through Robinhood Financial
+                            </p>
+                        </span>  
                     </div>
                     <div className={this.state.index === 3 ? 'prod-des-show' : 'prod-des-hide'}
                         id='gold-description'>
                         <p className='prod-des-des'
                             >Access research reports, trade on margin, and make bigger deposits with quicker access to funds—all starting at $5 per month.</p>
                         <Link>Learn More</Link>
-                        <p>Gold offered through Robinhood Financial</p>
-                        <button>Disclosure</button>
+                        <span className='risk-container'>
+                            <p className='prod-des-legend'>Margin Disclosure</p>
+                            <p className='prod-des-risk'
+                            >Gold offered through Robinhood Financial
+                            </p>
+                        </span>  
                     </div>
                     <div className={this.state.index === 4 ? 'prod-des-show' : 'prod-des-hide'}
                         id='crypto-description'>
                         <p className='prod-des-des'
                             >Tap into the cryptocurrency market to buy, HODL, and sell Bitcoin, Ethereum, Dogecoin, and more, 24/7 with Robinhood Crypto.</p>
                         <Link>Learn More</Link>
-                        <p>Crypto offered through Robinhood Crypto, not a member of FINRA.
-                           Crypto investing involves significant risks.</p>
-                        <button>Disclosure</button>
+                        <span className='risk-container'>
+                            <p className='prod-des-legend'>Crypto Risk Disclosure</p>
+                            <span className='prod-des-risk'>
+                                <p id='crypto-risk-1'
+                                    >Crypto offered through Robinhood Crypto, not a member of FINRA.</p>
+                                <p id='crypto-risk-2'
+                                    >Crypto investing involves significant risks.</p>  
+                            </span>
+                        </span>
                     </div>
                 </div>
 
