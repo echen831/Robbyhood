@@ -71,8 +71,40 @@ class Home extends React.Component {
                         <ul>
                             <h2 id='fees-header' >Break Free from Commission Fees</h2>
                             <p id='fees-slogan' >Make unlimited commission-free trades in stocks, ETFs, and options with Robinhood Financial, as well as buy and sell cryptocurrencies with Robinhood Crypto. See our fee schedule to learn more about cost.</p>
-                            <p id='com-dis'> Commissions Disclosure</p>
+                            <p id='com-dis'
+                                onClick={()=>this.showModal(5)}
+                                > Commissions Disclosure</p>
                         </ul>
+                    </div>
+                </div>
+                <div className='fractional-shares-body'>
+                    <div className='fractional-shares-left'>
+                        <h1>Introducing Fractional Shares</h1>
+                        <h2>Invest in thousands of stocks with as little as $1.</h2>
+                        <div className='fractional-shares-info'>
+                            <div>
+                                <p>Invest Any Amount</p>
+                                <p>Choose how much you want to invest, and we’ll convert from dollars to parts of a whole share.</p>
+                            </div>
+                            <div>
+                                <p>Build a Balanced Portfolio</p>
+                                <p>Customize your portfolio with pieces of different companies and funds to help reduce risk.</p>
+                            </div>
+                            <div>
+                                <p>Trade in Real Time</p>
+                                <p>Trades placed during market hours are executed at that time, so you’ll always know the share price.</p>
+                            </div>
+                        </div>
+                        <div className='fractional-shares-input'>
+                            <input type="text" placeholder='name@email.com'/>
+                            <input type="submit" value='Get Early Access'/>
+                        </div>
+                        <p className='fractional-shares-disclosure'
+                           onClick={()=>this.showModal(6)}
+                        >Fractional Shares Disclosure</p>
+                    </div>
+                    <div className='fractional-shares-right'>
+                        <img src="/assets/frac_share_img.png" alt=""/>
                     </div>
                 </div>
                 <LMC/>
