@@ -365,6 +365,10 @@ button {
   cursor: pointer;
 }
 
+.fractional-shares-disclosure:hover {
+  color: #00C805;
+}
+
 .fractional-shares-right {
   width: 20em;
   height: 100%;
@@ -417,7 +421,7 @@ button {
 
 
 .lmc-actions ul div:hover:not(.lmc-focus) {
-  color: greenyellow;
+  color:  #00C805;
 }
 
 .lmc-focus {
@@ -621,7 +625,7 @@ button {
 }
 
 .products-actions ul h2:hover:not(.prod-focus) {
-  color: lightgreen;
+  color:  #00C805;
 }
 
 .prod-focus {
@@ -689,7 +693,7 @@ button {
 }
 
 .prod-des-legend:hover {
-  color: green;
+  color:  #00C805;
 }
 
 .prod-des-risk {
