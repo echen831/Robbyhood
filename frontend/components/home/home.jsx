@@ -60,7 +60,7 @@ class Home extends React.Component {
                         
                     </div>
                     <div className='home-body-right'>
-                        <img src="https://cdn.robinhood.com/assets/robinhood/brand/0ac83d822d7f714396eebe65b54b2fa5-1x.png" 
+                        <img src="/assets/front.gif" 
                             alt=""
                             className='home-img'
                             />
