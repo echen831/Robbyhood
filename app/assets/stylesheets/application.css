@@ -128,9 +128,10 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: larger;
-  width: 9em;
-  height: 2.5em;
+  font-size: medium;
+  font-weight: bold;
+  width: 10em;
+  height: 3em;
   border-radius: 2em;
   background: #00C805;
 }
@@ -139,9 +140,10 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: larger;
-  width: 6em;
-  height: 2.5em;
+  font-size: medium;
+  font-weight: bold;
+  width: 7em;
+  height: 3em;
 }
 
 .signup-btn:hover {
@@ -149,11 +151,15 @@ button {
   background: #00b306;
 }
 
+.login-btn:hover {
+  color: #00b306;
+}
+
 .home-body {
   display: flex;
   width: 100%;
   height: 40em;
-  background-color: #bbf51d;
+  background-color: #bef32d;
   border-bottom: 1px solid black;
 }
 
