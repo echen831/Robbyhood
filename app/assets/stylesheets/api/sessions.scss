@@ -32,9 +32,15 @@
 .submit-image-body {
   width: 50%;
   height: 40em;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color:rgba(0, 255, 21, 0.349);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:rgba(179, 241, 36, 0.911);
+}
+
+.submit-image-body img {
+  height: 25em;
+  width: 25em;
 }
 
 .form-header {

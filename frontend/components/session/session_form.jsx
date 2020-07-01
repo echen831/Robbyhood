@@ -95,7 +95,7 @@ class SessionForm extends React.Component {
             <div className='body'>
                 <div className='form-body'>
                     <div className='submit-image-body'> 
-                        <h1></h1>
+                       <img src="/assets/front.gif" alt=""/>
                     </div>
                     <div className='submit-form-body'>
                         <form onSubmit={this.handleSubmit} className='form'>
