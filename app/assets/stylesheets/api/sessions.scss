@@ -4,6 +4,7 @@
 
 .body {
   position: relative;
+  display: flex;
   height: 100%;
   width: 100%;
 }
@@ -20,7 +21,7 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-  max-height: 100%;
+  height: 40em;
   background-color: white;
 }
 
@@ -29,11 +30,12 @@
 }
 
 .submit-image-body {
+  border: 1px solid black;
   width: 50%;
-  height: 100%;
+  height: 40em;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(https://s.yimg.com/ny/api/res/1.2/wL8oj3c3bEWARP8lBHRvAA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/motleyfool.com/dd29e27eb515379b591ab47e4857072a);
+  background-color:blue;
 }
 
 .form-header {
