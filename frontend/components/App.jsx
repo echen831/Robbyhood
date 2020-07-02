@@ -8,7 +8,7 @@ import LoginFormContainer from './session/login_form_container';
 import { AuthRoute, ProtectedRoute} from '../util/route_util'
 import IntraDayStockContainer from './stock/intraday_stock_container'
 import HistStockContainer from './stock/hist_stock_container'
-import SeachStockContainer from './stock/search_stock_container'
+import SearchStockContainer from './stock/search_stock_container'
 
 const App = () => {
 
@@ -21,7 +21,7 @@ const App = () => {
                 <AuthRoute path="/signup" component={SignupFormContainer} />
                 <ProtectedRoute exact path='/stocks' component={ShowContainer}/>
                 <ProtectedRoute exact path='/stocks/:symbol/:range' component={HistStockContainer}/>
-                <ProtectedRoute exact path='/search/stocks/:symbol' component={SeachStockContainer}/>
+                <ProtectedRoute exact path='/search/stocks/:symbol' component={SearchStockContainer}/>
                 <Route path='*' component={NoMatch}/>
             </Switch>
         </div>

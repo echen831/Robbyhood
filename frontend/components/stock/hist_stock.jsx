@@ -29,7 +29,7 @@ class HistStock extends React.Component {
     filterData(data) {
         let res = [];
         for(let i = 0; i < data.length; i ++) {
-            if (i % 5 === 0) {
+            if (i % 5 === 0 || i === data.length-1) {
                 res.push(data[i])
             }
         }
