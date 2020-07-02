@@ -36,7 +36,7 @@ class Show extends React.Component {
     
     render() {
         const {name, symbol, range} = this.state;
-        const { currentUser, logout } = this.props
+        const { currentUser, logout } = this.props;
         return (
             <div className= {!this.state.dark ? 'show-body' : 'show-body-dark'}>
                 <header className='stock-show-header'>
@@ -54,7 +54,7 @@ class Show extends React.Component {
                                     onChange={this.update('search')}
                                     className='search-input'
                                 />
-                                <Link to={`/stocks/${this.state.search}/1d`}>
+                                <Link to={`/search/stocks/${this.state.search}`}>
                                     <button className='go-btn'>Go</button>
                                 </Link>
                             </div>
