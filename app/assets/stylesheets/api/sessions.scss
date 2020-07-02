@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.body {
+.session-body {
   position: relative;
   display: flex;
   height: 100%;
@@ -35,7 +35,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:rgba(179, 241, 36, 0.911);
+  background-color:#BCF335;
 }
 
 .submit-image-body img {

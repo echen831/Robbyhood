@@ -92,7 +92,7 @@ class SessionForm extends React.Component {
         }
 
         return (
-            <div className='body'>
+            <div className='session-body'>
                 <div className='form-body'>
                     <div className='submit-image-body'> 
                        <img src="/assets/front.gif" alt=""/>
