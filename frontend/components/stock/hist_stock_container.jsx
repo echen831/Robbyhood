@@ -8,6 +8,7 @@ const mSTP = (state, ownProps) => {
     let range = ownProps.range || ownProps.match.params.range
     return {
         histData: state.entities.stocks[symbol],
+        loading: state.ui.loading,
         symbol,
         range
     }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HistStock from './hist_stock_container';
+import Loader from '../loader/loader'
 
 class SearchStock extends React.Component {
     constructor(props) {
@@ -34,8 +35,10 @@ class SearchStock extends React.Component {
     };
 
     render () {
+
+        if (this.props.loading) return <Loader/>
         let {symbol, name, range, stock} = this.state
-        if(!this.props.stock) return null;
+        if(!this.props.stock) return <NoMatch/>;
         return (
             <div className='show-body'>
                 <header className='stock-show-header'>

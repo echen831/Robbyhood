@@ -6,6 +6,7 @@ import { fetchHistStock } from '../../actions/stock_actions';
 
 const mSTP = (state, ownProps) => ({
     currentUser: state.entities.users[state.session.id],
+    loading: state.ui.loading,
     symbol: ownProps.match.params.symbol,
     stock: state.entities.stocks[ownProps.match.params.symbol]
 })

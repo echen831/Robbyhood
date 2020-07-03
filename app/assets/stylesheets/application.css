@@ -817,3 +817,31 @@ button {
 }
 
 /****************************************/
+
+/************** Loader ******************/
+
+.loader-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.185);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.loader-body {
+  width: 5%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-img {
+  height: 100%;
+  width: 100%;
+}
+
+/****************************************/

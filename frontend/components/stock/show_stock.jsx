@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import HistStock from './hist_stock_container'
+import { Link } from 'react-router-dom';
+import HistStock from './hist_stock_container';
+import Loader from '../loader/loader';
 
 const stocks = [
     {name: 'APPLE', symbol: 'aapl'},
@@ -37,6 +38,7 @@ class Show extends React.Component {
     render() {
         const {name, symbol, range} = this.state;
         const { currentUser, logout } = this.props;
+        if (this.props.loading) return <Loader/>
         return (
             <div className= {!this.state.dark ? 'show-body' : 'show-body-dark'}>
                 <header className='stock-show-header'>
