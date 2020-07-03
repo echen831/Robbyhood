@@ -85,7 +85,7 @@ class SearchStock extends React.Component {
                     <div className='stock-show-left'>
                         <div className='stock-show'>
 
-                            <HistStock symbol={symbol}
+                            <HistStock symbol={symbol.toUpperCase()}
                                 //name={name}
                                 range={range} />
 
@@ -110,7 +110,7 @@ class SearchStock extends React.Component {
                     </div>
                     <div className='stock-show-right'>
                         <div className='stock-bar'>
-                            <h1 className='stock-bar-header'>{`Buy ${symbol}`}</h1>
+                            <h1 className='stock-bar-header'>{`Buy ${symbol.toUpperCase()}`}</h1>
                             <div>Shares</div>
                             <div>Market Price { stock ? stock[stock.length-1].high : null}</div>
                             <div>Estimated Cost</div>
