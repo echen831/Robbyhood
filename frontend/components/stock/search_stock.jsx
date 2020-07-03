@@ -34,8 +34,7 @@ class SearchStock extends React.Component {
 
     render () {
         let {symbol, name, range, stock} = this.state
-        if(!this.props.stock) return null;
-        {console.log(this.state.stock)}
+        if(!this.props.stock) return <NoMatch/>;
         return (
             <div className='show-body'>
                 <header className='stock-show-header'>
@@ -124,5 +123,16 @@ class SearchStock extends React.Component {
         )
     }
 };
+
+const NoMatch = () => {
+    return (
+        <div>
+            404 Page not found
+            <Link to='/stocks'>
+                <h2>Back To Profile</h2>
+            </Link>
+        </div>
+    )
+}
 
 export default SearchStock

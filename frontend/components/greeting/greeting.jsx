@@ -5,9 +5,9 @@ const Greeting = ({ currentUser, logout }) => {
 
     const display = currentUser ? (
         <div className='logged-in-greeting'>
-            <ul className='header-list'>
-                {/* <p>Hello, {currentUser.email}</p> */}
-                <p className='signup-btn' onClick={logout} className='logout-btn'> Log Out</p>
+            <ul className='logged-in-list'>
+                <Link className='login-btn' to='/stocks'> Profile </Link>
+                <p className='logout-button' onClick={logout}> Log Out</p>
             </ul>
         </div>
     ) : (

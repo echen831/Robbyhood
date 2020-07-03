@@ -116,13 +116,37 @@ button {
   margin-left: 2em;
 }
 
+.logged-in-greeting {
+  height: 100%;
+  width: 20em;
+  margin-right: 1.25em;
+}
+
+.logged-in-list {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+  font-weight: bold;
+  width: 10em;
+  height: 3em;
+  border-radius: 2em;
+  background: #00C805;
+  cursor: pointer;
+}
 
 .header-list {
   display: flex;
   height: 100%;
   width: 15em;
   margin-right: 1.25em;
-  border: 1px solid black;
 }
 
 .signup-btn {
