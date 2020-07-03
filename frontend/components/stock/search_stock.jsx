@@ -9,14 +9,24 @@ class SearchStock extends React.Component {
         this.state = {
             symbol: this.props.symbol,
             name: this.props.symbol,
-            range: '1d'
+            range: '1d',
+            stock: this.props.stock,
+            search: ''
         }
-
+        this.update = this.update.bind(this)
     }
 
+    componentDidMount() {
+        this.props.fetchHistStock(this.props.symbol, '1d')
+    }
+
+
+    update(field) {
+        return (e) => this.setState({ [field]: e.currentTarget.value })
+    };
+
     render () {
-        let {symbol, name, range} = this.state
-        if (!this.props.stock) return null
+        let {symbol, name, range, stock} = this.state
         return (
             <div className='show-body'>
                 <header className='stock-show-header'>
@@ -28,16 +38,16 @@ class SearchStock extends React.Component {
                                 </Link>
                             </div>
 
-                            {/* <div className='stock-searchbar'>
+                            <div className='stock-searchbar'>
                                 <input type="text"
                                     value={this.state.search}
                                     onChange={this.update('search')}
                                     className='search-input'
                                 />
-                                <Link to={`/stocks/${this.state.search}/1d`}>
+                                <Link to={`/search/stocks/${this.state.search}`}>
                                     <button className='go-btn'>Go</button>
                                 </Link>
-                            </div> */}
+                            </div>
                         </div>
                         <div className='right-nav'>
                             <div>Free Stocks</div>
@@ -93,7 +103,7 @@ class SearchStock extends React.Component {
                         <div className='stock-bar'>
                             <h1 className='stock-bar-header'>{`Buy ${name}`}</h1>
                             <div>Shares</div>
-                                <div>Market Price {this.props.stock[this.props.stock.length-1].close}</div>
+                            <div>Market Price </div>
                             <div>Estimated Cost</div>
                             <button>Review Order</button>
                             <div>Buying Power Available</div>
