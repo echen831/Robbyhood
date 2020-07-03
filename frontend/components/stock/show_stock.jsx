@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'
 import HistStock from './hist_stock_container'
 
 const stocks = [
-    {name: 'APPLE', symbol: 'AAPL'},
-    {name: 'CARNIVAL', symbol: 'CCL'},
-    {name: 'MICROSOFT', symbol: 'MSFT'},
-    {name: 'TESLA', symbol: 'TSLA'},
-    {name: 'FORD', symbol: 'F'},
-    {name: 'FACEBOOK', symbol: 'FB'}
+    {name: 'APPLE', symbol: 'aapl'},
+    {name: 'CARNIVAL', symbol: 'ccl'},
+    {name: 'MICROSOFT', symbol: 'msft'},
+    {name: 'TESLA', symbol: 'tsla'},
+    {name: 'FORD', symbol: 'f'},
+    {name: 'FACEBOOK', symbol: 'fb'}
 ]
 
 
@@ -18,7 +18,7 @@ class Show extends React.Component {
         super(props)
         this.state = {
             name: 'APPLE',
-            symbol: 'AAPL',
+            symbol: 'aapl',
             range: '1d',
             search: '',
             dark: false

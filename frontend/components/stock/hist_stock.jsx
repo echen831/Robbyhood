@@ -16,13 +16,15 @@ class HistStock extends React.Component {
     componentDidMount() {
         const symbol = this.props.symbol;
         const range = this.props.range;
-        this.props.fetchHistStock(symbol, range)
+        if (!this.props.histData) {
+            this.props.fetchHistStock(symbol, range)
+        }
     }
 
     componentDidUpdate(prevProps) {
         const { symbol, range} = this.props
         if ((symbol !== prevProps.symbol) || (range !== prevProps.range)) {
-            this.props.fetchHistStock(this.props.symbol, this.props.range)
+            this.props.fetchHistStock(symbol, range)
         }
     }
 

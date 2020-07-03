@@ -11,22 +11,23 @@ class SearchStock extends React.Component {
             name: this.props.symbol,
             range: '1d',
             stock: this.props.stock,
-            search: ''
+            search: '',
         }
         this.update = this.update.bind(this)
     }
 
     componentDidMount() {
-        this.props.fetchHistStock(this.props.symbol, '1d')
-    }
-
-    componentDidUpdate(prevProps) {
-        if(this.props.symbol !== prevProps.symbol) {
+        if (!this.props.stock) {
             this.props.fetchHistStock(this.props.symbol, '1d')
-            this.setState({symbol: this.props.symbol})
         }
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.symbol !== prevProps.symbol) {
+            this.props.fetchHistStock(this.props.symbol, '1d')
+            this.setState({symbol: this.props.symbol})
+        }
+    } 
 
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value })
@@ -34,7 +35,7 @@ class SearchStock extends React.Component {
 
     render () {
         let {symbol, name, range, stock} = this.state
-        if(!this.props.stock) return <NoMatch/>;
+        if(!this.props.stock) return null;
         return (
             <div className='show-body'>
                 <header className='stock-show-header'>
@@ -84,7 +85,7 @@ class SearchStock extends React.Component {
                     <div className='stock-show-left'>
                         <div className='stock-show'>
 
-                            <HistStock symbol={symbol.toUpperCase()}
+                            <HistStock symbol={symbol}
                                 //name={name}
                                 range={range} />
 
@@ -111,7 +112,7 @@ class SearchStock extends React.Component {
                         <div className='stock-bar'>
                             <h1 className='stock-bar-header'>{`Buy ${symbol.toUpperCase()}`}</h1>
                             <div>Shares</div>
-                            <div>Market Price { stock ? stock[stock.length-1].high : null}</div>
+                            <div>Market Price </div>
                             <div>Estimated Cost</div>
                             <button>Review Order</button>
                             <div>Buying Power Available</div>
