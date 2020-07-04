@@ -16,9 +16,7 @@ class HistStock extends React.Component {
     componentDidMount() {
         const symbol = this.props.symbol;
         const range = this.props.range;
-        if (!this.props.histData) {
-            this.props.fetchHistStock(symbol, range)
-        }
+        this.props.fetchHistStock(symbol, range)
     }
 
     componentDidUpdate(prevProps) {
@@ -101,52 +99,65 @@ class HistStock extends React.Component {
         let close = data[data.length-1].high
         let open = data[0].high
         let flux = this.setFlux(close - open)
-        return (
+
+        const chart = (
             <div>
                 <h1 className='stock-name'>{name ? name : symbol}</h1>
                 <p id='stockPrice'>${this.setPrice(close)}</p>
                 <div className='flux'>
                     <p id='changePrice'>{this.addSymbol(flux)}</p>
-                    <p id='fluxPercent'>{this.setFluxPercent(close,open)}</p>
+                    <p id='fluxPercent'>{this.setFluxPercent(close, open)}</p>
                     {/* <p id='fluxInfo'>{range === '1d' ? 'Today' : ''}</p> */}
                 </div>
 
-                <LineChart data={data} 
-                            width={500} 
-                            height={300} 
-                            className='chart'
-                            // margin={{ top: 10, right: 0, bottom: 0, left: 0 }}
-                            >
+                <LineChart data={data}
+                    width={500}
+                    height={300}
+                    className='chart'
+                // margin={{ top: 10, right: 0, bottom: 0, left: 0 }}
+                >
                     <Line type="monotone"
-                            connectNulls 
-                            dataKey="high"
-                            strokeWidth={2} 
-                            stroke="#5ae6b0" 
-                            dot={false} 
-                            />
+                        connectNulls
+                        dataKey="high"
+                        strokeWidth={2}
+                        stroke="#5ae6b0"
+                        dot={false}
+                    />
                     <XAxis dataKey={range === "1d" ? 'label' : 'date'}
-                            tick={false} 
-                            axisLine={false} 
-                            domain={['dataMin, dataMax'] } 
-                            />
-                    <YAxis domain={['dataMin, dataMax']} 
-                            axisLine={false} 
-                            tick={false}
-                            />
+                        tick={false}
+                        axisLine={false}
+                        domain={['dataMin, dataMax']}
+                    />
+                    <YAxis domain={['dataMin, dataMax']}
+                        axisLine={false}
+                        tick={false}
+                    />
                     <Tooltip cursor={true}
-                            position={{y: -20}}
-                            content={<CustomTooltip 
-                                        oldPrice = {open}
-                                        setPrice = {this.setPrice}
-                                        setFlux = {this.setFlux}
-                                        addSymbol = {this.addSymbol}
-                                        setFluxPercent = {this.setFluxPercent}
-                                        date = {range === '1d' ? data[0].date : null}/>}
-                            />
+                        position={{ y: -20 }}
+                        content={<CustomTooltip
+                            oldPrice={open}
+                            setPrice={this.setPrice}
+                            setFlux={this.setFlux}
+                            addSymbol={this.addSymbol}
+                            setFluxPercent={this.setFluxPercent}
+                            date={range === '1d' ? data[0].date : null} />}
+                    />
                 </LineChart>
 
 
             </div>
+        )
+
+        const loader = (
+            <div className='loader-body'>
+                <img className='loader-img' src="https://i.ya-webdesign.com/images/loading-png-gif.gif" alt="" />
+            </div>
+        )
+        
+        return (
+           <div className='chart-container'>
+               {this.props.loading ? loader : chart}
+           </div>
         )
     };
 };

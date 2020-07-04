@@ -36,9 +36,9 @@ class SearchStock extends React.Component {
 
     render () {
 
-        if (this.props.loading) return <Loader/>
         let {symbol, name, range, stock} = this.state
-        if(!this.props.stock) return <NoMatch/>;
+        if(!this.props.stock) return null;
+        // if(this.props.loading) return <Loader/>
         return (
             <div className='show-body'>
                 <header className='stock-show-header'>

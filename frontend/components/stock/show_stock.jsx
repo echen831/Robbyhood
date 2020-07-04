@@ -38,7 +38,7 @@ class Show extends React.Component {
     render() {
         const {name, symbol, range} = this.state;
         const { currentUser, logout } = this.props;
-        if (this.props.loading) return <Loader/>
+        // if (this.props.loading) return <Loader/>
         return (
             <div className= {!this.state.dark ? 'show-body' : 'show-body-dark'}>
                 <header className='stock-show-header'>
