@@ -87,10 +87,12 @@ class SearchStock extends React.Component {
                 <div className='stock-show-container'>
                     <div className='stock-show-left'>
                         <div className='stock-show'>
-
-                            <HistStock symbol={symbol}
-                                //name={name}
-                                range={range} />
+                            
+                            <div className='stock-chart-container'>
+                                <HistStock symbol={symbol}
+                                    //name={name}
+                                    range={range} />
+                            </div>
 
                             <ul className='stock-show-bar'>
                                 <button onClick={() => this.setState({ range: '1d' })}

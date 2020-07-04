@@ -10,6 +10,7 @@
   align-items: center;
 }
 
+
 /* Navbar */
 
 .stock-show-header {
@@ -257,8 +258,14 @@
 }
 
 .stock-show {
+    display: flex;
+    flex-direction: column;
     width: 40em;
     height: 28em;
+}
+
+.stock-chart-container {
+  height: 90%;
 }
 
 .stock-show button {
@@ -302,6 +309,7 @@
 }
 
 .stock-show-bar {
+  height: 10%;
   display: inline-flex;
   justify-content: space-evenly;
   width: 50%;
