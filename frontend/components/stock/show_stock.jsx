@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HistStock from './hist_stock_container';
+import SearchBar from '../search_bar/search_bar'
 import Loader from '../loader/loader';
 
 const stocks = [
@@ -51,11 +52,12 @@ class Show extends React.Component {
                             </div>
 
                             <div className='stock-searchbar'>
-                                <input type="text"
+                                <SearchBar stocks={stocks}/>
+                                {/* <input type="text"
                                     value={this.state.search}
                                     onChange={this.update('search')}
                                     className='search-input'
-                                />
+                                /> */}
                                 <Link to={`/search/stocks/${this.state.search}`}>
                                     <button className='go-btn'>Go</button>
                                 </Link>
