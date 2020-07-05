@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -48,7 +49,7 @@ class SearchBar extends React.Component {
     render () {
         const results = this.matches().map((stock, idx) => {
             return (
-            <li key={idx} onClick={this.selectStock}>{stock.name} {stock.symbol}</li>
+            <li key={idx}><Link  to= {`/search/stocks/${stock.symbol}`} >{stock.name} {stock.symbol}</Link></li>
             );
         });
         return (
