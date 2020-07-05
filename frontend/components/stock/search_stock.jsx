@@ -63,7 +63,7 @@ class SearchStock extends React.Component {
                         </div>
                         <div className='right-nav'>
                             <div>Free Stocks</div>
-                            <div>Portfolio</div>
+                            <div><Link to='/stocks'> Portfolio </Link></div>
                             <div>Cash</div>
                             <div>Messages</div>
 
