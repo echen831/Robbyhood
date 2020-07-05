@@ -24,9 +24,12 @@ class SearchBar extends React.Component {
         }
 
         this.props.stocks.forEach( stock => {
-            const sub = stock.name.slice(0, this.state.inputValue.length);
-            if (sub.toLowerCase() === this.state.inputValue.toLowerCase()) {
-                matches.push(stock.name);
+            const subName = stock.name.slice(0, this.state.inputValue.length);
+            const subSym = stock.symbol.slice(0, this.state.inputValue.length);
+            if (subName.toLowerCase() === this.state.inputValue.toLowerCase() ||
+                subSym.toLowerCase() === this.state.inputValue.toLowerCase()
+            ) {
+                matches.push(stock);
             }
         });
 
@@ -45,7 +48,7 @@ class SearchBar extends React.Component {
     render () {
         const results = this.matches().map((stock, idx) => {
             return (
-                <li key={idx} onClick={this.selectStock}>{stock}</li>
+            <li key={idx} onClick={this.selectStock}>{stock.name} {stock.symbol}</li>
             );
         });
         return (

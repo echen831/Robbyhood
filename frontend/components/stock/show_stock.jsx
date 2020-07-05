@@ -27,6 +27,7 @@ class Show extends React.Component {
         }
         
         this.update = this.update.bind(this)
+        this.setSymbol = this.setSymbol.bind(this)
     }
 
 
@@ -34,6 +35,10 @@ class Show extends React.Component {
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value })
     };
+
+    setSymbol(symbol) {
+        this.setState({search: symbol})
+    }
 
     
     render() {
@@ -52,7 +57,7 @@ class Show extends React.Component {
                             </div>
 
                             <div className='stock-searchbar'>
-                                <SearchBar stocks={stocks}/>
+                                <SearchBar stocks={stocks} setState={this.setSymbol}/>
                                 {/* <input type="text"
                                     value={this.state.search}
                                     onChange={this.update('search')}
