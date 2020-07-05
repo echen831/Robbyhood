@@ -43,6 +43,12 @@
   margin-left: 2em;
 }
 
+.searchbar-container {
+  position: fixed;
+  width: auto;
+  z-index: 300;
+}
+
 
 .search-input {
   text-transform: uppercase;

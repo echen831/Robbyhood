@@ -63,9 +63,9 @@ class Show extends React.Component {
                                     onChange={this.update('search')}
                                     className='search-input'
                                 /> */}
-                                <Link to={`/search/stocks/${this.state.search}`}>
+                                {/* <Link to={`/search/stocks/${this.state.search}`}>
                                     <button className='go-btn'>Go</button>
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                         <div className='right-nav'>

@@ -35,7 +35,7 @@ class SearchBar extends React.Component {
         });
 
         if (matches.length === 0) {
-            matches.push('We were unable to find results')
+            matches.push({name: 'No Matches', symbol: false})
         }
 
         return matches
@@ -48,17 +48,25 @@ class SearchBar extends React.Component {
 
     render () {
         const results = this.matches().map((stock, idx) => {
-            return (
-            <li key={idx}><Link  to= {`/search/stocks/${stock.symbol}`} >{stock.name} {stock.symbol}</Link></li>
-            );
+
+            if (!stock.symbol) {
+                return (
+                <li key={idx}>{stock.name}</li>
+                )
+            } else {
+                return (
+                <li key={idx}><Link  to= {`/search/stocks/${stock.symbol}`} >{stock.name} {stock.symbol}</Link></li>
+                );
+            }
         });
         return (
-            <div>
-                <input type="text"
+            <div className='searchbar-container'>
+                <input className='searchbar-input'
+                       type="text"
                        onChange={this.handleInput}
                        value={this.state.inputValue}
                        placeholder='Search...'/>
-                <ul>
+                <ul className='searchbar-results'>
                     {results}
                 </ul>
             </div>
