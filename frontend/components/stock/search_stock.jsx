@@ -1,18 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HistStock from './hist_stock_container';
-import SearchBar from '../search_bar/search_bar'
+import SearchBar from '../search_bar/search_bar';
+import { stocks } from './stocks' 
 import Loader from '../loader/loader'
 
-const stocks = [
-    { name: 'APPLE', symbol: 'aapl' },
-    { name: 'CARNIVAL', symbol: 'ccl' },
-    { name: 'MICROSOFT', symbol: 'msft' },
-    { name: 'TESLA', symbol: 'tsla' },
-    { name: 'FORD', symbol: 'f' },
-    { name: 'FACEBOOK', symbol: 'fb' },
-    { name: 'FEDEX CORP', symbol: 'fdx' }
-]
+
+const searchRange = [ '1d', '5d', '1m', '3m', '1y', '5y']
 
 class SearchStock extends React.Component {
     constructor(props) {
@@ -61,14 +55,6 @@ class SearchStock extends React.Component {
 
                             <div className='stock-searchbar'>
                                 <SearchBar stocks={stocks} setState={this.setSymbol} />
-                                {/* <input type="text"
-                                    value={this.state.search}
-                                    onChange={this.update('search')}
-                                    className='search-input'
-                                />
-                                <Link to={`/search/stocks/${this.state.search}`}>
-                                    <button className='go-btn'>Go</button>
-                                </Link> */}
                             </div>
                         </div>
                         <div className='right-nav'>
@@ -105,21 +91,12 @@ class SearchStock extends React.Component {
                             </div>
 
                             <ul className='stock-show-bar'>
-                                <button onClick={() => this.setState({ range: '1d' })}
-                                    className={range === '1d' ? 'selected' : ''}
-                                >1D</button>
-                                <button onClick={() => this.setState({ range: '5d' })}
-                                    className={range === '5d' ? 'selected' : ''}
-                                >1W</button>
-                                <button onClick={() => this.setState({ range: '1m' })}
-                                    className={range === '1m' ? 'selected' : ''}
-                                >1M</button>
-                                <button onClick={() => this.setState({ range: '3m' })}
-                                    className={range === '3m' ? 'selected' : ''}
-                                >3M</button>
-                                <button onClick={() => this.setState({ range: '1y' })}
-                                    className={range === '1y' ? 'selected' : ''}
-                                >1Y</button>
+                                {searchRange.map((sRange, idx) => (
+                                    <button key={idx}
+                                            onClick={() => this.setState({ range: sRange })}
+                                            className={range === sRange ? 'selected' : ''}
+                                    >{sRange === '5d' ? '1W' : sRange.toUpperCase()}</button>
+                                ))}
                             </ul>
                         </div>
                     </div>
