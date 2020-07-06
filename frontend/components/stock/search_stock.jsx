@@ -1,7 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HistStock from './hist_stock_container';
+import SearchBar from '../search_bar/search_bar'
 import Loader from '../loader/loader'
+
+const stocks = [
+    { name: 'APPLE', symbol: 'aapl' },
+    { name: 'CARNIVAL', symbol: 'ccl' },
+    { name: 'MICROSOFT', symbol: 'msft' },
+    { name: 'TESLA', symbol: 'tsla' },
+    { name: 'FORD', symbol: 'f' },
+    { name: 'FACEBOOK', symbol: 'fb' },
+    { name: 'FEDEX CORP', symbol: 'fdx' }
+]
 
 class SearchStock extends React.Component {
     constructor(props) {
@@ -38,7 +49,7 @@ class SearchStock extends React.Component {
 
         let {symbol, name, range, stock} = this.state
         if(!this.props.stock) return null;
-        // if(this.props.loading) return <Loader/>
+        if(this.props.loading) return <Loader/>
         return (
             <div className='show-body'>
                 <header className='stock-show-header'>
@@ -51,14 +62,15 @@ class SearchStock extends React.Component {
                             </div>
 
                             <div className='stock-searchbar'>
-                                <input type="text"
+                                <SearchBar stocks={stocks} setState={this.setSymbol} />
+                                {/* <input type="text"
                                     value={this.state.search}
                                     onChange={this.update('search')}
                                     className='search-input'
                                 />
                                 <Link to={`/search/stocks/${this.state.search}`}>
                                     <button className='go-btn'>Go</button>
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                         <div className='right-nav'>

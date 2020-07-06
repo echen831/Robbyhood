@@ -10,7 +10,8 @@ const stocks = [
     {name: 'MICROSOFT', symbol: 'msft'},
     {name: 'TESLA', symbol: 'tsla'},
     {name: 'FORD', symbol: 'f'},
-    {name: 'FACEBOOK', symbol: 'fb'}
+    {name: 'FACEBOOK', symbol: 'fb'},
+    {name: 'FEDEX CORP', symbol: 'fdx'}
 ]
 
 
@@ -118,6 +119,9 @@ class Show extends React.Component {
                                 <button onClick={() => this.setState({ range: '1y' })}
                                         className={range === '1y' ? 'selected' : ''}
                                     >1Y</button>
+                                <button onClick={() => this.setState({ range: '5y' })}
+                                    className={range === '5y' ? 'selected' : ''}
+                                    >5Y</button>
                             </ul>
                         </div>
                     </div>

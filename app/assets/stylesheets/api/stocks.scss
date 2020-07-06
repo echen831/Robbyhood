@@ -44,11 +44,35 @@
 }
 
 .searchbar-container {
-  position: fixed;
-  width: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 20em;
+  height: auto;
   z-index: 300;
 }
 
+.searchbar-input {
+  position: absolute;
+  width: 20em;
+  height: 2.25em;
+}
+
+.searchbar-results {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 20em;
+  height: 20em;
+  margin-top: 11.25em;
+  z-index: 300;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.searchbar-results-hide {
+  display: none;
+}
 
 .search-input {
   text-transform: uppercase;
