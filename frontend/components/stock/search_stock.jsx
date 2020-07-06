@@ -29,9 +29,7 @@ class SearchStock extends React.Component {
     }
 
     componentDidMount() {
-        if (!this.props.stock) {
-            this.props.fetchHistStock(this.props.symbol, '1d')
-        }
+        this.props.fetchHistStock(this.props.symbol, '1d')
     }
 
     componentDidUpdate(prevProps) {
@@ -49,7 +47,7 @@ class SearchStock extends React.Component {
 
         let {symbol, name, range, stock} = this.state
         if(!this.props.stock) return null;
-        if(this.props.loading) return <Loader/>
+        // if(this.props.loading) return <Loader/>
         return (
             <div className='show-body'>
                 <header className='stock-show-header'>

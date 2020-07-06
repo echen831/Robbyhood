@@ -102,7 +102,7 @@ class HistStock extends React.Component {
 
         const chart = (
             <div>
-                <h1 className='stock-name'>{name ? name : symbol}</h1>
+                <h1 className='stock-name'>{name ? name : symbol.toUpperCase()}</h1>
                 <p id='stockPrice'>${this.setPrice(close)}</p>
                 <div className='flux'>
                     <p id='changePrice'>{this.addSymbol(flux)}</p>
