@@ -19,3 +19,10 @@ export const fetchHistStock = (symbol,range) => (
         method: 'GET'
     })
 );
+
+export const fetchHighLow = (symbol) => (
+    $.ajax({
+        url: `https://sandbox.iexapis.com/stable/stock/${symbol}/ohlc?token=${window.iexAPIKey}`,
+        method: 'GET'
+    })
+)

@@ -35,8 +35,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
     // window.signup = Action.signup
     window.getState = store.getState
     window.dispatch = store.dispatch
-    window.fetchIntraDayStock = Stock.fetchIntraDayStock    
+    // window.fetchIntraDayStock = Stock.fetchIntraDayStock    
     window.fetchHistStock = Stock.fetchHistStock
+    window.fetchIntraDayStock = StockUtil.fetchIntraDayStock
+    window.fetchHighLow = Stock.fetchHighLow
     //test 
 
 
