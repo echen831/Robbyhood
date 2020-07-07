@@ -72,9 +72,14 @@
   border: 1px solid black;
 }
 
-.searchbar-results li {
+.searchbar-results h2, .searchbar-results li {
   font-size: small;
   padding: 0.5em;
+}
+
+
+.searchbar-results li:hover {
+  background-color: lightgreen;
 }
 
 .searchbar-input:focus + .searchbar-results {

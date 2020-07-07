@@ -67,7 +67,7 @@ class SearchBar extends React.Component {
                        value={this.state.inputValue}
                        placeholder='Search...'/>
                 <ul className={ !results.length ? 'searchbar-results-hide' : 'searchbar-results'}>
-                    <li>Stocks</li>
+                    <h2>Stocks</h2>
                     {results}
                 </ul>
             </div>
