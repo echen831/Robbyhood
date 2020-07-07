@@ -17,7 +17,6 @@ class SearchStock extends React.Component {
             name: this.props.symbol,
             range: '1d',
             stock: this.props.stock,
-            price: '',
             search: '',
         }
         this.update = this.update.bind(this)
@@ -25,14 +24,12 @@ class SearchStock extends React.Component {
 
     componentDidMount() {
         this.props.fetchHistStock(this.props.symbol, '1d')
-        this.props.fetchHighLow(this.props.symbol)
     }
 
     componentDidUpdate(prevProps) {
         if (this.props.symbol !== prevProps.symbol) {
             this.props.fetchHistStock(this.props.symbol, '1d')
-            this.props.fetchHighLow(this.props.symbol)
-            this.setState({symbol: this.props.symbol, price: this.props.price})
+            this.setState({symbol: this.props.symbol})
         }
     } 
 
@@ -43,7 +40,7 @@ class SearchStock extends React.Component {
     render () {
 
         let {symbol, name, range, stock} = this.state
-        if(!this.props.stock || !this.props.price) return null;
+        if(!this.props.stock) return null;
         // if(this.props.loading) return <Loader/>
         return (
             <div className='show-body'>
@@ -107,7 +104,7 @@ class SearchStock extends React.Component {
                         <div className='stock-bar'>
                             <h1 className='stock-bar-header'>{`Buy ${symbol.toUpperCase()}`}</h1>
                             <div>Shares</div>
-                                <div>Market Price  {this.props.price.high}</div>
+                            <div>Market Price  {this.props.stock ? this.props.stock[this.props.stock.length - 1].high : null}</div>
                             <div>Estimated Cost</div>
                             <button>Review Order</button>
                             <div>Buying Power Available</div>

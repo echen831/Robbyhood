@@ -102,12 +102,14 @@ class HistStock extends React.Component {
 
         const chart = (
             <div>
-                <h1 className='stock-name'>{name ? name : symbol.toUpperCase()}</h1>
-                <p id='stockPrice'>${this.setPrice(close)}</p>
-                <div className='flux'>
-                    <p id='changePrice'>{this.addSymbol(flux)}</p>
-                    <p id='fluxPercent'>{this.setFluxPercent(close, open)}</p>
-                    {/* <p id='fluxInfo'>{range === '1d' ? 'Today' : ''}</p> */}
+                <div className='stock-info-container'>
+                    <h1 className='stock-name'>{name ? name : symbol.toUpperCase()}</h1>
+                    <p id='stockPrice'>${this.setPrice(close)}</p>
+                    <div className='flux'>
+                        <p id='changePrice'>{this.addSymbol(flux)}</p>
+                        <p id='fluxPercent'>{this.setFluxPercent(close, open)}</p>
+                        {/* <p id='fluxInfo'>{range === '1d' ? 'Today' : ''}</p> */}
+                    </div>
                 </div>
 
                 <LineChart data={data}

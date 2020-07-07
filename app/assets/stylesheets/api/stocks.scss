@@ -6,10 +6,14 @@
 
 .chart-container {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
+
+.stock-info-container {
+  width: 80%;
+  margin-left: 3.5em;
+}
 
 /* Navbar */
 
@@ -321,7 +325,10 @@
 
 .chart {
     margin-top: 2em;
+    border-top: 1px dotted lightgray;
+    margin-left: 3.5em;
 }
+
 .tooltip {
     margin-bottom: 2em;
 }
@@ -353,10 +360,11 @@
 .stock-show-bar {
   height: 10%;
   display: inline-flex;
-  justify-content: space-evenly;
-  width: 50%;
+  justify-content: space-between;
+  width: 80%;
   background-color: white;
-  margin-left: 2em;
+  margin-left: 3.5em;
+  border-bottom: 1px solid lightgrey ;
 }
 
 .stock-show-bar button {

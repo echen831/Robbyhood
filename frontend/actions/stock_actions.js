@@ -3,7 +3,7 @@ import * as StockAPIUtil from '../util/stock_api_util';
 export const RECEIVE_STOCKS = 'RECEIVE_STOCKS';
 export const RECEIVE_ONE_STOCK = 'RECEIVE_ONE_STOCK';
 export const LOADING_STOCK = 'LOADING_STOCK';
-export const RECEIVE_HIGH_LOW = 'RECEIVE_HIGH_LOW';
+export const RECEIVE_NEWS = 'RECEIVE_NEWS';
 
 const receiveStocks = (stocks) => ({
     type: RECEIVE_STOCKS,
@@ -18,13 +18,14 @@ const receiveOneStock = (stock, symbol) => ({
 
 const loadingStock = () => ({
     type: LOADING_STOCK
-})
+});
 
-const receiveHighLow = (stock, symbol) => ({
-    type: RECEIVE_HIGH_LOW,
-    stock,
+
+const receiveNews = (news, symbol) => ({
+    type: RECEIVE_NEWS,
+    news,
     symbol
-})
+}) 
 
 export const fetchStocks = () => dispatch => (
     StockAPIUtil.fetchStocks()
@@ -42,7 +43,8 @@ export const fetchHistStock = (symbol, range) => dispatch => {
         .then((stock) => dispatch(receiveOneStock(stock, symbol)))
 };
 
-export const fetchHighLow = (symbol) => dispatch => {
-    return StockAPIUtil.fetchHighLow(symbol)
-        .then((stock) => dispatch(receiveHighLow(stock, symbol)))
+
+export const fetchNews = (symbol) => dispatch => {
+    return StockAPIUtil.fetchNews(symbol)
+        .then((news) => dispatch(receiveNews(news, symbol)))
 }

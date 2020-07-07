@@ -34,7 +34,7 @@ export const stocks = [
     { name: 'KELLOG', symbol: 'k' },
     { name: 'KROGER', symbol: 'kr' },
     { name: 'KIMBERLY-CLARK', symbol: 'kmb' },
-    { name: "'KHOL'S", symbol: 'kss' },
+    { name: "KHOL'S", symbol: 'kss' },
     { name: 'LOEWS', symbol: 'l' },
     { name: "LOEW'S", symbol: 'low' },
     { name: 'LOCKHEAD', symbol: 'lmt' },
