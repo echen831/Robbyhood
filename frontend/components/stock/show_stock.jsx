@@ -2,17 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HistStock from './hist_stock_container';
 import SearchBar from '../search_bar/search_bar'
+import { stocks } from './stocks'
 import Loader from '../loader/loader';
 
-const stocks = [
-    {name: 'APPLE', symbol: 'aapl'},
-    {name: 'CARNIVAL', symbol: 'ccl'},
-    {name: 'MICROSOFT', symbol: 'msft'},
-    {name: 'TESLA', symbol: 'tsla'},
-    {name: 'FORD', symbol: 'f'},
-    {name: 'FACEBOOK', symbol: 'fb'},
-    {name: 'FEDEX CORP', symbol: 'fdx'}
-]
+// const stocks = [
+//     {name: 'APPLE', symbol: 'aapl'},
+//     {name: 'CARNIVAL', symbol: 'ccl'},
+//     {name: 'MICROSOFT', symbol: 'msft'},
+//     {name: 'TESLA', symbol: 'tsla'},
+//     {name: 'FORD', symbol: 'f'},
+//     {name: 'FACEBOOK', symbol: 'fb'},
+//     {name: 'FEDEX CORP', symbol: 'fdx'}
+// ]
 
 
 
