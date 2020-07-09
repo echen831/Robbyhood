@@ -60,7 +60,7 @@ class SearchStock extends React.Component {
                         </div>
                         <div className='right-nav'>
                             
-                            <div>Hi, {this.props.currentUser.email}</div>
+                            <div>Hi, {this.props.currentUser.username}</div>
                             <div><Link to='/stocks'> Portfolio </Link></div>
                             <div onClick={this.props.logout} >Log Out</div>
 

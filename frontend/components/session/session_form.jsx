@@ -7,7 +7,9 @@ class SessionForm extends React.Component {
         super(props)
         this.state = {
             email: '',
-            password: ''
+            username: '',
+            password: '',
+            buying_power: 1000,
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -81,7 +83,7 @@ class SessionForm extends React.Component {
 
     render() {
         const { formType } = this.props;
-        const { email, password} = this.state;
+        const { email, username, password, buying_power} = this.state;
         const header = formType === 'signup' ? 'Sign Up' : 'Sign In';
 
         let link;
@@ -111,16 +113,50 @@ class SessionForm extends React.Component {
                                     required
                                     />
                             <br/>
-                            <label className='submit-input-label'>Password</label>
+                            <label className={formType === 'signup' ? 'submit-input-label' : 'hide'}>Username</label>
                             <br/>
-                                <input className='submit-input-box'
-                                    id='password'
-                                    type="password"
-                                    value={password}
-                                    onChange={this.update('password')}
+                                <input className={formType === 'signup' ? 'submit-input-box' : 'hide'}
+                                    id='username'
+                                    type="text"
+                                    value={username}
+                                    onChange={this.update('username')}
                                     required
                                     />
                             <br/>
+                            <label className='submit-input-label'>Password</label>
+                            <br />
+                            <input className='submit-input-box'
+                                id='password'
+                                type="password"
+                                value={password}
+                                onChange={this.update('password')}
+                                required
+                            />
+                            <br />
+                            <div className={formType === 'signup' ? 'submit-input-bp' : 'hide'}> Buying Power
+                                <label> $1000
+                                    <input value= {1000}
+                                           type="radio" 
+                                           name="buying_power"
+                                           checked={buying_power === 1000 || buying_power === '1000' ? true : false}
+                                           onChange={this.update('buying_power')} 
+                                           />
+                                </label>
+                                <label> $3000
+                                    <input value={3000}
+                                        type="radio"
+                                        name="buying_power"
+                                        onChange={this.update('buying_power')}
+                                        />
+                                </label>
+                                <label> $5000
+                                    <input value={5000}
+                                        type="radio"
+                                        name="buying_power"
+                                        onChange={this.update('buying_power')}
+                                        />
+                                </label>
+                            </div>
                             <ul>{this.renderErrors()}</ul>
                             <button className='btn-show' type='submit'>{header}</button>
                             <br/>
