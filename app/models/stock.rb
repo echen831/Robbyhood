@@ -5,4 +5,6 @@ class Stock < ApplicationRecord
     has_many :transactions,
         foreign_key: :stock_id,
         class_name: :Transaction
+    
+    has_many :users, through: :transactions
 end
