@@ -103,27 +103,29 @@ class Show extends React.Component {
                                             name={name} 
                                             range={range}/>
                             </div>
-                
-                            <ul className='stock-show-bar'>
-                                <button onClick={() => this.setState({ range: '1d' })}
-                                        className={ range === '1d' ? 'selected' : ''}
-                                    >1D</button>
-                                <button onClick={()=> this.setState({range: '5d'})}
-                                        className={range === '5d' ? 'selected' : ''}
-                                    >1W</button>
-                                <button onClick={() => this.setState({ range: '1m' })}
-                                        className={range === '1m' ? 'selected' : ''}
-                                    >1M</button>
-                                <button onClick={() => this.setState({ range: '3m' })}
-                                        className={range === '3m' ? 'selected' : ''}
-                                    >3M</button>
-                                <button onClick={() => this.setState({ range: '1y' })}
-                                        className={range === '1y' ? 'selected' : ''}
-                                    >1Y</button>
-                                <button onClick={() => this.setState({ range: '5y' })}
-                                    className={range === '5y' ? 'selected' : ''}
-                                    >5Y</button>
-                            </ul>
+                            
+                            <div className='stock-show-bar-container'>
+                                <ul className='stock-show-bar'>
+                                    <button onClick={() => this.setState({ range: '1d' })}
+                                            className={ range === '1d' ? 'selected' : ''}
+                                        >1D</button>
+                                    <button onClick={()=> this.setState({range: '5d'})}
+                                            className={range === '5d' ? 'selected' : ''}
+                                        >1W</button>
+                                    <button onClick={() => this.setState({ range: '1m' })}
+                                            className={range === '1m' ? 'selected' : ''}
+                                        >1M</button>
+                                    <button onClick={() => this.setState({ range: '3m' })}
+                                            className={range === '3m' ? 'selected' : ''}
+                                        >3M</button>
+                                    <button onClick={() => this.setState({ range: '1y' })}
+                                            className={range === '1y' ? 'selected' : ''}
+                                        >1Y</button>
+                                    <button onClick={() => this.setState({ range: '5y' })}
+                                        className={range === '5y' ? 'selected' : ''}
+                                        >5Y</button>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div className='stock-show-right'>

@@ -13,6 +13,7 @@
 .stock-info-container {
   width: 80%;
   margin-left: 3.5em;
+  margin-bottom: 1.5em;
 }
 
 /* Navbar */
@@ -329,9 +330,10 @@
 
 
 .chart {
-    margin-top: 2em;
+    // margin-top: 2em;
     border-top: 1px dotted lightgray;
     margin-left: 3.5em;
+    padding-top: 1em;
 }
 
 .tooltip {
@@ -362,14 +364,20 @@
     font-size: x-large;
 }
 
+.stock-show-bar-container {
+  border-bottom: 1px solid lightgrey;
+  width: 80%;
+  height: max-content;
+  margin-left: 3.5em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
 .stock-show-bar {
-  height: 10%;
   display: inline-flex;
   justify-content: space-between;
-  width: 80%;
+  width: 60%;
   background-color: white;
-  margin-left: 3.5em;
-  border-bottom: 1px solid lightgrey ;
 }
 
 .stock-show-bar button {

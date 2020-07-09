@@ -17,6 +17,7 @@ class SearchStock extends React.Component {
             name: this.props.symbol,
             range: '1d',
             stock: this.props.stock,
+            price: '',
             search: '',
         }
         this.update = this.update.bind(this)
@@ -89,22 +90,23 @@ class SearchStock extends React.Component {
                                     //name={name}
                                     range={range} />
                             </div>
-
-                            <ul className='stock-show-bar'>
-                                {searchRange.map((sRange, idx) => (
-                                    <button key={idx}
-                                            onClick={() => this.setState({ range: sRange })}
-                                            className={range === sRange ? 'selected' : ''}
-                                    >{sRange === '5d' ? '1W' : sRange.toUpperCase()}</button>
-                                ))}
-                            </ul>
+                            <div className='stock-show-bar-container'>
+                                <ul className='stock-show-bar'>
+                                    {searchRange.map((sRange, idx) => (
+                                        <button key={idx}
+                                                onClick={() => this.setState({ range: sRange })}
+                                                className={range === sRange ? 'selected' : ''}
+                                        >{sRange === '5d' ? '1W' : sRange.toUpperCase()}</button>
+                                    ))}
+                                </ul>
+                            </div>            
                         </div>
                     </div>
                     <div className='stock-show-right'>
                         <div className='stock-bar'>
                             <h1 className='stock-bar-header'>{`Buy ${symbol.toUpperCase()}`}</h1>
                             <div>Shares</div>
-                            <div>Market Price  {this.props.stock ? this.props.stock[this.props.stock.length - 1].high : null}</div>
+                            <div>Market Price  {this.props.stock[this.props.stock.length-1].high}</div>
                             <div>Estimated Cost</div>
                             <button>Review Order</button>
                             <div>Buying Power Available</div>
