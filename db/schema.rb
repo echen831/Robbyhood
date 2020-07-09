@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_08_173500) do
+ActiveRecord::Schema.define(version: 2020_07_09_170556) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,15 @@ ActiveRecord::Schema.define(version: 2020_07_08_173500) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
+  end
+
+  create_table "watch_list_items", force: :cascade do |t|
+    t.string "user_id", null: false
+    t.string "stock_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["stock_id"], name: "index_watch_list_items_on_stock_id"
+    t.index ["user_id"], name: "index_watch_list_items_on_user_id"
   end
 
 end

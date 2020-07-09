@@ -71,12 +71,11 @@ class Show extends React.Component {
                             </div>
                         </div>
                         <div className='right-nav'>
-                            <div>Free Stocks</div>
+                            <div>Hi, {currentUser.email}</div>
                             <div>Portfolio</div>
-                            <div>Cash</div>
-                            <div>Messages</div>
+                            <div onClick={logout} >Log Out</div>
 
-                            <div className='nav-dropdown'>
+                            {/* <div className='nav-dropdown'>
                                 <h2 className='nav-dropdown-btn'>Account</h2>
                                 <span className='nav-dropdown-content'>
                                     <p>{currentUser.email}</p>
@@ -89,7 +88,7 @@ class Show extends React.Component {
                                     >{this.state.dark ? 'Light' : 'Dark'}</p>
                                     <p onClick={logout}> Log Out</p>
                                 </span>
-                            </div>
+                            </div> */}
                         </div>
 
                     </div>

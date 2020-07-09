@@ -59,25 +59,25 @@ class SearchStock extends React.Component {
                             </div>
                         </div>
                         <div className='right-nav'>
-                            <div>Free Stocks</div>
+                            
+                            <div>Hi, {this.props.currentUser.email}</div>
                             <div><Link to='/stocks'> Portfolio </Link></div>
-                            <div>Cash</div>
-                            <div>Messages</div>
+                            <div onClick={this.props.logout} >Log Out</div>
 
-                            <div className='nav-dropdown'>
+                            {/* <div className='nav-dropdown'>
                                 <h2 className='nav-dropdown-btn'>Account</h2>
                                 <span className='nav-dropdown-content'>
                                     <p>{this.props.currentUser.email}</p>
                                     <p>Account</p>
                                     <p>Banking</p>
                                     <p>History</p>
-                                    {/* <p onClick={() => this.setState({
+                                    <p onClick={() => this.setState({
                                         dark: !this.state.dark
                                     })}
-                                    >{this.state.dark ? 'Light' : 'Dark'}</p> */}
+                                    >{this.state.dark ? 'Light' : 'Dark'}</p>
                                     <p onClick={this.props.logout}> Log Out</p>
                                 </span>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </header>
