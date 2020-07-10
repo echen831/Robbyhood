@@ -46543,3 +46543,1997 @@ Completed 200 OK in 331ms (Views: 8.6ms | ActiveRecord: 14.1ms)
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:55
   [1m[36mStock Load (1.0ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  [1m[35m (31.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mStock Load (1.0ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.6ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:55
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.6ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.5ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.5ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 28]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 29]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 30]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 31]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 32]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 33]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 34]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 35]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 36]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 37]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 38]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 39]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 40]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.5ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 41]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 42]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AGILENT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "a"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.5ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AGILENT"], ["symbol", "a"], ["created_at", "2020-07-10 01:31:51.574720"], ["updated_at", "2020-07-10 01:31:51.574720"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "APPLE"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "aapl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "APPLE"], ["symbol", "aapl"], ["created_at", "2020-07-10 01:31:51.579922"], ["updated_at", "2020-07-10 01:31:51.579922"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMAZON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "amzn"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMAZON"], ["symbol", "amzn"], ["created_at", "2020-07-10 01:31:51.585293"], ["updated_at", "2020-07-10 01:31:51.585293"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "amd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMD"], ["symbol", "amd"], ["created_at", "2020-07-10 01:31:51.590904"], ["updated_at", "2020-07-10 01:31:51.590904"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMERICAN AIRLINES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "aal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMERICAN AIRLINES"], ["symbol", "aal"], ["created_at", "2020-07-10 01:31:51.595404"], ["updated_at", "2020-07-10 01:31:51.595404"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AT&T"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "T"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (1.1ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AT&T"], ["symbol", "T"], ["created_at", "2020-07-10 01:31:51.600404"], ["updated_at", "2020-07-10 01:31:51.600404"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BARNES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "b"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BARNES"], ["symbol", "b"], ["created_at", "2020-07-10 01:31:51.606748"], ["updated_at", "2020-07-10 01:31:51.606748"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BOEING"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ba"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BOEING"], ["symbol", "ba"], ["created_at", "2020-07-10 01:31:51.612267"], ["updated_at", "2020-07-10 01:31:51.612267"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BANK OF AMERICA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "bac"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BANK OF AMERICA"], ["symbol", "bac"], ["created_at", "2020-07-10 01:31:51.617589"], ["updated_at", "2020-07-10 01:31:51.617589"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BEYOND MEAT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "bnyd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BEYOND MEAT"], ["symbol", "bnyd"], ["created_at", "2020-07-10 01:31:51.623316"], ["updated_at", "2020-07-10 01:31:51.623316"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CARNIVAL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ccl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CARNIVAL"], ["symbol", "ccl"], ["created_at", "2020-07-10 01:31:51.629229"], ["updated_at", "2020-07-10 01:31:51.629229"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CITI GROUP"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "c"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CITI GROUP"], ["symbol", "c"], ["created_at", "2020-07-10 01:31:51.635617"], ["updated_at", "2020-07-10 01:31:51.635617"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CISCO"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "csco"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CISCO"], ["symbol", "csco"], ["created_at", "2020-07-10 01:31:51.640798"], ["updated_at", "2020-07-10 01:31:51.640798"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "COMCAST"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "cmcsa"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "COMCAST"], ["symbol", "cmcsa"], ["created_at", "2020-07-10 01:31:51.645819"], ["updated_at", "2020-07-10 01:31:51.645819"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DISNEY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DISNEY"], ["symbol", "dis"], ["created_at", "2020-07-10 01:31:51.651574"], ["updated_at", "2020-07-10 01:31:51.651574"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DELTA AIR LINES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.5ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DELTA AIR LINES"], ["symbol", "dal"], ["created_at", "2020-07-10 01:31:51.661564"], ["updated_at", "2020-07-10 01:31:51.661564"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DRAFT KINGS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dkng"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DRAFT KINGS"], ["symbol", "dkng"], ["created_at", "2020-07-10 01:31:51.668221"], ["updated_at", "2020-07-10 01:31:51.668221"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DOCUSIGN"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "docu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DOCUSIGN"], ["symbol", "docu"], ["created_at", "2020-07-10 01:31:51.673940"], ["updated_at", "2020-07-10 01:31:51.673940"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "EBAY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ebay"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "EBAY"], ["symbol", "ebay"], ["created_at", "2020-07-10 01:31:51.679558"], ["updated_at", "2020-07-10 01:31:51.679558"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FORD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "f"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FORD"], ["symbol", "f"], ["created_at", "2020-07-10 01:31:51.684746"], ["updated_at", "2020-07-10 01:31:51.684746"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FACEBOOK"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fb"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FACEBOOK"], ["symbol", "fb"], ["created_at", "2020-07-10 01:31:51.690039"], ["updated_at", "2020-07-10 01:31:51.690039"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FEDEX"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fdx"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FEDEX"], ["symbol", "fdx"], ["created_at", "2020-07-10 01:31:51.695429"], ["updated_at", "2020-07-10 01:31:51.695429"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FASTLY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fsly"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FASTLY"], ["symbol", "fsly"], ["created_at", "2020-07-10 01:31:51.701405"], ["updated_at", "2020-07-10 01:31:51.701405"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FISERV"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fisv"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FISERV"], ["symbol", "fisv"], ["created_at", "2020-07-10 01:31:51.712342"], ["updated_at", "2020-07-10 01:31:51.712342"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "GENPACT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "g"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "GENPACT"], ["symbol", "g"], ["created_at", "2020-07-10 01:31:51.716535"], ["updated_at", "2020-07-10 01:31:51.716535"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "GOLDMAN SACHS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "gs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "GOLDMAN SACHS"], ["symbol", "gs"], ["created_at", "2020-07-10 01:31:51.720260"], ["updated_at", "2020-07-10 01:31:51.720260"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HYATT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "h"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HYATT"], ["symbol", "h"], ["created_at", "2020-07-10 01:31:51.724302"], ["updated_at", "2020-07-10 01:31:51.724302"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HOME DEPOT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "hd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HOME DEPOT"], ["symbol", "hd"], ["created_at", "2020-07-10 01:31:51.728102"], ["updated_at", "2020-07-10 01:31:51.728102"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HONEYWELL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "hon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HONEYWELL"], ["symbol", "hon"], ["created_at", "2020-07-10 01:31:51.732399"], ["updated_at", "2020-07-10 01:31:51.732399"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "INTEL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "i"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "INTEL"], ["symbol", "i"], ["created_at", "2020-07-10 01:31:51.737212"], ["updated_at", "2020-07-10 01:31:51.737212"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "JPMORGAN CHASE"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "jpm"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "JPMORGAN CHASE"], ["symbol", "jpm"], ["created_at", "2020-07-10 01:31:51.741029"], ["updated_at", "2020-07-10 01:31:51.741029"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "JOHNSON & JOHNSON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "jnj"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "JOHNSON & JOHNSON"], ["symbol", "jnj"], ["created_at", "2020-07-10 01:31:51.744825"], ["updated_at", "2020-07-10 01:31:51.744825"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KELLOG"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "k"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KELLOG"], ["symbol", "k"], ["created_at", "2020-07-10 01:31:51.748885"], ["updated_at", "2020-07-10 01:31:51.748885"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KROGER"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kr"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KROGER"], ["symbol", "kr"], ["created_at", "2020-07-10 01:31:51.752880"], ["updated_at", "2020-07-10 01:31:51.752880"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KIMBERLY-CLARK"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kmb"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KIMBERLY-CLARK"], ["symbol", "kmb"], ["created_at", "2020-07-10 01:31:51.756765"], ["updated_at", "2020-07-10 01:31:51.756765"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KHOL'S"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kss"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KHOL'S"], ["symbol", "kss"], ["created_at", "2020-07-10 01:31:51.760741"], ["updated_at", "2020-07-10 01:31:51.760741"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOEWS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "l"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOEWS"], ["symbol", "l"], ["created_at", "2020-07-10 01:31:51.764505"], ["updated_at", "2020-07-10 01:31:51.764505"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOEW'S"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "low"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOEW'S"], ["symbol", "low"], ["created_at", "2020-07-10 01:31:51.768990"], ["updated_at", "2020-07-10 01:31:51.768990"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOCKHEAD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "lmt"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (1.8ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOCKHEAD"], ["symbol", "lmt"], ["created_at", "2020-07-10 01:31:51.772999"], ["updated_at", "2020-07-10 01:31:51.772999"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LULULEMON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "lulu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LULULEMON"], ["symbol", "lulu"], ["created_at", "2020-07-10 01:31:51.779252"], ["updated_at", "2020-07-10 01:31:51.779252"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "MICROSOFT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "msft"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "MICROSOFT"], ["symbol", "msft"], ["created_at", "2020-07-10 01:31:51.783509"], ["updated_at", "2020-07-10 01:31:51.783509"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "TESLA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "tsla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "TESLA"], ["symbol", "tsla"], ["created_at", "2020-07-10 01:31:51.787586"], ["updated_at", "2020-07-10 01:31:51.787586"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "ZILLOW"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "z"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ZILLOW"], ["symbol", "z"], ["created_at", "2020-07-10 01:31:51.791734"], ["updated_at", "2020-07-10 01:31:51.791734"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Load (1.8ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE DATABASE "project_1_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE "project_1_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (58.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "stocks" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "stocks" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_name" ON "stocks"  ("name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_symbol" ON "stocks"  ("symbol")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "user_id" integer NOT NULL, "stock_id" integer NOT NULL, "price" float NOT NULL, "num_shares" integer NOT NULL, "transactions_type" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_stock_id" ON "transactions"  ("stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id_and_stock_id" ON "transactions"  ("user_id", "stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (7.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:40
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "buying_power" float, "username" character varying NOT NULL)[0m
+  ↳ db/schema.rb:40
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (6.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_list_items" CASCADE[0m
+  ↳ db/schema.rb:52
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "watch_list_items" ("id" bigserial primary key, "user_id" character varying NOT NULL, "stock_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:52
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_watch_list_items_on_stock_id" ON "watch_list_items"  ("stock_id")[0m
+  ↳ db/schema.rb:52
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_watch_list_items_on_user_id" ON "watch_list_items"  ("user_id")[0m
+  ↳ db/schema.rb:52
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (13.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "stocks" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "stocks" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_name" ON "stocks"  ("name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_symbol" ON "stocks"  ("symbol")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (4.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "user_id" integer NOT NULL, "stock_id" integer NOT NULL, "price" float NOT NULL, "num_shares" integer NOT NULL, "transactions_type" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_stock_id" ON "transactions"  ("stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id_and_stock_id" ON "transactions"  ("user_id", "stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (3.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:40
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "buying_power" float, "username" character varying NOT NULL)[0m
+  ↳ db/schema.rb:40
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (6.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_list_items" CASCADE[0m
+  ↳ db/schema.rb:52
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "watch_list_items" ("id" bigserial primary key, "user_id" character varying NOT NULL, "stock_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:52
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_watch_list_items_on_stock_id" ON "watch_list_items"  ("stock_id")[0m
+  ↳ db/schema.rb:52
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_watch_list_items_on_user_id" ON "watch_list_items"  ("user_id")[0m
+  ↳ db/schema.rb:52
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200709193704)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2020-07-10 01:33:57.582437"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-07-10 01:33:57.589494"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mStock Load (1.1ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AGILENT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "a"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (1.2ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AGILENT"], ["symbol", "a"], ["created_at", "2020-07-10 01:33:57.653652"], ["updated_at", "2020-07-10 01:33:57.653652"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "APPLE"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "aapl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "APPLE"], ["symbol", "aapl"], ["created_at", "2020-07-10 01:33:57.660498"], ["updated_at", "2020-07-10 01:33:57.660498"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMAZON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "amzn"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMAZON"], ["symbol", "amzn"], ["created_at", "2020-07-10 01:33:57.669569"], ["updated_at", "2020-07-10 01:33:57.669569"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "amd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (1.0ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMD"], ["symbol", "amd"], ["created_at", "2020-07-10 01:33:57.675437"], ["updated_at", "2020-07-10 01:33:57.675437"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMERICAN AIRLINES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "aal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMERICAN AIRLINES"], ["symbol", "aal"], ["created_at", "2020-07-10 01:33:57.682688"], ["updated_at", "2020-07-10 01:33:57.682688"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AT&T"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "T"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AT&T"], ["symbol", "T"], ["created_at", "2020-07-10 01:33:57.688709"], ["updated_at", "2020-07-10 01:33:57.688709"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BARNES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "b"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BARNES"], ["symbol", "b"], ["created_at", "2020-07-10 01:33:57.694266"], ["updated_at", "2020-07-10 01:33:57.694266"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BOEING"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ba"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.5ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BOEING"], ["symbol", "ba"], ["created_at", "2020-07-10 01:33:57.708275"], ["updated_at", "2020-07-10 01:33:57.708275"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BANK OF AMERICA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "bac"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BANK OF AMERICA"], ["symbol", "bac"], ["created_at", "2020-07-10 01:33:57.713012"], ["updated_at", "2020-07-10 01:33:57.713012"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BEYOND MEAT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "bnyd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BEYOND MEAT"], ["symbol", "bnyd"], ["created_at", "2020-07-10 01:33:57.717186"], ["updated_at", "2020-07-10 01:33:57.717186"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CARNIVAL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ccl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CARNIVAL"], ["symbol", "ccl"], ["created_at", "2020-07-10 01:33:57.721954"], ["updated_at", "2020-07-10 01:33:57.721954"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CITI GROUP"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "c"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CITI GROUP"], ["symbol", "c"], ["created_at", "2020-07-10 01:33:57.726556"], ["updated_at", "2020-07-10 01:33:57.726556"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CISCO"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "csco"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CISCO"], ["symbol", "csco"], ["created_at", "2020-07-10 01:33:57.730700"], ["updated_at", "2020-07-10 01:33:57.730700"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "COMCAST"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "cmcsa"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "COMCAST"], ["symbol", "cmcsa"], ["created_at", "2020-07-10 01:33:57.734775"], ["updated_at", "2020-07-10 01:33:57.734775"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DISNEY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DISNEY"], ["symbol", "dis"], ["created_at", "2020-07-10 01:33:57.738841"], ["updated_at", "2020-07-10 01:33:57.738841"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DELTA AIR LINES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DELTA AIR LINES"], ["symbol", "dal"], ["created_at", "2020-07-10 01:33:57.743064"], ["updated_at", "2020-07-10 01:33:57.743064"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DRAFT KINGS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dkng"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DRAFT KINGS"], ["symbol", "dkng"], ["created_at", "2020-07-10 01:33:57.747545"], ["updated_at", "2020-07-10 01:33:57.747545"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DOCUSIGN"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "docu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DOCUSIGN"], ["symbol", "docu"], ["created_at", "2020-07-10 01:33:57.751554"], ["updated_at", "2020-07-10 01:33:57.751554"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "EBAY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ebay"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "EBAY"], ["symbol", "ebay"], ["created_at", "2020-07-10 01:33:57.756575"], ["updated_at", "2020-07-10 01:33:57.756575"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FORD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "f"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FORD"], ["symbol", "f"], ["created_at", "2020-07-10 01:33:57.760629"], ["updated_at", "2020-07-10 01:33:57.760629"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FACEBOOK"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fb"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FACEBOOK"], ["symbol", "fb"], ["created_at", "2020-07-10 01:33:57.764763"], ["updated_at", "2020-07-10 01:33:57.764763"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FEDEX"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fdx"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FEDEX"], ["symbol", "fdx"], ["created_at", "2020-07-10 01:33:57.768916"], ["updated_at", "2020-07-10 01:33:57.768916"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FASTLY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fsly"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FASTLY"], ["symbol", "fsly"], ["created_at", "2020-07-10 01:33:57.773116"], ["updated_at", "2020-07-10 01:33:57.773116"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FISERV"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fisv"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FISERV"], ["symbol", "fisv"], ["created_at", "2020-07-10 01:33:57.777052"], ["updated_at", "2020-07-10 01:33:57.777052"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "GENPACT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "g"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "GENPACT"], ["symbol", "g"], ["created_at", "2020-07-10 01:33:57.781246"], ["updated_at", "2020-07-10 01:33:57.781246"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "GOLDMAN SACHS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "gs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "GOLDMAN SACHS"], ["symbol", "gs"], ["created_at", "2020-07-10 01:33:57.785480"], ["updated_at", "2020-07-10 01:33:57.785480"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HYATT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "h"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HYATT"], ["symbol", "h"], ["created_at", "2020-07-10 01:33:57.791127"], ["updated_at", "2020-07-10 01:33:57.791127"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HOME DEPOT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "hd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HOME DEPOT"], ["symbol", "hd"], ["created_at", "2020-07-10 01:33:57.796783"], ["updated_at", "2020-07-10 01:33:57.796783"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HONEYWELL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "hon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HONEYWELL"], ["symbol", "hon"], ["created_at", "2020-07-10 01:33:57.801807"], ["updated_at", "2020-07-10 01:33:57.801807"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "INTEL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "i"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "INTEL"], ["symbol", "i"], ["created_at", "2020-07-10 01:33:57.807394"], ["updated_at", "2020-07-10 01:33:57.807394"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "JPMORGAN CHASE"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "jpm"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "JPMORGAN CHASE"], ["symbol", "jpm"], ["created_at", "2020-07-10 01:33:57.812985"], ["updated_at", "2020-07-10 01:33:57.812985"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "JOHNSON & JOHNSON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "jnj"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "JOHNSON & JOHNSON"], ["symbol", "jnj"], ["created_at", "2020-07-10 01:33:57.818468"], ["updated_at", "2020-07-10 01:33:57.818468"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KELLOG"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "k"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KELLOG"], ["symbol", "k"], ["created_at", "2020-07-10 01:33:57.824887"], ["updated_at", "2020-07-10 01:33:57.824887"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KROGER"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kr"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KROGER"], ["symbol", "kr"], ["created_at", "2020-07-10 01:33:57.829912"], ["updated_at", "2020-07-10 01:33:57.829912"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KIMBERLY-CLARK"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kmb"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KIMBERLY-CLARK"], ["symbol", "kmb"], ["created_at", "2020-07-10 01:33:57.835870"], ["updated_at", "2020-07-10 01:33:57.835870"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KHOL'S"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kss"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.5ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KHOL'S"], ["symbol", "kss"], ["created_at", "2020-07-10 01:33:57.841798"], ["updated_at", "2020-07-10 01:33:57.841798"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOEWS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "l"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOEWS"], ["symbol", "l"], ["created_at", "2020-07-10 01:33:57.847132"], ["updated_at", "2020-07-10 01:33:57.847132"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOEW'S"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "low"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOEW'S"], ["symbol", "low"], ["created_at", "2020-07-10 01:33:57.852874"], ["updated_at", "2020-07-10 01:33:57.852874"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOCKHEAD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "lmt"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOCKHEAD"], ["symbol", "lmt"], ["created_at", "2020-07-10 01:33:57.859241"], ["updated_at", "2020-07-10 01:33:57.859241"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LULULEMON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "lulu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LULULEMON"], ["symbol", "lulu"], ["created_at", "2020-07-10 01:33:57.864630"], ["updated_at", "2020-07-10 01:33:57.864630"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "MICROSOFT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "msft"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "MICROSOFT"], ["symbol", "msft"], ["created_at", "2020-07-10 01:33:57.870175"], ["updated_at", "2020-07-10 01:33:57.870175"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "TESLA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "tsla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.5ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "TESLA"], ["symbol", "tsla"], ["created_at", "2020-07-10 01:33:57.875929"], ["updated_at", "2020-07-10 01:33:57.875929"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "ZILLOW"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "z"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ZILLOW"], ["symbol", "z"], ["created_at", "2020-07-10 01:33:57.881305"], ["updated_at", "2020-07-10 01:33:57.881305"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (8516.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "project_1_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (8323.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "project_1_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (8388.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "project_1_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (121.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "project_1_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (50.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "project_1_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (326.6ms)[0m  [1m[35mCREATE DATABASE "project_1_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (88.5ms)[0m  [1m[35mCREATE DATABASE "project_1_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "stocks" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "stocks" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_name" ON "stocks"  ("name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_symbol" ON "stocks"  ("symbol")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "user_id" integer NOT NULL, "stock_id" integer NOT NULL, "price" float NOT NULL, "num_shares" integer NOT NULL, "transactions_type" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_stock_id" ON "transactions"  ("stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id_and_stock_id" ON "transactions"  ("user_id", "stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:40
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "buying_power" float, "username" character varying NOT NULL)[0m
+  ↳ db/schema.rb:40
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_list_items" CASCADE[0m
+  ↳ db/schema.rb:52
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "watch_list_items" ("id" bigserial primary key, "user_id" character varying NOT NULL, "stock_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:52
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_watch_list_items_on_stock_id" ON "watch_list_items"  ("stock_id")[0m
+  ↳ db/schema.rb:52
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_watch_list_items_on_user_id" ON "watch_list_items"  ("user_id")[0m
+  ↳ db/schema.rb:52
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200709193704)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200427210319),
+(20200709190728),
+(20200709170556),
+(20200506181706),
+(20200708173500);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-10 01:36:19.286394"], ["updated_at", "2020-07-10 01:36:19.286394"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "stocks" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "stocks" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_name" ON "stocks"  ("name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_symbol" ON "stocks"  ("symbol")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "user_id" integer NOT NULL, "stock_id" integer NOT NULL, "price" float NOT NULL, "num_shares" integer NOT NULL, "transactions_type" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_stock_id" ON "transactions"  ("stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id_and_stock_id" ON "transactions"  ("user_id", "stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:40
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "buying_power" float, "username" character varying NOT NULL)[0m
+  ↳ db/schema.rb:40
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_list_items" CASCADE[0m
+  ↳ db/schema.rb:52
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "watch_list_items" ("id" bigserial primary key, "user_id" character varying NOT NULL, "stock_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:52
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_watch_list_items_on_stock_id" ON "watch_list_items"  ("stock_id")[0m
+  ↳ db/schema.rb:52
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_watch_list_items_on_user_id" ON "watch_list_items"  ("user_id")[0m
+  ↳ db/schema.rb:52
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200709193704)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200427210319),
+(20200709190728),
+(20200709170556),
+(20200506181706),
+(20200708173500);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-10 01:36:19.466732"], ["updated_at", "2020-07-10 01:36:19.466732"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-07-10 01:36:19.471487"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mStock Load (1.0ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AGILENT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "a"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.9ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AGILENT"], ["symbol", "a"], ["created_at", "2020-07-10 01:36:19.537217"], ["updated_at", "2020-07-10 01:36:19.537217"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "APPLE"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "aapl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "APPLE"], ["symbol", "aapl"], ["created_at", "2020-07-10 01:36:19.543593"], ["updated_at", "2020-07-10 01:36:19.543593"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMAZON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "amzn"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.9ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMAZON"], ["symbol", "amzn"], ["created_at", "2020-07-10 01:36:19.549061"], ["updated_at", "2020-07-10 01:36:19.549061"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "amd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMD"], ["symbol", "amd"], ["created_at", "2020-07-10 01:36:19.556030"], ["updated_at", "2020-07-10 01:36:19.556030"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMERICAN AIRLINES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "aal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMERICAN AIRLINES"], ["symbol", "aal"], ["created_at", "2020-07-10 01:36:19.561760"], ["updated_at", "2020-07-10 01:36:19.561760"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AT&T"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "T"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AT&T"], ["symbol", "T"], ["created_at", "2020-07-10 01:36:19.566993"], ["updated_at", "2020-07-10 01:36:19.566993"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BARNES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "b"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BARNES"], ["symbol", "b"], ["created_at", "2020-07-10 01:36:19.572762"], ["updated_at", "2020-07-10 01:36:19.572762"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BOEING"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ba"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BOEING"], ["symbol", "ba"], ["created_at", "2020-07-10 01:36:19.579311"], ["updated_at", "2020-07-10 01:36:19.579311"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BANK OF AMERICA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "bac"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BANK OF AMERICA"], ["symbol", "bac"], ["created_at", "2020-07-10 01:36:19.586891"], ["updated_at", "2020-07-10 01:36:19.586891"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BEYOND MEAT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "bnyd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BEYOND MEAT"], ["symbol", "bnyd"], ["created_at", "2020-07-10 01:36:19.592244"], ["updated_at", "2020-07-10 01:36:19.592244"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CARNIVAL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ccl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.5ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CARNIVAL"], ["symbol", "ccl"], ["created_at", "2020-07-10 01:36:19.603798"], ["updated_at", "2020-07-10 01:36:19.603798"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CITI GROUP"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "c"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CITI GROUP"], ["symbol", "c"], ["created_at", "2020-07-10 01:36:19.608673"], ["updated_at", "2020-07-10 01:36:19.608673"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CISCO"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "csco"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CISCO"], ["symbol", "csco"], ["created_at", "2020-07-10 01:36:19.612916"], ["updated_at", "2020-07-10 01:36:19.612916"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "COMCAST"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "cmcsa"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "COMCAST"], ["symbol", "cmcsa"], ["created_at", "2020-07-10 01:36:19.616859"], ["updated_at", "2020-07-10 01:36:19.616859"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DISNEY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DISNEY"], ["symbol", "dis"], ["created_at", "2020-07-10 01:36:19.621101"], ["updated_at", "2020-07-10 01:36:19.621101"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DELTA AIR LINES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DELTA AIR LINES"], ["symbol", "dal"], ["created_at", "2020-07-10 01:36:19.625921"], ["updated_at", "2020-07-10 01:36:19.625921"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DRAFT KINGS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dkng"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DRAFT KINGS"], ["symbol", "dkng"], ["created_at", "2020-07-10 01:36:19.630151"], ["updated_at", "2020-07-10 01:36:19.630151"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DOCUSIGN"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "docu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DOCUSIGN"], ["symbol", "docu"], ["created_at", "2020-07-10 01:36:19.635230"], ["updated_at", "2020-07-10 01:36:19.635230"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "EBAY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ebay"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "EBAY"], ["symbol", "ebay"], ["created_at", "2020-07-10 01:36:19.639497"], ["updated_at", "2020-07-10 01:36:19.639497"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FORD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "f"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FORD"], ["symbol", "f"], ["created_at", "2020-07-10 01:36:19.646808"], ["updated_at", "2020-07-10 01:36:19.646808"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FACEBOOK"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fb"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FACEBOOK"], ["symbol", "fb"], ["created_at", "2020-07-10 01:36:19.650977"], ["updated_at", "2020-07-10 01:36:19.650977"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FEDEX"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fdx"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FEDEX"], ["symbol", "fdx"], ["created_at", "2020-07-10 01:36:19.655005"], ["updated_at", "2020-07-10 01:36:19.655005"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FASTLY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fsly"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.5ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FASTLY"], ["symbol", "fsly"], ["created_at", "2020-07-10 01:36:19.658966"], ["updated_at", "2020-07-10 01:36:19.658966"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FISERV"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fisv"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FISERV"], ["symbol", "fisv"], ["created_at", "2020-07-10 01:36:19.663201"], ["updated_at", "2020-07-10 01:36:19.663201"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "GENPACT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "g"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "GENPACT"], ["symbol", "g"], ["created_at", "2020-07-10 01:36:19.667480"], ["updated_at", "2020-07-10 01:36:19.667480"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "GOLDMAN SACHS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "gs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "GOLDMAN SACHS"], ["symbol", "gs"], ["created_at", "2020-07-10 01:36:19.672115"], ["updated_at", "2020-07-10 01:36:19.672115"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HYATT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "h"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HYATT"], ["symbol", "h"], ["created_at", "2020-07-10 01:36:19.676713"], ["updated_at", "2020-07-10 01:36:19.676713"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HOME DEPOT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "hd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HOME DEPOT"], ["symbol", "hd"], ["created_at", "2020-07-10 01:36:19.682075"], ["updated_at", "2020-07-10 01:36:19.682075"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HONEYWELL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "hon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HONEYWELL"], ["symbol", "hon"], ["created_at", "2020-07-10 01:36:19.688328"], ["updated_at", "2020-07-10 01:36:19.688328"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "INTEL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "i"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "INTEL"], ["symbol", "i"], ["created_at", "2020-07-10 01:36:19.694257"], ["updated_at", "2020-07-10 01:36:19.694257"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "JPMORGAN CHASE"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "jpm"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "JPMORGAN CHASE"], ["symbol", "jpm"], ["created_at", "2020-07-10 01:36:19.699079"], ["updated_at", "2020-07-10 01:36:19.699079"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "JOHNSON & JOHNSON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "jnj"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "JOHNSON & JOHNSON"], ["symbol", "jnj"], ["created_at", "2020-07-10 01:36:19.704369"], ["updated_at", "2020-07-10 01:36:19.704369"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KELLOG"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "k"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KELLOG"], ["symbol", "k"], ["created_at", "2020-07-10 01:36:19.709580"], ["updated_at", "2020-07-10 01:36:19.709580"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KROGER"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kr"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KROGER"], ["symbol", "kr"], ["created_at", "2020-07-10 01:36:19.715085"], ["updated_at", "2020-07-10 01:36:19.715085"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KIMBERLY-CLARK"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kmb"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KIMBERLY-CLARK"], ["symbol", "kmb"], ["created_at", "2020-07-10 01:36:19.722008"], ["updated_at", "2020-07-10 01:36:19.722008"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KHOL'S"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kss"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KHOL'S"], ["symbol", "kss"], ["created_at", "2020-07-10 01:36:19.727171"], ["updated_at", "2020-07-10 01:36:19.727171"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOEWS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "l"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOEWS"], ["symbol", "l"], ["created_at", "2020-07-10 01:36:19.733270"], ["updated_at", "2020-07-10 01:36:19.733270"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOEW'S"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "low"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOEW'S"], ["symbol", "low"], ["created_at", "2020-07-10 01:36:19.739089"], ["updated_at", "2020-07-10 01:36:19.739089"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOCKHEAD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "lmt"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOCKHEAD"], ["symbol", "lmt"], ["created_at", "2020-07-10 01:36:19.744748"], ["updated_at", "2020-07-10 01:36:19.744748"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LULULEMON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "lulu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LULULEMON"], ["symbol", "lulu"], ["created_at", "2020-07-10 01:36:19.750291"], ["updated_at", "2020-07-10 01:36:19.750291"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "MICROSOFT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "msft"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "MICROSOFT"], ["symbol", "msft"], ["created_at", "2020-07-10 01:36:19.756447"], ["updated_at", "2020-07-10 01:36:19.756447"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "TESLA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "tsla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "TESLA"], ["symbol", "tsla"], ["created_at", "2020-07-10 01:36:19.762198"], ["updated_at", "2020-07-10 01:36:19.762198"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "ZILLOW"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "z"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ZILLOW"], ["symbol", "z"], ["created_at", "2020-07-10 01:36:19.768006"], ["updated_at", "2020-07-10 01:36:19.768006"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mStock Load (1.0ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+Started GET "/" for ::1 at 2020-07-09 18:37:30 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ericchen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EiyV-mjafv2kbeEChLBoUw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 2306ms (Views: 2300.8ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-09 18:37:45 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@hotmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/users" for ::1 at 2020-07-09 18:37:57 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@hotmail.com", "username"=>"demoUser", "password"=>"[FILTERED]", "buying_power"=>"5000"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "buying_power", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "demo@hotmail.com"], ["password_digest", "$2a$12$J.dPJ8cKg66KWpWVMxy1peB.W/Sm9MVZQVqwCxxuHMxPS18kNq87e"], ["session_token", "17O6LcEtszTUXElQ59_TIg"], ["created_at", "2020-07-10 01:37:57.368046"], ["updated_at", "2020-07-10 01:37:57.368046"], ["buying_power", 5000.0], ["username", "demoUser"]]
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:32
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@hotmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demoUser"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "LSIiZt1cXH-BDqdE5VcO8Q"], ["updated_at", "2020-07-10 01:37:57.383628"], ["id", 1]]
+  ↳ app/models/user.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:32
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 341ms (Views: 9.1ms | ActiveRecord: 22.9ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2020-07-09 19:49:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "LSIiZt1cXH-BDqdE5VcO8Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 798ms (Views: 795.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-07-09 19:49:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "LSIiZt1cXH-BDqdE5VcO8Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-09 19:49:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "LSIiZt1cXH-BDqdE5VcO8Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 836ms (Views: 833.5ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-07-09 19:50:02 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "LSIiZt1cXH-BDqdE5VcO8Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:32
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@hotmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demoUser"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "JrebIZrC8IG1rcy7MnDUzA"], ["updated_at", "2020-07-10 02:50:02.411639"], ["id", 1]]
+  ↳ app/models/user.rb:32
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:32
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-09 19:50:10 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@hotmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:32
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@hotmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demoUser"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "uAoQcTWd7Pm_CQxOWiN5uA"], ["updated_at", "2020-07-10 02:50:10.532583"], ["id", 1]]
+  ↳ app/models/user.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:32
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 526ms (Views: 12.3ms | ActiveRecord: 6.7ms)
+
+

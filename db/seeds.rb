@@ -49,7 +49,10 @@ stocks = [
     { name: 'LULULEMON', symbol: 'lulu' },
     { name: 'MICROSOFT', symbol: 'msft' },
     { name: 'TESLA', symbol: 'tsla' },
+    { name: 'ZILLOW', symbol: 'z'}
 ]
+
+Stock.destroy_all
 
 stocks.each do |stock| 
     Stock.create(name: stock[:name], symbol: stock[:symbol])
