@@ -14,7 +14,7 @@ class SearchStock extends React.Component {
 
         this.state = {
             symbol: this.props.symbol,
-            name: this.props.symbol,
+            name: this.props.name,
             range: '1d',
             stock: this.props.stock,
             price: '',
@@ -30,7 +30,7 @@ class SearchStock extends React.Component {
     componentDidUpdate(prevProps) {
         if (this.props.symbol !== prevProps.symbol) {
             this.props.fetchHistStock(this.props.symbol, '1d')
-            this.setState({symbol: this.props.symbol})
+            this.setState({symbol: this.props.symbol, name: this.props.name})
         }
     } 
 
@@ -87,7 +87,7 @@ class SearchStock extends React.Component {
                             
                             <div className='stock-chart-container'>
                                 <HistStock symbol={symbol}
-                                    //name={name}
+                                    name={name}
                                     range={range} />
                             </div>
                             <div className='stock-show-bar-container'>
@@ -104,7 +104,7 @@ class SearchStock extends React.Component {
                     </div>
                     <div className='stock-show-right'>
                         <div className='stock-bar'>
-                            <h1 className='stock-bar-header'>{`Buy ${symbol.toUpperCase()}`}</h1>
+                            <h1 className='stock-bar-header'>{`Buy ${name.toUpperCase()}`}</h1>
                             <div>Shares</div>
                             <div>Market Price  {this.props.stock[this.props.stock.length-1].high}</div>
                             <div>Estimated Cost</div>

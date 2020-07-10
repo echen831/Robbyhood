@@ -8,6 +8,7 @@ const mSTP = (state, ownProps) => ({
     currentUser: state.entities.users[state.session.id],
     loading: state.ui.loading,
     symbol: ownProps.match.params.symbol,
+    name: ownProps.match.params.name,
     stock: state.entities.stocks[ownProps.match.params.symbol],
 })
 

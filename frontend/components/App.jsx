@@ -21,7 +21,7 @@ const App = () => {
                 <AuthRoute path="/signup" component={SignupFormContainer} />
                 <ProtectedRoute exact path='/stocks' component={ShowContainer}/>
                 <ProtectedRoute exact path='/stocks/:symbol/:range' component={HistStockContainer}/>
-                <ProtectedRoute exact path='/search/stocks/:symbol' component={SearchStockContainer}/>
+                <ProtectedRoute exact path='/search/stocks/:symbol/:name' component={SearchStockContainer}/>
                 <Route path='*' component={NoMatch}/>
             </Switch>
         </div>
