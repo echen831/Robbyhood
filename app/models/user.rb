@@ -7,6 +7,10 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Transaction
     
+    has_one :watch_list,
+        foreign_key: :user_id,
+        class_name: :WatchList
+    
     has_many :stock, through: :transactions
     
     attr_reader :password
