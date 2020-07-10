@@ -4,6 +4,7 @@ class Api::TransactionsController < ApplicationController
         @transactions = current_user.transactions.includes(:stock)
     end
 
+
     def create
         @transaction = Transaction.new(transaction_params)
         @stock = Stock.find_by(symbol: params[:transaction][:symbol])
@@ -48,5 +49,7 @@ class Api::TransactionsController < ApplicationController
     def transaction_params
         params.require(:transaction).permit(:price, :num_shares, :transactions_type)
     end
+
+
 
 end
