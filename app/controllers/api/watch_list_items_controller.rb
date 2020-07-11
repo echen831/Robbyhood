@@ -1,13 +1,13 @@
 class Api::WatchListItemsController < ApplicationController
     
     def create
+        @watch_list_item = WatchListItem.new
+        
 
     end
 
     def destroy
     end
 
-    private
-    def watch_list_item 
-    end
+
 end
