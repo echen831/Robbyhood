@@ -1,7 +1,7 @@
 
 export const fetchStocks = () => (
     $.ajax({
-        url: '',
+        url: '/api/stocks',
         method: 'GET'
     })
 );

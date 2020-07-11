@@ -72,6 +72,7 @@ class Show extends React.Component {
                         </div>
                         <div className='right-nav'>
                             <div>Hi, {currentUser.username}</div>
+                            <div>{currentUser.buying_power}</div>
                             <div>Portfolio</div>
                             <div onClick={logout} >Log Out</div>
 

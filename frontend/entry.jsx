@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     // window.fetchIntraDayStock = Stock.fetchIntraDayStock    
     window.fetchHistStock = Stock.fetchHistStock
     window.fetchIntraDayStock = StockUtil.fetchIntraDayStock
-    window.fetchNews = Stock.fetchNews
+    window.fetchStocks = StockUtil.fetchStocks
     //test 
 
 

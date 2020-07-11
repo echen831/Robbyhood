@@ -68,4 +68,20 @@ class User < ApplicationRecord
         buying_power
     end
 
+    def stocks_owned
+        stocks = {}
+
+        transactions.each do |transaction| 
+            if transaction.transactions_type == 'buy' && !stocks[transaction.stock_id]
+                stocks[transaction.stock_id] = transaction.num_shares
+            elsif transaction.transaction_type == 'buy'
+                stock[transaction.stock_id] += transaction.num_shares
+            elsif transaction.transaction_type == 'sell'
+                stock[transaction.stock_id] -= transaction.num_shares
+            end
+        end
+
+        stocks.select {|k, v| v > 0 }.keys
+    end
+
 end

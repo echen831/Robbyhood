@@ -1,0 +1,1 @@
+json.array! @stocks, :id, :name, :symbol 

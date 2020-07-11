@@ -27,10 +27,11 @@ const receiveNews = (news, symbol) => ({
     symbol
 }) 
 
-export const fetchStocks = () => dispatch => (
-    StockAPIUtil.fetchStocks()
+export const fetchStocks = () => dispatch => {
+    return StockAPIUtil.fetchStocks()
         .then((stocks) => dispatch(receiveStocks(stocks)))
-);
+};
+
 
 export const fetchIntraDayStock = (symbol) => dispatch => {
     return StockAPIUtil.fetchIntraDayStock(symbol)

@@ -1,1 +1,2 @@
-json.extract! user, :id, :email, :username, :buying_power
+json.extract! user, :id, :email, :username
+json.buying_power user.calculate_buying_power
