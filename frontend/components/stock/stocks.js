@@ -1,7 +1,7 @@
 export const stocks = [
+    { name: 'APPLE', symbol: 'aapl' },
     { name: 'AGILENT', symbol: 'a' },
     { name: 'ALIBABA', symbol: 'baba'},
-    { name: 'APPLE', symbol: 'aapl' },
     { name: 'AMAZON', symbol: 'amzn' },
     { name: 'AMD', symbol: 'amd' },
     { name: 'AMERICAN AIRLINES', symbol: 'aal' },

@@ -41,4 +41,31 @@ class User < ApplicationRecord
         self.session_token ||= SecureRandom.urlsafe_base64
     end
 
+    def shares_owned(stock_id)
+        shares = 0
+        transactions.where(stock_id: stock_id).each do |transaction| 
+            if transaction.transactions_type == 'buy'
+                shares += transactions.num_shares
+            else 
+                shares -= transaction.num_shares
+            end
+        end
+        shares
+    end
+
+    def calculate_buying_power
+        buying_power = self.buying_power
+
+        transactions.each do |transaction|
+            transaction_amount = transaction.price * transaction.num_shares
+            if transaction.transactions_type == 'buy'
+                buying_power -= transaction_amount
+            else 
+                buying_power += transaction_amount
+            end
+        end
+
+        buying_power
+    end
+
 end

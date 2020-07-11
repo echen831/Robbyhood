@@ -107,7 +107,7 @@ class SessionForm extends React.Component {
                             <br/>
                                 <input className='submit-input-box'
                                     id='email'
-                                    type="email" 
+                                    type="text" 
                                     value={email}
                                     onChange={this.update('email')}
                                     required
@@ -120,7 +120,6 @@ class SessionForm extends React.Component {
                                     type="text"
                                     value={username}
                                     onChange={this.update('username')}
-                                    required
                                     />
                             <br/>
                             <label className='submit-input-label'>Password</label>
