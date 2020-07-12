@@ -50823,3 +50823,24 @@ No template found for Api::StocksController#index, rendering head :no_content
 Completed 204 No Content in 121ms (ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-07-11 19:28:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "taOxc-p9HpBTC_yz7a7r-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (29.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (34.3ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.8ms)
+
+
+
+ActionView::Template::Error - undefined method `transaction_type' for #<Transaction:0x00007fac16d56e38>
+Did you mean?  transactions_type
+               transactions_type?
+               transactions_type=:
+  app/views/api/users/_user.json.jbuilder:3:in `view template'
+  app/views/static_pages/root.html.erb:3:in `_app_views_static_pages_root_html_erb__1815784208985074972_70188542786320'
+
+Started POST "/__better_errors/fdf2d1e22ea0a934/variables" for ::1 at 2020-07-11 19:28:32 -0700
