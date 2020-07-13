@@ -139,7 +139,7 @@ class Show extends React.Component {
                             <div>
 
                                 {Object.values(stocks).map((stock, idx) => {
-                                    if (Object.keys(currentUser.stocks_owned).includes(idx.toString()))
+                                    if (Object.keys(currentUser.stocks_owned).includes((idx+1).toString()))
                                     return (
                                         <span onClick={() => this.setState({
                                             symbol: stock.symbol,
@@ -147,7 +147,7 @@ class Show extends React.Component {
                                         })}
                                             className={name === stock.name ? 'selected' : ''}
                                             key={idx}
-                                    >{stock.name} {currentUser.stocks_owned[idx]}</span>
+                                    >{stock.name} {currentUser.stocks_owned[idx+1]}</span>
                                     )
                                 })}
                 

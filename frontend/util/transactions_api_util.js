@@ -1,9 +1,9 @@
 
 
-export const makeTransaction = (data) => {
+export const makeTransaction = (transaction) => {
     return $.ajax({
         url: '/api/transactions',
         method: 'POST',
-        data: { data }
+        data: { transaction }
     })
 }

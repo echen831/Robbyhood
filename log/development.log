@@ -52321,3 +52321,2580 @@ ActionController::ParameterMissing - param is missing or the value is empty: tra
   app/controllers/api/transactions_controller.rb:52:in `transaction_params'
   app/controllers/api/transactions_controller.rb:9:in `create'
 
+Started GET "/" for ::1 at 2020-07-13 12:50:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7pZ_HXEZvzmup76SMtKAeQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (1.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (24.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (62.9ms)
+Completed 200 OK in 118ms (Views: 92.1ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 12:50:15 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (2.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (26.7ms)
+Completed 200 OK in 81ms (Views: 22.0ms | ActiveRecord: 15.8ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 12:50:29 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"data"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "symbol"=>"aapl"}}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: transaction:
+  app/controllers/api/transactions_controller.rb:52:in `transaction_params'
+  app/controllers/api/transactions_controller.rb:9:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 12:53:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7pZ_HXEZvzmup76SMtKAeQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (20.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (50.8ms)
+Completed 200 OK in 91ms (Views: 69.2ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 12:53:07 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (16.0ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (61.3ms)
+Completed 200 OK in 78ms (Views: 27.7ms | ActiveRecord: 42.5ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 12:53:24 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"data"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy"}}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: transaction:
+  app/controllers/api/transactions_controller.rb:52:in `transaction_params'
+  app/controllers/api/transactions_controller.rb:9:in `create'
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:02:04 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"data"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "symbol"=>"aapl"}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: transaction:
+  app/controllers/api/transactions_controller.rb:52:in `transaction_params'
+  app/controllers/api/transactions_controller.rb:9:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 13:04:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7pZ_HXEZvzmup76SMtKAeQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (3.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 84ms (Views: 77.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:04:11 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (27.7ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (34.7ms)
+Completed 200 OK in 45ms (Views: 15.1ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 13:05:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7pZ_HXEZvzmup76SMtKAeQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (1.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (6.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 59ms (Views: 53.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 13:06:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7pZ_HXEZvzmup76SMtKAeQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (3.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 53ms (Views: 48.4ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-07-13 13:06:33 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7pZ_HXEZvzmup76SMtKAeQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "RFoYCJYVNmXQqkKYFelVdA"], ["updated_at", "2020-07-13 20:06:33.960894"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+Completed 200 OK in 48ms (Views: 0.3ms | ActiveRecord: 42.5ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-13 13:06:45 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"e1@gmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "sjXGhh3e_ETnYhH1cqhAFA"], ["updated_at", "2020-07-13 20:06:45.675064"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (2.2ms)
+  Rendered api/users/show.json.jbuilder (3.7ms)
+Completed 200 OK in 323ms (Views: 11.3ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:06:45 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (4.4ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (10.7ms)
+Completed 200 OK in 25ms (Views: 16.1ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:07:37 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"data"=>{"data"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "symbol"=>"aapl"}}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: transaction:
+  app/controllers/api/transactions_controller.rb:52:in `transaction_params'
+  app/controllers/api/transactions_controller.rb:9:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 13:08:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "sjXGhh3e_ETnYhH1cqhAFA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (3.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 61ms (Views: 57.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:08:06 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (0.7ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (6.0ms)
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:09:12 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"data"=>{"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "symbol"=>"aapl"}}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: transaction:
+  app/controllers/api/transactions_controller.rb:52:in `transaction_params'
+  app/controllers/api/transactions_controller.rb:9:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 13:10:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "sjXGhh3e_ETnYhH1cqhAFA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (23.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 108ms (Views: 88.0ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:10:52 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (159.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (203.8ms)
+Completed 200 OK in 227ms (Views: 25.7ms | ActiveRecord: 190.4ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:11:01 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"data"=>{"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "symbol"=>"aapl"}}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: transaction:
+  app/controllers/api/transactions_controller.rb:52:in `transaction_params'
+  app/controllers/api/transactions_controller.rb:9:in `create'
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:12:36 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"data"=>{"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "stock_id"=>"1"}}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: transaction:
+  app/controllers/api/transactions_controller.rb:52:in `transaction_params'
+  app/controllers/api/transactions_controller.rb:9:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 13:12:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "sjXGhh3e_ETnYhH1cqhAFA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (3.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 77ms (Views: 73.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:12:45 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (0.7ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (5.8ms)
+Completed 200 OK in 19ms (Views: 14.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:13:20 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"data"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "stock_id"=>"1"}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: transaction:
+  app/controllers/api/transactions_controller.rb:52:in `transaction_params'
+  app/controllers/api/transactions_controller.rb:9:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 13:18:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "sjXGhh3e_ETnYhH1cqhAFA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (20.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 103ms (Views: 87.9ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:18:09 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (22.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (47.8ms)
+Completed 200 OK in 71ms (Views: 28.7ms | ActiveRecord: 33.5ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:18:22 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"data"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "stock_id"=>"1"}}
+Unpermitted parameters: :data, :format
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "sjXGhh3e_ETnYhH1cqhAFA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.5ms)
+
+
+
+NoMethodError - undefined method `*' for nil:NilClass:
+  app/controllers/api/transactions_controller.rb:14:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 13:23:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "sjXGhh3e_ETnYhH1cqhAFA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (23.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 884ms (Views: 864.1ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:23:43 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (14.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (48.3ms)
+Completed 200 OK in 72ms (Views: 38.4ms | ActiveRecord: 23.1ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:24:10 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "stock_id"=>"1"}}}
+Unpermitted parameter: :transaction
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "sjXGhh3e_ETnYhH1cqhAFA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 3.0ms)
+
+
+
+NoMethodError - undefined method `*' for nil:NilClass:
+  app/controllers/api/transactions_controller.rb:14:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 13:25:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "sjXGhh3e_ETnYhH1cqhAFA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (1.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (4.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 57ms (Views: 51.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:25:02 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (10.6ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (17.4ms)
+Completed 200 OK in 28ms (Views: 15.5ms | ActiveRecord: 10.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-07-13 13:25:05 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "sjXGhh3e_ETnYhH1cqhAFA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "1zdR6ysUdOtzMLo61i47lw"], ["updated_at", "2020-07-13 20:25:05.582193"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+Completed 200 OK in 37ms (Views: 0.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 13:25:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-13 13:25:17 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"e1@gmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["updated_at", "2020-07-13 20:25:18.027636"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (2.6ms)
+  Rendered api/users/show.json.jbuilder (3.7ms)
+Completed 200 OK in 326ms (Views: 9.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:25:18 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (12.6ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (18.0ms)
+Completed 200 OK in 34ms (Views: 17.0ms | ActiveRecord: 12.6ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:25:30 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "stock_id"=>"1"}}}
+Unpermitted parameter: :transaction
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.9ms)
+
+
+
+NoMethodError - undefined method `*' for nil:NilClass:
+  app/controllers/api/transactions_controller.rb:14:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 13:26:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (31.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 98ms (Views: 77.7ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:26:59 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (4.0ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (44.9ms)
+Completed 200 OK in 133ms (Views: 86.4ms | ActiveRecord: 26.1ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 13:27:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (23.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 88ms (Views: 73.4ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:27:25 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (1.8ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (39.0ms)
+Completed 200 OK in 59ms (Views: 30.4ms | ActiveRecord: 22.7ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:28:16 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "symbol"=>"aapl"}}}
+Unpermitted parameter: :transaction
+  [1m[36mStock Load (0.4ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."symbol" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:10
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/api/transactions_controller.rb:11:in `create'
+
+  [1m[36mStock Load (2.3ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  [1m[36mStock Load (53.8ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE (aapl) LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStock Load (8.3ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "aapl"], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-07-13 13:33:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (22.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (51.5ms)
+Completed 200 OK in 102ms (Views: 80.7ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:33:43 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (11.0ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (142.6ms)
+Completed 200 OK in 160ms (Views: 18.8ms | ActiveRecord: 132.9ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:33:55 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "symbol"=>"aapl"}}}
+Unpermitted parameter: :transaction
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/api/transactions_controller.rb:10:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 13:35:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (20.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (44.9ms)
+Completed 200 OK in 88ms (Views: 71.9ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:35:36 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (129.4ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (213.2ms)
+Completed 200 OK in 235ms (Views: 43.9ms | ActiveRecord: 181.4ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:35:48 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "symbol"=>"aapl"}}}
+Unpermitted parameter: :transaction
+  [1m[36mStock Load (1.0ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "aapl"], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.4ms)
+
+
+
+NoMethodError - undefined method `*' for nil:NilClass:
+  app/controllers/api/transactions_controller.rb:14:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 13:36:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (2.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:36:28 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (3.6ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (10.4ms)
+Completed 200 OK in 26ms (Views: 19.8ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:36:49 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy"}}}
+Unpermitted parameter: :transaction
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "aapl"], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.7ms)
+
+
+
+NoMethodError - undefined method `*' for nil:NilClass:
+  app/controllers/api/transactions_controller.rb:14:in `create'
+
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+Started GET "/" for ::1 at 2020-07-13 13:38:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (22.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 87ms (Views: 70.9ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:38:51 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (29.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (59.4ms)
+Completed 200 OK in 78ms (Views: 38.9ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 13:39:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (3.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 72ms (Views: 68.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:39:13 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (10.9ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (16.1ms)
+Completed 200 OK in 27ms (Views: 11.4ms | ActiveRecord: 10.9ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:39:36 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "symbol"=>"aapl"}}}
+Unpermitted parameter: :transaction
+  [1m[36mStock Load (0.4ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."symbol" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:10
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/api/transactions_controller.rb:11:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 13:40:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (25.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (47.6ms)
+Completed 200 OK in 102ms (Views: 86.3ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:40:22 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (1.5ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (24.9ms)
+Completed 200 OK in 43ms (Views: 20.7ms | ActiveRecord: 12.2ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:40:37 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "symbol"=>"aapl"}}}
+Unpermitted parameter: :transaction
+  [1m[36mStock Load (0.4ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."symbol" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:10
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/api/transactions_controller.rb:11:in `create'
+
+  [1m[36mStock Load (0.6ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "baba"], ["LIMIT", 1]]
+  [1m[36mStock Load (0.5ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "amzn"], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-07-13 13:48:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (19.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (46.4ms)
+Completed 200 OK in 94ms (Views: 75.0ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:48:53 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (6.1ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (40.2ms)
+Completed 200 OK in 57ms (Views: 18.4ms | ActiveRecord: 27.4ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:49:37 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "stock_id"=>"1", "user_id"=>"2"}}}
+Unpermitted parameter: :transaction
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `*' for nil:NilClass:
+  app/controllers/api/transactions_controller.rb:14:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 13:50:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (30.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (58.8ms)
+Completed 200 OK in 104ms (Views: 84.7ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:50:12 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (130.3ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (169.5ms)
+Completed 200 OK in 194ms (Views: 32.6ms | ActiveRecord: 154.3ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:50:25 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "stock_id"=>"1", "user_id"=>"2"}}}
+Unpermitted parameter: :transaction
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `*' for nil:NilClass:
+  app/controllers/api/transactions_controller.rb:14:in `create'
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:51:26 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "stock_id"=>"1", "user_id"=>"2"}}}
+Unpermitted parameter: :transaction
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `*' for nil:NilClass:
+  app/controllers/api/transactions_controller.rb:14:in `create'
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:52:07 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "stock_id"=>"1", "user_id"=>"2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."stock_id" = $2[0m  [["user_id", 2], ["stock_id", 1]]
+  ↳ app/models/user.rb:46
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.5ms)
+
+
+
+NoMethodError - undefined method `num_shares' for #<Transaction::ActiveRecord_Associations_CollectionProxy:0x00007fb8ee765f30>:
+  app/models/user.rb:48:in `block in shares_owned'
+  app/models/user.rb:46:in `shares_owned'
+  app/controllers/api/transactions_controller.rb:16:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 13:52:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (3.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 53ms (Views: 48.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:52:43 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (237.5ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (244.2ms)
+Completed 200 OK in 255ms (Views: 16.0ms | ActiveRecord: 237.5ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:52:58 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "stock_id"=>"1", "user_id"=>"2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."stock_id" = $2[0m  [["user_id", 2], ["stock_id", 1]]
+  ↳ app/models/user.rb:46
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.7ms)
+
+
+
+NoMethodError - undefined method `num_shares' for #<Transaction::ActiveRecord_Associations_CollectionProxy:0x00007fb8eacc52b8>:
+  app/models/user.rb:48:in `block in shares_owned'
+  app/models/user.rb:46:in `shares_owned'
+  app/controllers/api/transactions_controller.rb:16:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 13:57:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (11.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 72ms (Views: 70.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 13:57:19 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (14.1ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (42.7ms)
+Completed 200 OK in 66ms (Views: 26.0ms | ActiveRecord: 30.8ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 13:57:34 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "stock_id"=>"1", "user_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mTransaction Create (49.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "stock_id", "price", "num_shares", "transactions_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 2], ["stock_id", 1], ["price", 100.0], ["num_shares", 1], ["transactions_type", "buy"], ["created_at", "2020-07-13 20:57:34.688062"], ["updated_at", "2020-07-13 20:57:34.688062"]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/transactions_controller.rb:13
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 50.1ms)
+
+
+
+ActiveRecord::RecordNotUnique - PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "transactions_pkey"
+DETAIL:  Key (id)=(1) already exists.
+: INSERT INTO "transactions" ("user_id", "stock_id", "price", "num_shares", "transactions_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id":
+  app/controllers/api/transactions_controller.rb:13:in `create'
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (43.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (8160.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "project_1_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (79.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "project_1_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (53.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "project_1_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (294.2ms)[0m  [1m[35mCREATE DATABASE "project_1_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (94.5ms)[0m  [1m[35mCREATE DATABASE "project_1_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (3.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "stocks" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (23.0ms)[0m  [1m[35mCREATE TABLE "stocks" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_name" ON "stocks"  ("name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_symbol" ON "stocks"  ("symbol")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "user_id" integer NOT NULL, "stock_id" integer NOT NULL, "price" float NOT NULL, "num_shares" integer NOT NULL, "transactions_type" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_stock_id" ON "transactions"  ("stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id_and_stock_id" ON "transactions"  ("user_id", "stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:40
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "buying_power" float, "username" character varying NOT NULL)[0m
+  ↳ db/schema.rb:40
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_list_items" CASCADE[0m
+  ↳ db/schema.rb:52
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "watch_list_items" ("id" bigserial primary key, "stock_id" integer NOT NULL, "watch_list_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:52
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_watch_list_items_on_watch_list_id_and_stock_id" ON "watch_list_items"  ("watch_list_id", "stock_id")[0m
+  ↳ db/schema.rb:52
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_lists" CASCADE[0m
+  ↳ db/schema.rb:60
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "watch_lists" ("id" bigserial primary key, "name" character varying, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:60
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_user_id" ON "watch_lists"  ("user_id")[0m
+  ↳ db/schema.rb:60
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200710182356)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200427210319),
+(20200709190728),
+(20200709193704),
+(20200710181240),
+(20200506181706),
+(20200708173500);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-13 21:01:30.722132"], ["updated_at", "2020-07-13 21:01:30.722132"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "stocks" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "stocks" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_name" ON "stocks"  ("name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_symbol" ON "stocks"  ("symbol")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "user_id" integer NOT NULL, "stock_id" integer NOT NULL, "price" float NOT NULL, "num_shares" integer NOT NULL, "transactions_type" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_stock_id" ON "transactions"  ("stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id_and_stock_id" ON "transactions"  ("user_id", "stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:40
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "buying_power" float, "username" character varying NOT NULL)[0m
+  ↳ db/schema.rb:40
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_list_items" CASCADE[0m
+  ↳ db/schema.rb:52
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "watch_list_items" ("id" bigserial primary key, "stock_id" integer NOT NULL, "watch_list_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:52
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_watch_list_items_on_watch_list_id_and_stock_id" ON "watch_list_items"  ("watch_list_id", "stock_id")[0m
+  ↳ db/schema.rb:52
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_lists" CASCADE[0m
+  ↳ db/schema.rb:60
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "watch_lists" ("id" bigserial primary key, "name" character varying, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:60
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_user_id" ON "watch_lists"  ("user_id")[0m
+  ↳ db/schema.rb:60
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200710182356)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200427210319),
+(20200709190728),
+(20200709193704),
+(20200710181240),
+(20200506181706),
+(20200708173500);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-13 21:01:30.935895"], ["updated_at", "2020-07-13 21:01:30.935895"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-07-13 21:01:30.945082"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mStock Load (1.3ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ db/seeds.rb:55
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "buying_power", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "demo@hotmail.com"], ["password_digest", "$2a$12$2.ccn1NFHqlvCtxw73ONdet32XjhgCBUPqVPV8tbKzbFbIRXZWe/6"], ["session_token", "PZ8pPQwwGJbodx5l2UxGwA"], ["created_at", "2020-07-13 21:01:31.382586"], ["updated_at", "2020-07-13 21:01:31.382586"], ["buying_power", 1000.0], ["username", "demoUser"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AGILENT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "a"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (1.2ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AGILENT"], ["symbol", "a"], ["created_at", "2020-07-13 21:01:31.425380"], ["updated_at", "2020-07-13 21:01:31.425380"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "APPLE"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "aapl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.7ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "APPLE"], ["symbol", "aapl"], ["created_at", "2020-07-13 21:01:31.433717"], ["updated_at", "2020-07-13 21:01:31.433717"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMAZON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "amzn"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMAZON"], ["symbol", "amzn"], ["created_at", "2020-07-13 21:01:31.441393"], ["updated_at", "2020-07-13 21:01:31.441393"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "amd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMD"], ["symbol", "amd"], ["created_at", "2020-07-13 21:01:31.449532"], ["updated_at", "2020-07-13 21:01:31.449532"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMERICAN AIRLINES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "aal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.7ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMERICAN AIRLINES"], ["symbol", "aal"], ["created_at", "2020-07-13 21:01:31.457081"], ["updated_at", "2020-07-13 21:01:31.457081"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AT&T"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "T"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.8ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AT&T"], ["symbol", "T"], ["created_at", "2020-07-13 21:01:31.464964"], ["updated_at", "2020-07-13 21:01:31.464964"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BARNES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "b"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BARNES"], ["symbol", "b"], ["created_at", "2020-07-13 21:01:31.472877"], ["updated_at", "2020-07-13 21:01:31.472877"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BOEING"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ba"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BOEING"], ["symbol", "ba"], ["created_at", "2020-07-13 21:01:31.480329"], ["updated_at", "2020-07-13 21:01:31.480329"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BANK OF AMERICA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "bac"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BANK OF AMERICA"], ["symbol", "bac"], ["created_at", "2020-07-13 21:01:31.487952"], ["updated_at", "2020-07-13 21:01:31.487952"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BEYOND MEAT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "bnyd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BEYOND MEAT"], ["symbol", "bnyd"], ["created_at", "2020-07-13 21:01:31.495532"], ["updated_at", "2020-07-13 21:01:31.495532"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CARNIVAL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ccl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CARNIVAL"], ["symbol", "ccl"], ["created_at", "2020-07-13 21:01:31.503796"], ["updated_at", "2020-07-13 21:01:31.503796"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CITI GROUP"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "c"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.5ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CITI GROUP"], ["symbol", "c"], ["created_at", "2020-07-13 21:01:31.511227"], ["updated_at", "2020-07-13 21:01:31.511227"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CISCO"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "csco"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CISCO"], ["symbol", "csco"], ["created_at", "2020-07-13 21:01:31.518588"], ["updated_at", "2020-07-13 21:01:31.518588"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "COMCAST"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "cmcsa"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.7ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "COMCAST"], ["symbol", "cmcsa"], ["created_at", "2020-07-13 21:01:31.525757"], ["updated_at", "2020-07-13 21:01:31.525757"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DISNEY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.7ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DISNEY"], ["symbol", "dis"], ["created_at", "2020-07-13 21:01:31.532985"], ["updated_at", "2020-07-13 21:01:31.532985"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DELTA AIR LINES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DELTA AIR LINES"], ["symbol", "dal"], ["created_at", "2020-07-13 21:01:31.541554"], ["updated_at", "2020-07-13 21:01:31.541554"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DRAFT KINGS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dkng"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DRAFT KINGS"], ["symbol", "dkng"], ["created_at", "2020-07-13 21:01:31.550301"], ["updated_at", "2020-07-13 21:01:31.550301"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DOCUSIGN"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "docu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DOCUSIGN"], ["symbol", "docu"], ["created_at", "2020-07-13 21:01:31.560403"], ["updated_at", "2020-07-13 21:01:31.560403"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "EBAY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ebay"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.7ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "EBAY"], ["symbol", "ebay"], ["created_at", "2020-07-13 21:01:31.568630"], ["updated_at", "2020-07-13 21:01:31.568630"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FORD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "f"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.8ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FORD"], ["symbol", "f"], ["created_at", "2020-07-13 21:01:31.577415"], ["updated_at", "2020-07-13 21:01:31.577415"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FACEBOOK"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fb"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FACEBOOK"], ["symbol", "fb"], ["created_at", "2020-07-13 21:01:31.586612"], ["updated_at", "2020-07-13 21:01:31.586612"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FEDEX"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fdx"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FEDEX"], ["symbol", "fdx"], ["created_at", "2020-07-13 21:01:31.595562"], ["updated_at", "2020-07-13 21:01:31.595562"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FASTLY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fsly"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FASTLY"], ["symbol", "fsly"], ["created_at", "2020-07-13 21:01:31.605302"], ["updated_at", "2020-07-13 21:01:31.605302"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FISERV"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fisv"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FISERV"], ["symbol", "fisv"], ["created_at", "2020-07-13 21:01:31.614624"], ["updated_at", "2020-07-13 21:01:31.614624"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "GENPACT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "g"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.7ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "GENPACT"], ["symbol", "g"], ["created_at", "2020-07-13 21:01:31.625292"], ["updated_at", "2020-07-13 21:01:31.625292"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "GOLDMAN SACHS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "gs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "GOLDMAN SACHS"], ["symbol", "gs"], ["created_at", "2020-07-13 21:01:31.634262"], ["updated_at", "2020-07-13 21:01:31.634262"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HYATT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "h"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HYATT"], ["symbol", "h"], ["created_at", "2020-07-13 21:01:31.643203"], ["updated_at", "2020-07-13 21:01:31.643203"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HOME DEPOT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "hd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HOME DEPOT"], ["symbol", "hd"], ["created_at", "2020-07-13 21:01:31.652030"], ["updated_at", "2020-07-13 21:01:31.652030"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HONEYWELL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "hon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.7ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HONEYWELL"], ["symbol", "hon"], ["created_at", "2020-07-13 21:01:31.661198"], ["updated_at", "2020-07-13 21:01:31.661198"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "INTEL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "i"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "INTEL"], ["symbol", "i"], ["created_at", "2020-07-13 21:01:31.670296"], ["updated_at", "2020-07-13 21:01:31.670296"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "JPMORGAN CHASE"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "jpm"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "JPMORGAN CHASE"], ["symbol", "jpm"], ["created_at", "2020-07-13 21:01:31.679108"], ["updated_at", "2020-07-13 21:01:31.679108"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "JOHNSON & JOHNSON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "jnj"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "JOHNSON & JOHNSON"], ["symbol", "jnj"], ["created_at", "2020-07-13 21:01:31.688415"], ["updated_at", "2020-07-13 21:01:31.688415"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KELLOG"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "k"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KELLOG"], ["symbol", "k"], ["created_at", "2020-07-13 21:01:31.697552"], ["updated_at", "2020-07-13 21:01:31.697552"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KROGER"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kr"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.5ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KROGER"], ["symbol", "kr"], ["created_at", "2020-07-13 21:01:31.706746"], ["updated_at", "2020-07-13 21:01:31.706746"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KIMBERLY-CLARK"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kmb"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KIMBERLY-CLARK"], ["symbol", "kmb"], ["created_at", "2020-07-13 21:01:31.715788"], ["updated_at", "2020-07-13 21:01:31.715788"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KHOL'S"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kss"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.8ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KHOL'S"], ["symbol", "kss"], ["created_at", "2020-07-13 21:01:31.724758"], ["updated_at", "2020-07-13 21:01:31.724758"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOEWS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "l"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOEWS"], ["symbol", "l"], ["created_at", "2020-07-13 21:01:31.734405"], ["updated_at", "2020-07-13 21:01:31.734405"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOEW'S"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "low"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOEW'S"], ["symbol", "low"], ["created_at", "2020-07-13 21:01:31.743921"], ["updated_at", "2020-07-13 21:01:31.743921"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOCKHEAD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "lmt"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOCKHEAD"], ["symbol", "lmt"], ["created_at", "2020-07-13 21:01:31.753381"], ["updated_at", "2020-07-13 21:01:31.753381"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LULULEMON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "lulu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LULULEMON"], ["symbol", "lulu"], ["created_at", "2020-07-13 21:01:31.761509"], ["updated_at", "2020-07-13 21:01:31.761509"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "MICROSOFT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "msft"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "MICROSOFT"], ["symbol", "msft"], ["created_at", "2020-07-13 21:01:31.769081"], ["updated_at", "2020-07-13 21:01:31.769081"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "TESLA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "tsla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "TESLA"], ["symbol", "tsla"], ["created_at", "2020-07-13 21:01:31.776016"], ["updated_at", "2020-07-13 21:01:31.776016"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "ZILLOW"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "z"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ZILLOW"], ["symbol", "z"], ["created_at", "2020-07-13 21:01:31.783082"], ["updated_at", "2020-07-13 21:01:31.783082"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Load (1.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+Started GET "/" for ::1 at 2020-07-13 14:02:33 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ericchen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YhoAQOIFO-846D7OhoogQg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 1787ms (Views: 1781.8ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-13 14:02:48 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@hotmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@hotmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demoUser"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "cNdb3-bIg2cvLjCT7bMe6A"], ["updated_at", "2020-07-13 21:02:49.224445"], ["id", 1]]
+  ↳ app/models/user.rb:36
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (24.9ms)
+  Rendered api/users/show.json.jbuilder (26.1ms)
+Completed 200 OK in 355ms (Views: 26.8ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:02:49 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (0.9ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (14.9ms)
+Completed 200 OK in 27ms (Views: 12.9ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 14:03:13 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"price"=>"100", "num_shares"=>"1", "transactions_type"=>"buy", "stock_id"=>"1", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mTransaction Create (1.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "stock_id", "price", "num_shares", "transactions_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["stock_id", 1], ["price", 100.0], ["num_shares", 1], ["transactions_type", "buy"], ["created_at", "2020-07-13 21:03:13.036589"], ["updated_at", "2020-07-13 21:03:13.036589"]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/transactions_controller.rb:13
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 12.4ms)
+
+
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+Started GET "/" for ::1 at 2020-07-13 14:03:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cNdb3-bIg2cvLjCT7bMe6A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (2.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 70ms (Views: 64.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:03:32 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (1.6ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (6.3ms)
+Completed 200 OK in 20ms (Views: 15.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 14:04:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cNdb3-bIg2cvLjCT7bMe6A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (24.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (48.2ms)
+Completed 200 OK in 100ms (Views: 82.4ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:04:27 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (0.5ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (37.4ms)
+Completed 200 OK in 63ms (Views: 41.0ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 14:05:01 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"price"=>"200", "num_shares"=>"2", "transactions_type"=>"buy", "stock_id"=>"3"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cNdb3-bIg2cvLjCT7bMe6A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mStock Load (0.5ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mTransaction Create (0.5ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "stock_id", "price", "num_shares", "transactions_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["stock_id", 3], ["price", 200.0], ["num_shares", 2], ["transactions_type", "buy"], ["created_at", "2020-07-13 21:05:01.216660"], ["updated_at", "2020-07-13 21:05:01.216660"]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/transactions_controller.rb:13
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 14:05:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cNdb3-bIg2cvLjCT7bMe6A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (2.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 62ms (Views: 57.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:05:06 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (228.8ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (232.7ms)
+Completed 200 OK in 247ms (Views: 15.1ms | ActiveRecord: 228.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 14:05:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cNdb3-bIg2cvLjCT7bMe6A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (19.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 78ms (Views: 64.2ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:05:37 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (0.8ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (29.9ms)
+Completed 200 OK in 47ms (Views: 21.0ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 14:06:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cNdb3-bIg2cvLjCT7bMe6A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (18.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 81ms (Views: 67.8ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:06:29 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (146.1ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (197.6ms)
+Completed 200 OK in 216ms (Views: 22.0ms | ActiveRecord: 184.6ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 14:07:01 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"price"=>"200", "num_shares"=>"2", "transactions_type"=>"buy", "symbol"=>"amzn"}}
+Unpermitted parameter: :symbol
+  [1m[36mStock Load (0.4ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "amzn"], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:10
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cNdb3-bIg2cvLjCT7bMe6A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mTransaction Create (0.9ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "stock_id", "price", "num_shares", "transactions_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["stock_id", 3], ["price", 200.0], ["num_shares", 2], ["transactions_type", "buy"], ["created_at", "2020-07-13 21:07:01.513093"], ["updated_at", "2020-07-13 21:07:01.513093"]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/transactions_controller.rb:13
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 14:07:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cNdb3-bIg2cvLjCT7bMe6A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (4.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:07:14 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (10.0ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (14.5ms)
+Completed 200 OK in 25ms (Views: 13.8ms | ActiveRecord: 10.0ms)
+
+
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  [1m[36mStock Load (0.7ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (39.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "project_1_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (43.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "project_1_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (132.9ms)[0m  [1m[35mCREATE DATABASE "project_1_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (127.1ms)[0m  [1m[35mCREATE DATABASE "project_1_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "stocks" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "stocks" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_name" ON "stocks"  ("name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_symbol" ON "stocks"  ("symbol")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "user_id" integer NOT NULL, "stock_id" integer NOT NULL, "price" float NOT NULL, "num_shares" integer NOT NULL, "transactions_type" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_stock_id" ON "transactions"  ("stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id_and_stock_id" ON "transactions"  ("user_id", "stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:40
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "buying_power" float, "username" character varying NOT NULL)[0m
+  ↳ db/schema.rb:40
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_list_items" CASCADE[0m
+  ↳ db/schema.rb:52
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "watch_list_items" ("id" bigserial primary key, "stock_id" integer NOT NULL, "watch_list_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:52
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_watch_list_items_on_watch_list_id_and_stock_id" ON "watch_list_items"  ("watch_list_id", "stock_id")[0m
+  ↳ db/schema.rb:52
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_lists" CASCADE[0m
+  ↳ db/schema.rb:60
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "watch_lists" ("id" bigserial primary key, "name" character varying, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:60
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_user_id" ON "watch_lists"  ("user_id")[0m
+  ↳ db/schema.rb:60
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200710182356)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200427210319),
+(20200709190728),
+(20200709193704),
+(20200710181240),
+(20200506181706),
+(20200708173500);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-13 21:10:04.319740"], ["updated_at", "2020-07-13 21:10:04.319740"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "stocks" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "stocks" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_name" ON "stocks"  ("name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stocks_on_symbol" ON "stocks"  ("symbol")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "user_id" integer NOT NULL, "stock_id" integer NOT NULL, "price" float NOT NULL, "num_shares" integer NOT NULL, "transactions_type" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_stock_id" ON "transactions"  ("stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id_and_stock_id" ON "transactions"  ("user_id", "stock_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_transactions_on_user_id" ON "transactions"  ("user_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:40
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "buying_power" float, "username" character varying NOT NULL)[0m
+  ↳ db/schema.rb:40
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:40
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_list_items" CASCADE[0m
+  ↳ db/schema.rb:52
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "watch_list_items" ("id" bigserial primary key, "stock_id" integer NOT NULL, "watch_list_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:52
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_watch_list_items_on_watch_list_id_and_stock_id" ON "watch_list_items"  ("watch_list_id", "stock_id")[0m
+  ↳ db/schema.rb:52
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_lists" CASCADE[0m
+  ↳ db/schema.rb:60
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "watch_lists" ("id" bigserial primary key, "name" character varying, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:60
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_user_id" ON "watch_lists"  ("user_id")[0m
+  ↳ db/schema.rb:60
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200710182356)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200427210319),
+(20200709190728),
+(20200709193704),
+(20200710181240),
+(20200506181706),
+(20200708173500);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-13 21:10:04.556046"], ["updated_at", "2020-07-13 21:10:04.556046"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-07-13 21:10:04.562723"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mStock Load (1.1ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ db/seeds.rb:55
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "buying_power", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "demo@hotmail.com"], ["password_digest", "$2a$12$Hj0kol3Ywj2nOAfud8OJzeyzT4c0tPcphytda050VqERFdE1mKbtG"], ["session_token", "yRGzbLAxSZ8P8HVYkF_BCg"], ["created_at", "2020-07-13 21:10:04.973093"], ["updated_at", "2020-07-13 21:10:04.973093"], ["buying_power", 1000.0], ["username", "demoUser"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AGILENT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "a"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.7ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AGILENT"], ["symbol", "a"], ["created_at", "2020-07-13 21:10:04.987458"], ["updated_at", "2020-07-13 21:10:04.987458"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "APPLE"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "aapl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "APPLE"], ["symbol", "aapl"], ["created_at", "2020-07-13 21:10:04.993868"], ["updated_at", "2020-07-13 21:10:04.993868"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMAZON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "amzn"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMAZON"], ["symbol", "amzn"], ["created_at", "2020-07-13 21:10:04.998314"], ["updated_at", "2020-07-13 21:10:04.998314"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "amd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMD"], ["symbol", "amd"], ["created_at", "2020-07-13 21:10:05.002608"], ["updated_at", "2020-07-13 21:10:05.002608"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AMERICAN AIRLINES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "aal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AMERICAN AIRLINES"], ["symbol", "aal"], ["created_at", "2020-07-13 21:10:05.007087"], ["updated_at", "2020-07-13 21:10:05.007087"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "AT&T"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "T"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "AT&T"], ["symbol", "T"], ["created_at", "2020-07-13 21:10:05.011221"], ["updated_at", "2020-07-13 21:10:05.011221"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BARNES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "b"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BARNES"], ["symbol", "b"], ["created_at", "2020-07-13 21:10:05.015553"], ["updated_at", "2020-07-13 21:10:05.015553"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BOEING"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ba"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BOEING"], ["symbol", "ba"], ["created_at", "2020-07-13 21:10:05.021026"], ["updated_at", "2020-07-13 21:10:05.021026"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BANK OF AMERICA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "bac"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BANK OF AMERICA"], ["symbol", "bac"], ["created_at", "2020-07-13 21:10:05.067498"], ["updated_at", "2020-07-13 21:10:05.067498"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "BEYOND MEAT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "bnyd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BEYOND MEAT"], ["symbol", "bnyd"], ["created_at", "2020-07-13 21:10:05.073617"], ["updated_at", "2020-07-13 21:10:05.073617"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CARNIVAL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ccl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CARNIVAL"], ["symbol", "ccl"], ["created_at", "2020-07-13 21:10:05.078199"], ["updated_at", "2020-07-13 21:10:05.078199"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CITI GROUP"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "c"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CITI GROUP"], ["symbol", "c"], ["created_at", "2020-07-13 21:10:05.082653"], ["updated_at", "2020-07-13 21:10:05.082653"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "CISCO"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "csco"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CISCO"], ["symbol", "csco"], ["created_at", "2020-07-13 21:10:05.087674"], ["updated_at", "2020-07-13 21:10:05.087674"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "COMCAST"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "cmcsa"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "COMCAST"], ["symbol", "cmcsa"], ["created_at", "2020-07-13 21:10:05.094185"], ["updated_at", "2020-07-13 21:10:05.094185"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DISNEY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DISNEY"], ["symbol", "dis"], ["created_at", "2020-07-13 21:10:05.098791"], ["updated_at", "2020-07-13 21:10:05.098791"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DELTA AIR LINES"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DELTA AIR LINES"], ["symbol", "dal"], ["created_at", "2020-07-13 21:10:05.105509"], ["updated_at", "2020-07-13 21:10:05.105509"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DRAFT KINGS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "dkng"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DRAFT KINGS"], ["symbol", "dkng"], ["created_at", "2020-07-13 21:10:05.112175"], ["updated_at", "2020-07-13 21:10:05.112175"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "DOCUSIGN"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "docu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DOCUSIGN"], ["symbol", "docu"], ["created_at", "2020-07-13 21:10:05.118053"], ["updated_at", "2020-07-13 21:10:05.118053"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "EBAY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ebay"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.5ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "EBAY"], ["symbol", "ebay"], ["created_at", "2020-07-13 21:10:05.124104"], ["updated_at", "2020-07-13 21:10:05.124104"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FORD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "f"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FORD"], ["symbol", "f"], ["created_at", "2020-07-13 21:10:05.129513"], ["updated_at", "2020-07-13 21:10:05.129513"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FACEBOOK"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fb"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FACEBOOK"], ["symbol", "fb"], ["created_at", "2020-07-13 21:10:05.135142"], ["updated_at", "2020-07-13 21:10:05.135142"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FEDEX"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fdx"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FEDEX"], ["symbol", "fdx"], ["created_at", "2020-07-13 21:10:05.140903"], ["updated_at", "2020-07-13 21:10:05.140903"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FASTLY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fsly"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FASTLY"], ["symbol", "fsly"], ["created_at", "2020-07-13 21:10:05.146419"], ["updated_at", "2020-07-13 21:10:05.146419"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "FISERV"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "fisv"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "FISERV"], ["symbol", "fisv"], ["created_at", "2020-07-13 21:10:05.151952"], ["updated_at", "2020-07-13 21:10:05.151952"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "GENPACT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "g"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "GENPACT"], ["symbol", "g"], ["created_at", "2020-07-13 21:10:05.158196"], ["updated_at", "2020-07-13 21:10:05.158196"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "GOLDMAN SACHS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "gs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "GOLDMAN SACHS"], ["symbol", "gs"], ["created_at", "2020-07-13 21:10:05.163832"], ["updated_at", "2020-07-13 21:10:05.163832"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HYATT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "h"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HYATT"], ["symbol", "h"], ["created_at", "2020-07-13 21:10:05.169666"], ["updated_at", "2020-07-13 21:10:05.169666"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HOME DEPOT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "hd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HOME DEPOT"], ["symbol", "hd"], ["created_at", "2020-07-13 21:10:05.175090"], ["updated_at", "2020-07-13 21:10:05.175090"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "HONEYWELL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "hon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HONEYWELL"], ["symbol", "hon"], ["created_at", "2020-07-13 21:10:05.180778"], ["updated_at", "2020-07-13 21:10:05.180778"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "INTEL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "i"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "INTEL"], ["symbol", "i"], ["created_at", "2020-07-13 21:10:05.186286"], ["updated_at", "2020-07-13 21:10:05.186286"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "JPMORGAN CHASE"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "jpm"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "JPMORGAN CHASE"], ["symbol", "jpm"], ["created_at", "2020-07-13 21:10:05.192326"], ["updated_at", "2020-07-13 21:10:05.192326"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "JOHNSON & JOHNSON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "jnj"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "JOHNSON & JOHNSON"], ["symbol", "jnj"], ["created_at", "2020-07-13 21:10:05.198023"], ["updated_at", "2020-07-13 21:10:05.198023"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KELLOG"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "k"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KELLOG"], ["symbol", "k"], ["created_at", "2020-07-13 21:10:05.203650"], ["updated_at", "2020-07-13 21:10:05.203650"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KROGER"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kr"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KROGER"], ["symbol", "kr"], ["created_at", "2020-07-13 21:10:05.209729"], ["updated_at", "2020-07-13 21:10:05.209729"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KIMBERLY-CLARK"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kmb"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KIMBERLY-CLARK"], ["symbol", "kmb"], ["created_at", "2020-07-13 21:10:05.214824"], ["updated_at", "2020-07-13 21:10:05.214824"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "KHOL'S"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "kss"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "KHOL'S"], ["symbol", "kss"], ["created_at", "2020-07-13 21:10:05.219395"], ["updated_at", "2020-07-13 21:10:05.219395"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOEWS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "l"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.5ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOEWS"], ["symbol", "l"], ["created_at", "2020-07-13 21:10:05.223996"], ["updated_at", "2020-07-13 21:10:05.223996"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOEW'S"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "low"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.3ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOEW'S"], ["symbol", "low"], ["created_at", "2020-07-13 21:10:05.228882"], ["updated_at", "2020-07-13 21:10:05.228882"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LOCKHEAD"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "lmt"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LOCKHEAD"], ["symbol", "lmt"], ["created_at", "2020-07-13 21:10:05.233364"], ["updated_at", "2020-07-13 21:10:05.233364"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "LULULEMON"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "lulu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "LULULEMON"], ["symbol", "lulu"], ["created_at", "2020-07-13 21:10:05.238184"], ["updated_at", "2020-07-13 21:10:05.238184"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "MICROSOFT"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "msft"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.7ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "MICROSOFT"], ["symbol", "msft"], ["created_at", "2020-07-13 21:10:05.244448"], ["updated_at", "2020-07-13 21:10:05.244448"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "TESLA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "tsla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.8ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "TESLA"], ["symbol", "tsla"], ["created_at", "2020-07-13 21:10:05.253320"], ["updated_at", "2020-07-13 21:10:05.253320"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."name" = $1 LIMIT $2[0m  [["name", "ZILLOW"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "z"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mStock Create (0.7ms)[0m  [1m[32mINSERT INTO "stocks" ("name", "symbol", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ZILLOW"], ["symbol", "z"], ["created_at", "2020-07-13 21:10:05.261247"], ["updated_at", "2020-07-13 21:10:05.261247"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mStock Load (1.0ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+Started GET "/" for ::1 at 2020-07-13 14:11:06 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ericchen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cNdb3-bIg2cvLjCT7bMe6A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 1406ms (Views: 1399.9ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-13 14:11:13 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@hotmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@hotmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demoUser"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "UdAl-tZ9voLGypVFqIVQJw"], ["updated_at", "2020-07-13 21:11:14.012567"], ["id", 1]]
+  ↳ app/models/user.rb:36
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  [1m[36mTransaction Load (49.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (75.3ms)
+  Rendered api/users/show.json.jbuilder (77.4ms)
+Completed 200 OK in 407ms (Views: 28.9ms | ActiveRecord: 66.9ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:11:14 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (8.1ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (47.2ms)
+Completed 200 OK in 69ms (Views: 29.4ms | ActiveRecord: 30.4ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 14:11:43 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"price"=>"200", "num_shares"=>"2", "transactions_type"=>"buy", "symbol"=>"amzn"}}
+Unpermitted parameter: :symbol
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "amzn"], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UdAl-tZ9voLGypVFqIVQJw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mTransaction Create (1.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "stock_id", "price", "num_shares", "transactions_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["stock_id", 3], ["price", 200.0], ["num_shares", 2], ["transactions_type", "buy"], ["created_at", "2020-07-13 21:11:43.655651"], ["updated_at", "2020-07-13 21:11:43.655651"]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/transactions_controller.rb:13
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 47.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 14:11:46 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UdAl-tZ9voLGypVFqIVQJw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (1.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 46ms (Views: 41.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:11:46 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (36.8ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (39.6ms)
+Completed 200 OK in 49ms (Views: 10.1ms | ActiveRecord: 36.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 14:14:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UdAl-tZ9voLGypVFqIVQJw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (2.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 800ms (Views: 796.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:14:57 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (9.1ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (14.9ms)
+Completed 200 OK in 23ms (Views: 12.0ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 14:15:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UdAl-tZ9voLGypVFqIVQJw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (2.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 991ms (Views: 987.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:15:42 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (2.6ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (9.0ms)
+Completed 200 OK in 38ms (Views: 28.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 14:16:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UdAl-tZ9voLGypVFqIVQJw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (2.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 510ms (Views: 507.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:16:43 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (17.1ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (19.6ms)
+Completed 200 OK in 26ms (Views: 7.5ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 14:16:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UdAl-tZ9voLGypVFqIVQJw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (2.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:16:48 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (0.9ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (4.1ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+Started GET "/" for ::1 at 2020-07-13 14:17:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UdAl-tZ9voLGypVFqIVQJw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (3.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:17:42 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (12.9ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (16.7ms)
+Completed 200 OK in 30ms (Views: 12.5ms | ActiveRecord: 12.9ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 14:18:08 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"price"=>"100", "num_shares"=>"5", "transactions_type"=>"buy", "symbol"=>"ccl"}}
+Unpermitted parameter: :symbol
+  [1m[36mStock Load (0.4ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ccl"], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UdAl-tZ9voLGypVFqIVQJw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mStock Load (0.5ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[36mTransaction Create (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "stock_id", "price", "num_shares", "transactions_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["stock_id", 11], ["price", 100.0], ["num_shares", 5], ["transactions_type", "buy"], ["created_at", "2020-07-13 21:18:08.297319"], ["updated_at", "2020-07-13 21:18:08.297319"]]
+  ↳ app/controllers/api/transactions_controller.rb:13
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/transactions_controller.rb:13
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 14:18:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UdAl-tZ9voLGypVFqIVQJw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 14:18:11 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (132.6ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (136.6ms)
+Completed 200 OK in 143ms (Views: 8.9ms | ActiveRecord: 132.6ms)
+
+

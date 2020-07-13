@@ -8,7 +8,7 @@ const receiveTransaction = (data) => ({
 })
 
 
-export const makeTransaction = (data) => {
-    return APITransaction.makeTransaction(data)
+export const makeTransaction = (transaction) => {
+    return APITransaction.makeTransaction(transaction)
         .then((transaction) => dispatch(receiveTransaction(transaction)))    
 }

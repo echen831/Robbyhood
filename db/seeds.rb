@@ -53,6 +53,9 @@ stocks = [
 ]
 
 Stock.destroy_all
+User.destroy_all
+
+User.create(email: 'demo@hotmail.com', password: '123456', username: 'demoUser', buying_power: 1000)
 
 stocks.each do |stock| 
     Stock.create(name: stock[:name], symbol: stock[:symbol])
