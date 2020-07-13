@@ -81,7 +81,7 @@ class User < ApplicationRecord
             end
         end
 
-        stocks.select {|k, v| v > 0 }.keys
+        stocks.select { |k, v| v > 0 }.keys
     end
 
 end
