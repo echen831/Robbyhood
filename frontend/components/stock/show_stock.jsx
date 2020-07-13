@@ -46,8 +46,12 @@ class Show extends React.Component {
 
     
     render() {
+
         const {name, symbol, range} = this.state;
         const { currentUser, logout, stocks } = this.props;
+
+        if (!stocks) return null
+        {console.log(stocks)}
         // if (this.props.loading) return <Loader/>
         return (
             <div className= {!this.state.dark ? 'show-body' : 'show-body-dark'}>
@@ -136,8 +140,10 @@ class Show extends React.Component {
                         <div className='stock-bar'>
                             <h1 className='stock-bar-header'>Stocks</h1>
                             <div>
-
-                                {Object.values(stocks).map((stock, idx) => (
+                                {currentUser.stocks_owned.map((stockId, idx) => (
+                                    <span key={idx}>{stockId}</span>
+                                ))}
+                                {/* {Object.values(stocks).map((stock, idx) => (
                                     <span onClick={() => this.setState({
                                         symbol: stock.symbol,
                                         name: stock.name
@@ -145,7 +151,7 @@ class Show extends React.Component {
                                         className={name === stock.name ? 'selected' : ''}
                                         key={idx}
                                 >{stock.name}</span>
-                                ))}
+                                ))} */}
                 
                             </div>
                         </div>
