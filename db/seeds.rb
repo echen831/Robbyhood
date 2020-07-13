@@ -57,3 +57,5 @@ Stock.destroy_all
 stocks.each do |stock| 
     Stock.create(name: stock[:name], symbol: stock[:symbol])
 end
+
+

@@ -1,6 +1,6 @@
 
 
-export const buyStock = (data) => {
+export const makeTransaction = (data) => {
     return $.ajax({
         url: '/api/transactions',
         method: 'POST',
