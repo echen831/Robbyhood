@@ -8,8 +8,8 @@ const stocksReducer = (oldState = {}, action) => {
             
             return Object.assign({}, oldState, action.stocks)
 
-        case RECEIVE_ONE_STOCK:
-            return Object.assign({}, oldState, {[action.symbol]: action.stock})
+        // case RECEIVE_ONE_STOCK:
+        //     return Object.assign({}, oldState, {[action.symbol]: action.stock})
     
         default:
             return oldState;
