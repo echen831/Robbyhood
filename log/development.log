@@ -55006,3 +55006,91 @@ Processing by Api::StocksController#index as JSON
 Completed 200 OK in 162ms (Views: 13.3ms | ActiveRecord: 146.3ms)
 
 
+Started POST "/api/transactions" for ::1 at 2020-07-13 16:38:35 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"price"=>"300", "num_shares"=>"3", "transactions_type"=>"sell", "symbol"=>"ccl"}}
+Unpermitted parameter: :symbol
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ccl"], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UdAl-tZ9voLGypVFqIVQJw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."stock_id" = $2[0m  [["user_id", 1], ["stock_id", 11]]
+  ↳ app/models/user.rb:46
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 19.9ms)
+
+
+
+NoMethodError - undefined method `num_shares' for #<Transaction::ActiveRecord_Associations_CollectionProxy:0x00007ff7f96abf50>:
+  app/models/user.rb:48:in `block in shares_owned'
+  app/models/user.rb:46:in `shares_owned'
+  app/controllers/api/transactions_controller.rb:17:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 16:40:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UdAl-tZ9voLGypVFqIVQJw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (22.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 97ms (Views: 81.2ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 16:40:03 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (0.7ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (30.5ms)
+Completed 200 OK in 85ms (Views: 28.7ms | ActiveRecord: 13.6ms)
+
+
+Started POST "/api/transactions" for ::1 at 2020-07-13 16:40:18 -0700
+Processing by Api::TransactionsController#create as JSON
+  Parameters: {"transaction"=>{"price"=>"300", "num_shares"=>"3", "transactions_type"=>"sell", "symbol"=>"ccl"}}
+Unpermitted parameter: :symbol
+  [1m[36mStock Load (0.5ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."symbol" = $1 LIMIT $2[0m  [["symbol", "ccl"], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:10
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UdAl-tZ9voLGypVFqIVQJw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."stock_id" = $2[0m  [["user_id", 1], ["stock_id", 11]]
+  ↳ app/models/user.rb:46
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/transactions_controller.rb:27
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:27
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/transactions_controller.rb:27
+  [1m[36mTransaction Create (0.7ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "stock_id", "price", "num_shares", "transactions_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["stock_id", 11], ["price", 300.0], ["num_shares", 3], ["transactions_type", "sell"], ["created_at", "2020-07-13 23:40:18.986301"], ["updated_at", "2020-07-13 23:40:18.986301"]]
+  ↳ app/controllers/api/transactions_controller.rb:27
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/transactions_controller.rb:27
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 16:40:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UdAl-tZ9voLGypVFqIVQJw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (2.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 16:40:22 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (3.4ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (9.3ms)
+Completed 200 OK in 25ms (Views: 15.5ms | ActiveRecord: 3.4ms)
+
+

@@ -45,7 +45,7 @@ class User < ApplicationRecord
         shares = 0
         transactions.where(stock_id: stock_id).each do |transaction| 
             if transaction.transactions_type == 'buy'
-                shares += transactions.num_shares
+                shares += transaction.num_shares
             else 
                 shares -= transaction.num_shares
             end
