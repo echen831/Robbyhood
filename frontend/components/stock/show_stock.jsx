@@ -78,7 +78,6 @@ class Show extends React.Component {
                         </div>
                         <div className='right-nav'>
                             <div>Hi, {currentUser.username}</div>
-                            <div>{currentUser.buying_power}</div>
                             <div>Portfolio</div>
                             <div onClick={logout} >Log Out</div>
 
@@ -140,7 +139,7 @@ class Show extends React.Component {
                             <div>
 
                                 {Object.values(stocks).map((stock, idx) => {
-                                    if (currentUser.stocks_owned.includes(idx))
+                                    if (Object.keys(currentUser.stocks_owned).includes(idx.toString()))
                                     return (
                                         <span onClick={() => this.setState({
                                             symbol: stock.symbol,
@@ -148,11 +147,12 @@ class Show extends React.Component {
                                         })}
                                             className={name === stock.name ? 'selected' : ''}
                                             key={idx}
-                                    >{stock.name}</span>
+                                    >{stock.name} {currentUser.stocks_owned[idx]}</span>
                                     )
                                 })}
                 
                             </div>
+                            <p>Buying Power: {currentUser.buying_power}</p>
                         </div>
                     </div>
                 </div>
