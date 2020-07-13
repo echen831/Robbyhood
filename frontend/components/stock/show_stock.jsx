@@ -32,7 +32,9 @@ class Show extends React.Component {
         this.setSymbol = this.setSymbol.bind(this)
     }
 
-
+    componentDidMount() {
+        this.props.fetchStocks()
+    }
 
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value })
