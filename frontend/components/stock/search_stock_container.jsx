@@ -9,7 +9,7 @@ const mSTP = (state, ownProps) => ({
     loading: state.ui.loading,
     symbol: ownProps.match.params.symbol,
     name: ownProps.match.params.name,
-    stock: state.entities.stocks[ownProps.match.params.symbol],
+    stock: state.entities.graphs[ownProps.match.params.symbol],
 })
 
 const mDTP = (dispatch) => ({
