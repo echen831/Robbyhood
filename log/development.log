@@ -51312,3 +51312,527 @@ Completed 200 OK in 37ms (Views: 15.1ms | ActiveRecord: 18.6ms)
 
 
   [1m[36mStock Load (0.9ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+Started DELETE "/api/session" for ::1 at 2020-07-13 09:36:34 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EkYsLMYfjSjlITIdBkWqGg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "BN5xG_oKJBY126wm0_x3dw"], ["updated_at", "2020-07-13 16:36:34.563275"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 09:42:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-13 09:43:03 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"e1@gmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "WbibuTSHvO9GTYv6avv3OA"], ["updated_at", "2020-07-13 16:43:04.356589"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (55.6ms)
+  Rendered api/users/show.json.jbuilder (57.3ms)
+Completed 500 Internal Server Error in 435ms (ActiveRecord: 40.0ms)
+
+
+
+ActionView::Template::Error - undefined method `transaction_type' for #<Transaction:0x00007fb8ef749c58>
+Did you mean?  transactions_type
+               transactions_type?
+               transactions_type=:
+  app/views/api/users/_user.json.jbuilder:3:in `view template'
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder___2539335551021369913_70216134167900'
+  app/controllers/api/sessions_controller.rb:11:in `create'
+
+Started POST "/api/session" for ::1 at 2020-07-13 09:43:08 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"e1@gmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "SqqNd6XN2CIfNZzfzKdhYw"], ["updated_at", "2020-07-13 16:43:09.042405"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (19.4ms)
+  Rendered api/users/show.json.jbuilder (20.6ms)
+Completed 500 Internal Server Error in 351ms (ActiveRecord: 11.5ms)
+
+
+
+ActionView::Template::Error - undefined method `transaction_type' for #<Transaction:0x00007fb8ee46ff10>
+Did you mean?  transactions_type
+               transactions_type?
+               transactions_type=:
+  app/views/api/users/_user.json.jbuilder:3:in `view template'
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder___2539335551021369913_70216133657560'
+  app/controllers/api/sessions_controller.rb:11:in `create'
+
+Started POST "/api/session" for ::1 at 2020-07-13 09:43:09 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"e1@gmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/session" for ::1 at 2020-07-13 09:43:09 -0700
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"e1@gmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "8YIYuKwNdp8FESHfAtJcSQ"], ["updated_at", "2020-07-13 16:43:09.937743"], ["id", 2]]
+  ↳ app/models/user.rb:21
+  ↳ app/models/user.rb:36
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/session" for ::1 at 2020-07-13 09:43:10 -0700
+  ↳ app/models/user.rb:36
+Processing by Api::SessionsController#create as JSON
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  Parameters: {"user"=>{"email"=>"e1@gmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Update (4.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "aebdF1DesSEixSNa30YEhw"], ["updated_at", "2020-07-13 16:43:10.250509"], ["id", 2]]
+  ↳ app/models/user.rb:21
+  Rendering api/users/show.json.jbuilder
+  ↳ app/models/user.rb:36
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  [1m[36mUser Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[35m (18.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendered api/users/_user.json.jbuilder (17.7ms)
+  Rendered api/users/show.json.jbuilder (21.9ms)
+  ↳ app/models/user.rb:36
+Completed 500 Internal Server Error in 953ms (ActiveRecord: 13.3ms)
+
+
+
+ActionView::Template::Error - undefined method `transaction_type' for #<Transaction:0x00007fb8ee3a2ee8>
+Did you mean?  transactions_type
+               transactions_type?
+               transactions_type=:
+  app/views/api/users/_user.json.jbuilder:3:in `view template'
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder___2539335551021369913_70216123908660'
+  app/controllers/api/sessions_controller.rb:11:in `create'
+
+  [1m[36mUser Exists (10.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  Rendering api/users/show.json.jbuilder
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (3.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "NpQVFRraecCp0uZjmYknMg"], ["updated_at", "2020-07-13 16:43:10.590630"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendered api/users/_user.json.jbuilder (20.4ms)
+  Rendered api/users/show.json.jbuilder (24.3ms)
+  Rendering api/users/show.json.jbuilder
+Completed 500 Internal Server Error in 687ms (ActiveRecord: 28.7ms)
+
+
+
+ActionView::Template::Error - undefined method `transaction_type' for #<Transaction:0x00007fb8ee2f0770>
+Did you mean?  transactions_type
+               transactions_type?
+               transactions_type=:
+  app/views/api/users/_user.json.jbuilder:3:in `view template'
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder___2539335551021369913_70216123908660'
+  app/controllers/api/sessions_controller.rb:11:in `create'
+
+  [1m[36mTransaction Load (2.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (20.7ms)
+  Rendered api/users/show.json.jbuilder (30.5ms)
+Completed 500 Internal Server Error in 402ms (ActiveRecord: 24.1ms)
+
+
+
+ActionView::Template::Error - undefined method `transaction_type' for #<Transaction:0x00007fb8ef0822a8>
+Did you mean?  transactions_type
+               transactions_type?
+               transactions_type=:
+  app/views/api/users/_user.json.jbuilder:3:in `view template'
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder___2539335551021369913_70216123908660'
+  app/controllers/api/sessions_controller.rb:11:in `create'
+
+Started POST "/api/session" for ::1 at 2020-07-13 09:43:11 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"e1@gmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Pc9P-dwb7iLtBd9FfFdEnA"], ["updated_at", "2020-07-13 16:43:11.589772"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (20.3ms)
+  Rendered api/users/show.json.jbuilder (21.7ms)
+Completed 500 Internal Server Error in 325ms (ActiveRecord: 3.0ms)
+
+
+
+ActionView::Template::Error - undefined method `transaction_type' for #<Transaction:0x00007fb8ea6629c0>
+Did you mean?  transactions_type
+               transactions_type?
+               transactions_type=:
+  app/views/api/users/_user.json.jbuilder:3:in `view template'
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder___2539335551021369913_70216091709580'
+  app/controllers/api/sessions_controller.rb:11:in `create'
+
+Started POST "/api/session" for ::1 at 2020-07-13 09:43:11 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"e1@gmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "fINpUdVAZYHA2IjRbPsFig"], ["updated_at", "2020-07-13 16:43:11.948369"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (28.2ms)
+  Rendered api/users/show.json.jbuilder (29.5ms)
+Completed 500 Internal Server Error in 346ms (ActiveRecord: 11.0ms)
+
+
+
+ActionView::Template::Error - undefined method `transaction_type' for #<Transaction:0x00007fb8f0b69f30>
+Did you mean?  transactions_type
+               transactions_type?
+               transactions_type=:
+  app/views/api/users/_user.json.jbuilder:3:in `view template'
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder___2539335551021369913_70216144703380'
+  app/controllers/api/sessions_controller.rb:11:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 09:43:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-13 09:43:22 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"e1@gmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "VBWT2dx6n41GiPFnfSCcQg"], ["updated_at", "2020-07-13 16:43:22.630507"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (20.1ms)
+  Rendered api/users/show.json.jbuilder (21.4ms)
+Completed 500 Internal Server Error in 334ms (ActiveRecord: 10.6ms)
+
+
+
+ActionView::Template::Error - undefined method `transaction_type' for #<Transaction:0x00007fb8ee62ff08>
+Did you mean?  transactions_type
+               transactions_type?
+               transactions_type=:
+  app/views/api/users/_user.json.jbuilder:3:in `view template'
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder___2539335551021369913_70216125249420'
+  app/controllers/api/sessions_controller.rb:11:in `create'
+
+Started POST "/api/session" for ::1 at 2020-07-13 09:43:23 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"e1@gmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21
+Started POST "/api/session" for ::1 at 2020-07-13 09:43:23 -0700
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+Processing by Api::SessionsController#create as JSON
+  ↳ app/models/user.rb:36
+  Parameters: {"user"=>{"email"=>"e1@gmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21
+Started POST "/api/session" for ::1 at 2020-07-13 09:43:23 -0700
+  [1m[36mUser Update (315.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "n6R3_yX7DgYWXPO3ShUHIw"], ["updated_at", "2020-07-13 16:43:23.416959"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Processing by Api::SessionsController#create as JSON
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  Parameters: {"user"=>{"email"=>"e1@gmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  ↳ app/models/user.rb:36
+  ↳ app/models/user.rb:36
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e1@gmail.com"], ["LIMIT", 1]]
+  Rendering api/users/show.json.jbuilder
+  ↳ app/models/user.rb:21
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[35m (6.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mTransaction Load (7.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mUser Update (7.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Tq2iZYzmnkLHJf5R63j-oA"], ["updated_at", "2020-07-13 16:43:24.076896"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  ↳ app/models/user.rb:59
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  Rendered api/users/_user.json.jbuilder (37.0ms)
+  [1m[35m (25.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (21.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  Rendered api/users/show.json.jbuilder (363.4ms)
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+Completed 500 Internal Server Error in 1003ms (ActiveRecord: 327.0ms)
+
+
+
+ActionView::Template::Error - undefined method `transaction_type' for #<Transaction:0x00007fb8ee4d3718>
+Did you mean?  transactions_type
+               transactions_type?
+               transactions_type=:
+  app/views/api/users/_user.json.jbuilder:3:in `view template'
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder___2539335551021369913_70216124625240'
+  app/controllers/api/sessions_controller.rb:11:in `create'
+
+  [1m[36mUser Update (17.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "0E4K0Xv_Z3GwvvmeRSSOoQ"], ["updated_at", "2020-07-13 16:43:24.121945"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[36mTransaction Load (2.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (40.9ms)
+  Rendered api/users/show.json.jbuilder (59.7ms)
+Completed 500 Internal Server Error in 768ms (ActiveRecord: 40.3ms)
+
+
+
+ActionView::Template::Error - undefined method `transaction_type' for #<Transaction:0x00007fb8ee30acb0>
+Did you mean?  transactions_type
+               transactions_type?
+               transactions_type=:
+  app/views/api/users/_user.json.jbuilder:3:in `view template'
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder___2539335551021369913_70216124625240'
+  app/controllers/api/sessions_controller.rb:11:in `create'
+
+  [1m[36mTransaction Load (13.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (39.4ms)
+  Rendered api/users/show.json.jbuilder (60.5ms)
+Completed 500 Internal Server Error in 487ms (ActiveRecord: 66.8ms)
+
+
+
+ActionView::Template::Error - undefined method `transaction_type' for #<Transaction:0x00007fb8eb3c9320>
+Did you mean?  transactions_type
+               transactions_type?
+               transactions_type=:
+  app/views/api/users/_user.json.jbuilder:3:in `view template'
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder___2539335551021369913_70216124625240'
+  app/controllers/api/sessions_controller.rb:11:in `create'
+
+Started GET "/" for ::1 at 2020-07-13 09:43:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-13 09:43:45 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"e1@gmail.com", "username"=>"", "password"=>"[FILTERED]", "buying_power"=>"1000"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "e1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "eric1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "7pZ_HXEZvzmup76SMtKAeQ"], ["updated_at", "2020-07-13 16:43:45.997657"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (1.9ms)
+  Rendered api/users/show.json.jbuilder (3.3ms)
+Completed 200 OK in 343ms (Views: 12.3ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 09:43:46 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (1.4ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (51.3ms)
+Completed 200 OK in 100ms (Views: 38.7ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 09:44:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7pZ_HXEZvzmup76SMtKAeQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (5.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.1ms)
+
+
+
+ActionView::Template::Error - wrong number of arguments (given 0, expected 1):
+  app/views/api/users/_user.json.jbuilder:3:in `view template'
+  app/views/static_pages/root.html.erb:3:in `_app_views_static_pages_root_html_erb__2002512451796122164_70216095443280'
+
+Started POST "/__better_errors/235cef2625514f5e/variables" for ::1 at 2020-07-13 09:44:52 -0700
+Started GET "/" for ::1 at 2020-07-13 09:45:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7pZ_HXEZvzmup76SMtKAeQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (36.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (41.7ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.0ms)
+
+
+
+ActionView::Template::Error - undefined method `transaction_type' for #<Transaction:0x00007fb8f02f1b28>
+Did you mean?  transactions_type
+               transactions_type?
+               transactions_type=:
+  app/views/api/users/_user.json.jbuilder:3:in `view template'
+  app/views/static_pages/root.html.erb:3:in `_app_views_static_pages_root_html_erb__2002512451796122164_70216139965100'
+
+Started POST "/__better_errors/cccf494bb7530387/variables" for ::1 at 2020-07-13 09:45:40 -0700
+Started GET "/" for ::1 at 2020-07-13 09:46:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7pZ_HXEZvzmup76SMtKAeQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (12.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 09:46:04 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (28.4ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (53.6ms)
+Completed 200 OK in 73ms (Views: 20.2ms | ActiveRecord: 43.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 09:46:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7pZ_HXEZvzmup76SMtKAeQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 909ms (Views: 906.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 09:46:57 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (2.8ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (9.9ms)
+Completed 200 OK in 22ms (Views: 15.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-13 09:47:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7pZ_HXEZvzmup76SMtKAeQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:59
+  Rendered api/users/_user.json.jbuilder (3.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 798ms (Views: 795.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/stocks" for ::1 at 2020-07-13 09:47:08 -0700
+Processing by Api::StocksController#index as JSON
+  Rendering api/stocks/index.json.jbuilder
+  [1m[36mStock Load (1.1ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/api/stocks/index.json.jbuilder:1
+  Rendered api/stocks/index.json.jbuilder (4.6ms)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 1.1ms)
+
+
