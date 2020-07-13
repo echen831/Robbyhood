@@ -13,6 +13,7 @@ class SearchBar extends React.Component {
         this.selectStock = this.selectStock.bind(this);
     }
 
+
     handleInput(e) {
         this.setState({inputValue: e.currentTarget.value})
     };
@@ -23,8 +24,8 @@ class SearchBar extends React.Component {
         if (this.state.inputValue.length === 0) {
             return matches
         }
-
-        this.props.stocks.forEach( stock => {
+        let stocks = Object.values(this.props.stocks)
+        stocks.forEach( stock => {
             const subName = stock.name.slice(0, this.state.inputValue.length);
             const subSym = stock.symbol.slice(0, this.state.inputValue.length);
             if (subName.toLowerCase() === this.state.inputValue.toLowerCase() ||
@@ -49,15 +50,15 @@ class SearchBar extends React.Component {
     render () {
         const results = this.matches().map((stock, idx) => {
 
-            if (!stock.symbol) {
-                return (
+        if (!stock.symbol) {
+            return (
                 <li key={idx}>{stock.name}</li>
-                )
-            } else {
-                return (
+            )
+        } else {
+            return (
                 <li key={idx}><Link  to= {`/search/stocks/${stock.symbol}/${stock.name}`} > {stock.symbol.toUpperCase()}  {stock.name}</Link></li>
-                );
-            }
+            );
+        }
         });
         return (
             <div className='searchbar-container'>

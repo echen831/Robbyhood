@@ -5,6 +5,7 @@ import { fetchStocks } from '../../actions/stock_actions'
 
 const mSTP = (state) => ({
     currentUser: state.entities.users[state.session.id],
+    stocks: state.entities.stocks,
     loading: state.ui.loading
 })
 

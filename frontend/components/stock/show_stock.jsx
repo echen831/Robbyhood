@@ -47,7 +47,7 @@ class Show extends React.Component {
     
     render() {
         const {name, symbol, range} = this.state;
-        const { currentUser, logout } = this.props;
+        const { currentUser, logout, stocks } = this.props;
         // if (this.props.loading) return <Loader/>
         return (
             <div className= {!this.state.dark ? 'show-body' : 'show-body-dark'}>
@@ -61,7 +61,9 @@ class Show extends React.Component {
                             </div>
 
                             <div className='stock-searchbar'>
-                                <SearchBar stocks={stocks} setState={this.setSymbol}/>
+                                <SearchBar stocks={stocks} 
+                                           setState={this.setSymbol}
+                                           />
                                 {/* <input type="text"
                                     value={this.state.search}
                                     onChange={this.update('search')}
@@ -135,7 +137,7 @@ class Show extends React.Component {
                             <h1 className='stock-bar-header'>Stocks</h1>
                             <div>
 
-                                {stocks.map((stock, idx) => (
+                                {Object.values(stocks).map((stock, idx) => (
                                     <span onClick={() => this.setState({
                                         symbol: stock.symbol,
                                         name: stock.name
