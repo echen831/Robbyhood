@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HistStock from './hist_stock_container';
 import SearchBar from '../search_bar/search_bar';
+import BuySellStock from './buy_sell_stock'
 import { stocks } from './stocks' 
 import Loader from '../loader/loader'
 
@@ -26,7 +27,7 @@ class SearchStock extends React.Component {
     componentDidMount() {
         this.props.fetchHistStock(this.props.symbol, '1d')
         
-        if (!this.props.stocks) {
+        if (!this.props.stocks || !this.props.stocks.length) {
             this.props.fetchStocks()
         }
     }
@@ -60,7 +61,7 @@ class SearchStock extends React.Component {
                             </div>
 
                             <div className='stock-searchbar'>
-                                <SearchBar stocks={stocks} setState={this.setSymbol} />
+                                <SearchBar stocks={stocks} setState={this.setSymbol}/>
                             </div>
                         </div>
                         <div className='right-nav'>
@@ -108,14 +109,12 @@ class SearchStock extends React.Component {
                         </div>
                     </div>
                     <div className='stock-show-right'>
-                        <div className='stock-bar'>
-                            <h1 className='stock-bar-header'>{`Buy ${name.toUpperCase()}`}</h1>
-                            <div>Shares</div>
-                            <div>Market Price  {this.props.stock[this.props.stock.length-1].high}</div>
-                            <div>Estimated Cost</div>
-                            <button>Review Order</button>
-                            <div>Buying Power Available</div>
-                        </div>
+                        <BuySellStock name={this.props.name} 
+                                      symbol={this.props.symbol}
+                                      stock={this.props.stock} 
+                                      currentUser={this.props.currentUser}
+                                      makeTransaction={this.props.makeTransaction}
+                                      />
                     </div>
                 </div>                  
 

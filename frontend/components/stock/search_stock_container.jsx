@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import SearchStock from './search_stock';
 import { logout } from '../../actions/session_actions';
 import { fetchHistStock, fetchStocks } from '../../actions/stock_actions';
+import { makeTransaction } from '../../actions/transaction_actions';
 
 
 const mSTP = (state, ownProps) => ({
@@ -16,7 +17,8 @@ const mSTP = (state, ownProps) => ({
 const mDTP = (dispatch) => ({
     logout: () => dispatch(logout()),
     fetchHistStock: (symbol, range) => dispatch(fetchHistStock(symbol, range)),
-    fetchStocks: () => dispatch(fetchStocks())
+    fetchStocks: () => dispatch(fetchStocks()),
+    makeTransaction: (transaction) => makeTransaction(transaction)  
 })
 
 export default connect(mSTP, mDTP)(SearchStock);

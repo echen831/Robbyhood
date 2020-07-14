@@ -1,0 +1,61 @@
+import React from 'react';
+import { LOGOUT_CURRENT_USER } from '../../actions/session_actions';
+
+class BuySellStock extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            num_shares: ''
+        }
+
+    }
+
+    calcMarketPrice(stock) {
+        if (!stock) return null
+        let price = stock.toString()
+        let priceArr = price.split('.')
+        let dollar = priceArr[0]
+        let decimal = priceArr[1]
+
+        if (!decimal || !decimal.length) {
+            decimal === '00'
+        } else if (decimal.length === 1) {
+            decimal += '0'
+        } else if (decimal.length > 2) {
+            decimal = decimal.slice(0, 2)
+        }
+
+        return dollar + '.' + decimal
+    }
+
+    render () {
+        let { stock, name, symbol, currentUser, makeTransaction } = this.props
+        let transaction = {
+            num_shares: this.state.num_shares,
+            price: this.calcMarketPrice(stock[stock.length - 1].high),
+            symbol: symbol,
+            transactions_type: 'buy'
+        }
+        if (!stock || !stock.length) return null
+        return (
+            <div>
+                <div className='stock-bar'>
+                    <h1 className='stock-bar-header'>{`Buy ${name.toUpperCase()}`}</h1>
+                    <div>Buying Power Available: {currentUser.buying_power}</div>
+                    <div>Owned Shares: {}</div>
+
+                    <div>Shares <input type="number" onChange={(e)=> this.setState({num_shares: e.currentTarget.value})}/>
+                    
+                    </div>
+                    <div>Market Price  {this.calcMarketPrice(stock[stock.length - 1].high)}</div>
+                    <div>Estimated Cost: {this.calcMarketPrice(stock[stock.length - 1].high) * this.state.num_shares}</div>
+                    <button onClick={()=> makeTransaction(transaction)}>Buy</button>
+                    
+                </div>
+            </div>
+        )
+    }
+}
+
+export default BuySellStock
