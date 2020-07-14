@@ -1,5 +1,4 @@
 
-
 export const makeTransaction = (transaction) => {
     return $.ajax({
         url: '/api/transactions',

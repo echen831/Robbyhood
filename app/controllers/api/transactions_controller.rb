@@ -18,11 +18,11 @@ class Api::TransactionsController < ApplicationController
 
 
         if transaction_amount > buying_power && @transaction.transactions_type == 'buy'
-            render json: ['Not enough buying power'], status: 401
+            render json: ['You do not have enough buying power'], status: 401
         elsif @transaction.num_shares <= 0 
-            render json: ['Shares must be greater than 0'], status: 422
+            render json: ['Number of shares must be greater than 0'], status: 422
         elsif @transaction.num_shares > shares_owned && @transaction.transactions_type == 'sell'
-            render json: ['Not enough shares'], status: 401
+            render json: ["You don't own enough shares"], status: 401
         else 
             if @transaction.save 
                 render json: ['Success'], status: 200
