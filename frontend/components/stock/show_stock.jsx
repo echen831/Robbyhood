@@ -156,7 +156,7 @@ class Show extends React.Component {
                             <h1 className='stock-bar-header'>Stocks</h1>
                             <div>
 
-                                {Object.values(stocks).map((stock, idx) => {
+                                {/* {Object.values(stocks).map((stock, idx) => {
                                     if (Object.keys(currentUser.stocks_owned).includes((idx+1).toString()))
                                     return (
                                         <span onClick={() => this.setState({
@@ -167,7 +167,7 @@ class Show extends React.Component {
                                             key={idx}
                                     >{stock.name} {currentUser.stocks_owned[idx+1]}</span>
                                     )
-                                })}
+                                })} */}
                 
                             </div>
                             <p>Buying Power: {this.showAmount(currentUser.buying_power)}</p>
