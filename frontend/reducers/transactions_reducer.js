@@ -6,7 +6,7 @@ const transactionsReducer = (oldState = {}, action) => {
     switch (action.type) {
         case RECEIVE_TRANSACTION:
 
-            return Object.assign({}, oldState, action.transaction)
+            return Object.assign({}, oldState, action.data)
 
         default:
             return oldState;

@@ -11,7 +11,8 @@ const mSTP = (state, ownProps) => ({
     symbol: ownProps.match.params.symbol,
     name: ownProps.match.params.name,
     stock: state.entities.graphs[ownProps.match.params.symbol],
-    stocks: state.entities.stocks
+    stocks: state.entities.stocks,
+    transactions: state.entities.transactions
 })
 
 const mDTP = (dispatch) => ({

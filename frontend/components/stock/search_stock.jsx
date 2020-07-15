@@ -37,11 +37,13 @@ class SearchStock extends React.Component {
             this.props.fetchHistStock(this.props.symbol, '1d')
             this.setState({symbol: this.props.symbol, name: this.props.name})
         }
+
     } 
 
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value })
     };
+
 
     render () {
 
