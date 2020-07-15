@@ -10,15 +10,15 @@ class BuySellStock extends React.Component {
 
     }
 
-    calcMarketPrice(stock) {
-        if (!stock) return null
-        let price = stock.toString()
-        let priceArr = price.split('.')
+    showAmount(num) {
+        if (!num) return null
+        let amount = num.toString()
+        let priceArr = amount.split('.')
         let dollar = priceArr[0]
         let decimal = priceArr[1]
 
         if (!decimal || !decimal.length) {
-            decimal === '00'
+            decimal = '00'
         } else if (decimal.length === 1) {
             decimal += '0'
         } else if (decimal.length > 2) {
@@ -46,14 +46,14 @@ class BuySellStock extends React.Component {
         let { stock, stocks, name, symbol, currentUser, makeTransaction } = this.props
         let transactionBuy = {
             num_shares: this.state.num_shares,
-            price: this.calcMarketPrice(stock[stock.length - 1].high),
+            price: this.showAmount(stock[stock.length - 1].high),
             symbol: symbol,
             transactions_type: 'buy'
         }
 
         let transactionSell = {
             num_shares: this.state.num_shares,
-            price: this.calcMarketPrice(stock[stock.length - 1].high),
+            price: this.showAmount(stock[stock.length - 1].high),
             symbol: symbol,
             transactions_type: 'sell'
         }
@@ -63,14 +63,14 @@ class BuySellStock extends React.Component {
             <div>
                 <div className='stock-bar'>
                     <h1 className='stock-bar-header'>{`Buy ${name.toUpperCase()}`}</h1>
-                    <div>Buying Power Available: {this.calcMarketPrice(currentUser.buying_power)}</div>
+                    <div>Buying Power Available: {this.showAmount(currentUser.buying_power)}</div>
                     <div>{`Owned Shares: ${this.findNumShares(Object.values(stocks), symbol, currentUser.stocks_owned)}`}</div>
 
                     <div>Shares <input type="number" onChange={(e)=> this.setState({num_shares: e.currentTarget.value})}/>
                     
                     </div>
-                    <div>Market Price  {this.calcMarketPrice(stock[stock.length - 1].high)}</div>
-                    <div>Estimated Cost: {this.calcMarketPrice(stock[stock.length - 1].high) * this.state.num_shares}</div>
+                    <div>Market Price  {this.showAmount(stock[stock.length - 1].high)}</div>
+                    <div>Estimated Cost: {this.showAmount(stock[stock.length - 1].high) * this.state.num_shares}</div>
                     <button onClick={()=> makeTransaction(transactionBuy)}>Buy</button>
                     <button onClick={() => makeTransaction(transactionSell)}>Sell</button>
                 </div>

@@ -44,6 +44,24 @@ class Show extends React.Component {
         this.setState({search: symbol})
     }
 
+    showAmount(num) {
+        if (!num) return null
+        let amount = num.toString()
+        let priceArr = amount.split('.')
+        let dollar = priceArr[0]
+        let decimal = priceArr[1]
+
+        if (!decimal || !decimal.length) {
+            decimal = '00'
+        } else if (decimal.length === 1) {
+            decimal += '0'
+        } else if (decimal.length > 2) {
+            decimal = decimal.slice(0, 2)
+        }
+
+        return dollar + '.' + decimal
+    }
+
     
     render() {
 
@@ -152,7 +170,7 @@ class Show extends React.Component {
                                 })}
                 
                             </div>
-                            <p>Buying Power: {currentUser.buying_power}</p>
+                            <p>Buying Power: {this.showAmount(currentUser.buying_power)}</p>
                         </div>
                     </div>
                 </div>
