@@ -112,6 +112,7 @@ class SearchStock extends React.Component {
                         <BuySellStock name={this.props.name} 
                                       symbol={this.props.symbol}
                                       stock={this.props.stock} 
+                                      stocks={this.props.stocks}
                                       currentUser={this.props.currentUser}
                                       makeTransaction={this.props.makeTransaction}
                                       />

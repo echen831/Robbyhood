@@ -56,7 +56,10 @@ class SearchBar extends React.Component {
             )
         } else {
             return (
-                <li key={idx}><Link  to= {`/search/stocks/${stock.symbol}/${stock.name}`} > {stock.symbol.toUpperCase()}  {stock.name}</Link></li>
+                <li key={idx}>
+                    <Link  to= {`/search/stocks/${stock.symbol}/${stock.name}`} 
+                    > {stock.symbol.toUpperCase()}  {stock.name}</Link>
+                </li>
             );
         }
         });

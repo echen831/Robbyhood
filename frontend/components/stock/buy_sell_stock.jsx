@@ -29,21 +29,36 @@ class BuySellStock extends React.Component {
         return dollar + '.' + decimal
     }
 
+    findNumShares(stocks, symbol, ids) {
+
+        let nums_shares = '0'
+
+        for(let i = 0; i < stocks.length; i ++) {
+            let stock = stocks[i]
+            if (stock.symbol === symbol && ids[i+1]) {
+                return ids[i+1]
+            }
+        }
+
+        return nums_shares 
+    }
+
     render () {
-        let { stock, name, symbol, currentUser, makeTransaction } = this.props
+        let { stock, stocks, name, symbol, currentUser, makeTransaction } = this.props
         let transaction = {
             num_shares: this.state.num_shares,
             price: this.calcMarketPrice(stock[stock.length - 1].high),
             symbol: symbol,
             transactions_type: 'buy'
         }
+        
         if (!stock || !stock.length) return null
         return (
             <div>
                 <div className='stock-bar'>
                     <h1 className='stock-bar-header'>{`Buy ${name.toUpperCase()}`}</h1>
                     <div>Buying Power Available: {currentUser.buying_power}</div>
-                    <div>Owned Shares: {}</div>
+                    <div>{`Owned Shares: ${this.findNumShares(Object.values(stocks), symbol, currentUser.stocks_owned)}`}</div>
 
                     <div>Shares <input type="number" onChange={(e)=> this.setState({num_shares: e.currentTarget.value})}/>
                     
