@@ -63,7 +63,7 @@ class BuySellStock extends React.Component {
             <div>
                 <div className='stock-bar'>
                     <h1 className='stock-bar-header'>{`Buy ${name.toUpperCase()}`}</h1>
-                    <div>Buying Power Available: {currentUser.buying_power}</div>
+                    <div>Buying Power Available: {this.calcMarketPrice(currentUser.buying_power)}</div>
                     <div>{`Owned Shares: ${this.findNumShares(Object.values(stocks), symbol, currentUser.stocks_owned)}`}</div>
 
                     <div>Shares <input type="number" onChange={(e)=> this.setState({num_shares: e.currentTarget.value})}/>
