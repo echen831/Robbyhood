@@ -1,5 +1,4 @@
 import React from 'react';
-import { LOGOUT_CURRENT_USER } from '../../actions/session_actions';
 
 class BuySellStock extends React.Component {
     constructor(props) {
@@ -45,11 +44,18 @@ class BuySellStock extends React.Component {
 
     render () {
         let { stock, stocks, name, symbol, currentUser, makeTransaction } = this.props
-        let transaction = {
+        let transactionBuy = {
             num_shares: this.state.num_shares,
             price: this.calcMarketPrice(stock[stock.length - 1].high),
             symbol: symbol,
             transactions_type: 'buy'
+        }
+
+        let transactionSell = {
+            num_shares: this.state.num_shares,
+            price: this.calcMarketPrice(stock[stock.length - 1].high),
+            symbol: symbol,
+            transactions_type: 'sell'
         }
         
         if (!stock || !stock.length) return null
@@ -65,8 +71,8 @@ class BuySellStock extends React.Component {
                     </div>
                     <div>Market Price  {this.calcMarketPrice(stock[stock.length - 1].high)}</div>
                     <div>Estimated Cost: {this.calcMarketPrice(stock[stock.length - 1].high) * this.state.num_shares}</div>
-                    <button onClick={()=> makeTransaction(transaction)}>Buy</button>
-                    
+                    <button onClick={()=> makeTransaction(transactionBuy)}>Buy</button>
+                    <button onClick={() => makeTransaction(transactionSell)}>Sell</button>
                 </div>
             </div>
         )

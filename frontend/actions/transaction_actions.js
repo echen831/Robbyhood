@@ -10,5 +10,6 @@ const receiveTransaction = (transaction) => ({
 
 export const makeTransaction = (transaction) => {
     return APITransaction.makeTransaction(transaction)
-        .then((transaction) => dispatch(receiveTransaction(transaction)))    
+        .then((transaction) => dispatch(receiveTransaction(transaction)))
+        .then(location.reload(), 3000)   
 }
