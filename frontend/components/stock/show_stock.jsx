@@ -155,7 +155,12 @@ class Show extends React.Component {
                         <div className='stock-bar'>
                             <h1 className='stock-bar-header'>Stocks</h1>
                             <div>
-
+                                {Object.keys(currentUser.stocks_owned).map((stock, idx) =>
+                                   <div>
+                                       <span>{stock}</span>
+                                       <span> Num Shares: {currentUser.stocks_owned[stock]}</span>
+                                   </div>
+                                )}
                                 {/* {Object.values(stocks).map((stock, idx) => {
                                     if (Object.keys(currentUser.stocks_owned).includes((idx+1).toString()))
                                     return (
