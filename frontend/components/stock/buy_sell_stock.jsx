@@ -73,7 +73,10 @@ class BuySellStock extends React.Component {
                         
                         </div>
                         <div>Market Price  {this.showAmount(stock[stock.length - 1].high)}</div>
-                        <div>Estimated Cost: {this.showAmount(stock[stock.length - 1].high) * this.state.num_shares}</div>
+                        <div>Estimated transaction amount:  
+                            {this.state.num_shares ? (this.state.transactions_type === 'buy' ? '-' : '+') : null } 
+                            {this.showAmount(stock[stock.length - 1].high) * this.state.num_shares}
+                        </div>
                         <button onClick={()=> makeTransaction(transaction)}>{this.state.transactions_type}</button>
                         <p>{this.state.transactions_made}</p>
                     </div>
