@@ -155,24 +155,12 @@ class Show extends React.Component {
                         <div className='stock-bar'>
                             <h1 className='stock-bar-header'>Stocks</h1>
                             <div>
-                                {Object.keys(currentUser.stocks_owned).map((stock, idx) =>
+                                {Object.keys(currentUser.stocks_owned).sort().map((stock, idx) =>
                                    <div>
                                        <span>{stock}</span>
                                        <span> Num Shares: {currentUser.stocks_owned[stock]}</span>
                                    </div>
                                 )}
-                                {/* {Object.values(stocks).map((stock, idx) => {
-                                    if (Object.keys(currentUser.stocks_owned).includes((idx+1).toString()))
-                                    return (
-                                        <span onClick={() => this.setState({
-                                            symbol: stock.symbol,
-                                            name: stock.name
-                                        })}
-                                            className={name === stock.name ? 'selected' : ''}
-                                            key={idx}
-                                    >{stock.name} {currentUser.stocks_owned[idx+1]}</span>
-                                    )
-                                })} */}
                 
                             </div>
                             <p>Buying Power: {this.showAmount(currentUser.buying_power)}</p>
