@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 
 class PortfolioItem extends React.Component {
     constructor(props) {
         super(props)
+
+        this.fetchOneDayStock = this.props.fetchOneDayStock.bind(this)
     }
 
     componentDidMount() {
         let { fetchOneDayStock, symbol } = this.props
         fetchOneDayStock(symbol, '1d')
     }
-
-
 
     findCurrentPrice(stocks, symbol) {
         let price = null
@@ -78,19 +79,32 @@ class PortfolioItem extends React.Component {
         return this.setFlux(res) + '%'
     } 
 
+    findName(stocks, symbol) {
+        for(let i = 0; i < stocks.length; i ++) {
+            let stock = stocks[i]
+            if (stock.symbol === symbol) {
+                return stock.name
+            }
+        }
+    }
+
 
     render () {
 
-        let { currentUser, symbol, idx, myStocks } = this.props
+        let { currentUser, symbol, idx, myStocks, stocks } = this.props
         if (!myStocks || !myStocks[symbol]) return null
+        let name = this.findName(Object.values(stocks), symbol)
         let currPrice = this.findCurrentPrice(myStocks, symbol)
         let purchasePrice = currentUser.stock_prices[symbol]
         let openPrice = myStocks[symbol][0].high
         return (
+        <Link to={`/search/stocks/${symbol}/${name}`}>
             <div className='portfolio-item-container'
                  key={idx}>
                 <div className='pi-name-shares'>
-                    <p id='pi-stock-name'>{symbol.toUpperCase()}</p>
+                    
+                        <p id='pi-stock-name'>{symbol.toUpperCase()}</p>
+                
                     <p id='pi-shares-owned'>
                         {currentUser.stocks_owned[symbol]}
                         {" "} 
@@ -101,6 +115,7 @@ class PortfolioItem extends React.Component {
                     <p>{this.setFluxPercent(openPrice, currPrice)}</p>
                 </div>
             </div>
+        </Link>
         )
     }
 }

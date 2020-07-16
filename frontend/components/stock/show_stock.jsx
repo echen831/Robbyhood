@@ -161,6 +161,7 @@ class Show extends React.Component {
                                         myStocks={myStocks}
                                         currentUser={currentUser}
                                         symbol={symbol}
+                                        stocks={stocks}
                                         fetchOneDayStock={fetchOneDayStock}
                                         idx={idx}
                                     />
