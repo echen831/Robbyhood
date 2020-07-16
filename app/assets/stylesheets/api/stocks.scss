@@ -391,17 +391,47 @@
   display: flex;
   padding: none;
   width: 100%;
-  border: 1px solid black;
+
 }
 
 .buy-sell-container p {
   width: 50%;
-  border: 1px solid black;
   cursor: pointer;
+  padding: 1em;
+}
+
+.bs-selected {
+  color:  rgb(66, 207, 160);
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 #display-none {
   display: none;
 }
+
+.buy-sell-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.buy-sell-info-container div{
+  display: flex;
+  justify-content: space-around;
+}
+
+.buy-sell-info-container p, .buy-sell-info-container button {
+  padding: 0.5em
+}
+
+
+.shares-container input[type=number] {
+  height: 100%;
+  padding: 0.5em;
+  width: 5em;
+  text-align: right;
+}
+
+
 
 /****************************************/
