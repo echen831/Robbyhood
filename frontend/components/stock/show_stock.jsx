@@ -4,6 +4,7 @@ import HistStock from './hist_stock_container';
 import SearchBar from '../search_bar/search_bar'
 import { stocks } from './stocks'
 import Loader from '../loader/loader';
+import { PortfolioItem } from './portfolio_item';
 
 // const stocks = [
 //     {name: 'APPLE', symbol: 'aapl'},
@@ -156,14 +157,18 @@ class Show extends React.Component {
                             <h1 className='stock-bar-header'>Stocks</h1>
                             <div>
                                 {Object.keys(currentUser.stocks_owned).sort().map((stock, idx) =>
-                                   <div key={idx}>
-                                       <span>{stock}</span>
-                                       <span> Num Shares: {currentUser.stocks_owned[stock]}</span>
-                                   </div>
+                                    <PortfolioItem 
+                                        currentUser={currentUser}
+                                        stock={stock}
+                                        idx={idx}
+                                    />
+                                //    <div key={idx}>
+                                //        <span>{stock}</span>
+                                //        <span> Num Shares: {currentUser.stocks_owned[stock]}</span>
+                                //    </div>
                                 )}
                 
                             </div>
-                            <p>Buying Power: {this.showAmount(currentUser.buying_power)}</p>
                         </div>
                     </div>
                 </div>
