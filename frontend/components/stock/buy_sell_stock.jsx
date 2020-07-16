@@ -30,14 +30,14 @@ class BuySellStock extends React.Component {
         return dollar + '.' + decimal
     }
 
-    findNumShares(stocks, name, ids) {
+    findNumShares(stocks, symbol, ids) {
 
         let nums_shares = '0'
 
         for(let i = 0; i < stocks.length; i ++) {
             let stock = stocks[i]
-            if (stock.name === name && ids[name]) {
-                return ids[name]
+            if (stock.symbol === symbol && ids[symbol]) {
+                return ids[symbol]
             }
         }
 
@@ -55,7 +55,7 @@ class BuySellStock extends React.Component {
             transactions_type: this.state.transactions_type
         }
 
-        let ownShares = this.findNumShares(Object.values(stocks), name, currentUser.stocks_owned)
+        let ownShares = this.findNumShares(Object.values(stocks), symbol, currentUser.stocks_owned)
 
         
         if (!stock || !stock.length) return null

@@ -73,12 +73,12 @@ class User < ApplicationRecord
 
         transactions.each do |transaction| 
             stock = transaction.stock
-            if transaction.transactions_type == 'buy' && !stocks[stock.name]
-                stocks[stock.name] = transaction.num_shares
+            if transaction.transactions_type == 'buy' && !stocks[stock.symbol]
+                stocks[stock.symbol] = transaction.num_shares
             elsif transaction.transactions_type == 'buy'
-                stocks[stock.name] += transaction.num_shares
+                stocks[stock.symbol] += transaction.num_shares
             elsif transaction.transactions_type == 'sell'
-                stocks[stock.name] -= transaction.num_shares
+                stocks[stock.symbol] -= transaction.num_shares
             end
         end
 
