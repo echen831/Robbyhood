@@ -5,14 +5,14 @@ class BuySellStock extends React.Component {
         super(props)
 
         this.state = {
-            num_shares: '',
+            num_shares: 0,
             transactions_type: 'buy',
         }
 
     }
 
     showAmount(num) {
-        if (!num) return null
+        if (!num) return '0.00'
         let amount = num.toString()
         let priceArr = amount.split('.')
         let dollar = priceArr[0]
@@ -73,9 +73,9 @@ class BuySellStock extends React.Component {
                         
                         </div>
                         <div>Market Price  {this.showAmount(stock[stock.length - 1].high)}</div>
-                        <div>Estimated transaction amount:  
-                            {this.state.num_shares ? (this.state.transactions_type === 'buy' ? '-' : '+') : null } 
-                            {this.showAmount(stock[stock.length - 1].high) * this.state.num_shares}
+                        <div> 
+                            {this.state.transactions_type === 'buy' ? 'Estimated Cost: ' : 'Estimated Credit: '}
+                            {this.showAmount(stock[stock.length - 1].high  * this.state.num_shares)}
                         </div>
                         <button onClick={()=> makeTransaction(transaction)}>{this.state.transactions_type}</button>
                         <p>{this.state.transactions_made}</p>
