@@ -156,7 +156,7 @@ class Show extends React.Component {
                             <h1 className='stock-bar-header'>Stocks</h1>
                             <div>
                                 {Object.keys(currentUser.stocks_owned).sort().map((stock, idx) =>
-                                   <div>
+                                   <div key={idx}>
                                        <span>{stock}</span>
                                        <span> Num Shares: {currentUser.stocks_owned[stock]}</span>
                                    </div>

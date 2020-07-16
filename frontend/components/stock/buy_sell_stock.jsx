@@ -90,7 +90,7 @@ class BuySellStock extends React.Component {
                         </div>
                         <div id={review ? 'display-none' : ''}>
                             <button
-                                disabled={num_shares === 0 ? true : false} 
+                                disabled={!num_shares? true : false} 
                                 onClick={() => this.setState({review: !review})}>Review Order</button>
                         </div>
                         <div className='buy-sell-review-container'
