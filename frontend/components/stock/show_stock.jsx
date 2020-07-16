@@ -67,7 +67,7 @@ class Show extends React.Component {
     render() {
 
         const {name, symbol, range} = this.state;
-        const { currentUser, logout, stocks, fetchOneDayStock} = this.props;
+        const { currentUser, logout, stocks, fetchOneDayStock, myStocks} = this.props;
 
         // if (this.props.loading) return <Loader/>
         return (
@@ -158,6 +158,7 @@ class Show extends React.Component {
                             <div>
                                 {Object.keys(currentUser.stocks_owned).sort().map((symbol, idx) =>
                                     <PortfolioItem 
+                                        myStocks={myStocks}
                                         currentUser={currentUser}
                                         symbol={symbol}
                                         fetchOneDayStock={fetchOneDayStock}
