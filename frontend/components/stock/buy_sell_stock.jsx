@@ -53,6 +53,8 @@ class BuySellStock extends React.Component {
             transactions_type: this.state.transactions_type
         }
 
+        let ownShares = this.findNumShares(Object.values(stocks), name, currentUser.stocks_owned)
+
         
         if (!stock || !stock.length) return null
 
@@ -60,15 +62,15 @@ class BuySellStock extends React.Component {
         return (
             <div>
                 <div className='stock-bar'>
-                    <div>
-                        <p onClick={() => this.setState({transactions_type: 'buy'})}>Buy</p>
-                        <p onClick={() => this.setState({transactions_type: 'sell'})}>Sell</p>
+                    <div className='buy-sell-container'>
+                        <p  id='buy-tab'
+                            onClick={() => this.setState({transactions_type: 'buy'})}
+                            >Buy {symbol.toUpperCase()}</p>
+                        <p  id={ ownShares === '0' ? 'display-none' : 'sell-tab'}
+                            onClick={() => this.setState({transactions_type: 'sell'})}
+                            >Sell {symbol.toUpperCase()}</p>
                     </div>
                     <div>
-                        <h1 className='stock-bar-header'>{`${this.state.transactions_type.toUpperCase()} ${name.toUpperCase()}`}</h1>
-                        <div>Buying Power Available: {this.showAmount(currentUser.buying_power)}</div>
-                        <div>{`Owned Shares: ${this.findNumShares(Object.values(stocks), name, currentUser.stocks_owned)}`}</div>
-
                         <div>Shares <input type="number" onChange={(e)=> this.setState({num_shares: e.currentTarget.value})}/>
                         
                         </div>
@@ -79,6 +81,11 @@ class BuySellStock extends React.Component {
                         </div>
                         <button onClick={()=> makeTransaction(transaction)}>{this.state.transactions_type}</button>
                         <p>{this.state.transactions_made}</p>
+                    </div>
+
+                    <div>
+                        <div>Buying Power Available: {this.showAmount(currentUser.buying_power)}</div>
+                        <div>{`Owned Shares: ${ownShares}`}</div>
                     </div>
             
                 </div>
