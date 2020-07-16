@@ -73,7 +73,6 @@ class User < ApplicationRecord
 
         transactions.each do |transaction| 
             stock = transaction.stock
-
             if transaction.transactions_type == 'buy' && !stocks[stock.name]
                 stocks[stock.name] = transaction.num_shares
             elsif transaction.transactions_type == 'buy'

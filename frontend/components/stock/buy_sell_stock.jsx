@@ -7,6 +7,7 @@ class BuySellStock extends React.Component {
         this.state = {
             num_shares: 0,
             transactions_type: 'buy',
+            review: false
         }
 
     }
@@ -46,7 +47,7 @@ class BuySellStock extends React.Component {
 
     render () {
         let { stock, stocks, name, symbol, currentUser, makeTransaction } = this.props
-        let { num_shares, transactions_type } = this.state
+        let { num_shares, transactions_type, review } = this.state
         let transaction = {
             num_shares: this.state.num_shares,
             price: this.showAmount(stock[stock.length - 1].high),
@@ -84,21 +85,29 @@ class BuySellStock extends React.Component {
                             <p>Market Price</p> 
                             <p>${this.showAmount(stock[stock.length - 1].high)}</p></div>
                         <div className='cost-credit-container'> 
-                            <p>{this.state.transactions_type === 'buy' ? 'Estimated Cost: ' : 'Estimated Credit: '}</p>
+                            <p>{transactions_type === 'buy' ? 'Estimated Cost: ' : 'Estimated Credit: '}</p>
                             <p>${this.showAmount(stock[stock.length - 1].high  * this.state.num_shares)}</p>
                         </div>
-                        <div className='review-order-container'>
-                            <button>Review Order</button>
+                        <div id={review ? 'display-none' : ''}>
+                            <button
+                                disabled={num_shares === 0 ? true : false} 
+                                onClick={() => this.setState({review: !review})}>Review Order</button>
+                        </div>
+                        <div className='buy-sell-review-container'
+                            id={!review ? 'display-none' : ''}>
+                            <p>{`Are you sure you want to ${transactions_type} ${num_shares} shares of ${name}?`}</p>
+                            <div className='bs-review-btn'>
+                                <button onClick={() => makeTransaction(transaction)}>{this.state.transactions_type}</button>
+                                <button onClick={() => this.setState({ review: !review })}>Edit</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div>
-                        <div id={this.state.transactions_type === 'sell' ? 'display-none' : ''}>Buying Power Available: {this.showAmount(currentUser.buying_power)}</div>
-                        <div id={this.state.transactions_type === 'buy' ? 'display-none' : ''}>{`Owned Shares: ${ownShares}`}</div>
-                    </div>
-
-                    <div>
-                        <button onClick={() => makeTransaction(transaction)}>{this.state.transactions_type}</button>
+                    <div className='transaction-info-container'>
+                        <div id={transactions_type === 'sell' ? 'display-none' : ''}>Buying Power Available: {this.showAmount(currentUser.buying_power)}</div>
+                        <div id={transactions_type === 'buy' ? 'display-none' : ''}>
+                             <p>{ownShares} {" "} {ownShares > 1 ? 'Shares Available' : 'Share Available'}</p>
+                        </div>
                     </div>
             
                 </div>

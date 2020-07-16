@@ -432,6 +432,23 @@
   text-align: right;
 }
 
+.transaction-info-container div{
+  display: flex;
+  padding: 0.5em;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+}
+
+.buy-sell-review-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.bs-review-btn {
+  display: flex;
+  justify-content: space-around;
+}
 
 
 /****************************************/
