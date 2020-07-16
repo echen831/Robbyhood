@@ -85,4 +85,18 @@ class User < ApplicationRecord
         stocks.select { |k, v| v > 0 }
     end
 
+    def stock_prices
+        prices = {}
+
+        transactions.each do |transaction| 
+            stock = transaction.stock
+
+            if transaction.transactions_type == 'buy' 
+                prices[stock.symbol] = transaction.price
+            end
+        end
+
+        prices
+    end
+
 end

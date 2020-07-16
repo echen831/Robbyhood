@@ -33,6 +33,8 @@ class PortfolioItem extends React.Component {
 
         let { currentUser, symbol, idx, myStocks } = this.props
         if (!myStocks) return null
+        let currPrice = this.findCurrentPrice(myStocks, symbol)
+        let purchasePrice = currentUser.stock_prices[symbol]
         return (
             <div className='portfolio-item-container'
                  key={idx}>
@@ -44,7 +46,8 @@ class PortfolioItem extends React.Component {
                         {currentUser.stocks_owned[symbol] > 1 ? 'Shares' : 'Share'}</p>
                 </div>
                 <div className='pi-stock-info'>
-                    <p>{this.findCurrentPrice(myStocks, symbol)}</p>
+                    <p>${currPrice}</p>
+                    <p>{purchasePrice}</p>
                 </div>
             </div>
         )
