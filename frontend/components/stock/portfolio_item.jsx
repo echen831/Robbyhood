@@ -7,8 +7,8 @@ class PortfolioItem extends React.Component {
     }
 
     componentDidMount() {
-        let { fetchHistStock, symbol} = this.props
-        fetchHistStock(symbol, '1d')
+        let { fetchOneDayStock, symbol} = this.props
+        fetchOneDayStock(symbol, '1d')
     }
 
     render () {
