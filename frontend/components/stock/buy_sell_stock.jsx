@@ -57,6 +57,8 @@ class BuySellStock extends React.Component {
 
         let ownShares = this.findNumShares(Object.values(stocks), symbol, currentUser.stocks_owned)
 
+        let notEnoughBP = (transactions_type === 'buy' && stock[stock.length - 1].high * this.state.num_shares > currentUser.buying_power)
+        let notEnoughShares = (transactions_type === 'sell' && this.state.num_shares > ownShares)
         
         if (!stock || !stock.length) return null
 
@@ -90,7 +92,7 @@ class BuySellStock extends React.Component {
                         </div>
                         <div id={review ? 'display-none' : ''}>
                             <button
-                                disabled={!num_shares? true : false} 
+                                disabled={!num_shares || notEnoughBP || notEnoughShares ? true : false} 
                                 onClick={() => this.setState({review: !review})}>Review Order</button>
                         </div>
                         <div className='buy-sell-review-container'
