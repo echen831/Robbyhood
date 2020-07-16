@@ -67,7 +67,7 @@ class Show extends React.Component {
     render() {
 
         const {name, symbol, range} = this.state;
-        const { currentUser, logout, stocks } = this.props;
+        const { currentUser, logout, stocks, fetchHistStock} = this.props;
 
         // if (this.props.loading) return <Loader/>
         return (
@@ -160,6 +160,7 @@ class Show extends React.Component {
                                     <PortfolioItem 
                                         currentUser={currentUser}
                                         symbol={symbol}
+                                        fetchHistStock={fetchHistStock}
                                         idx={idx}
                                     />
                                 //    <div key={idx}>

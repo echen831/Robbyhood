@@ -1,4 +1,4 @@
-import {RECEIVE_ONE_STOCK, LOADING_STOCK} from '../actions/stock_actions'
+import { RECEIVE_ONE_STOCK, LOADING_STOCK } from '../actions/stock_actions'
 
 const initialState = {
     loading: false
@@ -9,9 +9,9 @@ const UIReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case LOADING_STOCK:
-            return Object.assign({}, state, {loading: true});
+            return Object.assign({}, state, { loading: true });
         case RECEIVE_ONE_STOCK:
-            return Object.assign({}, state, {loading: false});
+            return Object.assign({}, state, { loading: false });
         default:
             return state;
     }

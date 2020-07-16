@@ -6,6 +6,11 @@ class PortfolioItem extends React.Component {
         super(props)
     }
 
+    componentDidMount() {
+        let { fetchHistStock, symbol} = this.props
+        fetchHistStock(symbol, '1d')
+    }
+
     render () {
 
         let { currentUser, symbol, idx } = this.props
