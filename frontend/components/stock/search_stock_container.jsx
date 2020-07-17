@@ -13,7 +13,8 @@ const mSTP = (state, ownProps) => ({
     stock: state.entities.graphs[ownProps.match.params.symbol],
     stocks: state.entities.stocks,
     transactions: state.entities.transactions,
-    companyInfo: state.entities.companyInfo[ownProps.match.params.symbol]
+    companyInfo: state.entities.companyInfo[ownProps.match.params.symbol],
+    news: state.entities.news[ownProps.match.params.symbol]
 })
 
 const mDTP = (dispatch) => ({
@@ -21,7 +22,8 @@ const mDTP = (dispatch) => ({
     fetchHistStock: (symbol, range) => dispatch(fetchHistStock(symbol, range)),
     fetchStocks: () => dispatch(fetchStocks()),
     makeTransaction: (transaction) => dispatch(makeTransaction(transaction)),
-    fetchCompanyInfo: (symbol) => dispatch(fetchCompanyInfo(symbol)) 
+    fetchCompanyInfo: (symbol) => dispatch(fetchCompanyInfo(symbol)),
+    fetchNews: (symbol) => dispatch(fetchNews(symbol)) 
 })
 
 export default connect(mSTP, mDTP)(SearchStock);

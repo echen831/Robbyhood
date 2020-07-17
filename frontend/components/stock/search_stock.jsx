@@ -4,6 +4,7 @@ import HistStock from './hist_stock_container';
 import SearchBar from '../search_bar/search_bar';
 import BuySellStock from './buy_sell_stock'
 import CompanyInfo from './company_info'
+import News from './news'
 import { stocks } from './stocks' 
 import Loader from '../loader/loader'
 
@@ -21,16 +22,20 @@ class SearchStock extends React.Component {
             stock: this.props.stock,
             price: '',
             search: '',
-            infoShow: false
         }
+
         this.update = this.update.bind(this)
     }
 
     componentDidMount() {
-        this.props.fetchHistStock(this.props.symbol, '1d')
-        this.props.fetchCompanyInfo(this.props.symbol)
+
+        let { symbol, fetchHistStock, fetchCompanyInfo, fetchNews, stocks } = this.props
+
+        fetchHistStock(symbol, '1d')
+        fetchCompanyInfo(symbol)
+        fetchNews(symbol)
         
-        if (!this.props.stocks || !this.props.stocks.length) {
+        if (!stocks || !stocks.length) {
             this.props.fetchStocks()
         }
     }
@@ -51,7 +56,7 @@ class SearchStock extends React.Component {
     render () {
 
         let {symbol, name, range, stock, infoShow} = this.state
-        let { stocks, companyInfo } = this.props
+        let { stocks, companyInfo, news } = this.props
         if(!this.props.stock || !companyInfo) return null;
         // if(this.props.loading) return <Loader/>
         return (
@@ -111,7 +116,7 @@ class SearchStock extends React.Component {
                 </div>
 
                 <CompanyInfo companyInfo={companyInfo}/>                        
-
+                <News news={news}/>                       
             </div>
         )
     }

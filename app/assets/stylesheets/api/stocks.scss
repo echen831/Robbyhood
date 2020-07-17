@@ -515,9 +515,20 @@
   padding-bottom: 0.5em;
 }
 
+.company-info-header p:last-child {
+  display: flex;
+  cursor: pointer;
+  font-size: small;
+  align-items: center;
+}
+
 .company-des-container {
   width: 80%;
   padding: 0.5em;
+}
+
+.company-des-container p {
+  font-size: small;
 }
 
 .company-tidbit-container {
@@ -542,3 +553,31 @@
 
 
 /****************************************/
+
+/****************** News *****************/
+.company-news-container {
+  width: 60%;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-top: 3em;
+
+}
+
+.company-news-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid grey;
+}
+
+.company-news-header p {
+  font-size: x-large;
+  padding-bottom: 0.5em;
+}
+
+.company-news-header p:last-child {
+  display: flex;
+  cursor: pointer;
+  font-size: small;
+  align-items: center;
+}
+/*****************************************/
