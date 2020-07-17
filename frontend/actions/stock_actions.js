@@ -69,7 +69,7 @@ export const fetchNews = (symbol) => dispatch => {
         .then((news) => dispatch(receiveNews(news, symbol)))
 }
 
-export const fetchCompany = (symbol) => dispatch => {
+export const fetchCompanyInfo = (symbol) => dispatch => {
     return StockAPIUtil.fetchCompanyInfo(symbol)
         .then((data) => dispatch(receiveCompanyInfo(data, symbol)))
 }

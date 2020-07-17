@@ -26,6 +26,7 @@ class SearchStock extends React.Component {
 
     componentDidMount() {
         this.props.fetchHistStock(this.props.symbol, '1d')
+        this.props.fetchCompanyInfo(this.props.symbol)
         
         if (!this.props.stocks || !this.props.stocks.length) {
             this.props.fetchStocks()
