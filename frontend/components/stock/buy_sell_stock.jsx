@@ -57,7 +57,7 @@ class BuySellStock extends React.Component {
 
         let ownShares = this.findNumShares(Object.values(stocks), symbol, currentUser.stocks_owned)
 
-        let notEnoughBP = (transactions_type === 'buy' && stock[stock.length - 1].high * this.state.num_shares > currentUser.buying_power)
+        let notEnoughBP = (transactions_type === 'buy' && ((stock[stock.length - 1].high * this.state.num_shares) > currentUser.buying_power))
         let notEnoughShares = (transactions_type === 'sell' && this.state.num_shares > ownShares)
         
         if (!stock || !stock.length) return null
@@ -102,6 +102,12 @@ class BuySellStock extends React.Component {
                                 <button onClick={() => makeTransaction(transaction)}>{this.state.transactions_type}</button>
                                 <button onClick={() => this.setState({ review: !review })}>Edit</button>
                             </div>
+                        </div>
+                        <div id={!notEnoughShares ? 'display-none' : ''}>
+                            <p>Not Enough Shares</p>
+                        </div>
+                        <div id={!notEnoughBP ? 'display-none' : ''}>
+                            <p>Not Enough Buying Power</p>
                         </div>
                     </div>
 
