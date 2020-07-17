@@ -49,8 +49,8 @@ class SearchStock extends React.Component {
     render () {
 
         let {symbol, name, range, stock} = this.state
-        let { stocks } = this.props
-        if(!this.props.stock) return null;
+        let { stocks, companyInfo } = this.props
+        if(!this.props.stock || !companyInfo) return null;
         // if(this.props.loading) return <Loader/>
         return (
             <div className='show-body'>
@@ -73,20 +73,6 @@ class SearchStock extends React.Component {
                             <div><Link to='/stocks'> Portfolio </Link></div>
                             <div onClick={this.props.logout} >Log Out</div>
 
-                            {/* <div className='nav-dropdown'>
-                                <h2 className='nav-dropdown-btn'>Account</h2>
-                                <span className='nav-dropdown-content'>
-                                    <p>{this.props.currentUser.email}</p>
-                                    <p>Account</p>
-                                    <p>Banking</p>
-                                    <p>History</p>
-                                    <p onClick={() => this.setState({
-                                        dark: !this.state.dark
-                                    })}
-                                    >{this.state.dark ? 'Light' : 'Dark'}</p>
-                                    <p onClick={this.props.logout}> Log Out</p>
-                                </span>
-                            </div> */}
                         </div>
                     </div>
                 </header>
@@ -119,6 +105,15 @@ class SearchStock extends React.Component {
                                       currentUser={this.props.currentUser}
                                       makeTransaction={this.props.makeTransaction}
                                       />
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        {companyInfo.companyName}
+                    </div>
+                    <div>
+                        {companyInfo.description}
                     </div>
                 </div>                  
 
