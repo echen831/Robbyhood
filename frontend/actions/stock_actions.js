@@ -5,6 +5,7 @@ export const RECEIVE_ONE_STOCK = 'RECEIVE_ONE_STOCK';
 export const RECEIVE_ONE_DAY_STOCK = 'RECEIVE_ONE_DAY_STOCK';
 export const LOADING_STOCK = 'LOADING_STOCK';
 export const RECEIVE_NEWS = 'RECEIVE_NEWS';
+export const RECEIVE_COMPANY_INFO = 'RECEIVE_COMPANY_INFO'
 
 const receiveStocks = (stocks) => ({
     type: RECEIVE_STOCKS,
@@ -31,6 +32,12 @@ const loadingStock = () => ({
 const receiveNews = (news, symbol) => ({
     type: RECEIVE_NEWS,
     news,
+    symbol
+});
+
+const receiveCompanyInfo = (data, symbol) => ({
+    type: RECEIVE_COMPANY_INFO,
+    data,
     symbol
 }) 
 
@@ -60,4 +67,9 @@ export const fetchHistStock = (symbol, range) => dispatch => {
 export const fetchNews = (symbol) => dispatch => {
     return StockAPIUtil.fetchNews(symbol)
         .then((news) => dispatch(receiveNews(news, symbol)))
+}
+
+export const fetchCompany = (symbol) => dispatch => {
+    return StockAPIUtil.fetchCompanyInfo(symbol)
+        .then((data) => dispatch(receiveCompanyInfo(data, symbol)))
 }

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import SearchStock from './search_stock';
 import { logout } from '../../actions/session_actions';
-import { fetchHistStock, fetchStocks } from '../../actions/stock_actions';
+import { fetchHistStock, fetchStocks, fetchNews } from '../../actions/stock_actions';
 import { makeTransaction } from '../../actions/transaction_actions';
 
 
