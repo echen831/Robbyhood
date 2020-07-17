@@ -238,10 +238,13 @@
 /* Stock Bar*/
 
 .stock-bar {
+  position: fixed;
+  right: 12em;
+  top: 8em;
   display: block;
   border-radius: 0.25em;
   width: 15em;
-  height: 20em;
+  height: 25em;
   border: 1px solid grey;
   box-shadow: 0 0 10px rgba(128, 128, 128, 0.575);
   overflow-y: auto;
@@ -292,7 +295,8 @@
 
 .stock-show-container {
   width: 100%;
-  height: 40em;
+  margin-top: 2em;
+  height: 35em;
   display: flex;
 }
 
@@ -494,7 +498,6 @@
 /************ Company Info **************/
 
 .company-info-container {
-
   width: 60%;
   padding-left: 3em;
   padding-right: 3em;
