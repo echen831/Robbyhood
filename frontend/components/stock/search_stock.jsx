@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import HistStock from './hist_stock_container';
 import SearchBar from '../search_bar/search_bar';
 import BuySellStock from './buy_sell_stock'
+import CompanyInfo from './company_info'
 import { stocks } from './stocks' 
 import Loader from '../loader/loader'
 
@@ -109,35 +110,7 @@ class SearchStock extends React.Component {
                     </div>
                 </div>
 
-                <div className='company-info-container'>
-                    <div className='company-info-header'>
-                        <p>About</p>
-                        <p onClick={() => this.setState({infoShow: !infoShow})}>{!infoShow ? 'show' : 'hide'}</p>
-                    </div>
-                    <div className='company-des-container'>
-                        <p>{companyInfo.description}</p>
-                    </div>
-                    <div className='company-tidbit-container'>
-                        <div className='company-tidbit-row'>
-                            <div className='company-tidbit-col'>
-                                <p>CEO</p>
-                                <p>{companyInfo.CEO}</p>
-                            </div>
-                            <div className='company-tidbit-col'>
-                                <p>Employees</p>
-                                <p>{companyInfo.employees}</p>
-                            </div>
-                            <div className='company-tidbit-col'>
-                                <p>Location</p>
-                                <p>{`${companyInfo.city}, ${companyInfo.state}`}</p>
-                            </div>
-                            <div className='company-tidbit-col'>
-                                <p>Exchange</p>
-                                <p>{companyInfo.exchange}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>                  
+                <CompanyInfo companyInfo={companyInfo}/>                        
 
             </div>
         )

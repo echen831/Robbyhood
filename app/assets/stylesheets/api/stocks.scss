@@ -494,20 +494,25 @@
 /************ Company Info **************/
 
 .company-info-container {
-  border: 1px solid black;
+
   width: 60%;
   padding-left: 3em;
   padding-right: 3em;
 }
 
+.display-none {
+  display: none;
+}
+
 .company-info-header {
   display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid grey;
 }
 
 .company-info-header p {
   font-size: x-large;
   padding-bottom: 0.5em;
-  border-bottom: 2px solid grey;
 }
 
 .company-des-container {
@@ -517,7 +522,6 @@
 
 .company-tidbit-container {
   width: 80%;
-  border: 1px solid black;
 }
 
 .company-tidbit-row {
