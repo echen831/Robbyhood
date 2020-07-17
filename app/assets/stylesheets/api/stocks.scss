@@ -490,3 +490,51 @@
 }
 
 /****************************************/
+
+/************ Company Info **************/
+
+.company-info-container {
+  border: 1px solid black;
+  width: 60%;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.company-info-header {
+  display: flex;
+}
+
+.company-info-header p {
+  font-size: x-large;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid grey;
+}
+
+.company-des-container {
+  width: 80%;
+  padding: 0.5em;
+}
+
+.company-tidbit-container {
+  width: 80%;
+  border: 1px solid black;
+}
+
+.company-tidbit-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-tidbit-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-tidbit-col p {
+  font-size: small;
+  padding: .25em;
+}
+
+
+/****************************************/

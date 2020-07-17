@@ -20,6 +20,7 @@ class SearchStock extends React.Component {
             stock: this.props.stock,
             price: '',
             search: '',
+            infoShow: false
         }
         this.update = this.update.bind(this)
     }
@@ -48,7 +49,7 @@ class SearchStock extends React.Component {
 
     render () {
 
-        let {symbol, name, range, stock} = this.state
+        let {symbol, name, range, stock, infoShow} = this.state
         let { stocks, companyInfo } = this.props
         if(!this.props.stock || !companyInfo) return null;
         // if(this.props.loading) return <Loader/>
@@ -108,12 +109,33 @@ class SearchStock extends React.Component {
                     </div>
                 </div>
 
-                <div>
-                    <div>
-                        {companyInfo.companyName}
+                <div className='company-info-container'>
+                    <div className='company-info-header'>
+                        <p>About</p>
+                        <p onClick={() => this.setState({infoShow: !infoShow})}>{!infoShow ? 'show' : 'hide'}</p>
                     </div>
-                    <div>
-                        {companyInfo.description}
+                    <div className='company-des-container'>
+                        <p>{companyInfo.description}</p>
+                    </div>
+                    <div className='company-tidbit-container'>
+                        <div className='company-tidbit-row'>
+                            <div className='company-tidbit-col'>
+                                <p>CEO</p>
+                                <p>{companyInfo.CEO}</p>
+                            </div>
+                            <div className='company-tidbit-col'>
+                                <p>Employees</p>
+                                <p>{companyInfo.employees}</p>
+                            </div>
+                            <div className='company-tidbit-col'>
+                                <p>Location</p>
+                                <p>{`${companyInfo.city}, ${companyInfo.state}`}</p>
+                            </div>
+                            <div className='company-tidbit-col'>
+                                <p>Exchange</p>
+                                <p>{companyInfo.exchange}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>                  
 
