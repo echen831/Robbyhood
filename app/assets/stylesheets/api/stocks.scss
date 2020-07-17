@@ -587,6 +587,7 @@
 
 .news-item {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 10em;
   padding: 1em;
@@ -604,7 +605,7 @@
 
 .news-item-right {
   display: flex;
-  width: 30%;
+  width: 25%;
 }
 
 #news-datetime {
