@@ -99,4 +99,13 @@ class User < ApplicationRecord
         prices.select { |k, v| }
     end
 
+    def wl_items 
+        items = {}
+        watch_list_items.each do |item| 
+            stock = item.stock
+            items[stock.symbol] = stock.name
+        end
+        items
+    end
+
 end
