@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_10_182356) do
+ActiveRecord::Schema.define(version: 2020_07_18_175633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,10 +51,10 @@ ActiveRecord::Schema.define(version: 2020_07_10_182356) do
 
   create_table "watch_list_items", force: :cascade do |t|
     t.integer "stock_id", null: false
-    t.integer "watch_list_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["watch_list_id", "stock_id"], name: "index_watch_list_items_on_watch_list_id_and_stock_id", unique: true
+    t.integer "user_id", null: false
+    t.index ["user_id", "stock_id"], name: "index_watch_list_items_on_user_id_and_stock_id", unique: true
   end
 
   create_table "watch_lists", force: :cascade do |t|
