@@ -23,7 +23,7 @@ export const fetchHistStock = (symbol,range) => (
 
 export const fetchNews = (symbol) => (
     $.ajax({
-        url: `https://sandbox.iexapis.com/stable/stock/${symbol}/news?token=${window.iexAPIKey}`,
+        url: `https://sandbox.iexapis.com/stable/stock/${symbol}/news/last/${5}?token=${window.iexAPIKey}`,
         method: 'GET'
     })
 )
