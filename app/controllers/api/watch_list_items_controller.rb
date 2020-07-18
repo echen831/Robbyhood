@@ -1,9 +1,16 @@
 class Api::WatchListItemsController < ApplicationController
     
     def create
-        @watch_list_item = WatchListItem.new
-        
+        @watch_list_item = WatchListItem.new(wl_item_params)
+        @stock = Stock.find_by(symbol: params[:watch_list_item][:symbol])
+        @watch_list_item.user_id = current_user.id
+        @watch_list_item.stock_id = @stock.id
 
+        if @watch_list_item.save
+            render json: ['Success'], status: 200
+        else 
+            render json: @watch_list_item.errors.full_messages, status: 422
+        end
     end
 
     def destroy
@@ -11,5 +18,10 @@ class Api::WatchListItemsController < ApplicationController
         @watch_list_item.destroy
     end
 
+    private 
+
+    def wl_item_params
+        params.require(:watch_list_item).permit(:symbol)
+    end
 
 end

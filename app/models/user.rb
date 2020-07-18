@@ -7,9 +7,9 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Transaction
     
-    has_one :watch_list,
+    has_many :watch_list_items,
         foreign_key: :user_id,
-        class_name: :WatchList
+        class_name: :WatchListItem
     
     has_many :stocks, through: :transactions
     
@@ -87,7 +87,7 @@ class User < ApplicationRecord
 
     def stock_prices
         prices = {}
-        
+
         transactions.each do |transaction| 
             stock = transaction.stock
 

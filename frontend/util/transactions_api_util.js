@@ -6,3 +6,11 @@ export const makeTransaction = (transaction) => {
         data: { transaction }
     })
 }
+
+export const addWatchListItem = (data) => {
+    return $.ajax({
+        url: 'api/watch_list_items',
+        method: 'POST',
+        data: { data }
+    })
+}
