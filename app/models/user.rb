@@ -96,7 +96,7 @@ class User < ApplicationRecord
             end
         end
 
-        prices.select { |k, v| }
+        prices
     end
 
     def wl_items 

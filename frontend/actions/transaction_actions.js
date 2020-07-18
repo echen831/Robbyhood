@@ -8,8 +8,8 @@ const receiveTransaction = (data) => ({
 })
 
 
-export const makeTransaction = (transaction) => {
+export const makeTransaction = (transaction) => dispatch => {
     return APITransaction.makeTransaction(transaction)
-        .then((transaction) => dispatch(receiveTransaction(transaction)))
+        .then((data) => dispatch(receiveTransaction(data)))
         .then(location.reload(), 3000)
 }
