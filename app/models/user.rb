@@ -87,7 +87,7 @@ class User < ApplicationRecord
 
     def stock_prices
         prices = {}
-
+        
         transactions.each do |transaction| 
             stock = transaction.stock
 
@@ -96,7 +96,7 @@ class User < ApplicationRecord
             end
         end
 
-        prices
+        prices.select { |k, v| }
     end
 
 end

@@ -23,8 +23,8 @@ class News extends React.Component {
                 </div>
                 <div className={newsShow ? 'news-container' : 'display-none'}>
                     {news.map((item, idx) => (
-                        <a href={item.url}>
-                            <div key={idx} className='news-item'>
+                        <a href={item.url} key={idx}>
+                            <div className='news-item'>
                                 <div className='news-item-left'>
                                     <p id='news-datetime'>{`${item.source} ${item.datetime}`}</p>
                                     <p id='news-headline'>{item.headline}</p>
