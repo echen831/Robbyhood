@@ -161,6 +161,16 @@ class Show extends React.Component {
                 
                             </div>
                             <h1 className='stock-bar-header'>Watchlist</h1>
+                            <div>
+                                {Object.keys(currentUser.wl_items).map((key, idx) => 
+                                    
+                                    <div>
+                                        <p>{currentUser.wl_items[key][0]}</p>
+                                        <p onClick={() => this.props.deleteWatchListItem(key) }>Remove</p>
+                                    </div>
+
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>

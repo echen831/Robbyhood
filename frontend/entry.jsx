@@ -8,7 +8,7 @@ import Root from './components/root'
 // import * as Action from './actions/session_actions'
 import * as Stock from './actions/stock_actions'
 import * as StockUtil from './util/stock_api_util'
-import * as TransUtil from './util/transactions_api_util'
+import * as Transaction from './actions/transaction_actions'
 
 //test only
 
@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
     window.fetchHistStock = Stock.fetchHistStock
     window.fetchIntraDayStock = StockUtil.fetchIntraDayStock
     window.fetchStocks = Stock.fetchStocks
-    window.makeTransaction = TransUtil.makeTransaction
+    window.deleteWatchListItem = Transaction.deleteWatchListItem
+
     //test 
 
 

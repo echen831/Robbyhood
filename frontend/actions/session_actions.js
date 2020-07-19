@@ -47,7 +47,8 @@ export const signup = (user) => dispatch => (
 
 export const fetchUser = (id) => dispatch => {
     return UserAPIUtil.fetchUser(id)
-        .then((user) => dispatch(receiveCurrentUser(user)))
+        .then((user) => dispatch(receiveCurrentUser(user))),
+        (err) => dispatch(receiveErrors(err.responseJSON))
 };
 
 
