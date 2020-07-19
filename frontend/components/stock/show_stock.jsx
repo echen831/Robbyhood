@@ -6,17 +6,6 @@ import { stocks } from './stocks'
 import Loader from '../loader/loader';
 import PortfolioItem  from './portfolio_item';
 
-// const stocks = [
-//     {name: 'APPLE', symbol: 'aapl'},
-//     {name: 'CARNIVAL', symbol: 'ccl'},
-//     {name: 'MICROSOFT', symbol: 'msft'},
-//     {name: 'TESLA', symbol: 'tsla'},
-//     {name: 'FORD', symbol: 'f'},
-//     {name: 'FACEBOOK', symbol: 'fb'},
-//     {name: 'FEDEX CORP', symbol: 'fdx'}
-// ]
-
-
 
 class Show extends React.Component {
     constructor(props) {
@@ -166,13 +155,11 @@ class Show extends React.Component {
                                         fetchOneDayStock={fetchOneDayStock}
                                         idx={idx}
                                     />
-                                //    <div key={idx}>
-                                //        <span>{stock}</span>
-                                //        <span> Num Shares: {currentUser.stocks_owned[stock]}</span>
-                                //    </div>
+
                                 )}
                 
                             </div>
+                            <h1 className='stock-bar-header'>Watchlist</h1>
                         </div>
                     </div>
                 </div>
