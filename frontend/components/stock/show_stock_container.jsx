@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Show from './show_stock'
-import { logout } from '../../actions/session_actions'
+import { logout, fetchUser } from '../../actions/session_actions'
 import { fetchStocks, fetchOneDayStock } from '../../actions/stock_actions'
 
 const mSTP = (state) => ({
@@ -13,7 +13,8 @@ const mSTP = (state) => ({
 const mDTP = (dispatch) => ({
     logout: () => dispatch(logout()),
     fetchStocks: () => dispatch(fetchStocks()),
-    fetchOneDayStock: (symbol, range) => dispatch(fetchOneDayStock(symbol, range))
+    fetchOneDayStock: (symbol, range) => dispatch(fetchOneDayStock(symbol, range)),
+    fetchUser: (id) => dispatch(fetchUser(id))
 })
 
 export default connect(mSTP, mDTP)(Show);

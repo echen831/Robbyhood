@@ -35,6 +35,7 @@ class Show extends React.Component {
 
     componentDidMount() {
         this.props.fetchStocks()
+        this.props.fetchUser(this.props.currentUser.id)
     }
 
     update(field) {
