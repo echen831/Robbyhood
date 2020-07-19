@@ -7,10 +7,16 @@ class BuySellStock extends React.Component {
         this.state = {
             num_shares: 0,
             transactions_type: 'buy',
-            review: false
+            review: false,
         }
 
     }
+
+    // componentDidUpdate(prevProps) {
+    //     if (prevProps.transactions !== this.props.transactions) {
+    //         this.props.fetchUser(this.props.currentUser.id)
+    //     }
+    // }
 
     showAmount(num) {
         if (!num) return '0.00'
@@ -99,7 +105,7 @@ class BuySellStock extends React.Component {
                             id={!review ? 'display-none' : ''}>
                             <p>{`Are you sure you want to ${transactions_type} ${num_shares} shares of ${name}?`}</p>
                             <div className='bs-review-btn'>
-                                <button onClick={() => makeTransaction(transaction)}>{this.state.transactions_type}</button>
+                                <button onClick={() => {this.props.handleTransaction(transaction)}}>{this.state.transactions_type}</button>
                                 <button onClick={() => this.setState({ review: !review })}>Edit</button>
                             </div>
                         </div>

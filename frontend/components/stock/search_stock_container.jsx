@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SearchStock from './search_stock';
-import { logout } from '../../actions/session_actions';
+import { logout, fetchUser } from '../../actions/session_actions';
 import { fetchHistStock, fetchStocks, fetchNews, fetchCompanyInfo} from '../../actions/stock_actions';
 import { makeTransaction } from '../../actions/transaction_actions';
 
@@ -23,7 +23,8 @@ const mDTP = (dispatch) => ({
     fetchStocks: () => dispatch(fetchStocks()),
     makeTransaction: (transaction) => dispatch(makeTransaction(transaction)),
     fetchCompanyInfo: (symbol) => dispatch(fetchCompanyInfo(symbol)),
-    fetchNews: (symbol) => dispatch(fetchNews(symbol)) 
+    fetchNews: (symbol) => dispatch(fetchNews(symbol)),
+    fetchUser: (id) => dispatch(fetchUser(id))
 })
 
 export default connect(mSTP, mDTP)(SearchStock);

@@ -22,9 +22,11 @@ class SearchStock extends React.Component {
             stock: this.props.stock,
             price: '',
             search: '',
+            transactions: 0
         }
 
         this.update = this.update.bind(this)
+        this.handleTransaction = this.handleTransaction.bind(this)
     }
 
     componentDidMount() {
@@ -34,6 +36,7 @@ class SearchStock extends React.Component {
         fetchHistStock(symbol, '1d')
         fetchCompanyInfo(symbol)
         fetchNews(symbol)
+        this.props.fetchUser(this.props.currentUser.id)
         
         if (!stocks || !stocks.length) {
             this.props.fetchStocks()
@@ -48,6 +51,11 @@ class SearchStock extends React.Component {
 
     } 
 
+    handleTransaction(transaction) {
+        this.props.makeTransaction(transaction)
+            .then(this.setState({transactions: this.state.transactions += 1}))
+    }
+
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value })
     };
@@ -55,7 +63,7 @@ class SearchStock extends React.Component {
 
     render () {
 
-        let {symbol, name, range, stock, infoShow} = this.state
+        let {symbol, name, range, stock } = this.state
         let { stocks, companyInfo, news } = this.props
         if(!this.props.stock || !companyInfo) return null;
         // if(this.props.loading) return <Loader/>
@@ -111,6 +119,9 @@ class SearchStock extends React.Component {
                                       stocks={this.props.stocks}
                                       currentUser={this.props.currentUser}
                                       makeTransaction={this.props.makeTransaction}
+                                      fetchUser={this.props.fetchUser}
+                                      transactions={this.state.transactions}
+                                      handleTransaction={this.handleTransaction}
                                       />
                     </div>
                 </div>
