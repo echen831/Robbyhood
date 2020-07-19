@@ -36,7 +36,10 @@ class SearchStock extends React.Component {
         fetchHistStock(symbol, '1d')
         fetchCompanyInfo(symbol)
         fetchNews(symbol)
-        this.props.fetchUser(this.props.currentUser.id)
+
+        if (this.props.currentUser) {
+            this.props.fetchUser(this.props.currentUser.id)
+        }
         
         if (!stocks || !stocks.length) {
             this.props.fetchStocks()
@@ -65,7 +68,7 @@ class SearchStock extends React.Component {
 
         let {symbol, name, range, stock } = this.state
         let { stocks, companyInfo, news } = this.props
-        if(!this.props.stock || !companyInfo) return null;
+        if(!this.props.stock) return null;
         // if(this.props.loading) return <Loader/>
         return (
             <div className='show-body'>

@@ -13,6 +13,7 @@ class CompanyInfo extends React.Component {
         let { infoShow } = this.state
         let { companyInfo } = this.props
 
+        if (!companyInfo) return null
         return(
             <div className='company-info-container'>
                 <div className='company-info-header'>
