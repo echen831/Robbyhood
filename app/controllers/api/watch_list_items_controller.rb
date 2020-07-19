@@ -1,8 +1,8 @@
 class Api::WatchListItemsController < ApplicationController
     
     def create
-        @watch_list_item = WatchListItem.new(wl_item_params)
-        @stock = Stock.find_by(symbol: params[:watch_list_item][:symbol])
+        @watch_list_item = WatchListItem.new 
+        @stock = Stock.find_by(symbol: params[:data][:symbol])
         @watch_list_item.user_id = current_user.id
         @watch_list_item.stock_id = @stock.id
 

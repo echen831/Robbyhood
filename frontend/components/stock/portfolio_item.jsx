@@ -98,9 +98,9 @@ class PortfolioItem extends React.Component {
         let purchasePrice = currentUser.stock_prices[symbol]
         let openPrice = myStocks[symbol][0].high
         return (
-        <Link to={`/search/stocks/${symbol}/${name}`}>
+        <Link to={`/search/stocks/${symbol}/${name}`} key={idx}>
             <div className='portfolio-item-container'
-                 key={idx}>
+                 >
                 <div className='pi-name-shares'>
                     
                         <p id='pi-stock-name'>{symbol.toUpperCase()}</p>

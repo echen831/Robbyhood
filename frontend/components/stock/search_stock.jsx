@@ -125,6 +125,7 @@ class SearchStock extends React.Component {
                                       fetchUser={this.props.fetchUser}
                                       transactions={this.state.transactions}
                                       handleTransaction={this.handleTransaction}
+                                      addWatchListItem={this.props.addWatchListItem}
                                       />
                     </div>
                 </div>

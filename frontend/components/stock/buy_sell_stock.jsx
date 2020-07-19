@@ -123,6 +123,8 @@ class BuySellStock extends React.Component {
                              <p>{ownShares} {" "} {ownShares > 1 ? 'Shares Available' : 'Share Available'}</p>
                         </div>
                     </div>
+
+                    <button onClick={() => this.props.addWatchListItem({symbol: symbol})}>Add To Watch List</button>
             
                 </div>
             </div>

@@ -154,6 +154,7 @@ class Show extends React.Component {
                                         stocks={stocks}
                                         fetchOneDayStock={fetchOneDayStock}
                                         idx={idx}
+                                        key={idx}
                                     />
 
                                 )}

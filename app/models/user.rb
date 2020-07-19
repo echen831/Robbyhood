@@ -103,7 +103,7 @@ class User < ApplicationRecord
         items = {}
         watch_list_items.each do |item| 
             stock = item.stock
-            items[item.id][stock.symbol] = stock.name
+            items[item.id]= [stock.symbol, stock.name]
         end
         items
     end
