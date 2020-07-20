@@ -168,6 +168,7 @@ class Show extends React.Component {
                                         key={idx}
                                         symbol={symbol}
                                         idx={idx}
+                                        name={currentUser.wl_items[symbol][0]}
                                   />  
                                 )}
                             </div>

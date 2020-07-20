@@ -107,7 +107,7 @@ class PortfolioItem extends React.Component {
                  >
                 <div className='pi-name-shares'>
                     
-                        <p id='pi-stock-name'>{symbol.toUpperCase()}</p>
+                    <p id='pi-stock-name'>{symbol.toUpperCase()}</p>
                 
                     <p id='pi-shares-owned'>
                         {currentUser.stocks_owned[symbol]}

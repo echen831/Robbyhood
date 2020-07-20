@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { fetchOHLC } from '../../actions/stock_actions'
+import { Link } from 'react-router-dom'
 
 class WatchListItem extends React.Component {
     constructor(props) {
@@ -62,17 +63,24 @@ class WatchListItem extends React.Component {
     } 
 
     render () {
-        let { symbol, prices } = this.props
+        let { symbol, prices, name } = this.props
         if (!prices || !prices[symbol]) return null
 
         let high = prices[symbol].high
         let open = prices[symbol].open.price
         return(
-            <div>
-                <p>{symbol}</p>
-                <p>${this.setPrice(high)}</p>
-                <p>{this.setFluxPercent(open, high)}</p>
-            </div>
+
+            <Link to={`/search/stocks/${symbol}/${name}`}>
+                <div className='portfolio-item-container'>
+                    <div className='pi-name-shares'>
+                        <p id='pi-stock-name'>{symbol.toUpperCase()}</p>
+                    </div>
+                    <div className='pi-stock-info'>
+                        <p>${this.setPrice(high)}</p>
+                        <p>{this.setFluxPercent(open, high)}</p>
+                    </div>
+                </div>
+            </Link>
         )
     }
 };
