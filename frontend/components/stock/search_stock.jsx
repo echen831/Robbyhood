@@ -36,8 +36,8 @@ class SearchStock extends React.Component {
         let { symbol, fetchHistStock, fetchCompanyInfo, fetchNews, stocks } = this.props
 
         fetchHistStock(symbol, '1d')
-        setTimeout(() => fetchCompanyInfo(symbol), 1000)
-        setTimeout(() => fetchNews(symbol), 2000)
+        fetchCompanyInfo(symbol)
+        fetchNews(symbol)
 
         if (this.props.currentUser) {
             this.props.fetchUser(this.props.currentUser.id)

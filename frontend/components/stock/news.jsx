@@ -31,7 +31,7 @@ class News extends React.Component {
                                     <p id='news-sum'>{item.summary}</p>
                                 </div>
                                 <div className='news-item-right'>
-                                    <img src={`https://www.americanachawaii.com/dynamicdata/newsImages/1News.jpg`} alt=""/>
+                                    <img src={ item.image ? item.image : `https://www.americanachawaii.com/dynamicdata/newsImages/1News.jpg`} alt=""/>
                                 </div>
                             </div>
                         </a>
