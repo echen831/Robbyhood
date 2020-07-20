@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     window.fetchHistStock = Stock.fetchHistStock
     window.fetchIntraDayStock = StockUtil.fetchIntraDayStock
     window.fetchStocks = Stock.fetchStocks
+    window.fetchOHLC = Stock.fetchOHLC
     window.deleteWatchListItem = Transaction.deleteWatchListItem
 
     //test 

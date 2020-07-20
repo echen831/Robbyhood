@@ -78,7 +78,6 @@ class BuySellStock extends React.Component {
         let notEnoughBP = (transactions_type === 'buy' && ((stock[stock.length - 1].high * this.state.num_shares) > currentUser.buying_power))
         let notEnoughShares = (transactions_type === 'sell' && this.state.num_shares > ownShares)
         let watchlistId = this.findWatchListItem(currentUser.wl_items, symbol)
-        {console.log(watchlistId)}
         
         if (!stock || !stock.length) return null
 

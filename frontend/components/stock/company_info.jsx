@@ -4,22 +4,22 @@ class CompanyInfo extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = {
-            infoShow: false
-        }
+        // this.state = {
+        //     infoShow: false
+        // }
     }
 
     render () {
-        let { infoShow } = this.state
-        let { companyInfo } = this.props
+        // let { infoShow } = this.state
+        let { companyInfo, infoShow } = this.props
 
         if (!companyInfo) return null
         return(
-            <div className='company-info-container'>
-                <div className='company-info-header'>
+            <div >
+                {/* <div className='company-info-header'>
                     <p>About</p>
                     <p onClick={() => this.setState({ infoShow: !infoShow })}>{!infoShow ? 'show' : 'hide'}</p>
-                </div>
+                </div> */}
                 <div className={infoShow ? 'company-des-container' : 'display-none'}>
                     <p>{companyInfo.description}</p>
                 </div>

@@ -22,7 +22,9 @@ class SearchStock extends React.Component {
             stock: this.props.stock,
             price: '',
             search: '',
-            transactions: 0
+            transactions: 0,
+            infoShow: false,
+            newsShow: false
         }
 
         this.update = this.update.bind(this)
@@ -34,8 +36,8 @@ class SearchStock extends React.Component {
         let { symbol, fetchHistStock, fetchCompanyInfo, fetchNews, stocks } = this.props
 
         fetchHistStock(symbol, '1d')
-        fetchCompanyInfo(symbol)
-        fetchNews(symbol)
+        setTimeout(() => fetchCompanyInfo(symbol), 1000)
+        setTimeout(() => fetchNews(symbol), 2000)
 
         if (this.props.currentUser) {
             this.props.fetchUser(this.props.currentUser.id)
@@ -66,7 +68,7 @@ class SearchStock extends React.Component {
 
     render () {
 
-        let {symbol, name, range, stock } = this.state
+        let {symbol, name, range, infoShow, newsShow } = this.state
         let { stocks, companyInfo, news } = this.props
         if(!this.props.stock) return null;
         // if(this.props.loading) return <Loader/>
@@ -130,9 +132,25 @@ class SearchStock extends React.Component {
                                       />
                     </div>
                 </div>
-
-                <CompanyInfo companyInfo={companyInfo}/>                        
-                <News news={news}/>                       
+                <div className='company-info-container'>
+                    <div className='company-info-header'>
+                        <p>About</p>
+                        <p onClick={() => this.setState({ infoShow: !infoShow })}>{!infoShow ? 'show' : 'hide'}</p>
+                    </div>
+                    <CompanyInfo companyInfo={companyInfo} 
+                                 infoShow={infoShow}
+                    />  
+                </div>
+                <div className='company-news-container'>
+                    <div className='company-news-header'>
+                        <p>News</p>
+                        <p onClick={() => this.setState({ newsShow: !newsShow })}>{!newsShow ? 'show' : 'hide'}</p>
+                    </div>                   
+                    <News news={news}
+                          newsShow={newsShow}
+                    />                       
+                </div>
+                                      
             </div>
         )
     }

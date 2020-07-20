@@ -16,6 +16,8 @@ class WatchListItem extends React.Component {
     }
 
     setPrice(data) {
+
+
         if (data) {
 
             let arr = data.toString().split('.')
@@ -30,10 +32,15 @@ class WatchListItem extends React.Component {
             }
 
             return arr[0] + '.' + res
+        } else {
+            return null
         }
     }
 
     setFlux(num) {
+
+        if (!num) return null 
+
         let res = ''
         let arr = num.toString().split('.')
         let int = arr[0];
@@ -56,9 +63,13 @@ class WatchListItem extends React.Component {
     }
 
     setFluxPercent(oldPrice, newPrice) {
+
+        if (!oldPrice || !newPrice) return null 
+
         let diff = oldPrice - newPrice
         let per = diff / oldPrice
         let res = per * 100
+        
         return this.setFlux(res) + '%'
     } 
 
@@ -67,7 +78,7 @@ class WatchListItem extends React.Component {
         if (!prices || !prices[symbol]) return null
 
         let high = prices[symbol].high
-        let open = prices[symbol].open.price
+        let open = prices[symbol].open ? prices[symbol].open.price : null
         return(
 
             <Link to={`/search/stocks/${symbol}/${name}`}>

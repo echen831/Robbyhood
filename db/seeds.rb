@@ -70,6 +70,7 @@ stocks = [
     { name: 'STARBUCKS', symbol: 'sbux' },
     { name: 'SNAP', symbol: 'snap' },
     { name: 'T-MOBILE', symbol: 'tmus' },
+    { name: 'TESLA', symbol: 'tsla' },
     { name: 'UNITED AIRLINES', symbol: 'ual' },
     { name: 'UNITEDHEALTH', symbol: 'unh' },
     { name: 'UBER', symbol: 'uber' },
