@@ -142,7 +142,7 @@
   margin-right: 1.5em;
 }
 
-.right-nav div:hover {
+.right-nav div:hover:not(:first-child) {
   color:  rgb(66, 207, 160);
   cursor: pointer;
 }
@@ -393,6 +393,7 @@
 /************ Buy Sell *******************/
 
 .buy-sell-container {
+  margin-top: 0.5em;
   display: flex;
   padding: none;
   width: 100%;
