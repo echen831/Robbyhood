@@ -16,7 +16,7 @@ class Show extends React.Component {
             symbol: 'aapl',
             range: '1d',
             search: '',
-            dark: false
+            dark: false,
         }
         
         this.update = this.update.bind(this)
@@ -57,7 +57,7 @@ class Show extends React.Component {
     
     render() {
 
-        const {name, symbol, range} = this.state;
+        const { name, symbol, range, numStocks } = this.state;
         const { currentUser, logout, stocks, fetchOneDayStock, myStocks} = this.props;
 
         // if (this.props.loading) return <Loader/>
@@ -161,15 +161,16 @@ class Show extends React.Component {
                                 )}
                 
                             </div>
-                            {/* <h1 className='stock-bar-header'>Watchlist</h1>
+                            <h1 className='stock-bar-header'>Watchlist</h1>
                             <div>
                                 {Object.keys(currentUser.wl_items).sort().map((symbol, idx) => 
                                   <WatchListItem 
                                         key={idx}
                                         symbol={symbol}
+                                        idx={idx}
                                   />  
                                 )}
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>

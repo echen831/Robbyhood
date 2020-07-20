@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import Loader from '../loader/loader'
 
 
 class PortfolioItem extends React.Component {
@@ -12,7 +13,7 @@ class PortfolioItem extends React.Component {
     componentDidMount() {
         let { fetchOneDayStock, symbol, idx } = this.props
 
-        setTimeout(() => fetchOneDayStock(symbol, '1d'), idx * 250)
+        setTimeout(() => fetchOneDayStock(symbol, '1d'), idx * 100)
     }
 
     findCurrentPrice(stocks, symbol) {
@@ -93,7 +94,9 @@ class PortfolioItem extends React.Component {
     render () {
 
         let { currentUser, symbol, idx, myStocks, stocks } = this.props
+
         if (!myStocks || !myStocks[symbol]) return null
+
         let name = this.findName(Object.values(stocks), symbol)
         let currPrice = this.findCurrentPrice(myStocks, symbol)
         let purchasePrice = currentUser.stock_prices[symbol]

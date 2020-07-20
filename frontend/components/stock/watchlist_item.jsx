@@ -8,7 +8,10 @@ class WatchListItem extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchOHLC(this.props.symbol)
+        let { fetchOHLC, symbol, idx, currentUser} = this.props
+        let numStocks = Object.keys(currentUser.stocks_owned).length
+        let delay = numStocks + idx
+        setTimeout(() => fetchOHLC(symbol), delay * 200)
     }
 
     setPrice(data) {
@@ -77,7 +80,8 @@ class WatchListItem extends React.Component {
 const mSTP = (state, ownProps) => ({
     currentUser: state.entities.users[state.session.id],
     prices: state.entities.ohlcs,
-    symbol: ownProps.symbol
+    symbol: ownProps.symbol,
+    idx: ownProps.idx
 })
 
 const mDTP = (dispatch) => ({
