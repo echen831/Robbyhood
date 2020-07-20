@@ -131,7 +131,7 @@ class BuySellStock extends React.Component {
                     </div>
 
                     <div className='transaction-info-container'>
-                        <div id={transactions_type === 'sell' ? 'display-none' : ''}>Buying Power Available: {this.showAmount(currentUser.buying_power)}</div>
+                        <div id={transactions_type === 'sell' ? 'display-none' : ''}>Buying Power Available: ${this.showAmount(currentUser.buying_power)}</div>
                         <div id={transactions_type === 'buy' ? 'display-none' : ''}>
                              <p>{ownShares} {" "} {ownShares > 1 ? 'Shares Available' : 'Share Available'}</p>
                         </div>

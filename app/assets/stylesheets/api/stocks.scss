@@ -243,7 +243,7 @@
   top: 6em;
   display: block;
   border-radius: 0.25em;
-  width: 17em;
+  width: 18em;
   height: 30em;
   border: 1px solid grey;
   box-shadow: 0 0 10px rgba(128, 128, 128, 0.575);
@@ -403,7 +403,7 @@
   width: 50%;
   cursor: pointer;
   padding: 1em;
-  font-size: larger;
+  font-size: large;
 }
 
 .bs-selected {
@@ -469,7 +469,7 @@
   width: 80%;
   height: 3em;
   border-radius: 0.25em;
-  background-color: lime;
+  background-color: rgb(66, 207, 160);
 }
 
 .add-remove-wl-container {
@@ -486,11 +486,11 @@
   width: 80%;
   height: 3em;
   border-radius: 0.25em;
-  background-color: lime;
+  background-color: rgb(66, 207, 160);
 }
 
 .add-remove-wl-container button:hover {
-  background-color: rgb(0, 230, 0);
+  background-color: rgb(52, 185, 138);
 }
 
 
