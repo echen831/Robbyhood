@@ -64,6 +64,9 @@ class BuySellStock extends React.Component {
     render () {
         let { stock, stocks, name, symbol, currentUser, addWatchListItem, deleteWatchListItem } = this.props
         let { num_shares, transactions_type, review } = this.state
+
+        if (!stock || !stock[stock.length-1]) return null
+
         let transaction = {
             num_shares: this.state.num_shares,
             price: this.showAmount(stock[stock.length - 1].high),
