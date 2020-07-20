@@ -26,11 +26,18 @@ export const fetchNews = (symbol) => (
         url: `https://sandbox.iexapis.com/stable/stock/${symbol}/news/last/${5}?token=${window.iexAPIKey}`,
         method: 'GET'
     })
-)
+);
 
 export const fetchCompanyInfo = (symbol) => (
     $.ajax({
         url: `https://sandbox.iexapis.com/stable/stock/${symbol}/company?token=${window.iexAPIKey}`,
         method: 'GET'    
     })
-)
+);
+
+export const fetchOHLC = (symbol) => (
+    $.ajax({
+        url: `https://sandbox.iexapis.com/stable/stock/${symbol}/ohlc?token=${window.iexAPIKey}`,
+        method: 'GET'
+    })
+);

@@ -5,7 +5,8 @@ export const RECEIVE_ONE_STOCK = 'RECEIVE_ONE_STOCK';
 export const RECEIVE_ONE_DAY_STOCK = 'RECEIVE_ONE_DAY_STOCK';
 export const LOADING_STOCK = 'LOADING_STOCK';
 export const RECEIVE_NEWS = 'RECEIVE_NEWS';
-export const RECEIVE_COMPANY_INFO = 'RECEIVE_COMPANY_INFO'
+export const RECEIVE_COMPANY_INFO = 'RECEIVE_COMPANY_INFO';
+export const RECEIVE_OHLC = 'RECEIVE_OHLC';
 
 const receiveStocks = (stocks) => ({
     type: RECEIVE_STOCKS,
@@ -22,7 +23,14 @@ const receiveOneDayStock = (stock, symbol) => ({
     type: RECEIVE_ONE_DAY_STOCK,
     stock,
     symbol
+});
+
+const receiveOHLC = (data, symbol) => ({
+    type: RECEIVE_OHLC,
+    data,
+    symbol
 })
+
 
 const loadingStock = () => ({
     type: LOADING_STOCK
@@ -55,7 +63,7 @@ export const fetchIntraDayStock = (symbol) => dispatch => {
 export const fetchOneDayStock = (symbol, range) => dispatch => {
     return StockAPIUtil.fetchHistStock(symbol, range) 
         .then((stock) => dispatch(receiveOneDayStock(stock, symbol)))
-}
+};
 
 export const fetchHistStock = (symbol, range) => dispatch => {
     dispatch(loadingStock())
@@ -72,4 +80,9 @@ export const fetchNews = (symbol) => dispatch => {
 export const fetchCompanyInfo = (symbol) => dispatch => {
     return StockAPIUtil.fetchCompanyInfo(symbol)
         .then((data) => dispatch(receiveCompanyInfo(data, symbol)))
-}
+};
+
+export const fetchOHLC = (symbol) => dispatch => {
+    return StockAPIUtil.fetchOHLC(symbol)
+        .then((data) => dispatch(receiveOHLC(data, symbol)))
+};

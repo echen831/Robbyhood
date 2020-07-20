@@ -5,6 +5,7 @@ import SearchBar from '../search_bar/search_bar'
 import { stocks } from './stocks'
 import Loader from '../loader/loader';
 import PortfolioItem  from './portfolio_item';
+import WatchListItem from './watchlist_item';
 
 
 class Show extends React.Component {
@@ -160,17 +161,15 @@ class Show extends React.Component {
                                 )}
                 
                             </div>
-                            <h1 className='stock-bar-header'>Watchlist</h1>
+                            {/* <h1 className='stock-bar-header'>Watchlist</h1>
                             <div>
-                                {Object.keys(currentUser.wl_items).map((key, idx) => 
-                                    
-                                    <div>
-                                        <p>{currentUser.wl_items[key][0]}</p>
-                                        <p onClick={() => this.props.deleteWatchListItem(key) }>Remove</p>
-                                    </div>
-
+                                {Object.keys(currentUser.wl_items).sort().map((symbol, idx) => 
+                                  <WatchListItem 
+                                        key={idx}
+                                        symbol={symbol}
+                                  />  
                                 )}
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
