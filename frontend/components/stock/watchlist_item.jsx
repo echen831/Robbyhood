@@ -69,7 +69,7 @@ class WatchListItem extends React.Component {
         let diff = oldPrice - newPrice
         let per = diff / oldPrice
         let res = per * 100
-        
+
         return this.setFlux(res) + '%'
     } 
 
@@ -78,7 +78,7 @@ class WatchListItem extends React.Component {
         if (!prices || !prices[symbol]) return null
 
         let high = prices[symbol].high
-        let open = prices[symbol].open ? prices[symbol].open.price : null
+        let open = prices[symbol].open 
         return(
 
             <Link to={`/search/stocks/${symbol}/${name}`}>

@@ -39,7 +39,7 @@ export const fetchCompanyInfo = (symbol) => (
 
 export const fetchOHLC = (symbol) => (
     $.ajax({
-        url: `https://sandbox.iexapis.com/stable/stock/${symbol}/ohlc?token=${window.iexAPIKey}`,
+        url: `https://sandbox.iexapis.com/stable/stock/${symbol}/previous?token=${window.iexAPIKey}`,
         method: 'GET'
     })
 );

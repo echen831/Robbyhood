@@ -102,38 +102,42 @@ class SessionForm extends React.Component {
                     <div className='submit-form-body'>
                         <form onSubmit={this.handleSubmit} className='form'>
                             <h1 className='form-header'>Welcome to Robbyhood</h1>
-
-                            <label className='submit-input-label'>Email</label>
-                            <br/>
+                            <div className='submit-input-container'>
+                                <label className='submit-input-label'>Email</label>
+                                
+                                    <input className='submit-input-box'
+                                        id='email'
+                                        type="text" 
+                                        value={email}
+                                        onChange={this.update('email')}
+                                        required
+                                        />
+                            </div>
+                            <div className={formType === 'signup' ? 'submit-input-container' : 'hide'}>
+                                <label className='submit-input-label'>Username</label>
+                                
+                                    <input className='submit-input-box'
+                                        id='username'
+                                        type="text"
+                                        value={username}
+                                        onChange={this.update('username')}
+                                        />
+                            </div>
+                            
+                            <div className='submit-input-container'>
+                                <label className='submit-input-label'>Password</label>
+                                
                                 <input className='submit-input-box'
-                                    id='email'
-                                    type="text" 
-                                    value={email}
-                                    onChange={this.update('email')}
+                                    id='password'
+                                    type="password"
+                                    value={password}
+                                    onChange={this.update('password')}
                                     required
-                                    />
-                            <br/>
-                            <label className={formType === 'signup' ? 'submit-input-label' : 'hide'}>Username</label>
-                            <br/>
-                                <input className={formType === 'signup' ? 'submit-input-box' : 'hide'}
-                                    id='username'
-                                    type="text"
-                                    value={username}
-                                    onChange={this.update('username')}
-                                    />
-                            <br/>
-                            <label className='submit-input-label'>Password</label>
-                            <br />
-                            <input className='submit-input-box'
-                                id='password'
-                                type="password"
-                                value={password}
-                                onChange={this.update('password')}
-                                required
-                            />
-                            <br />
-                            <div className={formType === 'signup' ? 'submit-input-bp' : 'hide'}> Buying Power
-                                <label> $1000
+                                />
+                            </div>
+                            
+                            <div className={formType === 'signup' ? 'submit-input-container' : 'hide'}> Buying Power
+                                <label className='submit-input-label'> $1000
                                     <input value= {1000}
                                            type="radio" 
                                            name="buying_power"
@@ -141,14 +145,14 @@ class SessionForm extends React.Component {
                                            onChange={this.update('buying_power')} 
                                            />
                                 </label>
-                                <label> $3000
+                                <label className='submit-input-label'> $3000
                                     <input value={3000}
                                         type="radio"
                                         name="buying_power"
                                         onChange={this.update('buying_power')}
                                         />
                                 </label>
-                                <label> $5000
+                                <label className='submit-input-label'> $5000
                                     <input value={5000}
                                         type="radio"
                                         name="buying_power"
@@ -158,7 +162,7 @@ class SessionForm extends React.Component {
                             </div>
                             <ul>{this.renderErrors()}</ul>
                             <button className='btn-show' type='submit'>{header}</button>
-                            <br/>
+                            
                         </form>
                         <form className='demo-container'>
                             <button
