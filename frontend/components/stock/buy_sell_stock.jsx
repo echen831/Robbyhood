@@ -48,11 +48,21 @@ class BuySellStock extends React.Component {
         }
 
         return nums_shares 
-    }
+    };
+
+    findWatchListItem(items, symbol) {
+
+        for(let key in items) {
+            if (key === symbol) {
+                return items[key][1]
+            }
+        }
+        return false 
+    };
 
 
     render () {
-        let { stock, stocks, name, symbol, currentUser, makeTransaction } = this.props
+        let { stock, stocks, name, symbol, currentUser, addWatchListItem, deleteWatchListItem } = this.props
         let { num_shares, transactions_type, review } = this.state
         let transaction = {
             num_shares: this.state.num_shares,
@@ -62,9 +72,10 @@ class BuySellStock extends React.Component {
         }
 
         let ownShares = this.findNumShares(Object.values(stocks), symbol, currentUser.stocks_owned)
-
         let notEnoughBP = (transactions_type === 'buy' && ((stock[stock.length - 1].high * this.state.num_shares) > currentUser.buying_power))
         let notEnoughShares = (transactions_type === 'sell' && this.state.num_shares > ownShares)
+        let watchlistId = this.findWatchListItem(currentUser.wl_items, symbol)
+        {console.log(watchlistId)}
         
         if (!stock || !stock.length) return null
 
@@ -91,12 +102,14 @@ class BuySellStock extends React.Component {
                         </div>
                         <div className='mp-container'>
                             <p>Market Price</p> 
-                            <p>${this.showAmount(stock[stock.length - 1].high)}</p></div>
+                            <p>${this.showAmount(stock[stock.length - 1].high)}</p>
+                        </div>
                         <div className='cost-credit-container'> 
                             <p>{transactions_type === 'buy' ? 'Estimated Cost: ' : 'Estimated Credit: '}</p>
                             <p>${this.showAmount(stock[stock.length - 1].high  * this.state.num_shares)}</p>
                         </div>
-                        <div id={review ? 'display-none' : ''}>
+                        <div className='review-order-btn-container'
+                            id={review ? 'display-none' : ''}>
                             <button
                                 disabled={!num_shares || notEnoughBP || notEnoughShares ? true : false} 
                                 onClick={() => this.setState({review: !review})}>Review Order</button>
@@ -124,7 +137,12 @@ class BuySellStock extends React.Component {
                         </div>
                     </div>
 
-                    <button onClick={() => this.props.addWatchListItem({symbol: symbol})}>Add To Watch List</button>
+                    <div className='add-remove-wl-container'>
+                        <button onClick={ !watchlistId ? 
+                            () => addWatchListItem({symbol: symbol}) :
+                            () => deleteWatchListItem(watchlistId)
+                        }> {!watchlistId ? 'Add to Watch List' : 'Remove from Watch List'}</button>
+                    </div>
             
                 </div>
             </div>

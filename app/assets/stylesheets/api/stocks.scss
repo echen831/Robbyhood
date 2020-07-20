@@ -403,6 +403,7 @@
   width: 50%;
   cursor: pointer;
   padding: 1em;
+  font-size: larger;
 }
 
 .bs-selected {
@@ -420,15 +421,17 @@
   flex-direction: column;
 }
 
+
+
 .buy-sell-info-container div{
   display: flex;
   justify-content: space-around;
+  padding: 0.5em;
 }
 
 .buy-sell-info-container p, .buy-sell-info-container button {
   padding: 0.5em
 }
-
 
 .shares-container input[type=number] {
   height: 100%;
@@ -453,6 +456,41 @@
 .bs-review-btn {
   display: flex;
   justify-content: space-around;
+}
+
+.review-order-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.review-order-btn-container button {
+  width: 80%;
+  height: 3em;
+  border-radius: 0.25em;
+  background-color: lime;
+}
+
+.add-remove-wl-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+  bottom: 0;
+}
+
+.add-remove-wl-container button {
+  width: 80%;
+  height: 3em;
+  border-radius: 0.25em;
+  background-color: lime;
+}
+
+.add-remove-wl-container button:hover {
+  background-color: rgb(0, 230, 0);
 }
 
 

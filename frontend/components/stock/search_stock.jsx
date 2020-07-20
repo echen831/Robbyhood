@@ -126,6 +126,7 @@ class SearchStock extends React.Component {
                                       transactions={this.state.transactions}
                                       handleTransaction={this.handleTransaction}
                                       addWatchListItem={this.props.addWatchListItem}
+                                      deleteWatchListItem={this.props.deleteWatchListItem}
                                       />
                     </div>
                 </div>
