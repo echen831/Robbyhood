@@ -15,7 +15,7 @@ class Product extends React.Component {
         return (
             <div className='products-body'>
                 <div className='products-header'>
-                    <h1>Our Products</h1>
+                    <h1>Upcoming Products</h1>
                 </div>
                 <div className='products-image'>
                     <img className={this.state.index === 0 ? 'image-show' : 'image-hide'} 

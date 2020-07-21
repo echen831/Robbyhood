@@ -91,20 +91,26 @@ class Show extends React.Component {
                             <div>Portfolio</div>
                             <div onClick={logout} >Log Out</div>
 
-                            {/* <div className='nav-dropdown'>
-                                <h2 className='nav-dropdown-btn'>Account</h2>
+                            <div className='nav-dropdown'>
+                                <h2 className='nav-dropdown-btn'>About Me</h2>
                                 <span className='nav-dropdown-content'>
-                                    <p>{currentUser.email}</p>
-                                    <p>Account</p>
-                                    <p>Banking</p>
-                                    <p>History</p>
-                                    <p onClick={() => this.setState({
-                                        dark: !this.state.dark
-                                        })}
-                                    >{this.state.dark ? 'Light' : 'Dark'}</p>
+                                
+                                        <a id='footer-github'
+                                            target='_blank'
+                                            href="https://github.com/echen831">
+                                        </a>
+                                        <a id='footer-linkedin'
+                                            target='_blank'
+                                            href="https://www.linkedin.com/in/eric-chen-782b951a9/" >
+                                        </a>
+                                        <a id='footer-facebook'
+                                            target='_blank'
+                                            href="https://www.facebook.com/profile.php?id=11708937" >
+                                        </a>
+                                    
                                     <p onClick={logout}> Log Out</p>
                                 </span>
-                            </div> */}
+                            </div>
                         </div>
 
                     </div>

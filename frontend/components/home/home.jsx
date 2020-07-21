@@ -104,7 +104,7 @@ class Home extends React.Component {
                         >Fractional Shares Disclosure</p>
                     </div>
                     <div className='fractional-shares-right'>
-                        <img src="/assets/frac_share_img.png" alt=""/>
+                        <img src="https://images.vexels.com/media/users/3/148202/isolated/preview/33784b3ee65577bbdbcb91c32ca2a8fd-colorful-geometric-shapes-background-by-vexels.png" alt=""/>
                     </div>
                 </div>
                 <LMC/>

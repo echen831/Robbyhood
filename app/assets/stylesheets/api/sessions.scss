@@ -58,8 +58,8 @@
   font-size: small;
 }
 
-.submit-input-container input[type="radio"] + label:before {
-  background-color: greenyellow
+.submit-input-container input[type="radio"] {
+  cursor: pointer;
 }
 
 .submit-input-label {

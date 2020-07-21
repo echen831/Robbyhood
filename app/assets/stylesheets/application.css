@@ -493,20 +493,21 @@ button {
 
 .lmc-image {
   height: 100%;
-  width: 30%;  
+  width: 35%;  
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .lmc-image img {
-  width: 16em;
-  height: 31em;
+  border-radius: 2em;
+  width: 15em;
+  height: 25em;
 }
 
 .lmc-msg {
   height: 100%;
-  width: 70%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
