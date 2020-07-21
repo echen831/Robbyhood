@@ -87,30 +87,47 @@ class Show extends React.Component {
                             </div>
                         </div>
                         <div className='right-nav'>
-                            <div>Hi, {currentUser.username}</div>
+                            <div className='footer-contacts'>
+                                <a id='footer-github'
+                                    target='_blank'
+                                    href="https://github.com/echen831">
+                                </a>
+                                <a id='footer-linkedin'
+                                    target='_blank'
+                                    href="https://www.linkedin.com/in/eric-chen-782b951a9/" >
+                                </a>
+                                <a id='footer-facebook'
+                                    target='_blank'
+                                    href="https://www.facebook.com/profile.php?id=11708937" >
+                                </a>
+                            </div>
+                            <div id='greeting' >Hi, {currentUser.username}</div>
                             <div>Portfolio</div>
                             <div onClick={logout} >Log Out</div>
 
-                            <div className='nav-dropdown'>
+                            {/* <div className='nav-dropdown'>
                                 <h2 className='nav-dropdown-btn'>About Me</h2>
                                 <span className='nav-dropdown-content'>
-                                
-                                        <a id='footer-github'
-                                            target='_blank'
-                                            href="https://github.com/echen831">
-                                        </a>
-                                        <a id='footer-linkedin'
-                                            target='_blank'
-                                            href="https://www.linkedin.com/in/eric-chen-782b951a9/" >
-                                        </a>
-                                        <a id='footer-facebook'
-                                            target='_blank'
-                                            href="https://www.facebook.com/profile.php?id=11708937" >
-                                        </a>
-                                    
+                            
+                                    <p><a 
+                                        id='footer-github'
+                                        target='_blank'
+                                        href="https://github.com/echen831">
+                                    GitHub</a></p>
+                                    <p><a 
+                                        id='footer-linkedin'
+                                        target='_blank'
+                                        href="https://www.linkedin.com/in/eric-chen-782b951a9/" >
+                                    LinkedIn</a>
+                                    </p>
+                                    <p><a 
+                                        id='footer-facebook'
+                                        target='_blank'
+                                        href="https://www.facebook.com/profile.php?id=11708937" >
+                                    Facebook</a></p>
                                     <p onClick={logout}> Log Out</p>
                                 </span>
-                            </div>
+                            </div> */}
                         </div>
 
                     </div>
