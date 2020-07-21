@@ -7,6 +7,15 @@ class Portfolio extends React.Component {
         super(props)
     }
 
+    oneDayPortfolio () {
+        let { currentUser, oneDayStocks } = this.props
+        let data = []
+
+
+
+    }
+
+
     render () {
         return (
             <div>
@@ -17,6 +26,8 @@ class Portfolio extends React.Component {
 };
 
 const mSTP = (state) => ({
+    currentUser: state.entities.users[state.session.id],
+    oneDayStocks: state.portfolio.stocks
     
 });
 

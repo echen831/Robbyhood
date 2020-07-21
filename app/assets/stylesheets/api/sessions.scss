@@ -80,24 +80,24 @@
 
 }
 
-#username {
-    height: 3.5em;
-    width: 32em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: small;
-    box-sizing: border-box;
-    border: none;
-    border-radius: 0.25em;
-    background-color: rgb(248, 248, 248);
-    font-style: italic;
-}
+// #username {
+//     height: 3.5em;
+//     width: 32em;
+//     margin-top: 1em;
+//     margin-bottom: 1em;
+//     font-size: small;
+//     box-sizing: border-box;
+//     border: none;
+//     border-radius: 0.25em;
+//     background-color: rgb(248, 248, 248);
+//     font-style: italic;
+// }
 
-#username:hover {
-    box-sizing: border-box;
-    background-color: white;
-    border: 1px solid rgb(245, 245, 245);
-}
+// #username:hover {
+//     box-sizing: border-box;
+//     background-color: white;
+//     border: 1px solid rgb(245, 245, 245);
+// }
 
 
 .submit-input-box:hover {
@@ -115,13 +115,13 @@
     border: 1px solid rgb(66, 207, 160);
 }
 
-.submit-input-box:valid {
-  box-sizing: border-box;
-  outline-style:none;
-  box-shadow:none;
-  border-color: transparent;
-  background-color: rgb(210, 238, 255);
-}
+// .submit-input-box:valid:not(#username) {
+//   box-sizing: border-box;
+//   outline-style:none;
+//   box-shadow:none;
+//   border-color: transparent;
+//   background-color: rgb(210, 238, 255);
+// }
 
 
 
