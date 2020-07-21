@@ -1,0 +1,1 @@
+json.extract! @watch_list_item, :id, :user_id, :stock_id

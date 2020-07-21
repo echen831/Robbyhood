@@ -40,7 +40,7 @@ export const fetchWatchListItems = () => dispatch => {
 export const addWatchListItem = (symbol) => dispatch => {
     return APITransaction.addWatchListItem(symbol) 
         .then((data) => dispatch(receiveWatchListItem(data)))
-        .then(location.reload(), 3000)
+        // .then(location.reload(), 3000)
 };
 
 export const deleteWatchListItem = (id) => dispatch => {

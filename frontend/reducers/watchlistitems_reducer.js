@@ -4,16 +4,24 @@ import { RECEIVE_WATCHLISTITEMS,
 
 const watchListItemsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
+    let nextState = {};
 
     switch (action.type) {
 
 
         case RECEIVE_WATCHLISTITEMS:
+            nextState = Object.assign({}, oldState)
+            action.data.forEach( item => {
+                nextState[item.stock_id] = item
+            })
+            return nextState
+        
+        case RECEIVE_WATCHLISTITEM:
 
-            return Object.assign({}, oldState, action.data)
+            return Object.assign({}, oldState, {[action.data.stock_id]: action.data})
 
         case REMOVE_WATCHLISTITEM:
-            let nextState = Object.assign({}, oldState)
+            nextState = Object.assign({}, oldState)
             for(let key in nextState) {
                 let item = nextState[key]
                 if (item.id === action.id) {

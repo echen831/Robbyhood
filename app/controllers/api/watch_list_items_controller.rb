@@ -11,7 +11,7 @@ class Api::WatchListItemsController < ApplicationController
         @watch_list_item.stock_id = @stock.id
 
         if @watch_list_item.save
-            render json: ['Success'], status: 200
+            render :show, status: 200
         else 
             render json: @watch_list_item.errors.full_messages, status: 422
         end

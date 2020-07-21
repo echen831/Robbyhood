@@ -33,11 +33,12 @@ class SearchStock extends React.Component {
 
     componentDidMount() {
 
-        let { symbol, fetchHistStock, fetchCompanyInfo, fetchNews, stocks } = this.props
+        let { symbol, fetchHistStock, fetchCompanyInfo, fetchNews, fetchWatchListItems, stocks } = this.props
 
         fetchHistStock(symbol, '1d')
         fetchCompanyInfo(symbol)
         fetchNews(symbol)
+        fetchWatchListItems()
 
         if (this.props.currentUser) {
             this.props.fetchUser(this.props.currentUser.id)
@@ -53,6 +54,12 @@ class SearchStock extends React.Component {
             this.props.fetchHistStock(this.props.symbol, '1d')
             this.setState({symbol: this.props.symbol, name: this.props.name})
         }
+
+        
+        if (Object.values(prevProps.watchListItems).length !== Object.values(this.props.watchListItems).length) {
+            this.props.fetchUser(this.props.currentUser.id)
+        }
+        
 
     } 
 
