@@ -59,7 +59,8 @@ class Product extends React.Component {
                         id='cash-management-description'>
                         <p className='prod-des-des'
                             >Earn 0.30% APY* on your uninvested cash and get more flexibility with your brokerage account.</p>
-                        <Link>Learn More</Link>
+                        {/* <Link>Learn More</Link> */}
+                        <a href="https://robinhood.com/us/en/" target='_blank'>Learn More</a>
                         <span className='risk-container'>
                             <p className='prod-des-legend'
                                 onClick={()=>{this.props.showModal(this.state.index)}}
@@ -73,7 +74,7 @@ class Product extends React.Component {
                         id='stocks-description'>
                         <p className='prod-des-des'
                             >Get mobile access to the markets. Invest commission-free in individual companies or bundles of investments (ETFs).</p>
-                        <Link>Learn More</Link>
+                        <a href="https://robinhood.com/us/en/" target='_blank'>Learn More</a>
                         <span className='risk-container'>
                             <p className='prod-des-legend'
                                 onClick={() => { this.props.showModal(this.state.index) }}
@@ -87,7 +88,7 @@ class Product extends React.Component {
                         id='options-description'>
                         <p className='prod-des-des'
                             >Be bullish on stocks you believe in and bearish on the ones you don’t. It’s your call.</p>
-                        <Link>Learn More</Link>
+                        <a href="https://robinhood.com/us/en/" target='_blank'>Learn More</a>
                         <span className='risk-container'>
                             <p className='prod-des-legend'
                                 onClick={() => { this.props.showModal(this.state.index) }}
@@ -101,7 +102,7 @@ class Product extends React.Component {
                         id='gold-description'>
                         <p className='prod-des-des'
                             >Access research reports, trade on margin, and make bigger deposits with quicker access to funds—all starting at $5 per month.</p>
-                        <Link>Learn More</Link>
+                        <a href="https://robinhood.com/us/en/" target='_blank'>Learn More</a>
                         <span className='risk-container'>
                             <p className='prod-des-legend'
                                 onClick={() => { this.props.showModal(this.state.index) }}
@@ -115,7 +116,7 @@ class Product extends React.Component {
                         id='crypto-description'>
                         <p className='prod-des-des'
                             >Tap into the cryptocurrency market to buy, HODL, and sell Bitcoin, Ethereum, Dogecoin, and more, 24/7 with Robinhood Crypto.</p>
-                        <Link>Learn More</Link>
+                        <a href="https://robinhood.com/us/en/" target='_blank'>Learn More</a>
                         <span className='risk-container'>
                             <p className='prod-des-legend'
                                 onClick={() => { this.props.showModal(this.state.index) }}
