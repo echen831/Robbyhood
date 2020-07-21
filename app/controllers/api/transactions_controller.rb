@@ -25,7 +25,7 @@ class Api::TransactionsController < ApplicationController
             render json: ["You don't own enough shares"], status: 401
         else 
             if @transaction.save 
-                render json: ['Success'], status: 200
+                render :show, status: 200
             else 
                 render json: @transaction.errors.full_messages, status: 422
             end

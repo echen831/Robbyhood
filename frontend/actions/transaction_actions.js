@@ -29,7 +29,7 @@ const removeWatchListItem = (id) => ({
 export const makeTransaction = (transaction) => dispatch => {
     return APITransaction.makeTransaction(transaction)
         .then((data) => dispatch(receiveTransaction(data)))
-        .then(location.reload(), 3000)
+        // .then(location.reload(), 3000)
 };
 
 export const fetchWatchListItems = () => dispatch => {

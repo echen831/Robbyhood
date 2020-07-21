@@ -50,14 +50,22 @@ class SearchStock extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.symbol !== prevProps.symbol) {
-            this.props.fetchHistStock(this.props.symbol, '1d')
-            this.setState({symbol: this.props.symbol, name: this.props.name})
+
+        let { symbol, name, currentUser, fetchHistStock, watchListItems, fetchUser, transactions } = this.props
+
+        if (symbol !== prevProps.symbol) {
+            fetchHistStock(symbol, '1d')
+            this.setState({symbol: symbol, name: name})
         }
 
+        let prevTrans = Object.keys(prevProps.transactions)
+        let currTrans = Object.keys(transactions)
+
+        let prevItems = Object.values(prevProps.watchListItems)
+        let currItems = Object.values(watchListItems)
         
-        if (Object.values(prevProps.watchListItems).length !== Object.values(this.props.watchListItems).length) {
-            this.props.fetchUser(this.props.currentUser.id)
+        if (prevItems.length !== currItems.length || prevTrans.length !== currTrans.length) {
+            fetchUser(currentUser.id)
         }
         
 
