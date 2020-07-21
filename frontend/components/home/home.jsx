@@ -60,7 +60,7 @@ class Home extends React.Component {
                         
                     </div>
                     <div className='home-body-right'>
-                        <img src="/assets/front.gif" 
+                        <img src="https://media1.giphy.com/media/dxV1twjt4OxR99BwDZ/source.gif" 
                             alt=""
                             className='home-img'
                             />

@@ -239,7 +239,7 @@ button {
 }
 
 #home-btn:hover {
-  background-color: rgba(0, 0, 0, 0.747);
+  background: rgba(0, 0, 0, 0);
 }
 
 .home-body-right {
@@ -251,6 +251,7 @@ button {
 .home-img {
   width: 23em;
   height: 20em;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 
@@ -626,6 +627,8 @@ button {
   position: absolute;
   width: 23em;
   height: 23em;
+  border-radius: 2em;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .image-show {

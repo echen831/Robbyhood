@@ -19,15 +19,15 @@ class Product extends React.Component {
                 </div>
                 <div className='products-image'>
                     <img className={this.state.index === 0 ? 'image-show' : 'image-hide'} 
-                         src="/assets/cash_management.png" alt=""/>
+                        src="https://primerevenue.com/wp-content/uploads/2015/11/simplify-cash-management.jpg" alt=""/>
                     <img className={this.state.index === 1 ? 'image-show' : 'image-hide'}
-                        src="/assets/stock_funds.png" alt="" />
+                        src="https://static.seekingalpha.com/uploads/2018/8/14736682_15333783677476_rId5.jpg" alt="" />
                     <img className={this.state.index === 2 ? 'image-show' : 'image-hide'}
-                        src="/assets/options.png" alt="" />
+                        src="https://lh3.googleusercontent.com/proxy/9u_n_pXeKxFmePPp0KZE7LCJZeSeupZEwma9U-xsJEbRTIrqfJw8ifKtoG-uxXcKYCoXI6Rezh5Z9ZmB3mtKrPH6Q-G3Zq_-Kfs" alt="" />
                     <img className={this.state.index === 3 ? 'image-show' : 'image-hide'}
-                        src="/assets/gold.png" alt="" />
+                        src="https://www.nicepng.com/png/detail/795-7956762_clipart-jokingart-com-transparent-background-gold-coins.png" alt="" />
                     <img className={this.state.index === 4 ? 'image-show' : 'image-hide'}
-                        src="/assets/crypto.png" alt="" />                        
+                        src="https://www.clipartkey.com/mpngs/m/86-863497_cryptocurrency-clipart.png" alt="" />                        
                 </div>
                 <div className='products-actions'>
                     <ul>
