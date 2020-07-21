@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     window.fetchStocks = Stock.fetchStocks
     window.fetchOHLC = Stock.fetchOHLC
     window.deleteWatchListItem = Transaction.deleteWatchListItem
+    window.fetchWatchListItems = Transaction.fetchWatchListItems
 
     //test 
 

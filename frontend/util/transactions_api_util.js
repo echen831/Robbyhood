@@ -7,6 +7,13 @@ export const makeTransaction = (transaction) => {
     })
 };
 
+export const fetchWatchListItems = () => {
+    return $.ajax({
+        url: '/api/watch_list_items',
+        method: 'GET'
+    })
+};
+
 export const addWatchListItem = (data) => {
     return $.ajax({
         url: '/api/watch_list_items',

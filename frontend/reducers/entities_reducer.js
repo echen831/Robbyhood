@@ -8,7 +8,8 @@ import graphsReducer from './graphs_reducer';
 import companyInfoReducer from './company_info_reducer'
 import transactionsReducer from './transactions_reducer';
 import portfolioReducer from './portfolio_reducer';
-import ohlcsReducer from './ohlcs_reducer'
+import ohlcsReducer from './ohlcs_reducer';
+import watchListItemsReducer from './watchlistitems_reducer'
 
 const entitiesReducer = combineReducers({
     users: usersReducer,
@@ -18,7 +19,8 @@ const entitiesReducer = combineReducers({
     graphs: graphsReducer,
     transactions: transactionsReducer,
     portfolio: portfolioReducer,
-    ohlcs: ohlcsReducer
+    ohlcs: ohlcsReducer,
+    watchListItems: watchListItemsReducer
 });
 
 export default entitiesReducer;

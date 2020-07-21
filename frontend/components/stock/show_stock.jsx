@@ -25,6 +25,7 @@ class Show extends React.Component {
 
     componentDidMount() {
         this.props.fetchStocks()
+        this.props.fetchWatchListItems()
         this.props.fetchUser(this.props.currentUser.id)
     }
 

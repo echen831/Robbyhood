@@ -1,4 +1,8 @@
 class Api::WatchListItemsController < ApplicationController
+
+    def index
+        @watch_list_items = WatchListItem.where(user_id: current_user.id)
+    end
     
     def create
         @watch_list_item = WatchListItem.new 

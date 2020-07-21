@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import Show from './show_stock'
 import { logout, fetchUser } from '../../actions/session_actions'
 import { fetchStocks, fetchOneDayStock } from '../../actions/stock_actions'
-import { deleteWatchListItem } from '../../actions/transaction_actions'
+import { deleteWatchListItem, fetchWatchListItems } from '../../actions/transaction_actions'
 
 const mSTP = (state) => ({
     currentUser: state.entities.users[state.session.id],
@@ -16,7 +16,8 @@ const mDTP = (dispatch) => ({
     fetchStocks: () => dispatch(fetchStocks()),
     fetchOneDayStock: (symbol, range) => dispatch(fetchOneDayStock(symbol, range)),
     fetchUser: (id) => dispatch(fetchUser(id)),
-    deleteWatchListItem: (id) => dispatch(deleteWatchListItem(id))
+    deleteWatchListItem: (id) => dispatch(deleteWatchListItem(id)),
+    fetchWatchListItems: () => dispatch(fetchWatchListItems())
 
 })
 
