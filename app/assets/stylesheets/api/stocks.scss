@@ -463,10 +463,11 @@
 }
 
 .bsr-container {
-  background-color: chartreuse;
+  background-color: white;
   padding: 1em;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 25%;
   width: 100%;
   margin-bottom: 8.5em;
@@ -474,7 +475,19 @@
 
 .bs-review-btn {
   display: flex;
+  align-items: center;
   justify-content: space-around;
+}
+
+.bs-review-btn button {
+  width: 5em;
+  height: 2em;
+  border-radius: 0.25em;
+  background-color: rgb(66, 207, 160);
+}
+
+.bs-review-btn button:hover {
+  background-color: rgb(52, 185, 138);
 }
 
 .review-order-btn-container {
