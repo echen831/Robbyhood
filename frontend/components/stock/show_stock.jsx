@@ -58,7 +58,7 @@ class Show extends React.Component {
     
     render() {
 
-        const { name, symbol, range, numStocks } = this.state;
+        const { name, symbol, range } = this.state;
         const { currentUser, logout, stocks, fetchOneDayStock, myStocks} = this.props;
 
         // if (this.props.loading) return <Loader/>
@@ -86,8 +86,6 @@ class Show extends React.Component {
                                     <button className='go-btn'>Go</button>
                                 </Link> */}
                             </div>
-                        </div>
-                        <div className='right-nav'>
                             <div className='footer-contacts'>
                                 <a id='footer-github'
                                     target='_blank'
@@ -102,6 +100,8 @@ class Show extends React.Component {
                                     href="https://www.facebook.com/profile.php?id=11708937" >
                                 </a>
                             </div>
+                        </div>
+                        <div className='right-nav'>
                             <div id='greeting' >Hi, {currentUser.username}</div>
                             <div>Portfolio</div>
                             <div onClick={logout} >Log Out</div>

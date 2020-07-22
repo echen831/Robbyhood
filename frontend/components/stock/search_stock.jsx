@@ -101,8 +101,6 @@ class SearchStock extends React.Component {
                             <div className='stock-searchbar'>
                                 <SearchBar stocks={stocks} setState={this.setSymbol}/>
                             </div>
-                        </div>
-                        <div className='right-nav'>
                             <div className='footer-contacts'>
                                 <a id='footer-github'
                                     target='_blank'
@@ -117,6 +115,8 @@ class SearchStock extends React.Component {
                                     href="https://www.facebook.com/profile.php?id=11708937" >
                                 </a>
                             </div>
+                        </div>
+                        <div className='right-nav'>
                             <div id='greeting'>Hi, {this.props.currentUser.username}</div>
                             <div><Link to='/stocks'> Portfolio </Link></div>
                             <div onClick={this.props.logout} >Log Out</div>
