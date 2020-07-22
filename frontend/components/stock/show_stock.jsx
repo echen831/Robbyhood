@@ -4,6 +4,7 @@ import HistStock from './hist_stock_container';
 import SearchBar from '../search_bar/search_bar'
 import { stocks } from './stocks'
 import Loader from '../loader/loader';
+import Portfolio from './portfolio'
 import PortfolioItem  from './portfolio_item';
 import WatchListItem from './watchlist_item';
 
@@ -138,9 +139,10 @@ class Show extends React.Component {
                         <div className='stock-show'>
                             
                             <div className='stock-chart-container'>
-                                <HistStock symbol={symbol} 
+                                {/* <HistStock symbol={symbol} 
                                             name={name} 
-                                            range={range}/>
+                                            range={range}/> */}
+                                <Portfolio/>
                             </div>
                             
                             <div className='stock-show-bar-container'>

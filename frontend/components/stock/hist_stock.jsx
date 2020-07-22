@@ -145,8 +145,6 @@ class HistStock extends React.Component {
                             date={range === '1d' ? data[0].date : null} />}
                     />
                 </LineChart>
-
-
             </div>
         )
 
