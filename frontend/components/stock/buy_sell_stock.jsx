@@ -64,6 +64,11 @@ class BuySellStock extends React.Component {
     render () {
         let { stock, stocks, name, symbol, currentUser, addWatchListItem, deleteWatchListItem } = this.props
         let { num_shares, transactions_type, review } = this.state
+        let originalState = {
+            num_shares: 0,
+            transactions_type: 'buy',
+            review: false,
+        }
 
         if (!stock || !stock[stock.length-1]) return null
 
@@ -99,7 +104,9 @@ class BuySellStock extends React.Component {
                         <div className='shares-container'>
                             <p>Shares</p>
                             <input type="number"
-                                   placeholder='0' 
+                                   placeholder='0'
+                                   min='1'
+                                   max='1000' 
                                    onChange={(e)=> this.setState({num_shares: e.currentTarget.value})}/>
                         </div>
                         <div className='mp-container'>
@@ -120,7 +127,7 @@ class BuySellStock extends React.Component {
                             id={!review ? 'display-none' : ''}>
                             <p>{`Are you sure you want to ${transactions_type} ${num_shares} shares of ${name}?`}</p>
                             <div className='bs-review-btn'>
-                                <button onClick={() => {this.props.handleTransaction(transaction)}}>{this.state.transactions_type}</button>
+                                <button onClick={() => {this.props.handleTransaction(transaction); this.setState(originalState)}}>{this.state.transactions_type}</button>
                                 <button onClick={() => this.setState({ review: !review })}>Edit</button>
                             </div>
                         </div>
