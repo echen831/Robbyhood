@@ -9,6 +9,8 @@ import { AuthRoute, ProtectedRoute} from '../util/route_util'
 import IntraDayStockContainer from './stock/intraday_stock_container'
 import HistStockContainer from './stock/hist_stock_container'
 import SearchStockContainer from './stock/search_stock_container'
+import Portfolio from './stock/portfolio';
+
 
 const App = () => {
 
@@ -22,6 +24,7 @@ const App = () => {
                 <ProtectedRoute exact path='/stocks' component={ShowContainer}/>
                 <ProtectedRoute exact path='/stocks/:symbol/:range' component={HistStockContainer}/>
                 <ProtectedRoute exact path='/search/stocks/:symbol/:name' component={SearchStockContainer}/>
+                <ProtectedRoute exact path='/portfolio' component={Portfolio} />
                 <Route path='*' component={NoMatch}/>
             </Switch>
         </div>

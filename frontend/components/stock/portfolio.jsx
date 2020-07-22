@@ -9,17 +9,56 @@ class Portfolio extends React.Component {
 
     oneDayPortfolio () {
         let { currentUser, oneDayStocks } = this.props
-        let data = []
+        
+        let res = []
+        
+        for (let symbol in oneDayStocks) {
+            let data = oneDayStocks[symbol]
+            let open = data[0].open
+            let num_owned = currentUser.stocks_owned[symbol]
+            
+            data.forEach((item, idx) => {
+                let hash = {
+                    date: '',
+                    label: '',
+                    open: currentUser.buying_power,
+                    high: currentUser.buying_power,
+                    close: currentUser.buying_power
+                }
 
+                if (!res[idx]) {
+                    res[idx] = hash
+                }
 
+                res[idx].date = item.date
+                res[idx].label = item.label
+                res[idx].open += (open * num_owned)
+                res[idx].high += (item.high * num_owned)
+                res[idx].close += (item.close * num_owned)
 
+            })
+        }
+        return res
     }
 
 
     render () {
         return (
             <div>
-
+                
+                <ul>
+                    {this.oneDayPortfolio().map((data, idx) => {
+                        return (
+                            <div key={idx}>
+                                <li>{data.date}</li>
+                                <li>{data.label}</li>
+                                <li>{data.open}</li>
+                                <li>{data.high}</li>
+                                <li>{data.close}</li>
+                            </div>
+                        )
+                    })}
+                </ul>
             </div>
         )
     }
@@ -27,7 +66,7 @@ class Portfolio extends React.Component {
 
 const mSTP = (state) => ({
     currentUser: state.entities.users[state.session.id],
-    oneDayStocks: state.portfolio.stocks
+    oneDayStocks: state.entities.portfolio.stocks
     
 });
 
