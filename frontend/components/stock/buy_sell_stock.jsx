@@ -5,7 +5,7 @@ class BuySellStock extends React.Component {
         super(props)
 
         this.state = {
-            num_shares: 0,
+            num_shares: '',
             transactions_type: 'buy',
             review: false,
         }
@@ -34,6 +34,18 @@ class BuySellStock extends React.Component {
         }
 
         return dollar + '.' + decimal
+    }
+
+    checkNum(num) {
+        if (num[0] === '0') {
+            return false
+        }
+
+        if (num.length > 6) {
+            return false
+        }
+
+        return true
     }
 
     findNumShares(stocks, symbol, ids) {
@@ -65,7 +77,7 @@ class BuySellStock extends React.Component {
         let { stock, stocks, name, symbol, currentUser, addWatchListItem, deleteWatchListItem } = this.props
         let { num_shares, transactions_type, review } = this.state
         let originalState = {
-            num_shares: 0,
+            num_shares: '',
             transactions_type: 'buy',
             review: false,
         }
@@ -100,13 +112,24 @@ class BuySellStock extends React.Component {
                             onClick={() => this.setState({transactions_type: 'sell'})}
                             >Sell {symbol.toUpperCase()}</p>
                     </div>
+                    <div className='buy-sell-review-container'
+                        id={!review ? 'display-none' : ''}>
+                        <div className='bsr-container'>
+                            <p>{this.checkNum(num_shares.toString()) ? `Are you sure you want to ${transactions_type} ${num_shares} shares of ${name}?` : `Invalid Amount`}</p>
+                            <div className='bs-review-btn'>
+                                <button
+                                    disabled={this.checkNum(num_shares.toString()) ? false : true}
+                                    onClick={() => { this.props.handleTransaction(transaction); this.setState(originalState) }}>{this.state.transactions_type}</button>
+                                <button onClick={() => { this.setState({ review: !review }); this.setState(originalState) }}>Edit</button>
+                            </div>
+                        </div>
+                    </div>
                     <div className='buy-sell-info-container'>
                         <div className='shares-container'>
                             <p>Shares</p>
                             <input type="number"
                                    placeholder='0'
-                                   min='1'
-                                   max='1000' 
+                                   value={num_shares}
                                    onChange={(e)=> this.setState({num_shares: e.currentTarget.value})}/>
                         </div>
                         <div className='mp-container'>
@@ -120,17 +143,21 @@ class BuySellStock extends React.Component {
                         <div className='review-order-btn-container'
                             id={review ? 'display-none' : ''}>
                             <button
-                                disabled={!num_shares || notEnoughBP || notEnoughShares ? true : false} 
+                                disabled={!num_shares || notEnoughBP || notEnoughShares || !this.checkNum(num_shares.toString()) ? true : false} 
                                 onClick={() => this.setState({review: !review})}>Review Order</button>
                         </div>
-                        <div className='buy-sell-review-container'
+                        {/* <div className='buy-sell-review-container'
                             id={!review ? 'display-none' : ''}>
-                            <p>{`Are you sure you want to ${transactions_type} ${num_shares} shares of ${name}?`}</p>
-                            <div className='bs-review-btn'>
-                                <button onClick={() => {this.props.handleTransaction(transaction); this.setState(originalState)}}>{this.state.transactions_type}</button>
-                                <button onClick={() => this.setState({ review: !review })}>Edit</button>
+                            <div>
+                                <p>{ this.checkNum(num_shares.toString()) ? `Are you sure you want to ${transactions_type} ${num_shares} shares of ${name}?` : `Invalid Amount`}</p>
+                                <div className='bs-review-btn'>
+                                    <button
+                                        disabled={this.checkNum(num_shares.toString()) ? false : true } 
+                                        onClick={() => {this.props.handleTransaction(transaction); this.setState(originalState)}}>{this.state.transactions_type}</button>
+                                    <button onClick={() => {this.setState({ review: !review }); this.setState(originalState)}}>Edit</button>
+                                </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div id={!notEnoughShares ? 'display-none' : ''}>
                             <p>Not Enough Shares</p>
                         </div>

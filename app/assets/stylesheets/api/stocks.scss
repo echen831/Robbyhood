@@ -452,8 +452,24 @@
 }
 
 .buy-sell-review-container {
+  background-color: rgba(0, 0, 0, 0.151);
+  position: absolute;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.bsr-container {
+  background-color: chartreuse;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  width: 100%;
+  margin-bottom: 8.5em;
 }
 
 .bs-review-btn {
@@ -465,7 +481,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
 }
 
 .review-order-btn-container button {
