@@ -72,6 +72,13 @@ class BuySellStock extends React.Component {
         return false 
     };
 
+    outsideClick(e) {
+        let modal = document.getElementById("buy-sell-review-container");
+        if (e.target === modal) {
+            this.setState({ review: false })
+        }   
+    }
+
 
     render () {
         let { stock, stocks, name, symbol, currentUser, addWatchListItem, deleteWatchListItem } = this.props
@@ -113,7 +120,9 @@ class BuySellStock extends React.Component {
                             >Sell {symbol.toUpperCase()}</p>
                     </div>
                     <div className='buy-sell-review-container'
-                        id={!review ? 'display-none' : ''}>
+                        id={!review ? 'display-none' : 'buy-sell-review-container'}
+                        onClick={(e) => {this.outsideClick(e)}} 
+                        >
                         <div className='bsr-container'>
                             <p>{this.checkNum(num_shares.toString()) ? `Are you sure you want to ${transactions_type} ${num_shares} shares of ${name}?` : `Invalid Amount`}</p>
                             <div className='bs-review-btn'>
@@ -146,6 +155,10 @@ class BuySellStock extends React.Component {
                                 disabled={!num_shares || notEnoughBP || notEnoughShares || !this.checkNum(num_shares.toString()) ? true : false} 
                                 onClick={() => this.setState({review: !review})}>Review Order</button>
                         </div>
+                        <div className='buy-sell-img-container'
+                            id={review ? 'display-none' : ''}>
+                            <img src="https://i.pinimg.com/originals/63/89/fa/6389fa22ed7653c40570c98b03764afc.gif" alt=""/>
+                        </div>
                         {/* <div className='buy-sell-review-container'
                             id={!review ? 'display-none' : ''}>
                             <div>
@@ -166,18 +179,20 @@ class BuySellStock extends React.Component {
                         </div>
                     </div>
 
-                    <div className='transaction-info-container'>
-                        <div id={transactions_type === 'sell' ? 'display-none' : ''}>Buying Power Available: ${this.showAmount(currentUser.buying_power)}</div>
-                        <div id={transactions_type === 'buy' ? 'display-none' : ''}>
-                             <p>{ownShares} {" "} {ownShares > 1 ? 'Shares Available' : 'Share Available'}</p>
+                    <div className='buy-sell-bottom'>
+                        <div className='transaction-info-container'>
+                            <div id={transactions_type === 'sell' ? 'display-none' : ''}>Buying Power Available: ${this.showAmount(currentUser.buying_power)}</div>
+                            <div id={transactions_type === 'buy' ? 'display-none' : ''}>
+                                <p>{ownShares} {" "} {ownShares > 1 ? 'Shares Available' : 'Share Available'}</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className='add-remove-wl-container'>
-                        <button onClick={ !watchlistId ? 
-                            () => addWatchListItem({symbol: symbol}) :
-                            () => deleteWatchListItem(watchlistId)
-                        }> {!watchlistId ? 'Add to Watch List' : 'Remove from Watch List'}</button>
+                        <div className='add-remove-wl-container'>
+                            <button onClick={ !watchlistId ? 
+                                () => addWatchListItem({symbol: symbol}) :
+                                () => deleteWatchListItem(watchlistId)
+                            }> {!watchlistId ? 'Add to Watch List' : 'Remove from Watch List'}</button>
+                        </div>
                     </div>
             
                 </div>
