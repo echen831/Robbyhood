@@ -156,7 +156,7 @@ class BuySellStock extends React.Component {
                                 onClick={() => this.setState({review: !review})}>Review Order</button>
                         </div>
                         <div className='buy-sell-img-container'
-                            id={review ? 'display-none' : ''}>
+                            id={notEnoughShares || notEnoughBP ||review ? 'display-none' : ''}>
                             <img src="https://i.pinimg.com/originals/63/89/fa/6389fa22ed7653c40570c98b03764afc.gif" alt=""/>
                         </div>
                         {/* <div className='buy-sell-review-container'

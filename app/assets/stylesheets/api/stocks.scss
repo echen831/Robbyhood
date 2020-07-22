@@ -407,6 +407,9 @@
   cursor: pointer;
   padding: 1em;
   font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bs-selected {
