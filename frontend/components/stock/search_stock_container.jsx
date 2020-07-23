@@ -15,7 +15,7 @@ const mSTP = (state, ownProps) => ({
     transactions: state.entities.transactions,
     companyInfo: state.entities.companyInfo[ownProps.match.params.symbol],
     news: state.entities.news[ownProps.match.params.symbol],
-    watchListItems: state.entities.watchListItems
+    watchListItems: state.entities.portfolio.watchListItems
 })
 
 const mDTP = (dispatch) => ({

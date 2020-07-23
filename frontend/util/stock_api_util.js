@@ -43,3 +43,10 @@ export const fetchOHLC = (symbol) => (
         method: 'GET'
     })
 );
+
+export const fetchMultiStocks = (symbols) => (
+    $.ajax({
+        url: `https://sandbox.iexapis.com/stable/stock/market/batch?symbols=${symbols}&types=chart&range=1y?token=${window.iexAPIKey}`,
+        method: 'GET'
+    })
+)

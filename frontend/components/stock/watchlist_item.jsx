@@ -98,7 +98,7 @@ class WatchListItem extends React.Component {
 
 const mSTP = (state, ownProps) => ({
     currentUser: state.entities.users[state.session.id],
-    prices: state.entities.ohlcs,
+    prices: state.entities.portfolio.ohlcs,
     symbol: ownProps.symbol,
     idx: ownProps.idx
 })
