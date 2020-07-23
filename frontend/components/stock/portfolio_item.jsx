@@ -99,7 +99,6 @@ class PortfolioItem extends React.Component {
 
         let name = this.findName(Object.values(stocks), symbol)
         let currPrice = this.findCurrentPrice(myStocks, symbol)
-        let purchasePrice = currentUser.stock_prices[symbol]
         let openPrice = myStocks[symbol][0].high
         return (
         <Link to={`/search/stocks/${symbol}/${name}`} key={idx}>
@@ -116,7 +115,7 @@ class PortfolioItem extends React.Component {
                 </div>
                 <div className='pi-stock-info'>
                     <p>${this.setPrice(currPrice)}</p>
-                    <p>{this.setFluxPercent(openPrice, currPrice)}</p>
+                    <p>{this.setFluxPercent(currPrice, openPrice)}</p>
                 </div>
             </div>
         </Link>

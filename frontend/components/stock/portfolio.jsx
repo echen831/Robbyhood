@@ -5,6 +5,7 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts'
 class Portfolio extends React.Component {
     constructor(props) {
         super(props)
+
         this.filterData = this.filterData.bind(this)
         this.setFlux = this.setFlux.bind(this)
         this.setFluxPercent = this.setFluxPercent.bind(this)
@@ -13,6 +14,7 @@ class Portfolio extends React.Component {
     }
 
     oneDayPortfolio () {
+
         let { currentUser, oneDayStocks } = this.props
         
         let res = []
@@ -118,6 +120,7 @@ class Portfolio extends React.Component {
 
 
     render () {
+
         let data = this.filterData(this.oneDayPortfolio())
         if (!data || !data[0]) return null
         let close = data[data.length - 1].high
