@@ -21,7 +21,7 @@ class Portfolio extends React.Component {
         
         for (let symbol in oneDayStocks) {
             let data = oneDayStocks[symbol]
-            let open = data[0].open
+            let open = data[0].high
             let num_owned = currentUser.stocks_owned[symbol]
 
             for(let i = 0; i < data.length; i ++) {
@@ -35,16 +35,17 @@ class Portfolio extends React.Component {
                     high: currentUser.buying_power,
                 }
 
-                if (!res[i] && item.high) {
+                if (!res[i]) {
                     res[i] = hash
                 }
 
-                if (res[i] && item.high) {
+                if (item.high) {
+                    
                     res[i].date = item.date
                     res[i].label = item.label
                     res[i].open = (open * num_owned)
                     res[i].high += (item.high * num_owned)
-                } else if (res[i] && !item.high) {
+                } else if (!item.high) {
                     res[i].date = item.date
                     res[i].label = item.label
                     res[i].open = (open * num_owned)
