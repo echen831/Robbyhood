@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux'
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 
 class Portfolio extends React.Component {
@@ -16,18 +15,19 @@ class Portfolio extends React.Component {
     oneDayPortfolio () {
 
         let { currentUser, oneDayStocks } = this.props
-        
         let res = []
         
         for (let symbol in oneDayStocks) {
             let data = oneDayStocks[symbol]
-            let open = data[0].high
-            let num_owned = currentUser.stocks_owned[symbol]
-
+            
             for(let i = 0; i < data.length; i ++) {
-                let item = data[i]
-                
+                let open = data[0].high
+                let num_owned = currentUser.stocks_owned[symbol]
+                if (!num_owned) {
+                    continue
+                }
 
+                let item = data[i]
                 let hash = {
                     date: '',
                     label: '',
@@ -121,9 +121,13 @@ class Portfolio extends React.Component {
 
 
     render () {
+        let { oneDayStocks, currentUser } = this.props
+        if ( !oneDayStocks || !currentUser ) return null
 
         let data = this.filterData(this.oneDayPortfolio())
+
         if (!data || !data[0]) return null
+
         let close = data[data.length - 1].high
         let open = data[0].high
         let flux = this.setFlux(close - open)
@@ -201,16 +205,7 @@ const CustomTooltip = (props) => {
     return null;
 };
 
-const mSTP = (state) => ({
-    currentUser: state.entities.users[state.session.id],
-    oneDayStocks: state.entities.portfolio.stocks
-    
-});
 
-const mDTP = (dispatch) => ({
-
-});
-
-export default connect(mSTP, mDTP)(Portfolio)
+export default (Portfolio)
 
 

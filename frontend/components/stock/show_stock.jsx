@@ -142,7 +142,10 @@ class Show extends React.Component {
                                 {/* <HistStock symbol={symbol} 
                                             name={name} 
                                             range={range}/> */}
-                                <Portfolio/>
+                                <Portfolio
+                                    currentUser = { currentUser }
+                                    oneDayStocks = { myStocks }
+                                />
                             </div>
                             
                             <div className='stock-show-bar-container'>
