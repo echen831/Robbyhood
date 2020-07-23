@@ -24,14 +24,13 @@ class Portfolio extends React.Component {
 
             for(let i = 0; i < data.length; i ++) {
                 let item = data[i]
-                let prev = data[i-1]
+                
 
                 let hash = {
                     date: '',
                     label: '',
                     open: currentUser.buying_power,
                     high: currentUser.buying_power,
-                    close: currentUser.buying_power
                 }
 
                 if (!res[i] && item.high) {
@@ -43,13 +42,11 @@ class Portfolio extends React.Component {
                     res[i].label = item.label
                     res[i].open = (open * num_owned)
                     res[i].high += (item.high * num_owned)
-                    res[i].close += (item.close * num_owned)
                 } else if (res[i] && !item.high) {
                     res[i].date = item.date
                     res[i].label = item.label
                     res[i].open = (open * num_owned)
-                    res[i].high += (prev.high * num_owned)
-                    res[i].close += (prev.close * num_owned)
+                    res[i].high += (open * num_owned)
                 }
             }
             
@@ -121,7 +118,7 @@ class Portfolio extends React.Component {
 
 
     render () {
-        let data = this.oneDayPortfolio()
+        let data = this.filterData(this.oneDayPortfolio())
         if (!data || !data[0]) return null
         let close = data[data.length - 1].high
         let open = data[0].high
