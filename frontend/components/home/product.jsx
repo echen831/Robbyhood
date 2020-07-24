@@ -23,7 +23,7 @@ class Product extends React.Component {
                     <img className={this.state.index === 1 ? 'image-show' : 'image-hide'}
                         src="https://static.seekingalpha.com/uploads/2018/8/14736682_15333783677476_rId5.jpg" alt="" />
                     <img className={this.state.index === 2 ? 'image-show' : 'image-hide'}
-                        src="https://lh3.googleusercontent.com/proxy/9u_n_pXeKxFmePPp0KZE7LCJZeSeupZEwma9U-xsJEbRTIrqfJw8ifKtoG-uxXcKYCoXI6Rezh5Z9ZmB3mtKrPH6Q-G3Zq_-Kfs" alt="" />
+                        src="https://s.clipartkey.com/mpngs/s/49-497739_investment-stock-market-clipart.png" alt="" />
                     <img className={this.state.index === 3 ? 'image-show' : 'image-hide'}
                         src="https://www.nicepng.com/png/detail/795-7956762_clipart-jokingart-com-transparent-background-gold-coins.png" alt="" />
                     <img className={this.state.index === 4 ? 'image-show' : 'image-hide'}
