@@ -34,13 +34,9 @@ class Show extends React.Component {
         this.props.fetchWatchListItems()
         this.props.fetchUser(this.props.currentUser.id)
 
-        let stocks = Object.keys(this.props.currentUser.stocks_owned)
-        stocks.forEach((stock => {
+        let symbols = Object.keys(this.props.currentUser.stocks_owned).join(',')
+        this.props.fetchMultiStocks(symbols, '1y')
 
-            setTimeout(() => {
-                this.props.fetchOneYearStock(stock, '1y')
-            }, 1000);
-        }))
     };
 
     componentWillUnmount() {
