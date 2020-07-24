@@ -33,6 +33,10 @@ class SearchStock extends React.Component {
 
     componentDidMount() {
 
+        setTimeout(() => {
+            this.props.pageLoaded()
+        }, 1500);
+
         let { symbol, fetchHistStock, fetchCompanyInfo, fetchNews, fetchWatchListItems, stocks } = this.props
 
         fetchHistStock(symbol, '1d')
@@ -71,6 +75,10 @@ class SearchStock extends React.Component {
 
     } 
 
+    componentWillUnmount() {
+        this.props.setPageLoading()
+    };
+
     handleTransaction(transaction) {
         this.props.makeTransaction(transaction)
             .then(this.setState({transactions: this.state.transactions += 1}))
@@ -84,9 +92,9 @@ class SearchStock extends React.Component {
     render () {
 
         let {symbol, name, range, infoShow, newsShow } = this.state
-        let { stocks, companyInfo, news } = this.props
+        let { stocks, companyInfo, news, pageLoading } = this.props
         if(!this.props.stock) return null;
-        // if(this.props.loading) return <Loader/>
+        if(this.props.pageLoading) return <Loader/>
         return (
             <div className='show-body'>
                 <header className='stock-show-header'>

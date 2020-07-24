@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SearchStock from './search_stock';
-import { logout, fetchUser } from '../../actions/session_actions';
+import { logout, fetchUser, pageLoaded, pageLoading } from '../../actions/session_actions';
 import { fetchHistStock, fetchStocks, fetchNews, fetchCompanyInfo} from '../../actions/stock_actions';
 import { makeTransaction, addWatchListItem, deleteWatchListItem, fetchWatchListItems } from '../../actions/transaction_actions';
 
@@ -15,7 +15,8 @@ const mSTP = (state, ownProps) => ({
     transactions: state.entities.transactions,
     companyInfo: state.entities.companyInfo[ownProps.match.params.symbol],
     news: state.entities.news[ownProps.match.params.symbol],
-    watchListItems: state.entities.portfolio.watchListItems
+    watchListItems: state.entities.portfolio.watchListItems,
+    pageLoading: state.ui.loading_page
 })
 
 const mDTP = (dispatch) => ({
@@ -28,7 +29,9 @@ const mDTP = (dispatch) => ({
     fetchUser: (id) => dispatch(fetchUser(id)),
     addWatchListItem: (symbol) => dispatch(addWatchListItem(symbol)),
     deleteWatchListItem: (id) => dispatch(deleteWatchListItem(id)),
-    fetchWatchListItems: () => dispatch(fetchWatchListItems())
+    fetchWatchListItems: () => dispatch(fetchWatchListItems()),
+    pageLoaded: () => dispatch(pageLoaded()),
+    setPageLoading: () => dispatch(pageLoading())
 })
 
 export default connect(mSTP, mDTP)(SearchStock);
