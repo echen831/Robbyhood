@@ -21,21 +21,31 @@ export const fetchHistStock = (symbol,range) => (
 );
 
 
-export const fetchNews = (symbol) => (
-    $.ajax({
-        url: `https://cloud.iexapis.com/stable/stock/${symbol}/news/last/${3}?token=${window.iex2APIKey}`,
+export const fetchNews = (symbol) => {
+
+    let cloud = `https://cloud.iexapis.com/stable/stock/${symbol}/news/last/${3}?token=${window.iex2APIKey}`
+    let sandbox = `https://sandbox.iexapis.com/stable/stock/${symbol}/news/last/${5}?token=${window.iexAPIKey}`
+    return $.ajax({
+        // url: `https://cloud.iexapis.com/stable/stock/${symbol}/news/last/${3}?token=${window.iex2APIKey}`,
         // url: `https://sandbox.iexapis.com/stable/stock/${symbol}/news/last/${5}?token=${window.iexAPIKey}`,
+        url: process.env.NODE_ENV !== "production" ? sandbox : cloud,
         method: 'GET'
     })
-);
+};
 
-export const fetchCompanyInfo = (symbol) => (
-    $.ajax({
-        url: `https://cloud.iexapis.com/stable/stock/${symbol}/company?token=${window.iex2APIKey}`,
+export const fetchCompanyInfo = (symbol) => {
+
+    let cloud = `https://cloud.iexapis.com/stable/stock/${symbol}/company?token=${window.iex2APIKey}`
+    let sandbox = `https://sandbox.iexapis.com/stable/stock/${symbol}/company?token=${window.iexAPIKey}`
+
+    return $.ajax({
+        // url: `https://cloud.iexapis.com/stable/stock/${symbol}/company?token=${window.iex2APIKey}`,
         // url: `https://sandbox.iexapis.com/stable/stock/${symbol}/company?token=${window.iexAPIKey}`,
+        url: process.env.NODE_ENV !== "production" ? sandbox : cloud,
         method: 'GET'    
     })
-);
+};
+
 
 export const fetchOHLC = (symbol) => (
     $.ajax({
