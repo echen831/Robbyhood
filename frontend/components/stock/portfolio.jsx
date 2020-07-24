@@ -12,10 +12,64 @@ class Portfolio extends React.Component {
         this.setPrice = this.setPrice.bind(this)
     }
 
+    oneYearPortfolio (range) {
+        let { currentUser, oneYearStocks } = this.props
+        let res = []
+        
+        if (!oneYearStocks) return res
+
+        for( let symbol in oneYearStocks) {
+            let data = oneYearStocks[symbol]
+            let num_owned = currentUser.stocks_owned[symbol]
+            if (!num_owned) {
+                continue
+            }
+
+            for(let i = 0; i < data.length; i ++) {
+                let open = data[0].high 
+                let item = data[i]
+                let hash = {
+                    date: '',
+                    open: currentUser.buying_power,
+                    high: currentUser.buying_power 
+                }
+
+                if (!res[i]) {
+                    res[i] = hash
+                }
+
+                if (item.high) {
+                    res[i].date = item.date
+                    res[i].open = (open * num_owned)
+                    res[i].high += (item.high * num_owned)
+                } else {
+                    res[i].date = item.date
+                    res[i].open = (open * num_owned)
+                    res[i].high += (open * num_owned)                  
+                }
+
+            }
+            
+        }
+        let length = Object.values(oneYearStocks)[0].length
+        let start = 0
+        if (range === '5d') {
+            start = (length - 5)
+        } else if (range === '1m') {
+            start = (length - 21)
+        } else if (range === '3m') {
+            start = (length - 65)
+        }
+        return res.slice(start)
+
+    }
+
     oneDayPortfolio () {
 
         let { currentUser, oneDayStocks } = this.props
         let res = []
+
+        if (!oneDayStocks) return res
         
         for (let symbol in oneDayStocks) {
             let data = oneDayStocks[symbol]
@@ -122,17 +176,17 @@ class Portfolio extends React.Component {
 
 
     render () {
-        let { oneDayStocks, currentUser } = this.props
+        let { oneDayStocks, currentUser, range } = this.props
+
         if ( !oneDayStocks || !currentUser ) return null
 
-        let data = this.filterData(this.oneDayPortfolio())
+        let data = range === '1d' ? this.filterData(this.oneDayPortfolio()) : this.oneYearPortfolio(range)
 
         if (!data || !data[0]) return null
 
         let close = data[data.length - 1].high
         let open = data[0].high
         let flux = this.setFlux(close - open)
-
         
         return (
             <div>
@@ -156,7 +210,7 @@ class Portfolio extends React.Component {
                         stroke="#5ae6b0"
                         dot={false}
                     />
-                    <XAxis dataKey={'label'}
+                    <XAxis dataKey={range === "1d" ? 'label' : 'date'}
                         tick={false}
                         axisLine={false}
                         domain={['dataMin, dataMax']}
@@ -173,7 +227,7 @@ class Portfolio extends React.Component {
                             setFlux={this.setFlux}
                             addSymbol={this.addSymbol}
                             setFluxPercent={this.setFluxPercent}
-                            date={data[0].date} />}
+                            date={range === '1d' ? data[0].date : null} />}
                     />
                 </LineChart>
 
