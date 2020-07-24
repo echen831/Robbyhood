@@ -25,11 +25,26 @@ class Show extends React.Component {
     }
 
     componentDidMount() {
+
+        setTimeout(() => {
+            this.props.pageLoaded()
+        }, 2000);
+
         this.props.fetchStocks()
         this.props.fetchWatchListItems()
         this.props.fetchUser(this.props.currentUser.id)
 
+        let stocks = Object.keys(this.props.currentUser.stocks_owned)
+        stocks.forEach((stock => {
 
+            setTimeout(() => {
+                this.props.fetchOneYearStock(stock, '1y')
+            }, 1000);
+        }))
+    };
+
+    componentWillUnmount() {
+        this.props.setPageLoad()
     }
 
     update(field) {
@@ -62,9 +77,9 @@ class Show extends React.Component {
     render() {
 
         const { name, symbol, range } = this.state;
-        const { currentUser, logout, stocks, fetchOneDayStock, myStocks} = this.props;
+        const { currentUser, logout, stocks, fetchOneDayStock, myStocks, pageLoading} = this.props;
 
-        // if (this.props.loading) return <Loader/>
+        if (pageLoading) return <Loader/>
         return (
             <div className= {!this.state.dark ? 'show-body' : 'show-body-dark'}>
                 <header className='stock-show-header'>
@@ -133,7 +148,7 @@ class Show extends React.Component {
                         <div className='stock-show'>
                             
                             <div className='stock-chart-container'>
-                                
+
                                 <Portfolio
                                     currentUser = { currentUser }
                                     oneDayStocks = { myStocks }

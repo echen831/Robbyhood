@@ -56,6 +56,7 @@ class Portfolio extends React.Component {
         }
         return res
     }
+    
     filterData(data) {
         let res = [];
         for (let i = 0; i < data.length; i++) {
