@@ -3,6 +3,7 @@ import * as StockAPIUtil from '../util/stock_api_util';
 export const RECEIVE_STOCKS = 'RECEIVE_STOCKS';
 export const RECEIVE_ONE_STOCK = 'RECEIVE_ONE_STOCK';
 export const RECEIVE_ONE_DAY_STOCK = 'RECEIVE_ONE_DAY_STOCK';
+export const RECEIVE_ONE_YEAR_STOCK = 'RECEIVE_ONE_YEAR_STOCK';
 export const LOADING_STOCK = 'LOADING_STOCK';
 export const RECEIVE_NEWS = 'RECEIVE_NEWS';
 export const RECEIVE_COMPANY_INFO = 'RECEIVE_COMPANY_INFO';
@@ -24,6 +25,12 @@ const receiveOneDayStock = (stock, symbol) => ({
     stock,
     symbol
 });
+
+const receiveOneYearStock = (stock, symbol) => ({
+    type: RECEIVE_ONE_YEAR_STOCK,
+    stock,
+    symbol
+})
 
 const receiveOHLC = (data, symbol) => ({
     type: RECEIVE_OHLC,
@@ -64,6 +71,11 @@ export const fetchOneDayStock = (symbol, range) => dispatch => {
     return StockAPIUtil.fetchHistStock(symbol, range) 
         .then((stock) => dispatch(receiveOneDayStock(stock, symbol)))
 };
+
+export const fetchOneYearStock = (symbol, range) => dispatch => {
+    return StockAPIUtil.fetchHistStock(symbol, range)
+        .then((stock) => dispatch(receiveOneYearStock(stock, symbol)))
+}
 
 export const fetchHistStock = (symbol, range) => dispatch => {
     dispatch(loadingStock())

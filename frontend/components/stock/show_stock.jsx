@@ -28,6 +28,8 @@ class Show extends React.Component {
         this.props.fetchStocks()
         this.props.fetchWatchListItems()
         this.props.fetchUser(this.props.currentUser.id)
+
+
     }
 
     update(field) {
@@ -78,14 +80,6 @@ class Show extends React.Component {
                                 <SearchBar stocks={stocks} 
                                            setState={this.setSymbol}
                                            />
-                                {/* <input type="text"
-                                    value={this.state.search}
-                                    onChange={this.update('search')}
-                                    className='search-input'
-                                /> */}
-                                {/* <Link to={`/search/stocks/${this.state.search}`}>
-                                    <button className='go-btn'>Go</button>
-                                </Link> */}
                             </div>
                             <div className='footer-contacts'>
                                 <a id='footer-github'
@@ -139,9 +133,7 @@ class Show extends React.Component {
                         <div className='stock-show'>
                             
                             <div className='stock-chart-container'>
-                                {/* <HistStock symbol={symbol} 
-                                            name={name} 
-                                            range={range}/> */}
+                                
                                 <Portfolio
                                     currentUser = { currentUser }
                                     oneDayStocks = { myStocks }
