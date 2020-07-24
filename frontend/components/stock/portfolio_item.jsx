@@ -10,11 +10,11 @@ class PortfolioItem extends React.Component {
         this.fetchOneDayStock = this.props.fetchOneDayStock.bind(this)
     }
 
-    componentDidMount() {
-        let { fetchOneDayStock, symbol, idx } = this.props
+    // componentDidMount() {
+    //     let { fetchOneDayStock, symbol, idx } = this.props
 
-        setTimeout(() => fetchOneDayStock(symbol, '1d'), idx * 100)
-    }
+    //     setTimeout(() => fetchOneDayStock(symbol, '1d'), idx * 100)
+    // }
 
     findCurrentPrice(stocks, symbol) {
         let price = null

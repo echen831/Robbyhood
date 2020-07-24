@@ -35,7 +35,8 @@ class Show extends React.Component {
         this.props.fetchUser(this.props.currentUser.id)
 
         let symbols = Object.keys(this.props.currentUser.stocks_owned).join(',')
-        this.props.fetchMultiStocks(symbols, '1y')
+        this.props.fetchMultiOneYearStocks(symbols, '1y')
+        this.props.fetchMultiOneDayStocks(symbols, '1d')
 
     };
 
@@ -73,7 +74,7 @@ class Show extends React.Component {
     render() {
 
         const { name, symbol, range } = this.state;
-        const { currentUser, logout, stocks, fetchOneDayStock, myStocks, pageLoading} = this.props;
+        const { currentUser, logout, stocks, fetchOneDayStock, portfolio, pageLoading} = this.props;
 
         if (pageLoading) return <Loader/>
         return (
@@ -147,7 +148,7 @@ class Show extends React.Component {
 
                                 <Portfolio
                                     currentUser = { currentUser }
-                                    oneDayStocks = { myStocks }
+                                    oneDayStocks = { portfolio.stocks }
                                 />
                             </div>
                             
@@ -181,7 +182,7 @@ class Show extends React.Component {
                             <div>
                                 {Object.keys(currentUser.stocks_owned).sort().map((symbol, idx) =>
                                     <PortfolioItem 
-                                        myStocks={myStocks}
+                                        myStocks={portfolio.stocks}
                                         currentUser={currentUser}
                                         symbol={symbol}
                                         stocks={stocks}

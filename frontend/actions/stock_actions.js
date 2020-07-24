@@ -8,7 +8,8 @@ export const LOADING_STOCK = 'LOADING_STOCK';
 export const RECEIVE_NEWS = 'RECEIVE_NEWS';
 export const RECEIVE_COMPANY_INFO = 'RECEIVE_COMPANY_INFO';
 export const RECEIVE_OHLC = 'RECEIVE_OHLC';
-export const RECEIVE_MULTI_1Y_STOCKS = 'RECEIVE_MULTI_1Y_STOCKS'
+export const RECEIVE_MULTI_1Y_STOCKS = 'RECEIVE_MULTI_1Y_STOCKS';
+export const RECEIVE_MULTI_1D_STOCKS = 'RECEIVE_MULTI_1D_STOCKS';
 
 const receiveStocks = (stocks) => ({
     type: RECEIVE_STOCKS,
@@ -33,8 +34,14 @@ const receiveOneYearStock = (stock, symbol) => ({
     symbol
 });
 
-const receiveMultiOneYearStock = (stocks, symbols) => ({
+const receiveMultiOneYearStocks = (stocks, symbols) => ({
     type: RECEIVE_MULTI_1Y_STOCKS,
+    stocks,
+    symbols
+});
+
+const receiveMultiOneDayStocks = (stocks, symbols) => ({
+    type: RECEIVE_MULTI_1D_STOCKS,
     stocks,
     symbols
 })
@@ -63,6 +70,7 @@ const receiveCompanyInfo = (data, symbol) => ({
     symbol
 }) 
 
+
 export const fetchStocks = () => dispatch => {
     return StockAPIUtil.fetchStocks()
         .then((stocks) => dispatch(receiveStocks(stocks)))
@@ -84,9 +92,14 @@ export const fetchOneYearStock = (symbol, range) => dispatch => {
         .then((stock) => dispatch(receiveOneYearStock(stock, symbol)))
 };
 
-export const fetchMultiStocks = (symbols, range) => dispatch => {
+export const fetchMultiOneYearStocks = (symbols, range) => dispatch => {
     return StockAPIUtil.fetchMultiStocks(symbols, range)
-        .then((stocks) => dispatch(receiveMultiOneYearStock(stocks, symbols)))
+        .then((stocks) => dispatch(receiveMultiOneYearStocks(stocks, symbols)))
+};
+
+export const fetchMultiOneDayStocks = (symbols, range) => dispatch => {
+    return StockAPIUtil.fetchMultiStocks(symbols, range)
+        .then((stocks) => dispatch(receiveMultiOneDayStocks(stocks, symbols)))
 }
 
 export const fetchHistStock = (symbol, range) => dispatch => {

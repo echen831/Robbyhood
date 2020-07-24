@@ -1,13 +1,13 @@
 import { connect } from 'react-redux'
 import Show from './show_stock'
 import { logout, fetchUser, pageLoaded, pageLoading } from '../../actions/session_actions'
-import { fetchStocks, fetchOneDayStock, fetchMultiStocks } from '../../actions/stock_actions'
+import { fetchStocks, fetchOneDayStock, fetchMultiOneYearStocks, fetchMultiOneDayStocks } from '../../actions/stock_actions'
 import { deleteWatchListItem, fetchWatchListItems } from '../../actions/transaction_actions'
 
 const mSTP = (state) => ({
     currentUser: state.entities.users[state.session.id],
     stocks: state.entities.stocks,
-    myStocks: state.entities.portfolio.stocks,
+    portfolio: state.entities.portfolio,
     oneYearStocks: state.entities.portfolio,
     loading: state.ui.loading,
     pageLoading: state.ui.loading_page
@@ -18,7 +18,8 @@ const mDTP = (dispatch) => ({
     fetchStocks: () => dispatch(fetchStocks()),
     fetchOneDayStock: (symbol, range) => dispatch(fetchOneDayStock(symbol, range)),
     fetchUser: (id) => dispatch(fetchUser(id)),
-    fetchMultiStocks: (symbols,range) => dispatch(fetchMultiStocks(symbols,range)),
+    fetchMultiOneYearStocks: (symbols,range) => dispatch(fetchMultiOneYearStocks(symbols,range)),
+    fetchMultiOneDayStocks: (symbols, range) => dispatch(fetchMultiOneDayStocks(symbols, range)),
     deleteWatchListItem: (id) => dispatch(deleteWatchListItem(id)),
     fetchWatchListItems: () => dispatch(fetchWatchListItems()),
     pageLoaded: () => dispatch(pageLoaded()),
