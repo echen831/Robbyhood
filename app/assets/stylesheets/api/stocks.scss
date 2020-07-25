@@ -563,10 +563,23 @@
 /************ Portfolio Item ************/
 
 .portfolio-item-container {
+  position: relative;
   width: 100%;
   display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid grey;
-  padding: 0.5em;
+  padding: 0.5em 1em 0.5em 1em;
+  cursor: pointer;
+}
+
+.pi-overlay {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
   cursor: pointer;
 }
 
@@ -591,14 +604,16 @@
 }
 
 .pi-stock-chart {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 2em;
   width: 40%;
   max-height: 100%;
-  border: 1px solid black;
   display: flex;
 }
 
 .pi-stock-chart .recharts-wrapper {
+  // background-color: lightpink;
   margin: none;
 }
 
@@ -607,6 +622,7 @@
 .pi-stock-info {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   width: 30%;
 }
 

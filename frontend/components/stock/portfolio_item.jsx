@@ -114,8 +114,8 @@ class PortfolioItem extends React.Component {
         let data = this.filterData(myStocks[symbol])
         return (
         <Link to={`/search/stocks/${symbol}/${name}`} key={idx}>
-            <div className='portfolio-item-container'
-                 >
+            <div className='portfolio-item-container'>
+                <div className='pi-overlay'></div>
                 <div className='pi-name-shares'>
                     
                     <p id='pi-stock-name'>{symbol.toUpperCase()}</p>
