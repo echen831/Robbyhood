@@ -134,8 +134,8 @@ class PortfolioItem extends React.Component {
                             <Line type="monotone"
                                 connectNulls
                                 dataKey="high"
-                                strokeWidth={0.5}
-                                stroke="#5ae6b0"
+                                strokeWidth={1}
+                                stroke={currPrice - openPrice < 0 ? "#e65a8b" : "#5ae6b0"}
                                 dot={false}
                             />
                             {/* <XAxis 
