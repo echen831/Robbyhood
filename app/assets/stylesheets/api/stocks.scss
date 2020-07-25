@@ -346,7 +346,7 @@
 .chart {
     // margin-top: 2em;
     border-top: 1px dotted lightgray;
-    margin-left: 3.5em;
+    margin-left: 2.5em;
     padding-top: 1em;
 }
 
@@ -577,8 +577,9 @@
 .pi-name-shares {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 30%;
 }
+
 
 #pi-stock-name {
   font-size: medium;
@@ -589,10 +590,24 @@
   font-size: small;
 }
 
+.pi-stock-chart {
+  position: relative;
+  width: 40%;
+  max-height: 100%;
+  border: 1px solid black;
+  display: flex;
+}
+
+.pi-stock-chart .recharts-wrapper {
+  margin: none;
+}
+
+
+
 .pi-stock-info {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 30%;
 }
 
 /****************************************/

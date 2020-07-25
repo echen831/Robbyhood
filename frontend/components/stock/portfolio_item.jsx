@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 import Loader from '../loader/loader'
 
 
@@ -90,6 +91,16 @@ class PortfolioItem extends React.Component {
         }
     }
 
+    filterData(data) {
+        let res = [];
+        for (let i = 0; i < data.length; i++) {
+            if (i % 10 === 0 || i === data.length - 1) {
+                res.push(data[i])
+            }
+        }
+        return res
+    }
+
 
     render () {
 
@@ -100,6 +111,7 @@ class PortfolioItem extends React.Component {
         let name = this.findName(Object.values(stocks), symbol)
         let currPrice = this.findCurrentPrice(myStocks, symbol)
         let openPrice = myStocks[symbol][0].high
+        let data = this.filterData(myStocks[symbol])
         return (
         <Link to={`/search/stocks/${symbol}/${name}`} key={idx}>
             <div className='portfolio-item-container'
@@ -112,6 +124,32 @@ class PortfolioItem extends React.Component {
                         {currentUser.stocks_owned[symbol]}
                         {" "} 
                         {currentUser.stocks_owned[symbol] > 1 ? 'Shares' : 'Share'}</p>
+                </div>
+                <div className='pi-stock-chart'>
+                    <LineChart data={data}
+                            width={150}
+                            height={50}
+                            className='pi-chart'
+                    >
+                            <Line type="monotone"
+                                connectNulls
+                                dataKey="high"
+                                strokeWidth={0.5}
+                                stroke="#5ae6b0"
+                                dot={false}
+                            />
+                            {/* <XAxis 
+                                // dataKey={range === "1d" ? 'label' : 'date'}
+                                tick={false}
+                                axisLine={false}
+                                domain={['dataMin, dataMax']}
+                            /> */}
+                            <YAxis 
+                                domain={['dataMin, dataMax']}
+                                axisLine={false}
+                                tick={false}
+                            />
+                    </LineChart>
                 </div>
                 <div className='pi-stock-info'>
                     <p>${this.setPrice(currPrice)}</p>
