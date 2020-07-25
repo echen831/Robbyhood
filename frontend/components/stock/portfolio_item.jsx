@@ -135,7 +135,7 @@ class PortfolioItem extends React.Component {
                                 connectNulls
                                 dataKey="high"
                                 strokeWidth={1}
-                                stroke={currPrice - openPrice < 0 ? "#e65a8b" : "#5ae6b0"}
+                                stroke={currPrice - openPrice < 0 ? "#e65a5a" : "#5ae6b0"}
                                 dot={false}
                             />
                             {/* <XAxis 
@@ -153,7 +153,7 @@ class PortfolioItem extends React.Component {
                 </div>
                 <div className='pi-stock-info'>
                     <p>${this.setPrice(currPrice)}</p>
-                    <p>{this.setFluxPercent(currPrice, openPrice)}</p>
+                    <p id={currPrice - openPrice < 0 ? 'red' : 'green'}>{this.setFluxPercent(currPrice, openPrice)}</p>
                 </div>
             </div>
         </Link>
