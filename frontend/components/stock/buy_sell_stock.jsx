@@ -126,7 +126,7 @@ class BuySellStock extends React.Component {
                         onClick={(e) => {this.outsideClick(e)}} 
                         >
                         <div className='bsr-container'>
-                            <p>{this.checkNum(num_shares.toString()) ? `Are you sure you want to ${transactions_type} ${num_shares} shares of ${name}?` : `Invalid Amount`}</p>
+                            <p className='bsr-msg'>{this.checkNum(num_shares.toString()) ? `Are you sure you want to ${transactions_type} ${num_shares} shares of ${name}?` : `Invalid Amount`}</p>
                             <div className='bs-review-btn'>
                                 <button
                                     disabled={this.checkNum(num_shares.toString()) ? false : true}
