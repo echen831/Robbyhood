@@ -102,6 +102,8 @@ class BuySellStock extends React.Component {
         let notEnoughBP = (transactions_type === 'buy' && ((stock[stock.length - 1].high * this.state.num_shares) > currentUser.buying_power))
         let notEnoughShares = (transactions_type === 'sell' && this.state.num_shares > ownShares)
         let watchlistId = this.findWatchListItem(currentUser.wl_items, symbol)
+
+        let estCost = this.showAmount(stock[stock.length - 1].high * this.state.num_shares)
         
         if (!stock || !stock.length) return null
 
@@ -128,7 +130,7 @@ class BuySellStock extends React.Component {
                             <div className='bs-review-btn'>
                                 <button
                                     disabled={this.checkNum(num_shares.toString()) ? false : true}
-                                    onClick={() => { this.props.handleTransaction(transaction); this.setState(originalState) }}>{this.state.transactions_type}</button>
+                                    onClick={() => { this.props.handleTransaction(transaction); this.setState(originalState) }}>{this.state.transactions_type.toUpperCase()}</button>
                                 <button onClick={() => { this.setState({ review: !review }); this.setState(originalState) }}>Edit</button>
                             </div>
                         </div>
@@ -139,6 +141,7 @@ class BuySellStock extends React.Component {
                             <input type="number"
                                    placeholder='0'
                                    value={num_shares}
+                                   maxLength='5'
                                    onChange={(e)=> this.setState({num_shares: e.currentTarget.value})}/>
                         </div>
                         <div className='mp-container'>
@@ -147,7 +150,7 @@ class BuySellStock extends React.Component {
                         </div>
                         <div className='cost-credit-container'> 
                             <p>{transactions_type === 'buy' ? 'Estimated Cost: ' : 'Estimated Credit: '}</p>
-                            <p>${this.showAmount(stock[stock.length - 1].high  * this.state.num_shares)}</p>
+                            <p className='est-cost-amt'>{estCost.length < 10 ? `$${estCost}` : `Invalid`}</p>
                         </div>
                         <div className='review-order-btn-container'
                             id={review ? 'display-none' : ''}>

@@ -436,20 +436,37 @@
 
 
 
-.buy-sell-info-container div{
+// .buy-sell-info-container div{
+//   display: flex;
+//   justify-content: space-around;
+  
+//   max-width: 100%;
+//   overflow: hidden;
+// }
+
+.shares-container, .mp-container, .cost-credit-container {
   display: flex;
-  justify-content: space-around;
-  padding: 0.5em;
+  justify-content: space-between;
+  padding: 0.5em 1em 0.5em 1em;
 }
+
+
 
 .buy-sell-info-container p, .buy-sell-info-container button {
   padding: 0.5em
 }
 
+
+.est-cost-amt {
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+}
+
 .shares-container input[type=number] {
   height: 100%;
   padding: 0.5em;
-  width: 5em;
+  max-width: 5em;
   text-align: right;
 }
 
@@ -462,7 +479,7 @@
 }
 
 .buy-sell-review-container {
-  background-color: rgba(0, 0, 0, 0.151);
+  background-color: rgba(255, 255, 255, 0);
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -601,6 +618,10 @@
 
 #pi-shares-owned {
   font-size: small;
+}
+
+#display-none {
+  display: none;
 }
 
 .pi-stock-chart {

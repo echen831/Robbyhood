@@ -7,7 +7,7 @@ import Loader from '../loader/loader'
 class PortfolioItem extends React.Component {
     constructor(props) {
         super(props)
-        
+
     }
 
     // componentDidMount() {
@@ -118,8 +118,7 @@ class PortfolioItem extends React.Component {
                 <div className='pi-name-shares'>
                     
                     <p id='pi-stock-name'>{symbol.toUpperCase()}</p>
-                
-                    <p id='pi-shares-owned'>
+                    <p id={!currentUser.stocks_owned[symbol] ? 'display-none' : 'pi-shares-owned'}>
                         {currentUser.stocks_owned[symbol]}
                         {" "} 
                         {currentUser.stocks_owned[symbol] > 1 ? 'Shares' : 'Share'}</p>
