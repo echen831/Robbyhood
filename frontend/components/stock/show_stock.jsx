@@ -26,17 +26,28 @@ class Show extends React.Component {
 
     componentDidMount() {
 
+        let { pageLoaded, 
+              fetchStocks, 
+              fetchWatchListItems, 
+              fetchUser, 
+              currentUser,
+              fetchMultiOneYearStocks,
+              fetchMultiOneDayStocks
+            } = this.props
+
         setTimeout(() => {
-            this.props.pageLoaded()
+            pageLoaded()
         }, 1300);
 
-        this.props.fetchStocks()
-        this.props.fetchWatchListItems()
-        this.props.fetchUser(this.props.currentUser.id)
+        fetchStocks()
+        fetchWatchListItems()
+        fetchUser(currentUser.id)
 
-        let symbols = Object.keys(this.props.currentUser.stocks_owned).join(',')
-        this.props.fetchMultiOneYearStocks(symbols, '1y')
-        this.props.fetchMultiOneDayStocks(symbols, '1d')
+        let symbols = Object.keys(currentUser.stocks_owned).join(',')
+        fetchMultiOneYearStocks(symbols, '1y')
+
+        let allSymbols = this.findSymbols(Object.keys(currentUser.stocks_owned), Object.keys(currentUser.wl_items))
+        fetchMultiOneDayStocks(allSymbols, '1d')
 
     };
 
@@ -68,7 +79,20 @@ class Show extends React.Component {
         }
 
         return dollar + '.' + decimal
-    }
+    };
+
+    findSymbols(arr1, arr2) {
+        let res = arr1
+
+        for(let i = 0; i < arr2.length; i ++) {
+            let symbol = arr2[i]
+            if (!res.includes(symbol)) {
+                res.push(symbol)
+            }
+        }
+
+        return res.join(",")
+    };
 
     
     render() {
@@ -196,12 +220,21 @@ class Show extends React.Component {
                             <h1 className='stock-bar-header'>Watchlist</h1>
                             <div>
                                 {Object.keys(currentUser.wl_items).sort().map((symbol, idx) => 
-                                  <WatchListItem 
-                                        key={idx}
+
+                                    <PortfolioItem
+                                        myStocks={portfolio.stocks}
+                                        currentUser={currentUser}
                                         symbol={symbol}
+                                        stocks={stocks}
                                         idx={idx}
-                                        name={currentUser.wl_items[symbol][0]}
-                                  />  
+                                        key={idx}
+                                    />
+                                //   <WatchListItem 
+                                //         key={idx}
+                                //         symbol={symbol}
+                                //         idx={idx}
+                                //         name={currentUser.wl_items[symbol][0]}
+                                //   />  
                                 )}
                             </div>
                         </div>

@@ -7,8 +7,7 @@ import Loader from '../loader/loader'
 class PortfolioItem extends React.Component {
     constructor(props) {
         super(props)
-
-        this.fetchOneDayStock = this.props.fetchOneDayStock.bind(this)
+        
     }
 
     // componentDidMount() {
