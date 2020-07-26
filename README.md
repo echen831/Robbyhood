@@ -1,5 +1,7 @@
 # Overview
 
+<img src='app/assets/images/home_1.png' width='600' height='375' >
+
 Robbyhood is a single page app that allows users to learn stock brokerage without using actual money.  It is heavily influenced by [Robinhood](https://robinhood.com/).  
 
 Please check it out [here](https://robbyhood.herokuapp.com/).
