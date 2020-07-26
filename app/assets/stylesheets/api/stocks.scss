@@ -65,6 +65,7 @@
   text-transform: uppercase;
   width: 20em;
   height: 2.25em;
+  outline: none;
 }
 
 .searchbar-results {
@@ -74,6 +75,7 @@
   z-index: 300;
   background-color: white;
   border: 1px solid rgb(80, 80, 80);
+  border-radius: 0.25em;
 }
 
 .searchbar-results h2, .searchbar-results li {
@@ -88,6 +90,8 @@
 
 .searchbar-input:focus + .searchbar-results {
   display: flex;
+  outline: lightgreen;
+  border: 2px solid lightgreen;
 }
 
 .searchbar-results:hover {
