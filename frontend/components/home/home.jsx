@@ -54,7 +54,7 @@ class Home extends React.Component {
                 </header>
                 <div className='home-body'>
                     <div className='home-body-left'>
-                        <div className='home-header'> It's Time to do Money Learning</div>
+                        <div className='home-header'> It's Time to Learn About Stocks</div>
                         <div className='home-slogan'> Robbyhood, a clone of Robinhood, is a website that allows people to learn investing in stocks without using actual money.</div>
                         <div className='home-btn-container'><Link to="/signup"><button id='home-btn'>Sign Up</button></Link></div>
                         
