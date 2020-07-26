@@ -127,8 +127,8 @@ const CustomTooltip = (props) => {
 
 Users can buy or sell stocks on a single component.  Components includes error rendering such as 'Not enough Buying Power' or 'Not enough Shares' and also button disables if there is an error.
 
-<img src='app/assets/images/buy_sell_1.png' width='200' height='375' >
-<img src='app/assets/images/buy_sell_2.png' width='200' height='375' >
+<img src='app/assets/images/buy_sell_1.png' width='250' height='375' >
+<img src='app/assets/images/buy_sell_2.png' width='250' height='375' >
 
 #### Code Snippet
 
