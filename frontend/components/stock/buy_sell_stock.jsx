@@ -150,7 +150,9 @@ class BuySellStock extends React.Component {
                         </div>
                         <div className='cost-credit-container'> 
                             <p>{transactions_type === 'buy' ? 'Estimated Cost: ' : 'Estimated Credit: '}</p>
-                            <p className='est-cost-amt'>{estCost.length < 10 ? `$${estCost}` : `Invalid`}</p>
+                            <p className='est-cost-amt'
+                               id={notEnoughBP || notEnoughShares ? 'display-none' : ''}
+                            >{estCost.length < 10 ? `$${estCost}` : `Too Large`}</p>
                         </div>
                         <div className='review-order-btn-container'
                             id={review ? 'display-none' : ''}>
@@ -162,22 +164,13 @@ class BuySellStock extends React.Component {
                             id={notEnoughShares || notEnoughBP ||review ? 'display-none' : ''}>
                             <img src="https://i.pinimg.com/originals/63/89/fa/6389fa22ed7653c40570c98b03764afc.gif" alt=""/>
                         </div>
-                        {/* <div className='buy-sell-review-container'
-                            id={!review ? 'display-none' : ''}>
-                            <div>
-                                <p>{ this.checkNum(num_shares.toString()) ? `Are you sure you want to ${transactions_type} ${num_shares} shares of ${name}?` : `Invalid Amount`}</p>
-                                <div className='bs-review-btn'>
-                                    <button
-                                        disabled={this.checkNum(num_shares.toString()) ? false : true } 
-                                        onClick={() => {this.props.handleTransaction(transaction); this.setState(originalState)}}>{this.state.transactions_type}</button>
-                                    <button onClick={() => {this.setState({ review: !review }); this.setState(originalState)}}>Edit</button>
-                                </div>
-                            </div>
-                        </div> */}
-                        <div id={!notEnoughShares ? 'display-none' : ''}>
+
+                        <div className='bs-error-container'
+                            id={!notEnoughShares ? 'display-none' : ''}>
                             <p>Not Enough Shares</p>
                         </div>
-                        <div id={!notEnoughBP ? 'display-none' : ''}>
+                        <div className='bs-error-container'
+                            id={!notEnoughBP ? 'display-none' : ''}>
                             <p>Not Enough Buying Power</p>
                         </div>
                     </div>
