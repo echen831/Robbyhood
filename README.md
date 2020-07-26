@@ -35,7 +35,7 @@ Please check it out [here](https://robbyhood.herokuapp.com/).
 
 Users can see what stocks they own and how much money they gained and lost in single day, week, month, 3 month and year timeframe.  Users can also add stocks to their watchlist to keep an eye on stocks they are interested in buying in the future.
 
-<img src='app/assets/images/portfolio_1.png' width='600' height='375' >
+<img src='app/assets/images/portfolio_1.PNG' width='600' height='375' >
 
 ### Stock Seachbar: 
 
