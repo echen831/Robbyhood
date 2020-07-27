@@ -15,6 +15,9 @@
     <script type="text/javascript">
         window.avAPIKey = "<%= Rails.application.credentials.av[:api_key] %>"
     </script>
+    <script type="text/javascript">
+        window.msAPIKey = "<%= Rails.application.credentials.ms[:api_key] %>"
+    </script>
     <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
 

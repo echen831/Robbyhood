@@ -6,12 +6,22 @@ export const fetchStocks = () => (
     })
 );
 
+// Alpha Advantage Call
 export const fetchStocksAndSymbols = (keyword) => (
     $.ajax({
         url: `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${keyword}&apikey=${window.avAPIKey}`,
         method: 'GET'
     })
 );
+
+
+// MarketStack Call
+// export const fetchStocksAndSymbols = (mic) => (
+//     $.ajax({
+//         url: `https://api.marketstack.com/v1/exchanges/${mic}/tickers?access_key=${window.msAPIKey}`,
+//         method: 'GET'
+//     })
+// );
 
 export const fetchIntraDayStock = (symbol) => (
     $.ajax({
