@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     window.fetchMultiStocks = StockUtil.fetchMultiStocks
     window.fetchOneYearStock = Stock.fetchOneYearStock
     window.fetchMultiOneDayStocks = Stock.fetchMultiOneDayStocks
+    window.fetchStocksAndSymbols = StockUtil.fetchStocksAndSymbols
     //test 
 
 

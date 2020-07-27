@@ -6,6 +6,13 @@ export const fetchStocks = () => (
     })
 );
 
+export const fetchStocksAndSymbols = (keyword) => (
+    $.ajax({
+        url: `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${keyword}&apikey=${window.avAPIKey}`,
+        method: 'GET'
+    })
+);
+
 export const fetchIntraDayStock = (symbol) => (
     $.ajax({
         url: `https://sandbox.iexapis.com/stable/stock/${symbol}/intraday-prices?token=${window.iexAPIKey}`,
