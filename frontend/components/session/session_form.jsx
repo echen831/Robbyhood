@@ -159,6 +159,13 @@ class SessionForm extends React.Component {
                                         onChange={this.update('buying_power')}
                                         />
                                 </label>
+                                <label className='submit-input-label'> $10000
+                                    <input value={10000}
+                                        type="radio"
+                                        name="buying_power"
+                                        onChange={this.update('buying_power')}
+                                    />
+                                </label>
                             </div>
                             <ul>{this.renderErrors()}</ul>
                             <button className='btn-show' type='submit'>{header}</button>
