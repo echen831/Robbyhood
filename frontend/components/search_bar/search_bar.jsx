@@ -24,16 +24,35 @@ class SearchBar extends React.Component {
         if (this.state.inputValue.length === 0) {
             return matches
         }
+
+
         let stocks = Object.values(this.props.stocks)
-        stocks.forEach( stock => {
+        for( let i = 0; i < stocks.length; i ++) {
+            let stock = stocks[i]
             const subName = stock.name.slice(0, this.state.inputValue.length);
             const subSym = stock.symbol.slice(0, this.state.inputValue.length);
-            if (subName.toLowerCase() === this.state.inputValue.toLowerCase() ||
-                subSym.toLowerCase() === this.state.inputValue.toLowerCase()
-            ) {
+
+
+            if (subSym.toLowerCase() === this.state.inputValue.toLowerCase() ||
+                subName.toLowerCase() === this.state.inputValue.toLowerCase()) {
                 matches.push(stock);
+
+                if (matches.length === 10) {
+                    return matches
+                }
             }
-        });
+        }
+
+        // let stocks = Object.values(this.props.stocks)
+        // stocks.forEach( stock => {
+        //     const subName = stock.name.slice(0, this.state.inputValue.length);
+        //     const subSym = stock.symbol.slice(0, this.state.inputValue.length);
+        //     if (subName.toLowerCase() === this.state.inputValue.toLowerCase() ||
+        //         subSym.toLowerCase() === this.state.inputValue.toLowerCase()
+        //     ) {
+        //         matches.push(stock);
+        //     }
+        // });
 
         if (matches.length === 0) {
             matches.push({name: 'No Matches', symbol: false})
