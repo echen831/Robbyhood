@@ -61,6 +61,10 @@ class SearchStock extends React.Component {
             fetchHistStock(symbol, '1d')
             fetchNews(symbol)
             fetchCompanyInfo(symbol)
+            this.props.setPageLoading()
+            setTimeout(() => {
+                this.props.pageLoaded()
+            }, 1500);
             this.setState({symbol: symbol, name: name})
         }
 

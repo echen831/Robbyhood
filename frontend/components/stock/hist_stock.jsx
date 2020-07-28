@@ -16,6 +16,7 @@ class HistStock extends React.Component {
     componentDidMount() {
         const symbol = this.props.symbol;
         const range = this.props.range;
+
         this.props.fetchHistStock(symbol, range)
     }
 
@@ -93,9 +94,12 @@ class HistStock extends React.Component {
     render () {
         const { range, name, symbol, histData } = this.props
         if (!this.props.histData) return null;
+
         // let data = this.props.histData
         let data;
         range !== '1d' ? data = histData : data = this.filterData(histData)
+
+        if (!data || !data[0]) return null;
         let close = data[data.length-1].high
         let open = data[0].high
         let flux = this.setFlux(close - open)
