@@ -37,15 +37,15 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 60%;
+  width: 50%;
   height: 100%;
 }
 
 .stock-searchbar {
   position: relative;
   display: flex;
-  justify-content: center;
-  width: 20em;
+  justify-content: flex-start;
+  width: 25em;
   height: 100%;
   margin-left: 2em;
 }
@@ -54,44 +54,88 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 20em;
+  align-items: flex-end;
+  width: 25em;
   height: fit-content;
   z-index: 300;
   top: 25%;
+  border-radius: .25em;
+  border: 1px solid black;
 }
 
+.searchbar-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 0.25em;
+}
+
+.searchbar-img p {
+  width: 60%;
+  height: 60%;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSTapkqq_zlEkvQW9V9QzAtte399VUa-DM7WA&usqp=CAU);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 .searchbar-input {
   text-transform: uppercase;
-  width: 20em;
+  box-sizing: none;
+  width: 90%;
   height: 2.25em;
+  border-radius: .25em;
   outline: none;
+  border: none;
 }
+
+// .searchbar-input:hover {
+//   outline: none;
+//   border: none;
+//   box-sizing: none;
+//   box-shadow: 0 0 10px rgba(128, 128, 128, 0.575)
+// }
 
 .searchbar-results {
   display: none;
   flex-direction: column;
-  width: 17.15em;
+  align-items: flex-end;
+  width: 100%;
   z-index: 300;
   background-color: white;
-  border: 1px solid rgb(80, 80, 80);
-  border-radius: 0.25em;
+  // border-left: 1px solid rgb(80, 80, 80);
+  // border-radius: 0.25em;
 }
 
-.searchbar-results h2, .searchbar-results li {
+.searchbar-results h2, .searchbar-results a , .searchbar-results li{
   font-size: small;
-  padding: 0.5em;
+  padding: .5em;
+  width: 100%;
+  border-radius: .25em;
 }
 
+.searchbar-results a {
+  display: flex;
+}
 
-.searchbar-results li:hover {
+.search-result-symbol {
+  width: 5em;
+}
+
+.searchbar-results a:hover {
   background-color: rgb(219, 255, 219);
 }
 
 .searchbar-input:focus + .searchbar-results {
   display: flex;
-  outline: lightgreen;
-  border: 2px solid lightgreen;
+  border-radius: .25em;
+  // outline: lightgreen;
+  // border: 2px solid lightgreen;
 }
 
 .searchbar-results:hover {
@@ -144,7 +188,7 @@
   justify-content: space-around;
   align-items: center;
   margin-right: 1em;
-  width: 30%;
+  width: 40%;
 }
 
 .right-nav div {

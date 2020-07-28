@@ -36,6 +36,16 @@ class BuySellStock extends React.Component {
         return dollar + '.' + decimal
     }
 
+    findHighAmount(array) {
+
+        for(let i = array.length-1; i >= 0; i -= 1) {
+            let stock = array[i]
+            if (stock.high) {
+                return stock.high
+            }
+        }
+    }
+
     checkNum(num) {
         if (num[0] === '0') {
             return false
@@ -146,7 +156,7 @@ class BuySellStock extends React.Component {
                         </div>
                         <div className='mp-container'>
                             <p>Market Price</p> 
-                            <p>${this.showAmount(stock[stock.length - 1].high)}</p>
+                            <p>${this.showAmount(this.findHighAmount(stock))}</p>
                         </div>
                         <div className='cost-credit-container'> 
                             <p>{transactions_type === 'buy' ? 'Estimated Cost: ' : 'Estimated Credit: '}</p>

@@ -75,20 +75,34 @@ class SearchBar extends React.Component {
             )
         } else {
             return (
-                <li key={idx}>
-                    <Link  to= {`/search/stocks/${stock.symbol}/${stock.name}`} 
-                    > {stock.symbol.toUpperCase()}  {stock.name}</Link>
-                </li>
+                // <li key={idx}>
+                //     <Link  to= {`/search/stocks/${stock.symbol}/${stock.name}`} 
+                //     > {stock.symbol.toUpperCase()}  {stock.name}</Link>
+                // </li>
+                <Link to={`/search/stocks/${stock.symbol}/${stock.name}`}
+                      key={idx}> 
+                      <li className='search-result-symbol'>
+                         {stock.symbol.toUpperCase()} 
+                      </li>
+                      <li>
+                        {stock.name}   
+                      </li>
+                </Link>
             );
         }
         });
         return (
             <div className='searchbar-container'>
+
+                <div className='searchbar-img'>
+                    <p></p>
+                </div>
+
                 <input className='searchbar-input'
-                       type="text"
-                       onChange={this.handleInput}
-                       value={this.state.inputValue}
-                       placeholder='Search...'/>
+                        type="text"
+                        onChange={this.handleInput}
+                        value={this.state.inputValue}
+                        placeholder='Search...'/>
                 <ul className={ !results.length ? 'searchbar-results-hide' : 'searchbar-results'}>
                     <h2>Stocks</h2>
                     {results}

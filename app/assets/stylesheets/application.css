@@ -126,6 +126,10 @@ button {
   margin-left: 2em;
 }
 
+.header-logo:hover {
+  color: rgb(80, 192, 155);
+}
+
 .logged-in-greeting {
   height: 100%;
   width: 20em;

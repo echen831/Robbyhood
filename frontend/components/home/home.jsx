@@ -84,7 +84,7 @@ class Home extends React.Component {
                         <div className='fractional-shares-info'>
                             <div>
                                 <p>Choose your starting amount</p>
-                                <p>At sign up, you are given the choices of $1000, $3000 and $5000</p>
+                                <p>At sign up, you are given the choices of $1000, $3000, $5000 and $10,000</p>
                             </div>
                             <div>
                                 <p>Don't miss out</p>
