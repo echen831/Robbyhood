@@ -44,10 +44,11 @@
 .stock-searchbar {
   position: relative;
   display: flex;
-  justify-content: flex-start;
-  width: 28em;
+  justify-content: center;
+  width: 30em;
   height: 100%;
   margin-left: 2em;
+  box-sizing: border-box;
 }
 
 .searchbar-container {
@@ -60,17 +61,18 @@
   z-index: 300;
   top: 25%;
   border-radius: .25em;
-  border: 1px solid black;
+  box-sizing: border-box;
+  border: 1px solid rgb(179, 179, 179);
 }
 
 .searchbar-img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 2em;
-  height: 2em;
+  width: 2.25em;
+  height: 2.25em;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   border-radius: 0.25em;
 }
@@ -85,21 +87,21 @@
 }
 
 .searchbar-input {
+  position: relative;
   text-transform: uppercase;
   box-sizing: none;
   width: 90%;
-  height: 2.25em;
+  height: 2.75em;
   border-radius: .25em;
   outline: none;
   border: none;
 }
 
-// .searchbar-input:hover {
-//   outline: none;
-//   border: none;
-//   box-sizing: none;
-//   box-shadow: 0 0 10px rgba(128, 128, 128, 0.575)
-// }
+.searchbar-container:hover {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.575)
+}
 
 .searchbar-results {
   display: none;
