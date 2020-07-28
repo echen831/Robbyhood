@@ -71,7 +71,7 @@ class SearchBar extends React.Component {
 
         if (!stock.symbol) {
             return (
-                <li key={idx}>{stock.name}</li>
+                <li key={idx} id='search-no-matches'>{stock.name}</li>
             )
         } else {
             return (
