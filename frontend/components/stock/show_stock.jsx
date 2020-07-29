@@ -138,25 +138,21 @@ class Show extends React.Component {
                             <div onClick={logout} >Log Out</div>
 
                             {/* <div className='nav-dropdown'>
-                                <h2 className='nav-dropdown-btn'>About Me</h2>
+                                <h2 className='nav-dropdown-btn'>Account</h2>
                                 <span className='nav-dropdown-content'>
-                            
-                                    <p><a 
-                                        id='footer-github'
-                                        target='_blank'
-                                        href="https://github.com/echen831">
-                                    GitHub</a></p>
-                                    <p><a 
-                                        id='footer-linkedin'
-                                        target='_blank'
-                                        href="https://www.linkedin.com/in/eric-chen-782b951a9/" >
-                                    LinkedIn</a>
-                                    </p>
-                                    <p><a 
-                                        id='footer-facebook'
-                                        target='_blank'
-                                        href="https://www.facebook.com/profile.php?id=11708937" >
-                                    Facebook</a></p>
+                                    <div>
+                                        <p>{currentUser.username}</p>
+                                        <div>
+                                            <div>
+                                                <p>Portfolio Value</p>
+                                                <p></p>
+                                            </div>
+                                            <div>
+                                                <p>Buying Power</p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <p onClick={logout}> Log Out</p>
                                 </span>
                             </div> */}

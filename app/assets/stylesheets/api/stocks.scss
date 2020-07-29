@@ -219,10 +219,11 @@
 
 .nav-dropdown-content {
   display: none;
+  width: 12em;
   position: absolute;
-  border-radius: .5em;
+  border-radius: .25em;
   background-color: white;
-  right: 1em;
+  right: 0;
   border: 1px solid lightgrey ;
   color: black;
   z-index: 1;
@@ -230,7 +231,6 @@
 
 .nav-dropdown-content p {
   padding: 5px;
-  margin-bottom: 5px;
 }
 
 .nav-dropdown-content p:hover {
