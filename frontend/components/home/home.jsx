@@ -97,11 +97,11 @@ class Home extends React.Component {
                         </div>
                         <div className='fractional-shares-input'>
                             <input type="text" placeholder='name@email.com'/>
-                            <input type="submit" value='Get Early Access'/>
+                            <Link to="/signup"><input type="submit" value='Get Started Now!'/></Link>
                         </div>
                         <p className='fractional-shares-disclosure'
                            onClick={()=>this.showModal(6)}
-                        >Fractional Shares Disclosure</p>
+                        >Robbyhood Disclosure</p>
                     </div>
                     <div className='fractional-shares-right'>
                         <img src="https://images.vexels.com/media/users/3/148202/isolated/preview/33784b3ee65577bbdbcb91c32ca2a8fd-colorful-geometric-shapes-background-by-vexels.png" alt=""/>
