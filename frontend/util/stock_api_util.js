@@ -36,7 +36,8 @@ export const fetchHistStock = (symbol,range) => {
     let sandbox = `https://sandbox.iexapis.com/stable/stock/${symbol}/chart/${range}?token=${window.iexAPIKey}`
 
    return $.ajax({
-        url: process.env.NODE_ENV !== "production" ? sandbox : cloud,
+        // url: process.env.NODE_ENV !== "production" ? sandbox : cloud,
+        url: sandbox,
         method: 'GET'
     })
 };
@@ -80,7 +81,8 @@ export const fetchMultiStocks = (symbols, range) => {
     let cloud = `https://cloud.iexapis.com/stable/stock/market/batch?symbols=${symbols}&types=chart&range=${range}&token=${window.iex2APIKey}`
     let sandbox = `https://sandbox.iexapis.com/stable/stock/market/batch?symbols=${symbols}&types=chart&range=${range}&token=${window.iexAPIKey}`
     return $.ajax({
-        url: process.env.NODE_ENV !== "production" ? sandbox : cloud,
+        // url: process.env.NODE_ENV !== "production" ? sandbox : cloud,
+        url: sandbox,
         method: 'GET'
     })
 }
