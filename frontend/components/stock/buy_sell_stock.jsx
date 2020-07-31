@@ -87,7 +87,7 @@ class BuySellStock extends React.Component {
         if (e.target === modal) {
             this.setState({ review: false })
         }   
-    }
+    };
 
 
     render () {
@@ -108,12 +108,13 @@ class BuySellStock extends React.Component {
             transactions_type: this.state.transactions_type
         }
 
+
         let ownShares = this.findNumShares(Object.values(stocks), symbol, currentUser.stocks_owned)
-        let notEnoughBP = (transactions_type === 'buy' && ((stock[stock.length - 1].high * this.state.num_shares) > currentUser.buying_power))
+        let notEnoughBP = (transactions_type === 'buy' && ((this.findHighAmount(stock) * this.state.num_shares) > currentUser.buying_power))
         let notEnoughShares = (transactions_type === 'sell' && this.state.num_shares > ownShares)
         let watchlistId = this.findWatchListItem(currentUser.wl_items, symbol)
 
-        let estCost = this.showAmount(stock[stock.length - 1].high * this.state.num_shares)
+        let estCost = this.showAmount(this.findHighAmount(stock) * this.state.num_shares)
         
         if (!stock || !stock.length) return null
 
