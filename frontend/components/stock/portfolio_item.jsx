@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ReferenceLine } from 'recharts';
 import Loader from '../loader/loader'
 
 
@@ -150,6 +150,7 @@ class PortfolioItem extends React.Component {
                                 stroke={currPrice - openPrice < 0 ? "#e65a5a" : "#5ae6b0"}
                                 dot={false}
                             />
+                            <ReferenceLine y={openPrice} stroke='#d6d6d6' strokeDasharray="1 1"/>
                             {/* <XAxis 
                                 // dataKey={range === "1d" ? 'label' : 'date'}
                                 tick={false}

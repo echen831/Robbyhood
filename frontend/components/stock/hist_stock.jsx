@@ -1,5 +1,5 @@
 import React from 'react';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ReferenceLine } from 'recharts';
 
 class HistStock extends React.Component {
     constructor(props) {
@@ -166,6 +166,7 @@ class HistStock extends React.Component {
                         axisLine={false}
                         tick={false}
                     />
+                    <ReferenceLine y={open} stroke='#dedede' strokeDasharray="2 2" />
                     <Tooltip cursor={true}
                         position={{ y: -20 }}
                         content={<CustomTooltip
