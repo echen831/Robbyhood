@@ -100,6 +100,20 @@ class PortfolioItem extends React.Component {
         return res
     }
 
+    findOpen(data) {
+        let i = 0
+        let res = undefined
+
+        while (!res) {
+            if (data[i].high) {
+                res = data[i].high
+            } else {
+                i++
+            }
+        }
+        return res
+    }
+
 
     render () {
 
@@ -109,7 +123,7 @@ class PortfolioItem extends React.Component {
 
         let name = this.findName(Object.values(stocks), symbol)
         let currPrice = this.findCurrentPrice(myStocks, symbol)
-        let openPrice = myStocks[symbol][0].high
+        let openPrice = this.findOpen(myStocks[symbol])
         let data = this.filterData(myStocks[symbol])
         return (
         <Link to={`/search/stocks/${symbol}/${name}`} key={idx}>

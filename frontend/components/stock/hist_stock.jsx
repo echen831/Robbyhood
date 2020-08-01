@@ -88,7 +88,35 @@ class HistStock extends React.Component {
         let per = diff/oldPrice
         let res = per * 100
         return '(' + this.setFlux(res) + '%)'
-    }  
+    }
+    
+    findOpen(data) {
+        let i = 0 
+        let res = undefined
+
+        while (!res) {
+            if (data[i].high) {
+                res = data[i].high
+            } else {
+                i ++
+            }
+        }
+        return res
+    }
+
+    findClose(data) {
+        let i = data.length-1 
+        let res = undefined
+
+        while (!res) {
+            if (data[i].high) {
+                res = data[i].high
+            } else {
+                i -= 1
+            }
+        }
+        return res
+    }
 
 
     render () {
@@ -100,8 +128,8 @@ class HistStock extends React.Component {
         range !== '1d' ? data = histData : data = this.filterData(histData)
 
         if (!data || !data[0]) return null;
-        let close = data[data.length-1].high
-        let open = data[0].high
+        let close = this.findClose(data)
+        let open = this.findOpen(data)
         let flux = this.setFlux(close - open)
 
         const chart = (
