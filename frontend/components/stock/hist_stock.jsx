@@ -132,6 +132,16 @@ class HistStock extends React.Component {
         let open = this.findOpen(data)
         let flux = this.setFlux(close - open)
 
+        let stroke;
+
+        if (flux > 0.9) {
+            stroke = "#5ae6b0"
+        } else if (flux < -0.9) {
+            stroke = "#e65a5a"
+        } else {
+            stroke = "#ffac12"
+        }
+
         const chart = (
             <div>
                 <div className='stock-info-container'>
@@ -154,7 +164,7 @@ class HistStock extends React.Component {
                         connectNulls
                         dataKey="high"
                         strokeWidth={2}
-                        stroke="#5ae6b0"
+                        stroke={stroke}
                         dot={false}
                     />
                     <XAxis dataKey={range === "1d" ? 'label' : 'date'}

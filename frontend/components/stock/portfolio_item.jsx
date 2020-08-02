@@ -125,6 +125,18 @@ class PortfolioItem extends React.Component {
         let currPrice = this.findCurrentPrice(myStocks, symbol)
         let openPrice = this.findOpen(myStocks[symbol])
         let data = this.filterData(myStocks[symbol])
+        let flux = currPrice - openPrice
+
+        let stroke;
+
+        if (flux > 0.9) {
+            stroke = "#5ae6b0"
+        } else if (flux < -0.9) {
+            stroke = "#e65a5a"
+        } else {
+            stroke = "#ffac12"
+        }
+        
         return (
         <Link to={`/search/stocks/${symbol}/${name}`} key={idx}>
             <div className='portfolio-item-container'>
@@ -147,7 +159,7 @@ class PortfolioItem extends React.Component {
                                 connectNulls
                                 dataKey="high"
                                 strokeWidth={1}
-                                stroke={currPrice - openPrice < 0 ? "#e65a5a" : "#5ae6b0"}
+                                stroke={stroke}
                                 dot={false}
                             />
                             <ReferenceLine y={openPrice} stroke='#d6d6d6' strokeDasharray="1 1"/>

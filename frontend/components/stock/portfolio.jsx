@@ -187,6 +187,16 @@ class Portfolio extends React.Component {
         let close = data[data.length - 1].high
         let open = data[0].high
         let flux = this.setFlux(close - open)
+
+        let stroke;
+
+        if (flux > 0.9) {
+            stroke = "#5ae6b0"
+        } else if (flux < -0.9) {
+            stroke = "#e65a5a"
+        } else {
+            stroke = "#ffac12"
+        }
         
         return (
             <div>
@@ -207,7 +217,7 @@ class Portfolio extends React.Component {
                         connectNulls
                         dataKey="high"
                         strokeWidth={2}
-                        stroke="#5ae6b0"
+                        stroke={stroke}
                         dot={false}
                     />
                     <XAxis dataKey={range === "1d" ? 'label' : 'date'}
