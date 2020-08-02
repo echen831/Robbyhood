@@ -80,6 +80,7 @@ class HistStock extends React.Component {
     }
 
     addSymbol(flux) {
+        flux = flux.toString()
         return flux[0] + '$' + flux.slice(1)
     }
 
@@ -130,13 +131,13 @@ class HistStock extends React.Component {
         if (!data || !data[0]) return null;
         let close = this.findClose(data)
         let open = this.findOpen(data)
-        let flux = this.setFlux(close - open)
-
+        let flux = close - open
+        let fluxPercent = (flux/open) * 100
         let stroke;
 
-        if (flux > 0.9) {
+        if (fluxPercent > 0.99) {
             stroke = "#5ae6b0"
-        } else if (flux < -0.9) {
+        } else if (fluxPercent < -0.99) {
             stroke = "#e65a5a"
         } else {
             stroke = "#ffac12"

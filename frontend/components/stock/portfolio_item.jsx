@@ -125,13 +125,13 @@ class PortfolioItem extends React.Component {
         let currPrice = this.findCurrentPrice(myStocks, symbol)
         let openPrice = this.findOpen(myStocks[symbol])
         let data = this.filterData(myStocks[symbol])
-        let flux = currPrice - openPrice
+        let flux = ((currPrice - openPrice) / openPrice) * 100
 
         let stroke;
 
-        if (flux > 0.9) {
+        if (flux > 0.99) {
             stroke = "#5ae6b0"
-        } else if (flux < -0.9) {
+        } else if (flux < -0.99) {
             stroke = "#e65a5a"
         } else {
             stroke = "#ffac12"
@@ -178,7 +178,9 @@ class PortfolioItem extends React.Component {
                 </div>
                 <div className='pi-stock-info'>
                     <p>${this.setPrice(currPrice)}</p>
-                    <p id={currPrice - openPrice < 0 ? 'red' : 'green'}>{this.setFluxPercent(currPrice, openPrice)}</p>
+                    <p style={{color: stroke}}
+                        // id={currPrice - openPrice < 0 ? 'red' : 'green'}
+                        >{this.setFluxPercent(currPrice, openPrice)}</p>
                 </div>
             </div>
         </Link>
