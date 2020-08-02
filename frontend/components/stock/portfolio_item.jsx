@@ -178,7 +178,7 @@ class PortfolioItem extends React.Component {
                 </div>
                 <div className='pi-stock-info'>
                     <p>${this.setPrice(currPrice)}</p>
-                    <p style={{color: stroke}}
+                    <p style={{color: stroke, fontSize: 12}}
                         // id={currPrice - openPrice < 0 ? 'red' : 'green'}
                         >{this.setFluxPercent(currPrice, openPrice)}</p>
                 </div>
