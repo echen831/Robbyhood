@@ -47,8 +47,11 @@ class Show extends React.Component {
         let symbols = Object.keys(currentUser.stocks_owned).join(',')
         fetchMultiOneYearStocks(symbols, '1y')
 
+
         let allSymbols = this.findSymbols(Object.keys(currentUser.stocks_owned), Object.keys(currentUser.wl_items))
+
         fetchMultiOneDayStocks(allSymbols, '1d')
+        
 
     };
 
@@ -150,7 +153,7 @@ class Show extends React.Component {
 
         let oneDayPort = this.oneDayPortfolio()
 
-        if(!oneDayPort || !oneDayPort[oneDayPort.length-1]) return null
+        // if(!oneDayPort || !oneDayPort[oneDayPort.length-1]) return null
 
         if (pageLoading) return <Loader/>
         return (
@@ -260,11 +263,11 @@ class Show extends React.Component {
                                 </div>
                                 <div className='account-info'>
                                     <div>
-                                        <p>${this.showAmount(oneDayPort[oneDayPort.length-1].high)}</p>
+                                        <p>${(!oneDayPort || !oneDayPort[0]) ? this.showAmount(currentUser.buying_power) : this.showAmount(oneDayPort[oneDayPort.length-1].high)}</p>
                                         <p>Portfolio Value</p>
                                     </div>
                                     <div>
-                                        <p>${currentUser.buying_power}</p>
+                                        <p>${this.showAmount(currentUser.buying_power)}</p>
                                         <p>Buying Power</p>
                                     </div>
                                 </div>
