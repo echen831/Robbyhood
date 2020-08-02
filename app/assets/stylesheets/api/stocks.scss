@@ -329,7 +329,9 @@
   width: 100%;
   height: 3em;
   border-bottom: 1px solid grey;
-}
+};
+
+
 
 // .stock-bar div {
 //   display: flex;
@@ -672,7 +674,7 @@
 }
 
 .portfolio-item-container:hover {
-  background-color: lightgray;
+  background-color: rgb(228, 228, 228);
 }
 
 .pi-name-shares {

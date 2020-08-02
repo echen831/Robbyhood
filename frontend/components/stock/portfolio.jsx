@@ -64,52 +64,52 @@ class Portfolio extends React.Component {
 
     }
 
-    oneDayPortfolio () {
+    // oneDayPortfolio () {
 
-        let { currentUser, oneDayStocks } = this.props
-        let res = []
+    //     let { currentUser, oneDayStocks } = this.props
+    //     let res = []
 
-        if (!oneDayStocks) return res
+    //     if (!oneDayStocks) return res
         
-        for (let symbol in oneDayStocks) {
-            let data = oneDayStocks[symbol]
+    //     for (let symbol in oneDayStocks) {
+    //         let data = oneDayStocks[symbol]
             
-            for(let i = 0; i < data.length; i ++) {
-                let open = data[0].high
-                let num_owned = currentUser.stocks_owned[symbol]
-                if (!num_owned) {
-                    continue
-                }
+    //         for(let i = 0; i < data.length; i ++) {
+    //             let open = data[0].high
+    //             let num_owned = currentUser.stocks_owned[symbol]
+    //             if (!num_owned) {
+    //                 continue
+    //             }
 
-                let item = data[i]
-                let hash = {
-                    date: '',
-                    label: '',
-                    open: currentUser.buying_power,
-                    high: currentUser.buying_power,
-                }
+    //             let item = data[i]
+    //             let hash = {
+    //                 date: '',
+    //                 label: '',
+    //                 open: currentUser.buying_power,
+    //                 high: currentUser.buying_power,
+    //             }
 
-                if (!res[i]) {
-                    res[i] = hash
-                }
+    //             if (!res[i]) {
+    //                 res[i] = hash
+    //             }
 
-                if (item.high) {
+    //             if (item.high) {
                     
-                    res[i].date = item.date
-                    res[i].label = item.label
-                    res[i].open = (open * num_owned)
-                    res[i].high += (item.high * num_owned)
-                } else if (!item.high) {
-                    res[i].date = item.date
-                    res[i].label = item.label
-                    res[i].open = (open * num_owned)
-                    res[i].high += (open * num_owned)
-                }
-            }
+    //                 res[i].date = item.date
+    //                 res[i].label = item.label
+    //                 res[i].open = (open * num_owned)
+    //                 res[i].high += (item.high * num_owned)
+    //             } else if (!item.high) {
+    //                 res[i].date = item.date
+    //                 res[i].label = item.label
+    //                 res[i].open = (open * num_owned)
+    //                 res[i].high += (open * num_owned)
+    //             }
+    //         }
             
-        }
-        return res
-    }
+    //     }
+    //     return res
+    // }
     
     filterData(data) {
         let res = [];
@@ -180,7 +180,7 @@ class Portfolio extends React.Component {
 
         if ( !oneDayStocks || !currentUser ) return null
 
-        let data = range === '1d' ? this.filterData(this.oneDayPortfolio()) : this.oneYearPortfolio(range)
+        let data = range === '1d' ? this.filterData(oneDayStocks) : this.oneYearPortfolio(range)
 
         if (!data || !data[0]) return null
 

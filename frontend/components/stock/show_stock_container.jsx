@@ -9,6 +9,7 @@ const mSTP = (state) => ({
     stocks: state.entities.stocks,
     portfolio: state.entities.portfolio,
     oneYearStocks: state.entities.portfolio,
+    oneDayStocks: state.entities.portfolio.stocks,
     loading: state.ui.loading,
     pageLoading: state.ui.loading_page
 })

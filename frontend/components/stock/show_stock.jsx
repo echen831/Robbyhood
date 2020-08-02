@@ -55,6 +55,53 @@ class Show extends React.Component {
         this.props.setPageLoad()
     }
 
+    oneDayPortfolio() {
+
+        let { currentUser, oneDayStocks } = this.props
+        let res = []
+
+        if (!oneDayStocks) return res
+
+        for (let symbol in oneDayStocks) {
+            let data = oneDayStocks[symbol]
+
+            for (let i = 0; i < data.length; i++) {
+                let open = data[0].high
+                let num_owned = currentUser.stocks_owned[symbol]
+                if (!num_owned) {
+                    continue
+                }
+
+                let item = data[i]
+                let hash = {
+                    date: '',
+                    label: '',
+                    open: currentUser.buying_power,
+                    high: currentUser.buying_power,
+                }
+
+                if (!res[i]) {
+                    res[i] = hash
+                }
+
+                if (item.high) {
+
+                    res[i].date = item.date
+                    res[i].label = item.label
+                    res[i].open = (open * num_owned)
+                    res[i].high += (item.high * num_owned)
+                } else if (!item.high) {
+                    res[i].date = item.date
+                    res[i].label = item.label
+                    res[i].open = (open * num_owned)
+                    res[i].high += (open * num_owned)
+                }
+            }
+
+        }
+        return res
+    }
+
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value })
     };
@@ -99,6 +146,10 @@ class Show extends React.Component {
 
         const { name, symbol, range } = this.state;
         const { currentUser, logout, stocks, fetchOneDayStock, portfolio, pageLoading} = this.props;
+
+        let oneDayPort = this.oneDayPortfolio()
+
+        if(!oneDayPort || !oneDayPort[oneDayPort.length-1]) return null
 
         if (pageLoading) return <Loader/>
         return (
@@ -167,9 +218,10 @@ class Show extends React.Component {
 
                                 <Portfolio
                                     currentUser = { currentUser }
-                                    oneDayStocks = { portfolio.stocks }
+                                    oneDayStocks = { oneDayPort }
                                     oneYearStocks = { portfolio.oneYearStocks }
                                     range = { range }
+
                                 />
                             </div>
                             
@@ -196,6 +248,22 @@ class Show extends React.Component {
                     </div>
                     <div className='stock-show-right'>
                         <div className='stock-bar'>
+                            <h1 className='stock-bar-header'>My Account</h1>
+                            <div className='account-info-container'>
+                                <div className='account-info-greeting'>
+                                    <p>Hi, {currentUser.username}</p>
+                                </div>
+                                <div className='account-info'>
+                                    <div>
+                                        <p>${this.showAmount(oneDayPort[oneDayPort.length-1].high)}</p>
+                                        <p>Portfolio Value</p>
+                                    </div>
+                                    <div>
+                                        <p>${currentUser.buying_power}</p>
+                                        <p>Buying Power</p>
+                                    </div>
+                                </div>
+                            </div>
                             <h1 className='stock-bar-header'>Stocks</h1>
                             <div>
                                 {Object.keys(currentUser.stocks_owned).sort().map((symbol, idx) =>
