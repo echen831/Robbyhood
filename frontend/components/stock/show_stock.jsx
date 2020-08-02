@@ -18,6 +18,7 @@ class Show extends React.Component {
             range: '1d',
             search: '',
             dark: false,
+            accountShow: false
         }
         
         this.update = this.update.bind(this)
@@ -248,10 +249,14 @@ class Show extends React.Component {
                     </div>
                     <div className='stock-show-right'>
                         <div className='stock-bar'>
-                            <h1 className='stock-bar-header'>My Account</h1>
-                            <div className='account-info-container'>
+                            <h1 
+                                onClick={() => this.setState({accountShow: !this.state.accountShow})}
+                                className='stock-bar-header'
+                                id='account-info-header'
+                                >My Account</h1>
+                            <div className={ this.state.accountShow ? 'account-info-container' : 'account-hide'}>
                                 <div className='account-info-greeting'>
-                                    <p>Hi, {currentUser.username}</p>
+                                    <p>{currentUser.username}</p>
                                 </div>
                                 <div className='account-info'>
                                     <div>

@@ -331,6 +331,26 @@
   border-bottom: 1px solid grey;
 };
 
+.account-info-container {
+  padding: 1em; 
+  border-bottom: 1px solid grey;
+}
+
+#account-info-header {
+  cursor: pointer;
+}
+
+.account-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1em;
+ 
+}
+
+.account-hide {
+  display: none;
+}
 
 
 // .stock-bar div {
