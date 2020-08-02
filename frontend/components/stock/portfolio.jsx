@@ -187,12 +187,12 @@ class Portfolio extends React.Component {
         let close = data[data.length - 1].high
         let open = data[0].high
         let flux = this.setFlux(close - open)
-
+        let fluxPercent = ((close - open) / open) * 100
         let stroke;
 
-        if (flux > 0.9) {
+        if (fluxPercent > 0.99) {
             stroke = "#5ae6b0"
-        } else if (flux < -0.9) {
+        } else if (fluxPercent < -0.99) {
             stroke = "#e65a5a"
         } else {
             stroke = "#ffac12"

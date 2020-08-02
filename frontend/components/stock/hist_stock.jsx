@@ -131,8 +131,8 @@ class HistStock extends React.Component {
         if (!data || !data[0]) return null;
         let close = this.findClose(data)
         let open = this.findOpen(data)
-        let flux = close - open
-        let fluxPercent = (flux/open) * 100
+        let flux = this.setFlux(close - open)
+        let fluxPercent = ((close-open)/open) * 100
         let stroke;
 
         if (fluxPercent > 0.99) {
