@@ -203,7 +203,7 @@ class Portfolio extends React.Component {
                     className='chart'
                 // margin={{ top: 10, right: 0, bottom: 0, left: 0 }}
                 >
-                    <Line type="monotone"
+                    <Line type="linear"
                         connectNulls
                         dataKey="high"
                         strokeWidth={2}

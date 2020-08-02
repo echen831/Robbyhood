@@ -143,7 +143,7 @@ class PortfolioItem extends React.Component {
                             height={50}
                             className='pi-chart'
                     >
-                            <Line type="monotone"
+                            <Line type="linear"
                                 connectNulls
                                 dataKey="high"
                                 strokeWidth={1}
