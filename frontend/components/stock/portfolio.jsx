@@ -208,7 +208,7 @@ class Portfolio extends React.Component {
                     </div>
                 </div>
                 <LineChart data={data}
-                    width={500}
+                    width={625}
                     height={300}
                     className='chart'
                 // margin={{ top: 10, right: 0, bottom: 0, left: 0 }}
