@@ -405,14 +405,14 @@
 }
 
 .stock-show-left {
-  width: 60%;
+  width: 65%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
 .stock-show-right {
-  width: 40%;
+  width: 35%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -476,7 +476,7 @@
 
 .stock-show-bar-container {
   border-bottom: 1px solid lightgrey;
-  width: 98%;
+  width: 110%;
   height: max-content;
   margin-left: 3em;
   padding-bottom: 1em;
@@ -488,6 +488,7 @@
   justify-content: space-between;
   width: 40%;
   background-color: white;
+  margin-left: 3em;
 }
 
 .stock-show-bar button {
@@ -773,7 +774,7 @@
 /************ Company Info **************/
 
 .company-info-container {
-  width: 50%;
+  width: 56%;
   margin-left: 5em;
 }
 
@@ -800,7 +801,7 @@
 }
 
 .company-des-container {
-  width: 80%;
+  width: 85%;
   padding: 0.5em;
 }
 
@@ -833,7 +834,7 @@
 
 /****************** News *****************/
 .company-news-container {
-  width: 50%;
+  width: 56%;
   margin-left: 5em;
   padding-top: 3em;
 
