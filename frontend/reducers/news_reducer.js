@@ -12,7 +12,7 @@ const newsReducer = (oldState = {}, action) => {
             let nextState = Object.assign({}, oldState)
 
             action.symbols.split(',').forEach((symbol) => {
-                nextState[symbol] = action.stocks[symbol.toUpperCase()].news
+                nextState[symbol] = action.news[symbol.toUpperCase()].news
             })
 
             return nextState    

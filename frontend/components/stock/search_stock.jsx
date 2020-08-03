@@ -41,7 +41,11 @@ class SearchStock extends React.Component {
 
         fetchHistStock(symbol, '1d')
         fetchCompanyInfo(symbol)
-        fetchNews(symbol)
+
+        if (!this.props.news) {
+            fetchNews(symbol)
+        }
+
         fetchWatchListItems()
 
         if (this.props.currentUser) {

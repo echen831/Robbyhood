@@ -33,7 +33,8 @@ class Show extends React.Component {
               fetchUser, 
               currentUser,
               fetchMultiOneYearStocks,
-              fetchMultiOneDayStocks
+              fetchMultiOneDayStocks,
+              fetchMultiNews
             } = this.props
 
         setTimeout(() => {
@@ -46,6 +47,7 @@ class Show extends React.Component {
 
         let symbols = Object.keys(currentUser.stocks_owned).join(',')
         fetchMultiOneYearStocks(symbols, '1y')
+        fetchMultiNews(symbols)
 
 
         let allSymbols = this.findSymbols(Object.keys(currentUser.stocks_owned), Object.keys(currentUser.wl_items))

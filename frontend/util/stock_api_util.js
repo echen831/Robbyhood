@@ -46,7 +46,7 @@ export const fetchHistStock = (symbol,range) => {
 export const fetchNews = (symbol) => {
 
     let cloud = `https://cloud.iexapis.com/stable/stock/${symbol}/news/last/${3}?token=${window.iex2APIKey}`
-    let sandbox = `https://sandbox.iexapis.com/stable/stock/${symbol}/news/last/${5}?token=${window.iexAPIKey}`
+    let sandbox = `https://sandbox.iexapis.com/stable/stock/${symbol}/news/last/${3}?token=${window.iexAPIKey}`
     return $.ajax({
         // url: `https://cloud.iexapis.com/stable/stock/${symbol}/news/last/${3}?token=${window.iex2APIKey}`,
         // url: `https://sandbox.iexapis.com/stable/stock/${symbol}/news/last/${5}?token=${window.iexAPIKey}`,
@@ -88,9 +88,10 @@ export const fetchMultiStocks = (symbols, range) => {
 };
 
 export const fetchMultiNews = (symbols) => {
-    let sandbox = `https://sandbox.iexapis.com/stable/stock/market/batch?symbols=${symbols}&types=news&last=2&token=${window.iexAPIKey}`
+    let sandbox = `https://sandbox.iexapis.com/stable/stock/market/batch?symbols=${symbols}&types=news&last=3&token=${window.iexAPIKey}`
+    let cloud = `https://cloud.iexapis.com/stable/stock/market/batch?symbols=${symbols}&types=news&last=3&token=${window.iex2APIKey}`
     return $.ajax({
-        url: sandbox,
+        url: process.env.NODE_ENV !== "production" ? sandbox : cloud,
         method: 'GET'
     })
 };
