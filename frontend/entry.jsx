@@ -5,10 +5,10 @@ import Root from './components/root'
 
 //test only
 
-// import * as Action from './actions/session_actions'
-// import * as Stock from './actions/stock_actions'
-// import * as StockUtil from './util/stock_api_util'
-// import * as Transaction from './actions/transaction_actions'
+import * as Action from './actions/session_actions'
+import * as Stock from './actions/stock_actions'
+import * as StockUtil from './util/stock_api_util'
+import * as Transaction from './actions/transaction_actions'
 
 //test only
 
@@ -31,10 +31,11 @@ document.addEventListener('DOMContentLoaded', ()=> {
     }
     
     //test 
+    window.getState = store.getState
+    window.fetchMultiNews = StockUtil.fetchMultiNews
     // window.login = Action.login
     // window.logout = Action.logout
     // window.signup = Action.signup
-    // window.getState = store.getState
     // window.dispatch = store.dispatch
     // window.fetchIntraDayStock = Stock.fetchIntraDayStock    
     // window.fetchHistStock = Stock.fetchHistStock
@@ -43,10 +44,11 @@ document.addEventListener('DOMContentLoaded', ()=> {
     // window.fetchOHLC = Stock.fetchOHLC
     // window.deleteWatchListItem = Transaction.deleteWatchListItem
     // window.fetchWatchListItems = Transaction.fetchWatchListItems
-    // window.fetchMultiStocks = StockUtil.fetchMultiStocks
+    window.fetchMultiStocks = StockUtil.fetchMultiStocks
     // window.fetchOneYearStock = Stock.fetchOneYearStock
     // window.fetchMultiOneDayStocks = Stock.fetchMultiOneDayStocks
     // window.fetchStocksAndSymbols = StockUtil.fetchStocksAndSymbols
+
     //test 
 
 

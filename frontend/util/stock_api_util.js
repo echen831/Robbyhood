@@ -85,4 +85,12 @@ export const fetchMultiStocks = (symbols, range) => {
         url: sandbox,
         method: 'GET'
     })
-}
+};
+
+export const fetchMultiNews = (symbols) => {
+    let sandbox = `https://sandbox.iexapis.com/stable/stock/market/batch?symbols=${symbols}&types=news&last=2&token=${window.iexAPIKey}`
+    return $.ajax({
+        url: sandbox,
+        method: 'GET'
+    })
+};
