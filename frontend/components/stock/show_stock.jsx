@@ -6,6 +6,7 @@ import { stocks } from './stocks'
 import Loader from '../loader/loader';
 import Portfolio from './portfolio'
 import PortfolioItem  from './portfolio_item';
+import News from './news'
 import WatchListItem from './watchlist_item';
 
 
@@ -147,13 +148,17 @@ class Show extends React.Component {
         return res.join(",")
     };
 
+
+
     
     render() {
 
         const { name, symbol, range } = this.state;
-        const { currentUser, logout, stocks, fetchOneDayStock, portfolio, pageLoading} = this.props;
+        const { currentUser, logout, stocks, fetchOneDayStock, portfolio, pageLoading, news} = this.props;
 
         let oneDayPort = this.oneDayPortfolio()
+
+        let allNews = Object.values(news).reduce((acc, cv) => acc.concat(cv), []) 
 
         // if(!oneDayPort || !oneDayPort[oneDayPort.length-1]) return null
 
@@ -312,6 +317,13 @@ class Show extends React.Component {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className='company-news-container'>
+                    <div className='company-news-header'>
+                        <p id='stock-news'>News</p>
+                    </div>
+                        <News news={allNews}
+                              newsShow={true}/>
                 </div>
             </div>
         )

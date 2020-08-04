@@ -12,6 +12,7 @@ export const RECEIVE_OHLC = 'RECEIVE_OHLC';
 export const RECEIVE_MULTI_1Y_STOCKS = 'RECEIVE_MULTI_1Y_STOCKS';
 export const RECEIVE_MULTI_1D_STOCKS = 'RECEIVE_MULTI_1D_STOCKS';
 
+const noSymbols = 'aapl,amzn,fb,msft'
 
 const receiveStocks = (stocks) => ({
     type: RECEIVE_STOCKS,
@@ -100,12 +101,12 @@ export const fetchOneYearStock = (symbol, range) => dispatch => {
         .then((stock) => dispatch(receiveOneYearStock(stock, symbol)))
 };
 
-export const fetchMultiOneYearStocks = (symbols, range) => dispatch => {
+export const fetchMultiOneYearStocks = (symbols=noSymbols, range='1y') => dispatch => {
     return StockAPIUtil.fetchMultiStocks(symbols, range)
         .then((stocks) => dispatch(receiveMultiOneYearStocks(stocks, symbols)))
 };
 
-export const fetchMultiOneDayStocks = (symbols, range) => dispatch => {
+export const fetchMultiOneDayStocks = (symbols=noSymbols, range='1d') => dispatch => {
     return StockAPIUtil.fetchMultiStocks(symbols, range)
         .then((stocks) => dispatch(receiveMultiOneDayStocks(stocks, symbols)))
 }
@@ -122,7 +123,7 @@ export const fetchNews = (symbol) => dispatch => {
         .then((news) => dispatch(receiveNews(news, symbol)))
 };
 
-export const fetchMultiNews = (symbols) => dispatch => {
+export const fetchMultiNews = (symbols = noSymbols) => dispatch => {
     return StockAPIUtil.fetchMultiNews(symbols)
         .then((news) => dispatch(receiveMultiNews(news, symbols)))
 };

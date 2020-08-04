@@ -11,7 +11,8 @@ const mSTP = (state) => ({
     oneYearStocks: state.entities.portfolio,
     oneDayStocks: state.entities.portfolio.stocks,
     loading: state.ui.loading,
-    pageLoading: state.ui.loading_page
+    pageLoading: state.ui.loading_page,
+    news: state.entities.news
 })
 
 const mDTP = (dispatch) => ({
