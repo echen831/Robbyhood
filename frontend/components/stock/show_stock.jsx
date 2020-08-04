@@ -46,7 +46,7 @@ class Show extends React.Component {
         fetchWatchListItems()
         fetchUser(currentUser.id)
 
-        let symbols = Object.keys(currentUser.stocks_owned).join(',')
+        let symbols = Object.keys(currentUser.stocks_owned).join(',') || 'AAPL'
         fetchMultiOneYearStocks(symbols, '1y')
         fetchMultiNews(symbols)
 
@@ -318,7 +318,7 @@ class Show extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className='company-news-container'>
+                <div className='company-info-container'>
                     <div className='company-news-header'>
                         <p id='stock-news'>News</p>
                     </div>
