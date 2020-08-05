@@ -259,11 +259,18 @@ class Show extends React.Component {
                     </div>
                     <div className='stock-show-right'>
                         <div className='stock-bar'>
-                            <h1 
+                            <div className='stock-bar-header'>
+                                My Account
+                                <button
+                                    id='my-account-btn'
+                                    onClick={() => this.setState({ accountShow: !this.state.accountShow })}
+                                >{this.state.accountShow ? '˄' : '˅'}</button>
+                            </div>
+                            {/* <h1 
                                 onClick={() => this.setState({accountShow: !this.state.accountShow})}
                                 className='stock-bar-header'
                                 id='account-info-header'
-                                >My Account</h1>
+                                >My Account</h1> */}
                             <div className={ this.state.accountShow ? 'account-info-container' : 'account-hide'}>
                                 <div className='account-info-greeting'>
                                     <p>{currentUser.username}</p>
@@ -326,6 +333,7 @@ class Show extends React.Component {
                               newsShow={true}/>
                 </div>
             </div>
+
         )
     }
 }

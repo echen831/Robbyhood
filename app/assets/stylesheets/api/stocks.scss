@@ -1,3 +1,4 @@
+
 .show-body {
   width: 100%;
   display: flex;
@@ -321,7 +322,7 @@
 
 .stock-bar-header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   font-size: large;
   font-weight: bold;
@@ -331,6 +332,23 @@
   padding: 1em;
   border-bottom: 1px solid grey;
 };
+
+#my-account-btn{
+  width: 2em;
+  height: 2em;
+  border-radius: .25em;
+  color: grey;
+  border: 1px solid grey;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+#my-account-btn:hover {
+  background-color: rgb(214, 214, 214);
+  border: 1px solid grey;
+  color: grey;
+  opacity: 1;
+}
 
 .account-info-container {
   max-height: fit-content;
