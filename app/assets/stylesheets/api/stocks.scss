@@ -21,10 +21,11 @@
 
 .stock-show-header {
   position: fixed;
-  width: 100%;
+  width: 80em;
   height: 5em;
   z-index: 100;
   background-color: white;
+  overflow-x: auto;
 }
 
 .top-nav {
@@ -305,7 +306,7 @@
 
 .stock-bar {
   position: fixed;
-  right: 10%;
+  left: 55em;
   top: 6em;
   display: block;
   border-radius: 0.25em;
@@ -372,10 +373,15 @@
 }
 
 .account-info-container {
-  max-height: fit-content;
+  max-height: 10em;
+  overflow-y: hidden;
   color:  rgb(71, 71, 71);
   padding: 1em; 
   border-bottom: 1px solid grey;
+  transition: all .3s ease-out;
+  // transition-property: all;
+  // transition-duration: .5s;
+  // transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
 
 .account-info-container p {
@@ -406,7 +412,9 @@
 
 .account-hide {
   display: none;
+  transition: all 0.3s ease-out;
 }
+
 
 
 // .stock-bar div {
@@ -437,7 +445,7 @@
 /* Stock Bar*/
 
 .stock-show-container {
-  width: 100%;
+  width: 80em;
   margin-top: 2em;
   height: 35em;
   display: flex;
@@ -818,7 +826,7 @@
 /************ Company Info **************/
 
 .company-info-container {
-  width: 56%;
+  width: 45em;
   margin-left: 5em;
 }
 
