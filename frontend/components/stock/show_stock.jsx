@@ -260,6 +260,7 @@ class Show extends React.Component {
                     <div className='stock-show-right'>
                         <div className='stock-bar'>
                             <div className='stock-bar-header'>
+                                
                                 My Account
                                 <p
                                     id='my-account-btn'
@@ -286,7 +287,7 @@ class Show extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <h1 className='stock-bar-header'>Stocks</h1>
+                            <h1 className='stock-bar-header' id='stock-bar-header'>Stocks</h1>
                             <div>
                                 {Object.keys(currentUser.stocks_owned).sort().map((symbol, idx) =>
                                     <PortfolioItem 

@@ -376,9 +376,9 @@
   max-height: 10em;
   overflow-y: hidden;
   color:  rgb(71, 71, 71);
-  padding: 1em; 
+  // padding: 1em; 
   border-bottom: 1px solid grey;
-  transition: all .3s ease-out;
+  transition: .5s ease-in-out;
   // transition-property: all;
   // transition-duration: .5s;
   // transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
@@ -386,6 +386,13 @@
 
 .account-info-container p {
   font-weight: bold;
+  overflow: hidden;
+}
+
+.account-info-greeting p {
+  padding-left: 1em ;
+  padding-right: 1em;
+  padding: 1em 1em 0em 1em;
 }
 
 #account-info-header {
@@ -402,7 +409,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1em;
+  padding: 1em;
 }
 
 .account-info p:last-child {
@@ -411,9 +418,21 @@
 }
 
 .account-hide {
-  display: none;
-  transition: all 0.3s ease-out;
+  max-height: 0;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  font-weight: bold;
 }
+
+.account-hide div {
+  opacity: 0;
+  transition: .2s ease-out;
+}
+
+.account-hide p {
+  font-weight: bold;
+}
+
 
 
 
@@ -886,7 +905,7 @@
 
 /****************** News *****************/
 .company-news-container {
-  width: 56%;
+  width: 45em;
   margin-left: 5em;
   padding-top: 3em;
 
