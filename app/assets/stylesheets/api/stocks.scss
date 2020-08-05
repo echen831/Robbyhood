@@ -334,20 +334,41 @@
 };
 
 #my-account-btn{
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 1.5em;
   border-radius: .25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: grey;
   border: 1px solid grey;
-  opacity: 0.6;
+  opacity: 0.5;
   transition: 0.3s;
+  cursor: pointer;
+}
+.arrow {
+  border: solid grey;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.up {
+  margin-top: 0.25em;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 #my-account-btn:hover {
   background-color: rgb(214, 214, 214);
   border: 1px solid grey;
   color: grey;
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .account-info-container {
@@ -459,7 +480,7 @@
 
 .chart {
     // margin-top: 2em;
-    border-top: 1px dotted lightgray;
+    // border-top: 1px dotted lightgray;
     margin-left: 2.5em;
     padding-top: 1em;
 }
