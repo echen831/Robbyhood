@@ -826,10 +826,21 @@ button {
   justify-content: flex-end;
 }
 
-.prod-modal-close-btn-container p {
+#close-btn {
+  height: 1em;
+  width: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: xx-large;
   cursor: pointer;
+  border-radius: 50%;
 }
+
+#close-btn:hover {
+  color: rgba(128, 128, 128, 0.507)
+}
+
 
 .prod-modal-header {
   width: 100%;

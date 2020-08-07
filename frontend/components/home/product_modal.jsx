@@ -34,7 +34,9 @@ class ProductModal extends React.Component {
                  onClick={(e)=>this.props.outsideClose(e)}>
                 <div className='prod-modal-body'>
                     <div className='prod-modal-close-btn-container'>
-                        <p onClick={()=>this.props.closeModal()}>&times;</p>
+                        <div onClick={()=>this.props.closeModal()} id='close-btn'>
+                            <p>&times;</p>
+                        </div>
                     </div>
                     <h1 className='prod-modal-header'
                         >{MODAL_HEADER[this.props.index]}</h1>
