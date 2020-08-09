@@ -586,8 +586,8 @@ button {
   cursor: pointer;
 }
 
-#footer-facebook {
-  background-image: url("https://i.pinimg.com/736x/b8/2f/06/b82f063b643f72be6f5bc912bc0f5d7f.jpg");
+#footer-angelist {
+  background-image: url("https://kinlane-productions.s3.amazonaws.com/api-evangelist-site/blog/angellist-peace-sign.jpg");
   background-size: cover;
   background-position: center;
   width: 2em;

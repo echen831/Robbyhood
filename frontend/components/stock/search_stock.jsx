@@ -130,9 +130,9 @@ class SearchStock extends React.Component {
                                     target='_blank'
                                     href="https://www.linkedin.com/in/eric-chen-782b951a9/" >
                                 </a>
-                                <a id='footer-facebook'
+                                <a id='footer-angelist'
                                     target='_blank'
-                                    href="https://www.facebook.com/profile.php?id=11708937" >
+                                    href="https://angel.co/u/eric-chen-80" >
                                 </a>
                             </div>
                             {/* <div id='greeting'>Hi, {this.props.currentUser.username}</div> */}
