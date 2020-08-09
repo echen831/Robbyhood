@@ -262,10 +262,18 @@ class Show extends React.Component {
                             <div className='stock-bar-header'>
                                 
                                 My Account
-                                <p
+                                {/* <p
                                     id='my-account-btn'
                                     onClick={() => this.setState({ accountShow: !this.state.accountShow })}
-                                >{this.state.accountShow ? <i className="arrow up"></i> : <i className='arrow down'></i>}</p>
+                                >{this.state.accountShow ? <i className="arrow up"></i> : <i className='arrow down'></i>}</p> */}
+                                <div className='menu-btn'
+                                     id={this.state.accountShow ? 'menu-btn-open' : ''}
+                                     onClick={() => this.setState({ accountShow: !this.state.accountShow })}
+            
+                                     >
+                                    <div className='menu-btn-burger'>
+                                    </div>
+                                </div>
                             </div>
                             {/* <h1 
                                 onClick={() => this.setState({accountShow: !this.state.accountShow})}
