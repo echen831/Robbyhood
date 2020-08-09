@@ -1,13 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import HistStock from './hist_stock_container';
-import SearchBar from '../search_bar/search_bar'
-import { stocks } from './stocks'
 import Loader from '../loader/loader';
 import Portfolio from './portfolio'
 import PortfolioItem  from './portfolio_item';
 import News from './news'
-import WatchListItem from './watchlist_item';
+import { Header } from '../nav_bar/header_bar'
+import { StockShowBar } from './stock_show_bar'
 
 
 class Show extends React.Component {
@@ -24,6 +21,7 @@ class Show extends React.Component {
         
         this.update = this.update.bind(this)
         this.setSymbol = this.setSymbol.bind(this)
+        this.updateRange = this.updateRange.bind(this)
     }
 
     componentDidMount() {
@@ -148,6 +146,10 @@ class Show extends React.Component {
         return res.join(",")
     };
 
+    updateRange(range) {
+        this.setState({range: range})
+    }
+
 
 
     
@@ -160,101 +162,26 @@ class Show extends React.Component {
 
         let allNews = Object.values(news).reduce((acc, cv) => acc.concat(cv), []) 
 
-        // if(!oneDayPort || !oneDayPort[oneDayPort.length-1]) return null
-
         if (pageLoading) return <Loader/>
         return (
             <div className= {!this.state.dark ? 'show-body' : 'show-body-dark'}>
-                <header className='stock-show-header'>
-                    <div className='top-nav'>
-                        <div className= 'left-nav'>
-                            <div>
-                                <Link to='/' className='header-logo'>
-                                    <h2>Robbyhood ➶</h2>
-                                </Link>
-                            </div>
-
-                            <div className='stock-searchbar'>
-                                <SearchBar stocks={stocks} 
-                                           setState={this.setSymbol}
-                                           />
-                            </div>
-                        </div>
-                        <div className='right-nav'>
-                            <div className='footer-contacts'>
-                                <a id='footer-github'
-                                    target='_blank'
-                                    href="https://github.com/echen831">
-                                </a>
-                                <a id='footer-linkedin'
-                                    target='_blank'
-                                    href="https://www.linkedin.com/in/eric-chen-782b951a9/" >
-                                </a>
-                                <a id='footer-angelist'
-                                    target='_blank'
-                                    href="https://angel.co/u/eric-chen-80" >
-                                </a>
-                            </div>
-                            {/* <div id='greeting' >Hi, {currentUser.username}</div> */}
-                            <div>Portfolio</div>
-                            <div onClick={logout} >Log Out</div>
-
-                            {/* <div className='nav-dropdown'>
-                                <h2 className='nav-dropdown-btn'>Account</h2>
-                                <span className='nav-dropdown-content'>
-                                    <div>
-                                        <p>{currentUser.username}</p>
-                                        <div>
-                                            <div>
-                                                <p>Portfolio Value</p>
-                                                <p></p>
-                                            </div>
-                                            <div>
-                                                <p>Buying Power</p>
-                                                <p></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p onClick={logout}> Log Out</p>
-                                </span>
-                            </div> */}
-                        </div>
-                    </div>
-                </header>
+                <Header stocks={stocks}
+                        logout={logout}
+                        />
                 <div className='stock-show-container'>
                     <div className='stock-show-left'>
                         <div className='stock-show'>
                             
                             <div className='stock-chart-container'>
-
                                 <Portfolio
                                     currentUser = { currentUser }
                                     oneDayStocks = { oneDayPort }
                                     oneYearStocks = { portfolio.oneYearStocks }
                                     range = { range }
-
                                 />
                             </div>
-                            
-                            <div className='stock-show-bar-container'>
-                                <ul className='stock-show-bar'>
-                                    <button onClick={() => this.setState({ range: '1d' })}
-                                            className={ range === '1d' ? 'selected' : ''}
-                                        >1D</button>
-                                    <button onClick={()=> this.setState({range: '5d'})}
-                                            className={range === '5d' ? 'selected' : ''}
-                                        >1W</button>
-                                    <button onClick={() => this.setState({ range: '1m' })}
-                                            className={range === '1m' ? 'selected' : ''}
-                                        >1M</button>
-                                    <button onClick={() => this.setState({ range: '3m' })}
-                                            className={range === '3m' ? 'selected' : ''}
-                                        >3M</button>
-                                    <button onClick={() => this.setState({ range: '1y' })}
-                                            className={range === '1y' ? 'selected' : ''}
-                                        >1Y</button>
-                                </ul>
-                            </div>
+                            <StockShowBar updateRange={ this.updateRange }
+                                          range={ range }/>
                         </div>
                     </div>
                     <div className='stock-show-right'>
@@ -275,11 +202,6 @@ class Show extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            {/* <h1 
-                                onClick={() => this.setState({accountShow: !this.state.accountShow})}
-                                className='stock-bar-header'
-                                id='account-info-header'
-                                >My Account</h1> */}
                             <div className={ this.state.accountShow ? 'account-info-container' : 'account-hide'}>
                                 <div className='account-info-greeting'>
                                     <p>{currentUser.username}</p>
@@ -323,12 +245,6 @@ class Show extends React.Component {
                                         idx={idx}
                                         key={idx}
                                     />
-                                //   <WatchListItem 
-                                //         key={idx}
-                                //         symbol={symbol}
-                                //         idx={idx}
-                                //         name={currentUser.wl_items[symbol][0]}
-                                //   />  
                                 )}
                             </div>
                         </div>
