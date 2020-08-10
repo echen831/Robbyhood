@@ -399,24 +399,6 @@
 }
 
 
-.arrow {
-  border: solid grey;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-.up {
-  margin-top: 0.25em;
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-}
-
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
 #my-account-btn:hover {
   background-color: rgb(214, 214, 214);
   border: 1px solid grey;

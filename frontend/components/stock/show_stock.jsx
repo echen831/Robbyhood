@@ -5,6 +5,7 @@ import PortfolioItem  from './portfolio_item';
 import News from './news'
 import { Header } from '../nav_bar/header_bar'
 import { StockShowBar } from './stock_show_bar'
+import { StockBarHeader } from './stock_bar_header';
 
 
 class Show extends React.Component {
@@ -22,6 +23,7 @@ class Show extends React.Component {
         this.update = this.update.bind(this)
         this.setSymbol = this.setSymbol.bind(this)
         this.updateRange = this.updateRange.bind(this)
+        this.showAmount = this.showAmount.bind(this)
     }
 
     componentDidMount() {
@@ -186,37 +188,11 @@ class Show extends React.Component {
                     </div>
                     <div className='stock-show-right'>
                         <div className='stock-bar'>
-                            <div className='stock-bar-header'>
-                                
-                                My Account
-                                {/* <p
-                                    id='my-account-btn'
-                                    onClick={() => this.setState({ accountShow: !this.state.accountShow })}
-                                >{this.state.accountShow ? <i className="arrow up"></i> : <i className='arrow down'></i>}</p> */}
-                                <div className='menu-btn'
-                                     id={this.state.accountShow ? 'menu-btn-open' : ''}
-                                     onClick={() => this.setState({ accountShow: !this.state.accountShow })}
-            
-                                     >
-                                    <div className='menu-btn-burger'>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={ this.state.accountShow ? 'account-info-container' : 'account-hide'}>
-                                <div className='account-info-greeting'>
-                                    <p>{currentUser.username}</p>
-                                </div>
-                                <div className='account-info'>
-                                    <div>
-                                        <p>${(!oneDayPort || !oneDayPort[0]) ? this.showAmount(currentUser.buying_power) : this.showAmount(oneDayPort[oneDayPort.length-1].high)}</p>
-                                        <p>Portfolio Value</p>
-                                    </div>
-                                    <div>
-                                        <p>${this.showAmount(currentUser.buying_power)}</p>
-                                        <p>Buying Power</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <StockBarHeader currentUser={currentUser}
+                                            showAmount={this.showAmount}
+                                            oneDayPort={oneDayPort}
+
+                            />
                             <h1 className='stock-bar-header' id='stock-bar-header'>Stocks</h1>
                             <div>
                                 {Object.keys(currentUser.stocks_owned).sort().map((symbol, idx) =>
@@ -236,7 +212,6 @@ class Show extends React.Component {
                             <h1 className='stock-bar-header'>Watchlist</h1>
                             <div>
                                 {Object.keys(currentUser.wl_items).sort().map((symbol, idx) => 
-
                                     <PortfolioItem
                                         myStocks={portfolio.stocks}
                                         currentUser={currentUser}

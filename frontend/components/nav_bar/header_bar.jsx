@@ -35,7 +35,7 @@ export const Header = (props) => {
                             href="https://angel.co/u/eric-chen-80" >
                         </a>
                     </div>
-                    <div>Portfolio</div>
+                    <div><Link to='/stocks'> Portfolio </Link></div>
                     <div onClick={logout} >Log Out</div>
                 </div>
             </div>

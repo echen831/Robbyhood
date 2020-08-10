@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HistStock from './hist_stock_container';
-import SearchBar from '../search_bar/search_bar';
-import BuySellStock from './buy_sell_stock'
-import CompanyInfo from './company_info'
-import News from './news'
-import { stocks } from './stocks' 
-import Loader from '../loader/loader'
+import BuySellStock from './buy_sell_stock';
+import CompanyInfo from './company_info';
+import News from './news';
+import Loader from '../loader/loader';
+import { Header } from '../nav_bar/header_bar';
 
 
 const searchRange = [ '1d', '5d', '1m', '3m', '1y', '5y']
@@ -102,46 +101,14 @@ class SearchStock extends React.Component {
     render () {
 
         let {symbol, name, range, infoShow, newsShow } = this.state
-        let { stocks, companyInfo, news, pageLoading } = this.props
+        let { stocks, companyInfo, news, pageLoading, logout } = this.props
         if(!this.props.stock) return null;
         if(this.props.pageLoading) return <Loader/>
         return (
             <div className='show-body'>
-                <header className='stock-show-header'>
-                    <div className='top-nav'>
-                        <div className='left-nav'>
-                            <div>
-                                <Link to='/' className='header-logo'>
-                                    <h2>Robbyhood ➶</h2>
-                                </Link>
-                            </div>
-
-                            <div className='stock-searchbar'>
-                                <SearchBar stocks={stocks} setState={this.setSymbol}/>
-                            </div>
-                        </div>
-                        <div className='right-nav'>
-                            <div className='footer-contacts'>
-                                <a id='footer-github'
-                                    target='_blank'
-                                    href="https://github.com/echen831">
-                                </a>
-                                <a id='footer-linkedin'
-                                    target='_blank'
-                                    href="https://www.linkedin.com/in/eric-chen-782b951a9/" >
-                                </a>
-                                <a id='footer-angelist'
-                                    target='_blank'
-                                    href="https://angel.co/u/eric-chen-80" >
-                                </a>
-                            </div>
-                            {/* <div id='greeting'>Hi, {this.props.currentUser.username}</div> */}
-                            <div><Link to='/stocks'> Portfolio </Link></div>
-                            <div onClick={this.props.logout} >Log Out</div>
-
-                        </div>
-                    </div>
-                </header>
+                <Header stocks={stocks}
+                        logout={logout}
+                />
                 <div className='stock-show-container'>
                     <div className='stock-show-left'>
                         <div className='stock-show'>
