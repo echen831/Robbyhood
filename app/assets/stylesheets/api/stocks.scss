@@ -197,7 +197,7 @@
   font-weight: bold;
 }
 
-.right-nav div:hover:not(#greeting) {
+.right-nav div:hover:not(.footer-contacts) {
   color:  rgb(66, 207, 160);
   cursor: pointer;
 }

@@ -564,6 +564,10 @@ button {
   align-items: center;
 }
 
+#footer-icon {
+  margin-right: 1em;
+}
+
 #footer-github {
   background-image: url("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png");
   background-size: cover;

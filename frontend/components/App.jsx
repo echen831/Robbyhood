@@ -1,15 +1,19 @@
 import React from "react";
-import GreetingContainer from './greeting/greeting_container'
-import Home from './home/home'
+import Home from './home/home';
 import ShowContainer from './stock/show_stock_container'
-import { Route, Switch, Link } from 'react-router-dom'
-import SignupFormContainer from './session/signup_form_container'
+import { Route, Switch, Link } from 'react-router-dom';
+import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
-import { AuthRoute, ProtectedRoute} from '../util/route_util'
-import IntraDayStockContainer from './stock/intraday_stock_container'
-import HistStockContainer from './stock/hist_stock_container'
-import SearchStockContainer from './stock/search_stock_container'
+import { AuthRoute, ProtectedRoute} from '../util/route_util';
+import HistStockContainer from './stock/hist_stock_container';
+import SearchStockContainer from './stock/search_stock_container';
 import Portfolio from './stock/portfolio';
+import ReactDOM from 'react-dom'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, faCheckSquare, faCoffee)
 
 
 const App = () => {
