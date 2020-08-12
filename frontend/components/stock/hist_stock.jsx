@@ -1,5 +1,6 @@
 import React from 'react';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ReferenceLine } from 'recharts';
+import { StockShowBar } from './stock_show_bar' 
 
 class HistStock extends React.Component {
     constructor(props) {
@@ -121,7 +122,7 @@ class HistStock extends React.Component {
 
 
     render () {
-        const { range, name, symbol, histData } = this.props
+        const { range, name, symbol, histData, updateRange } = this.props
         if (!this.props.histData) return null;
 
         // let data = this.props.histData
@@ -189,6 +190,11 @@ class HistStock extends React.Component {
                             date={range === '1d' ? data[0].date : null} />}
                     />
                 </LineChart>
+                {/* <StockShowBar
+                    range={range}
+                    updateRange={updateRange}
+                    stroke={stroke}
+                /> */}
             </div>
         )
 

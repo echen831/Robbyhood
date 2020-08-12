@@ -28,6 +28,7 @@ class SearchStock extends React.Component {
 
         this.update = this.update.bind(this)
         this.handleTransaction = this.handleTransaction.bind(this)
+        this.updateRange = this.updateRange.bind(this)
     }
 
     componentDidMount() {
@@ -97,6 +98,10 @@ class SearchStock extends React.Component {
         return (e) => this.setState({ [field]: e.currentTarget.value })
     };
 
+    updateRange(range) {
+        this.setState({ range: range })
+    }
+
 
     render () {
 
@@ -116,7 +121,8 @@ class SearchStock extends React.Component {
                             <div className='stock-chart-container'>
                                 <HistStock symbol={symbol}
                                     name={name}
-                                    range={range} />
+                                    range={range}
+                                    updateRange={this.updateRange} />
                             </div>
                             <div className='stock-show-bar-container'>
                                 <ul className='stock-show-bar'>
