@@ -311,7 +311,9 @@
 
 .chart-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  margin-left: 2em;
 }
 
 
@@ -536,14 +538,12 @@
     font-size: small;
 }
 
-.stock-show button:hover {
+.stock-show-bar button:hover {
     color: rgb(66, 207, 160);
 }
 
 
 .chart {
-    // margin-top: 2em;
-    // border-top: 1px dotted lightgray;
     margin-left: 2.5em;
     padding-top: 1em;
 }

@@ -124,7 +124,7 @@ class SearchStock extends React.Component {
                                     range={range}
                                     updateRange={this.updateRange} />
                             </div>
-                            <div className='stock-show-bar-container'>
+                            {/* <div className='stock-show-bar-container'>
                                 <ul className='stock-show-bar'>
                                     {searchRange.map((sRange, idx) => (
                                         <button key={idx}
@@ -133,7 +133,7 @@ class SearchStock extends React.Component {
                                         >{sRange === '5d' ? '1W' : sRange.toUpperCase()}</button>
                                     ))}
                                 </ul>
-                            </div>            
+                            </div>             */}
                         </div>
                     </div>
                     <div className='stock-show-right'>

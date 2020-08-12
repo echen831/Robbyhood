@@ -144,7 +144,7 @@ class HistStock extends React.Component {
             stroke = "#ffac12"
         }
 
-        const chart = (
+        return (
             <div>
                 <div className='stock-info-container'>
                     <h1 className='stock-name'>{name ? name : symbol.toUpperCase()}</h1>
@@ -190,25 +190,25 @@ class HistStock extends React.Component {
                             date={range === '1d' ? data[0].date : null} />}
                     />
                 </LineChart>
-                {/* <StockShowBar
+                <StockShowBar
                     range={range}
                     updateRange={updateRange}
                     stroke={stroke}
-                /> */}
+                />
             </div>
         )
 
-        const loader = (
-            <div className='loader-body'>
-                <img className='loader-img' src="https://i.ya-webdesign.com/images/loading-png-gif.gif" alt="" />
-            </div>
-        )
+        // const loader = (
+        //     <div className='loader-body'>
+        //         <img className='loader-img' src="https://i.ya-webdesign.com/images/loading-png-gif.gif" alt="" />
+        //     </div>
+        // )
         
-        return (
-           <div className='chart-container'>
-               {this.props.loading ? loader : chart}
-           </div>
-        )
+        // return (
+        //    <div className='chart-container'>
+        //        {this.props.loading ? loader : chart}
+        //    </div>
+        // )
     };
 };
 
