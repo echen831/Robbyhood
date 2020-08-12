@@ -1,5 +1,6 @@
 import React from 'react';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ReferenceLine } from 'recharts';
+import { StockShowBar } from './stock_show_bar'
 
 class Portfolio extends React.Component {
     constructor(props) {
@@ -176,7 +177,7 @@ class Portfolio extends React.Component {
 
 
     render () {
-        let { oneDayStocks, currentUser, range } = this.props
+        let { oneDayStocks, currentUser, range, updateRange } = this.props
 
         if ( !oneDayStocks || !currentUser ) return null
 
@@ -241,7 +242,9 @@ class Portfolio extends React.Component {
                             date={range === '1d' ? data[0].date : null} />}
                     />
                 </LineChart>
-
+                <StockShowBar range={range}
+                              updateRange={updateRange}
+                              stroke={stroke}/>
             </div>
         )
     }

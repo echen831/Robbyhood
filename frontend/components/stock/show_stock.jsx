@@ -180,10 +180,11 @@ class Show extends React.Component {
                                     oneDayStocks = { oneDayPort }
                                     oneYearStocks = { portfolio.oneYearStocks }
                                     range = { range }
+                                    updateRange = {this.updateRange}
                                 />
                             </div>
-                            <StockShowBar updateRange={ this.updateRange }
-                                          range={ range }/>
+                            {/* <StockShowBar updateRange={ this.updateRange }
+                                          range={ range }/> */}
                         </div>
                     </div>
                     <div className='stock-show-right'>
