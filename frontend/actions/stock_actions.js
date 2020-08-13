@@ -8,7 +8,6 @@ export const LOADING_STOCK = 'LOADING_STOCK';
 export const RECEIVE_NEWS = 'RECEIVE_NEWS';
 export const RECEIVE_MULTI_NEWS = 'RECEIVE_MULTI_NEWS';
 export const RECEIVE_COMPANY_INFO = 'RECEIVE_COMPANY_INFO';
-export const RECEIVE_OHLC = 'RECEIVE_OHLC';
 export const RECEIVE_MULTI_1Y_STOCKS = 'RECEIVE_MULTI_1Y_STOCKS';
 export const RECEIVE_MULTI_1D_STOCKS = 'RECEIVE_MULTI_1D_STOCKS';
 
@@ -49,11 +48,6 @@ const receiveMultiOneDayStocks = (stocks, symbols) => ({
     symbols
 })
 
-const receiveOHLC = (data, symbol) => ({
-    type: RECEIVE_OHLC,
-    data,
-    symbol
-})
 
 
 const loadingStock = () => ({
@@ -131,9 +125,4 @@ export const fetchMultiNews = (symbols) => dispatch => {
 export const fetchCompanyInfo = (symbol) => dispatch => {
     return StockAPIUtil.fetchCompanyInfo(symbol)
         .then((data) => dispatch(receiveCompanyInfo(data, symbol)))
-};
-
-export const fetchOHLC = (symbol) => dispatch => {
-    return StockAPIUtil.fetchOHLC(symbol)
-        .then((data) => dispatch(receiveOHLC(data, symbol)))
 };

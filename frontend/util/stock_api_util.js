@@ -69,13 +69,6 @@ export const fetchCompanyInfo = (symbol) => {
 };
 
 
-export const fetchOHLC = (symbol) => (
-    $.ajax({
-        url: `https://sandbox.iexapis.com/stable/stock/${symbol}/previous?token=${window.iexAPIKey}`,
-        method: 'GET'
-    })
-);
-
 export const fetchMultiStocks = (symbols, range) => {
 
     let cloud = `https://cloud.iexapis.com/stable/stock/market/batch?symbols=${symbols}&types=chart&range=${range}&token=${window.iex2APIKey}`
