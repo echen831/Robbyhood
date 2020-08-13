@@ -43,17 +43,6 @@ class SearchBar extends React.Component {
             }
         }
 
-        // let stocks = Object.values(this.props.stocks)
-        // stocks.forEach( stock => {
-        //     const subName = stock.name.slice(0, this.state.inputValue.length);
-        //     const subSym = stock.symbol.slice(0, this.state.inputValue.length);
-        //     if (subName.toLowerCase() === this.state.inputValue.toLowerCase() ||
-        //         subSym.toLowerCase() === this.state.inputValue.toLowerCase()
-        //     ) {
-        //         matches.push(stock);
-        //     }
-        // });
-
         if (matches.length === 0) {
             matches.push({name: 'No Matches', symbol: false})
         }
@@ -75,18 +64,13 @@ class SearchBar extends React.Component {
             )
         } else {
             return (
-                // <li key={idx}>
-                //     <Link  to= {`/search/stocks/${stock.symbol}/${stock.name}`} 
-                //     > {stock.symbol.toUpperCase()}  {stock.name}</Link>
-                // </li>
+
                 <Link to={`/search/stocks/${stock.symbol}/${stock.name}`}
                       key={idx}> 
                       <li className='search-result-symbol'>
                          {stock.symbol.toUpperCase()} 
                       </li>
-                      <li>
-                        {stock.name}   
-                      </li>
+                      <li>{stock.name}</li>
                 </Link>
             );
         }
