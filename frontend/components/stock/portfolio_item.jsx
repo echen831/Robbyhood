@@ -10,12 +10,6 @@ class PortfolioItem extends React.Component {
 
     }
 
-    // componentDidMount() {
-    //     let { fetchOneDayStock, symbol, idx } = this.props
-
-    //     setTimeout(() => fetchOneDayStock(symbol, '1d'), idx * 100)
-    // }
-
     findCurrentPrice(stocks, symbol) {
         let price = null
         if (!stocks || !stocks[symbol]) return null
@@ -179,7 +173,6 @@ class PortfolioItem extends React.Component {
                 <div className='pi-stock-info'>
                     <p>${this.setPrice(currPrice)}</p>
                     <p style={{color: stroke, fontSize: 12}}
-                        // id={currPrice - openPrice < 0 ? 'red' : 'green'}
                         >{this.setFluxPercent(currPrice, openPrice)}</p>
                 </div>
             </div>
