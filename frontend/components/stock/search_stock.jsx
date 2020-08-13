@@ -8,8 +8,6 @@ import Loader from '../loader/loader';
 import { Header } from '../nav_bar/header_bar';
 
 
-const searchRange = [ '1d', '5d', '1m', '3m', '1y', '5y']
-
 class SearchStock extends React.Component {
     constructor(props) {
         super(props)
@@ -124,16 +122,6 @@ class SearchStock extends React.Component {
                                     range={range}
                                     updateRange={this.updateRange} />
                             </div>
-                            {/* <div className='stock-show-bar-container'>
-                                <ul className='stock-show-bar'>
-                                    {searchRange.map((sRange, idx) => (
-                                        <button key={idx}
-                                                onClick={() => this.setState({ range: sRange })}
-                                                className={range === sRange ? 'selected' : ''}
-                                        >{sRange === '5d' ? '1W' : sRange.toUpperCase()}</button>
-                                    ))}
-                                </ul>
-                            </div>             */}
                         </div>
                     </div>
                     <div className='stock-show-right'>
