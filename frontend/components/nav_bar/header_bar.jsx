@@ -10,7 +10,7 @@ export const Header = (props) => {
     const linkedIn = <FontAwesomeIcon icon={['fab', 'linkedin']} size='2x'/>
     const angelList = <FontAwesomeIcon icon={['fab', 'angellist']} size='2x' />
 
-    let { stocks, setState, logout } = props
+    let { stocks, logout } = props
     return (
         <header className='stock-show-header'>
             <div className='top-nav'>

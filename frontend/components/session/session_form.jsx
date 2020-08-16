@@ -13,7 +13,6 @@ class SessionForm extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
-        // this.handleDemoLogin = this.handleDemoLogin.bind(this)
         this.demoLogin = this.demoLogin.bind(this)
     }
 
@@ -22,10 +21,7 @@ class SessionForm extends React.Component {
     }
 
     demoLogin() {
-        // this.setState ({
-        //     email: 'demo@hotmail.com',
-        //     password: '123456'
-        // })
+
         const email = 'demo@hotmail.com';
         const password = '123456';
         const Speed = 100;
@@ -50,13 +46,6 @@ class SessionForm extends React.Component {
 
     };
 
-    // handleDemoLogin(e) {
-    //     e.preventDefault();
-    //     const user = Object.assign({}, this.state)
-    //     this.props.demoLogin(user)
-    //         .then(() => this.props.history.push('/stocks'))
-
-    // }
 
     update(field) {
         return (e) => this.setState({[field]: e.currentTarget.value})
