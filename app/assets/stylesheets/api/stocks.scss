@@ -892,6 +892,7 @@
 .company-info-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 2px solid grey;
 }
 
@@ -950,6 +951,7 @@
 .company-news-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 2px solid grey;
 }
 
@@ -958,12 +960,8 @@
   padding-bottom: 0.5em;
 }
 
-.company-news-header p:last-child {
-  display: flex;
-  font-size: small;
-  align-items: center;
-  cursor: pointer;
-}
+
+
 
 .news-container {
  width: 100%;

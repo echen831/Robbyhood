@@ -100,7 +100,6 @@ class SearchStock extends React.Component {
         this.setState({ range: range })
     }
 
-
     render () {
 
         let {symbol, name, range, infoShow, newsShow } = this.state
@@ -142,7 +141,14 @@ class SearchStock extends React.Component {
                 <div className='company-info-container'>
                     <div className='company-info-header'>
                         <p>About</p>
-                        <p onClick={() => this.setState({ infoShow: !infoShow })}>{!infoShow ? 'show' : 'hide'}</p>
+                        <div className='menu-btn'
+                            id={infoShow ? 'menu-btn-open' : ''}
+                            onClick={() => {this.setState({ infoShow: !infoShow })}}>
+                            <div className='menu-btn-burger'>
+                            </div>
+                        </div>
+                        
+                        {/* <p onClick={() => this.setState({ infoShow: !infoShow })}>{!infoShow ? 'show' : 'hide'}</p> */}
                     </div>
                     <CompanyInfo companyInfo={companyInfo} 
                                  infoShow={infoShow}
@@ -151,7 +157,14 @@ class SearchStock extends React.Component {
                 <div className='company-news-container'>
                     <div className='company-news-header'>
                         <p>News</p>
-                        <p onClick={() => this.setState({ newsShow: !newsShow })}>{!newsShow ? 'show' : 'hide'}</p>
+                        <div className='menu-btn'
+                            id={newsShow ? 'menu-btn-open' : ''}
+                            onClick={() => {this.setState({ newsShow: !newsShow })}}>
+                            <div className='menu-btn-burger'>
+                            </div>
+                        </div>
+
+                        {/* <p onClick={() => this.setState({ newsShow: !newsShow })}>{!newsShow ? 'show' : 'hide'}</p> */}
                     </div>                   
                     <News news={news}
                           newsShow={newsShow}
