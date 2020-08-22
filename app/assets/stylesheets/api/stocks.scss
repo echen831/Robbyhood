@@ -361,6 +361,8 @@
   cursor: pointer;
 }
 
+/************** Burger Button **************/
+
 .menu-btn-burger {
   width: 80%;
   height: .1em;
@@ -399,6 +401,47 @@
 #menu-btn-open .menu-btn-burger::after {
   transform: rotate(-45deg);
 }
+
+/*************Arrow Button ****************/
+.menu-btn-arrow {
+  width: 80%;
+  height: .1em;
+  background-color: grey;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  background-color: transparent;
+}
+.menu-btn-arrow::before,
+.menu-btn-arrow::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: .1em;
+  background-color: grey;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  
+};
+
+.menu-btn-arrow::before {
+  transform: translateX(-.3em) rotate(45deg);
+}
+
+.menu-btn-arrow::after {
+  transform: translateX(.3em) rotate(-45deg);
+}
+
+
+
+
+#menu-btn-open .menu-btn-arrow::before {
+  transform: rotate(45deg);
+}
+
+#menu-btn-open .menu-btn-arrow::after {
+  transform: rotate(-45deg);
+}
+/******************************************/
 
 
 #my-account-btn:hover {
