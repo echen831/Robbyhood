@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
 class LMC extends React.Component {
     constructor() {
         super()
