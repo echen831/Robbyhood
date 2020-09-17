@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 class LMC extends React.Component {
     constructor() {
         super()
@@ -51,7 +52,7 @@ class LMC extends React.Component {
                 <div className='lmc-content'>
                     <div className='lmc-actions'>
                         <ul>
-                            <div onClick={() => this.upButton()}>&#8593;</div>
+                            <div onClick={() => this.upButton()}><FontAwesomeIcon icon={faChevronUp} /></div>
                             <div
                                 className={this.state.index === 0 ? 'lmc-focus' : ''}
                                 onClick={()=>this.setState({index: 0})}>Learn</div>
@@ -61,7 +62,7 @@ class LMC extends React.Component {
                             <div
                                 className={this.state.index === 2 ? 'lmc-focus' : ''}
                                 onClick={() => this.setState({ index: 2 })}>Customize</div>
-                            <div onClick={() => this.downButton()}>&#8595;</div>
+                            <div onClick={() => this.downButton()}><FontAwesomeIcon icon={faChevronDown} /></div>
                         </ul>
                     </div>
                     <div className='lmc-details'>
