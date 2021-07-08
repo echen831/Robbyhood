@@ -69,7 +69,7 @@ class Home extends React.Component {
                 <div className='fees-body'>
                     <div className='fees-content'>
                         <ul>
-                            <h2 id='fees-header' >Investing is simple and easy</h2>
+                            <h2 id='fees-header' >Investing made simple and easy</h2>
                             <p id='fees-slogan' >Make unlimited commission-free trades in stocks without actually using real money.  Robbyhood mimics profits and losses of an actual investment</p>
                             <p id='com-dis'
                                 onClick={()=>this.showModal(5)}
